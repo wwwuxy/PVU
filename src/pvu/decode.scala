@@ -1,5 +1,4 @@
-//posit vector decode unit
-packet pvu
+package pvu
 
 import chisel3._
 import chisel3.util._
@@ -7,7 +6,7 @@ import chisel3.experimental._
 
 class decode(POSIT_WIDTH:Int, VECTOR_SIZE:Int) extends Module{
     val es: Int         = 2
-    val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
+    val nd: Int         = log2Ceil(POSIT_WIDTH - 1) //log2Ceil的调用？
     val EXP_WIDTH: Int  = nd + es
     val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2     
 
@@ -57,7 +56,7 @@ class decode(POSIT_WIDTH:Int, VECTOR_SIZE:Int) extends Module{
     //Left shift the regime
     val operand_after_shift = Wire(Vec(VECTOR_SIZE, UInt(POSIT_WIDTH.W - 1.W)))
 
-    val barrel_shifter Module(new BarrelShifter(POSIT_WIDTH - 1, nd, false))
+    val barrel_shifter = Module(new BarrelShifter(POSIT_WIDTH - 1, nd, false))
     for(i <- 0 until VECTOR_SIZE){
         barrel_shifter.io.operand_i := operand(i)
         barrel_shifter.io.shift_amount := same_lenth(i) + 1.U
