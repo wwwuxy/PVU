@@ -10,7 +10,7 @@ import chisel3.util._
   * @param SHIFT_WIDTH  移位量的位宽
   * @param MODE         移位模式，false 表示左移，true 表示右移
   */
-class BarrelShifter(val WIDTH: Int, val SHIFT_WIDTH: Int, val MODE: Boolean) extends Module {
+class BarrelShifter(val WIDTH: Int, val SHIFT_WIDTH: Int, val MODE: Bool) extends Module {
   val io = IO(new Bundle {
     val operand_i    = Input(UInt(WIDTH.W))         // 输入操作数
     val shift_amount = Input(UInt(SHIFT_WIDTH.W))   // 移位量

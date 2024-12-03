@@ -4,7 +4,7 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class LZC(val WIDTH: Int, val MODE: Boolean, val nd: Int) extends BlackBox(Map(
+class LZC(val WIDTH: Int, val MODE: Bool, val nd: Int) extends BlackBox(Map(
   "WIDTH" -> WIDTH,
   "MODE"  -> MODE
 )) {

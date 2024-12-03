@@ -13,7 +13,7 @@ class Decode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val io = IO(new Bundle {
     val posit = Input(Vec(VECTOR_SIZE, UInt(POSIT_WIDTH.W)))
     val Sign  = Output(Vec(VECTOR_SIZE, UInt(1.W)))
-    val Exp   = Output(Vec(VECTOR_SIZE, UInt(EXP_WIDTH.W)))
+    val Exp   = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
     val Frac  = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
   })
 
