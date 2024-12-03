@@ -1,9 +1,0 @@
-{
-    "value": [
-        "ref:v0:c984eca8:/home/wuxy/PVU/pvu/compile-resources",
-        "ref:v0:c984eca8:/home/wuxy/PVU/pvu/resources",
-        "ref:v0:c984eca8:/home/wuxy/PVU/out/pvu/compile.dest/classes"
-    ],
-    "valueHash": 700675746,
-    "inputsHash": 213949904
-}
