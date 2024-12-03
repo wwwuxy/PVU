@@ -1,0 +1,22 @@
+{
+    "value": {
+        "seenScripts": [
+            [
+                "/home/wuxy/PVU/build.sc",
+                "// import Mill dependency\nimport mill._\nimport mill.scalalib._\nimport mill.scalalib.scalafmt.ScalafmtModule\nimport mill.scalalib.TestModule.Utest\n// support BSP\nimport mill.bsp._\n\nobject pvu extends ScalaModule with ScalafmtModule { m =>\n  override def scalaVersion = \"2.13.12\"\n  override def scalacOptions = Seq(\n    \"-language:reflectiveCalls\",  // 允许使用反射调用\n    \"-deprecation\",               // 编译器关于过时特性的警告\n    \"-feature\",                   // 编译器对新特性的支持\n    \"-Xcheckinit\"                 // 检查初始化变量是否被使用\n  )\n\n  // def sources = T.sources {    // 添加模块源代码目录\n  //   super.sources() ++ Seq(\n  //     PathRef(os.pwd / \"src\" / \"pvu\")\n  //   )\n  // }\n\n  val chiselVersion = \"6.5.0\"\n\n  override def ivyDeps = Agg(\n    ivy\"org.chipsalliance::chisel:$chiselVersion\",\n    // ivy\"org.circt::circt-stage:0.0.1\" // 根据实际情况调整版本\n  )\n\n  override def scalacPluginIvyDeps = Agg(\n    ivy\"org.chipsalliance:::chisel-plugin:$chiselVersion\"\n  )\n\n  object test extends ScalaTests with TestModule.ScalaTest {  // 测试模块\n    override def ivyDeps = m.ivyDeps() ++ Agg(\n      ivy\"org.scalatest::scalatest::3.2.16\"\n    )\n  }\n\n  def repositoriesTask = T.task { // 仓库配置\n    Seq(\n      coursier.MavenRepository(\"http://mirrors.cloud.tencent.com/nexus/repository/maven-public\"),\n      coursier.MavenRepository(\"https://repo.scala-sbt.org/scalasbt/maven-releases\")\n      // 如果 CIRCT 不在上述仓库中，添加 CIRCT 的仓库\n    ) ++ super.repositoriesTask()\n  }\n}\n"
+            ]
+        ],
+        "repos": [],
+        "ivyDeps": [],
+        "importGraphEdges": [
+            [
+                "/home/wuxy/PVU/build.sc",
+                []
+            ]
+        ],
+        "errors": [],
+        "millImport": false
+    },
+    "valueHash": -623570202,
+    "inputsHash": -1891873433
+}

@@ -1,0 +1,44 @@
+{
+    "value": [
+        "org.chipsalliance:chisel_2.13:6.5.0",
+        {
+            "dep": {
+                "module": {
+                    "organization": {
+                        "value": "org.scala-lang"
+                    },
+                    "name": {
+                        "value": "scala-library"
+                    },
+                    "attributes": {}
+                },
+                "version": "2.13.12",
+                "configuration": {
+                    "value": "default(compile)"
+                },
+                "minimizedExclusions": {
+                    "data": "coursier.core.MinimizedExclusions.ExcludeNone"
+                },
+                "publication": {
+                    "name": "",
+                    "type": {
+                        "value": ""
+                    },
+                    "ext": {
+                        "value": ""
+                    },
+                    "classifier": {
+                        "value": ""
+                    }
+                },
+                "optional": false,
+                "transitive": true,
+                "overrides": [],
+                "boms": []
+            },
+            "force": true
+        }
+    ],
+    "valueHash": -29128363,
+    "inputsHash": -1338626641
+}

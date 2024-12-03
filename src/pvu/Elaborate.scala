@@ -1,4 +1,5 @@
 package pvu
+
 import chisel3._
 import chisel3.stage._
 import circt.stage.ChiselStage
@@ -6,6 +7,9 @@ import chisel3.util._
 
 
 object Elaborate extends App{
+    val POSIT_WIDTH = 16
+    val VECTOR_SIZE = 4
+
     var filltlflag = Array[String]()
     var firtoolOpts = Array[String]()
 
@@ -24,7 +28,7 @@ object Elaborate extends App{
     )
 
     ChiselStage.emitSystemVerilogFile(
-        new decode,
+        new Decode(POSIT_WIDTH, VECTOR_SIZE),
         filltlflag,
         firtoolOpts
     )
