@@ -44,13 +44,20 @@ class FractionCompare(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDT
     }
   }
 
-  // Calculate the amount of shift required
+    // Calculate the amount of shift required
   for (i <- 0 until VECTOR_SIZE) {
     val shift_amount1 = io.pir_max_exp(i) - io.pir_exp1_i(i)
     val shift_amount2 = io.pir_max_exp(i) - io.pir_exp2_i(i)  
 
     // Ensure shift_amount <= ALIGN_WIDTH
-    io.pir_frac1_align(i) := frac1_shifted(i) << Mux(shift_amount1 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1)
-    io.pir_frac2_align(i) := frac2_shifted(i) << Mux(shift_amount2 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2)
+    io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1)
+    io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2)
   }
+
+  //Updata Exp
+  for (i <- 0 until VECTOR_SIZE) {
+    io.pir_exp1_i(i) := io.pir_max_exp(i)
+    io.pir_exp2_i(i) := io.pir_max_exp(i)
+  }
+
 }

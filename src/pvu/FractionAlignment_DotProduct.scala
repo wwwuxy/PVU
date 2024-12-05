@@ -39,7 +39,11 @@ class FractionCompare(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDT
   // Calculate the amount of shift required and ensure shift_amount <= ALIGN_WIDTH
   for(i <- 0 until VECTOR_SIZE){
     val shift_amount = (io.pir_max_exp - io.pir_exp_i(i)).max(0.S)
-    io.pir_frac_align(i) := frac_shifted(i) << Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount)
+    io.pir_frac_align(i) := frac_shifted(i) >> Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount)
   }
 
+  //Updata Exp
+  for(i <- 0 until VECTOR_SIZE){
+    io.pir_exp_i(i) := io.pir_max_exp
+  }
 }

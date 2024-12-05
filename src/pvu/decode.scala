@@ -39,8 +39,8 @@ class Decode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   for (i <- 0 until VECTOR_SIZE) {
     val lzcModule = Module(new LZC(POSIT_WIDTH - 1, true, nd))
     lzcModule.io.in_i := lzc_operand(i)
-    lzc(i) := lzcModule.io.cnt_o
-    lzc_zeros(i) := lzcModule.io.empty_o
+    lzc(i)            := lzcModule.io.cnt_o
+    lzc_zeros(i)      := lzcModule.io.empty_o
   }
 
   // Get the regime value
@@ -57,9 +57,9 @@ class Decode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 
   for (i <- 0 until VECTOR_SIZE) {
     val barrel_shifter = Module(new BarrelShifter(POSIT_WIDTH - 1, nd, false))
-    barrel_shifter.io.operand_i := operand(i)
+    barrel_shifter.io.operand_i    := operand(i)
     barrel_shifter.io.shift_amount := same_length(i) + 1.U
-    operand_after_shift(i) := barrel_shifter.io.result_o
+    operand_after_shift(i)         := barrel_shifter.io.result_o
   }
 
   // Get the exponent value
