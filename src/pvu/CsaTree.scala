@@ -5,9 +5,7 @@ import chisel3._
 import chisel3.util._
 
 class CsaTree(
-  val N: Int,          // 输入数量
-  val WIDTH_I: Int    // 输入位宽
-) extends Module {
+  val N: Int,val WIDTH_I: Int) extends Module {
   val WIDTH_O: Int = WIDTH_I + log2Ceil(N) // 输出位宽
   val io = IO(new Bundle {
     val operands_i = Input(Vec(N, UInt(WIDTH_I.W)))
