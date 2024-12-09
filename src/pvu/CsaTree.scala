@@ -4,9 +4,9 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class CsaTree(
-  val N: Int,val WIDTH_I: Int) extends Module {
+class CsaTree(val N: Int, val WIDTH_I: Int) extends Module {
   val WIDTH_O: Int = WIDTH_I + log2Ceil(N) // 输出位宽
+
   val io = IO(new Bundle {
     val operands_i = Input(Vec(N, UInt(WIDTH_I.W)))
     val sum_o = Output(UInt(WIDTH_O.W))

@@ -11,11 +11,12 @@ class FractionCompare(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDT
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
   val EXP_WIDTH: Int  = nd + es
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
+  val MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
   
   val io = IO(new Bundle {
-    val pir_frac_i     = Input(Vec(VECTOR_SIZE, UInt(2 * FRAC_WIDTH.W)))
+    val pir_frac_i     = Input(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
     val pir_exp_i      = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-    val pir_frac_align = Output(Vec(VECTOR_SIZE, UInt(2 *ALIGN_WIDTH.W)))
+    val pir_frac_align = Output(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
     val pir_max_exp    = Output(SInt(EXP_WIDTH.W))      //for encode and fraction_normalize 
   })
 
@@ -25,7 +26,7 @@ class FractionCompare(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDT
     io.pir_max_exp         := comptree.io.result_o
 
   // Align score to ALIGN_WIDTH
-    val frac_shifted = Wire(Vec(VECTOR_SIZE, UInt(2 * ALIGN_WIDTH.W)))
+    val frac_shifted = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
     if(ALIGN_WIDTH > FRAC_WIDTH){
       for(i <- 0 until VECTOR_SIZE){
         frac_shifted(i) := io.pir_frac_i(i) << (ALIGN_WIDTH - FRAC_WIDTH)
