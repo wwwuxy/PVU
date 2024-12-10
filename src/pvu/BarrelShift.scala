@@ -6,9 +6,9 @@ import chisel3.util._
 /**
   * Barrel Shifter 模块
   *
-  * @param WIDTH        输入数据的位宽
-  * @param SHIFT_WIDTH  移位量的位宽
-  * @param MODE         移位模式，false 表示左移，true 表示右移
+  * WIDTH        输入数据的位宽
+  * SHIFT_WIDTH  移位量的位宽
+  * MODE         移位模式，false 表示左移，true 表示右移
   */
 class BarrelShifter(val WIDTH: Int, val SHIFT_WIDTH: Int, val MODE: Bool) extends Module {
   val io = IO(new Bundle {
