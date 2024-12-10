@@ -5,11 +5,16 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class MantissaNorm(val VECTOR_SIZE: Int, val WIDTH: Int, val EXP_WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
+class MantissaNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
+  val es: Int         = 2
+  val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
+  val EXP_WIDTH: Int  = nd + es
+  val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
+  
   val io = IO(new Bundle {
     val pir_frac_i = Input(Vec(VECTOR_SIZE, UInt(WIDTH.W)))
-    val exp_adjust = Output(Vec(VECTOR_SIZE, SInt((EXP_WIDTH+1).W)))
-    val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt(WIDTH.W)))
+    val exp_adjust = Output(Vec(VECTOR_SIZE, SInt((EXP_WIDTH).W)))
+    val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W + 1.W)))
   })
 
   val LZC_WIDTH = log2Cei(WIDTH)  //存放前导0数量所需要的二进制位宽
@@ -35,10 +40,20 @@ class MantissaNorm(val VECTOR_SIZE: Int, val WIDTH: Int, val EXP_WIDTH: Int, val
 
     io.exp_adjust(i) := exp_adjust_reg
 
-  //使用barrel_shifter移位，使DECIMAL_POINT位上为1
-    val shifter = Module(new BarrelShifter(WIDTH, LZC_WIDTH))
+  //使用barrel_shifter左移，使DECIMAL_POINT位上为1
+    val frac_shifted = Wire(UInt(WIDTH.W))
+    val shifter = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
     shifter.io.operand_i    := io.pir_frac_i(i)
     shifter.io.shift_amount := leading_zero_count
-    io.pir_frac_o(i)        := shifter.io.result_o
+    frac_shifted            := shifter.io.result_o
+
+  //保留前FRAC_WITH + 1位，低位舍入
+    when(WIDTH > FRAC_WIDTH + 1){
+      val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
+      val sticky_bit = |sticky_bits
+      io.pir_frac_o(i) := Cat(frac_shifted(WIDTH - 1, WIDTH - FRAC_WIDTH) ,sticky_bit)
+    }.otherwise{
+      io.pir_frac_o(i) := frac_shifted << (FRAC_WIDTH - WIDTH + 1) 
+    }
   }
 }

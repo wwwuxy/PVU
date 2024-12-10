@@ -4,7 +4,7 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class Decode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
+class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val es: Int = 2
   val nd: Int = log2Ceil(POSIT_WIDTH - 1)
   val EXP_WIDTH: Int = nd + es
