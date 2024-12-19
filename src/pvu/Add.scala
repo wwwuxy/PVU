@@ -5,10 +5,9 @@ import chisel3._
 import chisel3.util._
 
 class Add(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
-// Fixed parameters
   val es: Int         = 2
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es
+  val EXP_WIDTH: Int  = nd + es + 1 
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
 
   val io = IO(new Bundle {
@@ -40,7 +39,7 @@ class Add(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     val carry = sum(FRAC_WIDTH)                                     // 检查进位
 
     // 如果有进位，尾数右移一位 并 指数加一
-    val new_frac = Mux(carry, sum >> 1, sum(FRAC_WIDTH-1, 0))
+    val new_frac = Mux(carry, sum >> 1, sum(FRAC_WIDTH - 1, 0))
     val new_exp  = Mux(carry, io.pir_exp1_i(i) + 1.S, io.pir_exp1_i(i))
 
     // 赋值结果符号、指数和尾数

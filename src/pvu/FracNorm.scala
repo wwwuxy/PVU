@@ -1,18 +1,20 @@
 //Posit Vector FracNorm Unit
+//输出的是调整后的尾数和指数的调整量，还需对指数进行调整
 package pvu
 
 import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class MantissaNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
+class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
   val es: Int         = 2
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es
+  val EXP_WIDTH: Int  = nd + es + 1 
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
   
   val io = IO(new Bundle {
     val pir_frac_i = Input(Vec(VECTOR_SIZE, UInt(WIDTH.W)))
+    
     val exp_adjust = Output(Vec(VECTOR_SIZE, SInt((EXP_WIDTH).W)))
     val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W + 1.W)))
   })
@@ -42,7 +44,7 @@ class MantissaNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, v
 
   //使用barrel_shifter左移，使DECIMAL_POINT位上为1
     val frac_shifted = Wire(UInt(WIDTH.W))
-    val shifter = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
+    val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
     shifter.io.operand_i    := io.pir_frac_i(i)
     shifter.io.shift_amount := leading_zero_count
     frac_shifted            := shifter.io.result_o
@@ -50,7 +52,7 @@ class MantissaNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, v
   //保留前FRAC_WITH + 1位，低位舍入
     when(WIDTH > FRAC_WIDTH + 1){
       val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
-      val sticky_bit = |sticky_bits
+      val sticky_bit  = |sticky_bits
       io.pir_frac_o(i) := Cat(frac_shifted(WIDTH - 1, WIDTH - FRAC_WIDTH) ,sticky_bit)
     }.otherwise{
       io.pir_frac_o(i) := frac_shifted << (FRAC_WIDTH - WIDTH + 1) 

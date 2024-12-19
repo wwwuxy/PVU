@@ -5,19 +5,20 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class FractionCompare(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
+class FractionAlignment_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
   // Fixed parameters
   val es: Int         = 2
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es
+  val EXP_WIDTH: Int  = nd + es + 1
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
   val MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
   
   val io = IO(new Bundle {
     val pir_frac_i     = Input(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
     val pir_exp_i      = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
+
     val pir_frac_align = Output(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
-    val pir_max_exp    = Output(SInt(EXP_WIDTH.W))      //for encode and fraction_normalize 
+    val pir_max_exp    = Output(SInt(EXP_WIDTH.W))                    //for encode and fraction_normalize 
   })
 
   // Calculate the maximum exponent of each vector element

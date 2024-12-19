@@ -8,7 +8,7 @@ class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 // Fixed parameters
   val es: Int         = 2
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es
+  val EXP_WIDTH: Int  = nd + es + 1 
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
 
   val io = IO(new Bundle {

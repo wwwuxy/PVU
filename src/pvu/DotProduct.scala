@@ -18,9 +18,10 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     val pir_exp2_i  = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
     val pir_frac1_i = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
     val pir_frac2_i = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
-    val pir_sign_o  = Output(UInt(1.W))
-    val pir_exp_o   = Output(SInt(EXP_WIDTH.W))
-    val pir_frac_o  = Output(UInt(MUL_WIDTH.W))
+
+    val pir_sign_o = Output(UInt(1.W))
+    val pir_exp_o  = Output(SInt(EXP_WIDTH.W))
+    val pir_frac_o = Output(UInt(MUL_WIDTH.W))
   })
 
 //通过MUL进行累乘计算
