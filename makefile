@@ -1,11 +1,8 @@
 BUILD_DIR = ./build
-
+PRG = PvuTop
 
 verilog:
-	mkdir -p $(BUILD_DIR)
-	-rm $(BUILD_DIR)/* -r
-	mill -i pvu.runMain pvu.Elaborate --target-dir $(BUILD_DIR)
-
+	sbt "runMain pvu.$(PRG)"
 git:
 	git add .
 	git commit
