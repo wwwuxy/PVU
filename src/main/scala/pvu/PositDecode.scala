@@ -49,7 +49,7 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 
   for (i <- 0 until VECTOR_SIZE) {
     same_length(i) := Mux(lzc_zeros(i) === 1.U, (POSIT_WIDTH - 1).U, lzc(i))
-    regime_r(i)    := Mux(R0(i) === 1.U, Cat(0.U, same_length(i) - 1.U), Cat(1.U, ~same_length(i) + 1.U)) // regime value, Convert negative numbers to two's complement
+    regime_r(i)    := (Mux(R0(i) === 1.U, Cat(0.U, same_length(i) - 1.U), Cat(1.U, ~same_length(i) + 1.U))).asSInt // regime value, Convert negative numbers to two's complement
   }
 
   // Left shift the regime
@@ -66,7 +66,7 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val es_value = Wire(Vec(VECTOR_SIZE, UInt(2.W)))
   for (i <- 0 until VECTOR_SIZE) {
     es_value(i) := Mux(lzc_zeros(i) === 1.U, 0.U, operand_after_shift(i)(POSIT_WIDTH - 2, POSIT_WIDTH - 3))
-    io.Exp(i)   := (regime_r(i) << 2) | es_value(i)
+    io.Exp(i)   := (regime_r(i) << 2) | es_value(i).asSInt
   }
 
   // Extract the fraction

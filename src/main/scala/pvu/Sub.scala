@@ -55,7 +55,7 @@ class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
       io.overflow(i)      := 0.U
       io.frac_truncate(i) := 0.U
 
-    }.otherwise(){ //符号不同，执行加法
+    }.otherwise{ //符号不同，执行加法
       val sum      = io.pir_frac1_aligned(i) +& io.pir_frac2_aligned(i)
       val carry    = sum(FRAC_WIDTH)
       val new_frac = Mux(carry, sum >> 1, sum(FRAC_WIDTH-1, 0))
@@ -68,7 +68,7 @@ class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 
     //溢出、截断标志
       io.overflow(i)  := carry
-      io.frac_truncate(i) := carry && (sum(FRAC_WIDTH-1, 0).orR())
+      io.frac_truncate(i) := carry && (sum(FRAC_WIDTH-1, 0).orR)
 
     } 
   }

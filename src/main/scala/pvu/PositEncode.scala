@@ -48,7 +48,7 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   //计算regime位宽
   val regime_width = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
   for(i <- 0 until VECTOR_SIZE){
-    regime_width(i) := Mux(k_sign(i) === 1.U, ((~regime_k(i) + 1) + 1), regime_k(i) + 2)
+    regime_width(i) := Mux(k_sign(i) === 1.U, ((~regime_k(i) + 1.U) + 1.U), regime_k(i) + 2.U)
   }
 
   //拼接各个部分（位宽溢出）
@@ -82,16 +82,16 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   }
 
   //进行舍入操作  --> RNE舍入
-  val value_before_round = Wire(Vec(VECTOR_SIZE, UInt(POSIT_WIDTH.W - 1.W)))
+  val value_before_round = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
   val round_bits         = Wire(Vec(VECTOR_SIZE, UInt(MAX_SHIFT.W)))
-  val value_after_round  = Wire(Vec(VECTOR_SIZE, UInt(POSIT_WIDTH.W - 1.W)))
+  val value_after_round  = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
 
   for(i <- 0 until VECTOR_SIZE){
    value_before_round(i) := value_after_shift(i)(MAX_SHIFT + POSIT_WIDTH - 2, MAX_SHIFT)
    round_bits(i)         := value_after_shift(i)(MAX_SHIFT - 1, 0)
 
    val round_bit         = round_bits(i)(MAX_SHIFT - 1)
-   val sticky_bit        = |round_bits(i)(MAX_SHIFT - 2, 0)
+   val sticky_bit        = round_bits(i)(MAX_SHIFT - 2, 0).orR
    val round_value       = round_bit & (sticky_bit | value_before_round(i)(0))
    value_after_round(i) := value_before_round(i) + round_value
   }
@@ -100,7 +100,7 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   for(i <- 0 until VECTOR_SIZE){
     val result   = Wire(UInt(POSIT_WIDTH.W))
 
-    result      := Mux(io.pir_sign(i) === 1.U, Cat(1.U, ~value_after_round(i) + 1), Cat(0.U, value_after_round(i)))
+    result      := Mux(io.pir_sign(i) === 1.U, Cat(1.U, ~value_after_round(i) + 1.U), Cat(0.U, value_after_round(i)))
     io.posit(i) := Mux(frac_hide(i) === 1.U, result, 0.U)
   }
 }

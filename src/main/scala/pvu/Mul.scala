@@ -51,7 +51,7 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     val sum   = io.pir_exp1_i(i) +& io.pir_exp2_i(i)
     val carry = sum(EXP_WIDTH)
 
-   io.pir_exp_o(i)  := Mux(carry, maxExp, sum(EXP_WIDTH - 1, 0))
-   io.pir_frac_o(i) := Mux(carry, 0.U, frac(i)) //溢出时尾数为0
+   io.pir_exp_o(i)  := Mux(carry === 1.U, maxExp, sum(EXP_WIDTH - 1, 0).asSInt)
+   io.pir_frac_o(i) := Mux(carry === 1.U, 0.U, frac(i)) //溢出时尾数为0
   }
 }

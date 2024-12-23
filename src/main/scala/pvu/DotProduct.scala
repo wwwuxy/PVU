@@ -4,10 +4,10 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
+class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
   val es: Int         = 2
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es
+  val EXP_WIDTH: Int  = nd + es + 1 
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
   val MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
 
@@ -42,14 +42,14 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   pir_frac_mul := mul.io.pir_frac_o
 
 //将尾数进行对阶
-  val pir_exp_cmp  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
+  val pir_exp_cmp  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_cmp = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
 
-  val frac_compare            = Module(new FracCompare(POSIT_WIDTH, VECTOR_SIZE))
+  val frac_compare            = Module(new FractionAlignment_DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
   frac_compare.io.pir_exp_i  := pir_exp_mul
   frac_compare.io.pir_frac_i := pir_frac_mul
-  pir_exp_cmp                := frac_compare.io.pir_exp_o
-  pir_frac_cmp               := frac_compare.io.pir_frac_o
+  pir_exp_cmp                := frac_compare.io.pir_max_exp
+  pir_frac_cmp               := frac_compare.io.pir_frac_align
 
 //将负Posit数的尾数转换为补码
   for (i <- 0 until VECTOR_SIZE) {
@@ -64,14 +64,14 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val sum_result = Wire(UInt(MUL_WIDTH.W + 1.W))
 
   val csaTree = Module(new CsaTree(VECTOR_SIZE, MUL_WIDTH))
-  csaTree.io.operand_i := pir_frac_cmp
-  sum                  := csaTree.io.sum_o
-  carry                := csaTree.io.carry_o
-//最后一次求和
-  sum_result           := carry + sum
+  csaTree.io.operands_i := pir_frac_cmp
+  sum                   := csaTree.io.sum_o
+  carry                 := csaTree.io.carry_o
+  //最后一次求和
+  sum_result := carry + sum
 
 //输出结果 
   io.pir_sign_o := sum_result(MUL_WIDTH)
-  io.pir_exp_o  := pir_exp_cmp(0)
+  io.pir_exp_o  := pir_exp_cmp
   io.pir_frac_o := sum_result(MUL_WIDTH - 1, 0)
 }

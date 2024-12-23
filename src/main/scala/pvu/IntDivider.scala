@@ -23,7 +23,7 @@ class IntDivider(val FRAC_WIDTH: Int) extends Module {
 
   // 3. 使用radix4BoothMultiplier进行乘法
   // 两个操作数均为2*FRAC_WIDTH位，结果为4*FRAC_WIDTH位
-  val boothMult = Module(new Radix4BoothMultiplier(2*FRAC_WIDTH, 2*FRAC_WIDTH, 2*(2*FRAC_WIDTH)))
+  val boothMult = Module(new Radix4BoothMultiplier(2*FRAC_WIDTH, 2*FRAC_WIDTH))
   boothMult.io.operand_a := dividend_fixed
   boothMult.io.operand_b := reciprocal
 

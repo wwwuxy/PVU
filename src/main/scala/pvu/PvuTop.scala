@@ -22,8 +22,8 @@
    val io = IO(new Bundle {
      val posit_i1    = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
      val posit_i2    = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
-     val op          = Input(Vec(VECTOR_SIZE,UInt(3.W)))
-     val posit_o     = Output(VECTOR_SIZE,UInt(POSIT_WIDTH.W))
+     val op          = Input(UInt(3.W))
+     val posit_o     = Output(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
      val posit_dot_o = Output(UInt(POSIT_WIDTH.W))
  })
  
@@ -141,22 +141,16 @@
     pir_exp_rst         := div.io.pir_exp_o
     pir_frac_rst_muldiv := div.io.pir_frac_o
   
-  }.elsewhen(io.op === 5.U){  //DotProduct, 输入向量 输出标量
-    val fracalign1 = Module(new FractionAlignment_DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
-    val fracalign2 = Module(new FractionAlignment_DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
-    val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE))
+  }.elsewhen(io.op === 5.U){  //DotProduct, 先相乘再相加，对阶在DotProduct中实现，输入向量 输出标量
+   val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
   
-    fracalign1.io.pir_exp_i  := pir_exp1
-    fracalign1.io.pir_frac_i := pir_frac1
-    fracalign2.io.pir_exp_i  := pir_exp2
-    fracalign2.io.pir_frac_i := pir_frac2
   
     dotproduct.io.pir_sign1_i := pir_sign1
     dotproduct.io.pir_sign2_i := pir_sign2
-    dotproduct.io.pir_exp1_i  := fracalign1.io.pir_max_exp
-    dotproduct.io.pir_exp2_i  := fracalign2.io.pir_max_exp
-    dotproduct.io.pir_frac1_i := fracalign1.io.pir_frac_align
-    dotproduct.io.pir_frac2_i := fracalign2.io.pir_frac_align
+    dotproduct.io.pir_exp1_i  := pir_exp1
+    dotproduct.io.pir_exp2_i  := pir_exp2
+    dotproduct.io.pir_frac1_i := pir_frac1
+    dotproduct.io.pir_frac2_i := pir_frac2
   
     pir_sign_dot := dotproduct.io.pir_sign_o
     pir_exp_dot  := dotproduct.io.pir_exp_o
@@ -172,23 +166,21 @@
   val pir_frac_normed_dot = Wire(UInt(MUL_WIDTH.W))
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm = Module(new FracNorm(POSIT_WIDTH, 1, MUL_WIDTH, 1))
+  val frac_norm = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
   frac_norm.io.pir_frac_i := pir_frac_dot
   pir_frac_normed_dot     := frac_norm.io.pir_frac_o
-  pir_exp_adjusi_dot      := frac_norm.io.pir_exp_o
+  pir_exp_adjusi_dot      := frac_norm.io.exp_adjust
   
   }.elsewhen(io.op === 1.U || io.op === 2.U){ //Add Sub
     val frac_norm = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, FRAC_WIDTH, 1))
     frac_norm.io.pir_frac_i := pir_frac_rst_addsub
-    frac_norm.io.pir_exp_i  := pir_exp_rst
     pir_frac_normed         := frac_norm.io.pir_frac_o
-    pir_exp_adjust          := frac_norm.io.pir_exp_o
+    pir_exp_adjust          := frac_norm.io.exp_adjust
   }.otherwise{                            //Mul Div                
     val frac_norm = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
     frac_norm.io.pir_frac_i := pir_frac_rst_muldiv
-    frac_norm.io.pir_exp_i  := pir_exp_rst
     pir_frac_normed         := frac_norm.io.pir_frac_o
-    pir_exp_adjust          := frac_norm.io.pir_exp_o
+    pir_exp_adjust          := frac_norm.io.exp_adjust
   }
 
 //***************//
@@ -209,7 +201,7 @@
 //**encode**//
 //*********//
   when(io.op === 5.U){
-    val encode_dot = Module(new PositEncode(POSIT_WIDTH, 1))
+    val encode_dot = Module(new PositEncode_DotProduct(POSIT_WIDTH))
     encode_dot.io.pir_sign := pir_sign_dot
     encode_dot.io.pir_exp  := pir_exp_rst_adjusied_dot
     encode_dot.io.pir_frac := pir_frac_normed_dot
@@ -225,21 +217,24 @@
   }
 }
 
-object PvuTop extends App{
-    var filltlflag = Array[String]()
-    filltlflag = filltlflag ++ Array(
-        "--target-dir", "generated",
-        "--target:verilog",
-        // "--split-verilog",
-        // "--lowering-options=" + Seq(
-        //     "disallowLocalVariables",
-        //     "disallowPackedArrays"
-        // ).mkString(","),
-        // "--disable-all-randomization"
-        )
+// object PvuTop extends App{
+//     var filltlflag = Array[String]()
+//     filltlflag = filltlflag ++ Array(
+//         "--target-dir", "generated",
+//         "--target:verilog",
+//         // "--split-verilog",
+//         // "--lowering-options=" + Seq(
+//         //     "disallowLocalVariables",
+//         //     "disallowPackedArrays"
+//         // ).mkString(","),
+//         // "--disable-all-randomization"
+//         )
 
-    ChiselStage.emitSystemVerilogFile(
-        new PvuTop(16, 4, 14),
-        filltlflag
-    )
+//     (new ChiselStage).emitVerilog(
+//         new PvuTop(16, 4, 14),
+//         filltlflag
+//     )
+
+  object PvuTop extends App {
+    emitVerilog(new PvuTop(16, 4, 14), Array("--target-dir", "generated"))
 }

@@ -28,7 +28,8 @@ class IntReciprocal(val FRAC_WIDTH: Int) extends Module {
     val num_x = (num * x)((2*FRAC_WIDTH)-1,0)
 
     // two = 2.0 = 2 << FRAC_WIDTH (Q(1+FRAC_WIDTH).FRAC_WIDTH格式下的2.0)
-    val two = (2.U << FRAC_WIDTH)((2*FRAC_WIDTH)-1,0)
+    val two = (BigInt(2) << FRAC_WIDTH).U((2 * FRAC_WIDTH).W)
+    //val two = (2.U << FRAC_WIDTH)((2*FRAC_WIDTH)-1,0)
 
     // diff = (2 - num*x)
     val diff = two - num_x

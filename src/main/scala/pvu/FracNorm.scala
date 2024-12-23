@@ -1,5 +1,6 @@
 //Posit Vector FracNorm Unit
 //输出的是调整后的尾数和指数的调整量，还需对指数进行调整
+//WIDTH在PvuTop中调用时指定，要么是MUL_WIDTH，要么是FRAC_WIDTH
 package pvu
 
 import chisel3._
@@ -19,13 +20,13 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W + 1.W)))
   })
 
-  val LZC_WIDTH = log2Cei(WIDTH)  //存放前导0数量所需要的二进制位宽
+  val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
 
   
   for(i <- 0 until VECTOR_SIZE){
     
   //计算前导0的个数
-    val lzcMod              = Module(new LZC(WIDTH))
+    val lzcMod              = Module(new LZC(WIDTH, true, nd))
     lzcMod.io.in_i         := io.pir_frac_i(i)
     val leading_zero_count  = lzcMod.io.cnt_o
     val lzc_zeroes          = lzcMod.io.empty_o
@@ -50,12 +51,12 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     frac_shifted            := shifter.io.result_o
 
   //保留前FRAC_WITH + 1位，低位舍入
-    when(WIDTH > FRAC_WIDTH + 1){
+    if(WIDTH > (FRAC_WIDTH + 1)){
       val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
-      val sticky_bit  = |sticky_bits
+      val sticky_bit  = sticky_bits.orR.asUInt
       io.pir_frac_o(i) := Cat(frac_shifted(WIDTH - 1, WIDTH - FRAC_WIDTH) ,sticky_bit)
-    }.otherwise{
-      io.pir_frac_o(i) := frac_shifted << (FRAC_WIDTH - WIDTH + 1) 
+    }else{
+      io.pir_frac_o(i) := frac_shifted
     }
   }
-}
+} 

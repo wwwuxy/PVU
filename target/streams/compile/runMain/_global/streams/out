@@ -1,21 +1,294 @@
-[0m[[0m[31merror[0m] [0m[0mjava.lang.ClassNotFoundException: pvu.PvuTop[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:445)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.ManagedClassLoader.findClass(ManagedClassLoader.java:103)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:592)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Class.forName0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Class.forName(Class.java:467)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.getMainMethod(Run.scala:161)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.execute$1(Run.scala:93)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:121)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeSuccess(Run.scala:187)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.runWithLoader(Run.scala:121)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$bgRunMainTask$7(Defaults.scala:2011)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1982)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:369)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:840)[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) java.lang.ClassNotFoundException: pvu.PvuTop[0m
+[0m[[0m[31merror[0m] [0m[0mcirct.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:60:26: error: sink "pir_sign_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_dot = Wire(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:61:26: error: sink "pir_exp_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_dot  = Wire(SInt(EXP_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:62:26: error: sink "pir_frac_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_dot = Wire(UInt(MUL_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:164:33: error: sink "pir_exp_adjusi_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjusi_dot  = Wire(SInt(EXP_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:166:33: error: sink "pir_frac_normed_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed_dot = Wire(UInt(MUL_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:190:43: error: sink "pir_exp_rst_adjusied_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied_dot      = Wire(SInt(EXP_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:40:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:41:23: error: sink "" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:53:33: error: sink "pir_sign_rst_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:54:33: error: sink "pir_exp_rst_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:55:33: error: sink "pir_frac_rst_addsub_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:56:33: error: sink "pir_frac_rst_muldiv_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:57:33: error: sink "pir_max_exp_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:60:26: error: sink "pir_sign_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_sign_dot = Wire(UInt(1.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:61:26: error: sink "pir_exp_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_dot  = Wire(SInt(EXP_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:62:26: error: sink "pir_frac_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_dot = Wire(UInt(MUL_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:163:33: error: sink "pir_exp_adjust_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:164:33: error: sink "pir_exp_adjusi_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_adjusi_dot  = Wire(SInt(EXP_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:165:33: error: sink "pir_frac_normed_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:166:33: error: sink "pir_frac_normed_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_frac_normed_dot = Wire(UInt(MUL_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_0" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_1" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_2" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:189:34: error: sink "pir_exp_rst_adjusied_3" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:190:43: error: sink "pir_exp_rst_adjusied_dot" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val pir_exp_rst_adjusied_dot      = Wire(SInt(EXP_WIDTH.W))[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m

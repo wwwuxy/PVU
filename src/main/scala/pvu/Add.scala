@@ -51,7 +51,7 @@ class Add(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     io.overflow(i) := carry
 
     // 设置尾数截断标志：如果有进位且尾数中有1
-    io.frac_truncate(i) := carry && (sum(FRAC_WIDTH-1, 0).orR())
+    io.frac_truncate(i) := (carry.asBool && sum(FRAC_WIDTH - 1, 0).orR).asUInt
   } .otherwise { // 符号不同，执行减法
     // 确定哪个尾数更大
     val mant1         = io.pir_frac1_aligned(i)
