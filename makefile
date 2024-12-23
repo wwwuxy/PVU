@@ -2,7 +2,8 @@ BUILD_DIR = ./build
 PRG = PvuTop
 
 verilog:
-	sbt "runMain pvu.$(PRG)"
+	sbt -DparallelExecution=true -DmaxThreads=12 "runMain pvu.$(PRG)"
+	python3 clean_line.py
 git:
 	git add .
 	git commit

@@ -52,9 +52,14 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   pir_frac_cmp               := frac_compare.io.pir_frac_align
 
 //将负Posit数的尾数转换为补码
+val pir_frac_cmp_tmp = RegInit(VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W))))
+  
   for (i <- 0 until VECTOR_SIZE) {
+    pir_frac_cmp_tmp(i) := pir_frac_cmp(i)
     when (pir_sign_mul(i) === 1.U) {
-      pir_frac_cmp(i) := ~pir_frac_cmp(i) + 1.U
+      pir_frac_cmp(i) := ~pir_frac_cmp_tmp(i) + 1.U
+    }.otherwise {
+      pir_frac_cmp(i) := pir_frac_cmp_tmp(i)
     }
   }
 

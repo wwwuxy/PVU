@@ -20,9 +20,10 @@
    val MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
  
    val io = IO(new Bundle {
-     val posit_i1    = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
-     val posit_i2    = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
-     val op          = Input(UInt(3.W))
+     val posit_i1 = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
+     val posit_i2 = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
+     val op       = Input(UInt(3.W))
+
      val posit_o     = Output(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
      val posit_dot_o = Output(UInt(POSIT_WIDTH.W))
  })
@@ -40,6 +41,8 @@
   val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))
   val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))
 
+  decode1.io.posit := io.posit_i1
+  decode2.io.posit := io.posit_i2
   pir_sign1 := decode1.io.Sign
   pir_exp1  := decode1.io.Exp
   pir_frac1 := decode1.io.Frac
@@ -60,6 +63,17 @@
   val pir_sign_dot = Wire(UInt(1.W))
   val pir_exp_dot  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_dot = Wire(UInt(MUL_WIDTH.W))
+
+  //初始化中间变量
+  pir_sign_rst        := VecInit(Seq.fill(VECTOR_SIZE)(0.U(1.W)))
+  pir_exp_rst         := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
+  pir_frac_rst_addsub := VecInit(Seq.fill(VECTOR_SIZE)(0.U(FRAC_WIDTH.W)))
+  pir_frac_rst_muldiv := VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W)))
+  pir_max_exp         := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
+
+  pir_sign_dot := 0.U
+  pir_exp_dot  := 0.S
+  pir_frac_dot := 0.U
 
   when(io.op === 1.U){    //Add
     val overflow      = Wire(Vec(VECTOR_SIZE, UInt(1.W)))  //尾数溢出
@@ -165,6 +179,12 @@
   val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   val pir_frac_normed_dot = Wire(UInt(MUL_WIDTH.W))
 
+  //初始化中间变量
+  pir_exp_adjust      := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
+  pir_exp_adjusi_dot  := 0.S(EXP_WIDTH.W)
+  pir_frac_normed     := VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W)))
+  pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
+
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
   val frac_norm = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
   frac_norm.io.pir_frac_i := pir_frac_dot
@@ -188,6 +208,10 @@
 //**************//
   val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
   val pir_exp_rst_adjusied_dot      = Wire(SInt(EXP_WIDTH.W))
+
+  //初始化中间变量
+  pir_exp_rst_adjusied     := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
+  pir_exp_rst_adjusied_dot := 0.S(EXP_WIDTH.W)
 
   when(io.op === 5.U){
     pir_exp_rst_adjusied_dot := pir_exp_adjusi_dot
