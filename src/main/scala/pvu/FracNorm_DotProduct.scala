@@ -10,7 +10,7 @@ import chisel3.experimental._
 
 class FracNorm_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
   val es: Int         = 2
-  val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
+  val nd: Int         = log2Ceil(WIDTH - 1)
   val EXP_WIDTH: Int  = nd + es + 1 
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
   
@@ -18,13 +18,13 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH:
     val pir_frac_i = Input(UInt(WIDTH.W))
     
     val exp_adjust = Output(SInt((EXP_WIDTH).W))
-    val pir_frac_o = Output(UInt(FRAC_WIDTH.W + 1.W))
+    val pir_frac_o = Output(UInt((FRAC_WIDTH+1).W))
   })
 
   val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
 
   //计算前导0的个数
-    val lzcMod              = Module(new LZC(WIDTH, true, nd))
+    val lzcMod              = Module(new LZC(WIDTH - 1, true, nd))
     lzcMod.io.in_i         := io.pir_frac_i
     val leading_zero_count  = lzcMod.io.cnt_o
     val lzc_zeroes          = lzcMod.io.empty_o

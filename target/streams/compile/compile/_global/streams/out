@@ -1,4 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PvuTop.scala:204:29: not found: value newPositEncode_DotProduct[0m
-[0m[[0m[31merror[0m] [0m[0m    val encode_dot = Module(newPositEncode_DotProduct(POSIT_WIDTH))[0m
-[0m[[0m[31merror[0m] [0m[0m                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

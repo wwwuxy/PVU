@@ -13,5 +13,5 @@ class LZC(val WIDTH: Int, val MODE: Boolean, val nd: Int) extends BlackBox(Map(
     val cnt_o   = Output(UInt(nd.W))
     val empty_o = Output(Bool())
   })
-  addResource("/pvu/lzc.sv") // Ensure the path is correct
+  addResource("/pvu/lzc.sv")
 }

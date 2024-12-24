@@ -11,6 +11,7 @@
  import chisel3._
  import chisel3.util._
  import scala.languageFeature.existentials
+ import chisel3.stage._
  
  class PvuTop(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
    val es: Int         = 2
@@ -196,7 +197,7 @@
     frac_norm.io.pir_frac_i := pir_frac_rst_addsub
     pir_frac_normed         := frac_norm.io.pir_frac_o
     pir_exp_adjust          := frac_norm.io.exp_adjust
-  }.otherwise{                            //Mul Div                
+  }.elsewhen(io.op === 3.U || io.op === 4.U){                            //Mul Div                
     val frac_norm = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
     frac_norm.io.pir_frac_i := pir_frac_rst_muldiv
     pir_frac_normed         := frac_norm.io.pir_frac_o
@@ -259,6 +260,13 @@
 //         filltlflag
 //     )
 
-  object PvuTop extends App {
-    emitVerilog(new PvuTop(16, 4, 14), Array("--target-dir", "generated"))
-}
+//   object PvuTop extends App {
+//     emitVerilog(new PvuTop(16, 4, 14), Array("--target-dir", "vsrc"))
+// }
+
+// object PvuTopApp extends App {
+//   (new ChiselStage).emitSystemVerilog(
+//     new PvuTop(16, 4, 14),
+//     Array("--target-dir", "vsrc")
+//   )
+// }

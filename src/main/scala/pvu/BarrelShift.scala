@@ -14,7 +14,8 @@ class BarrelShifter(val WIDTH: Int, val SHIFT_WIDTH: Int, val MODE: Boolean) ext
   val io = IO(new Bundle {
     val operand_i    = Input(UInt(WIDTH.W))         // 输入操作数
     val shift_amount = Input(UInt(SHIFT_WIDTH.W))   // 移位量
-    val result_o     = Output(UInt(WIDTH.W))        // 移位结果
+
+    val result_o = Output(UInt(WIDTH.W))  // 移位结果
   })
 
   // 初始化 temp_results 为一个包含 SHIFT_WIDTH 个 WIDTH 位的向量
@@ -45,6 +46,3 @@ class BarrelShifter(val WIDTH: Int, val SHIFT_WIDTH: Int, val MODE: Boolean) ext
   }
 }
 
-// object BarrelShifterDriver extends App {
-//   (new chisel3.stage.ChiselStage).emitVerilog(new BarrelShifter(WIDTH = 8, SHIFT_WIDTH = 3, MODE = false))
-// }

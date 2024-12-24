@@ -1,0 +1,321 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Design internal header
+// See VPvuTop.h for the primary calling header
+
+#ifndef VERILATED_VPVUTOP___024ROOT_H_
+#define VERILATED_VPVUTOP___024ROOT_H_  // guard
+
+#include "verilated.h"
+
+class VPvuTop__Syms;
+class VPvuTop_Mul;
+class VPvuTop_IntDivider;
+
+
+class VPvuTop___024root final : public VerilatedModule {
+  public:
+    // CELLS
+    VPvuTop_Mul* __PVT__PvuTop__DOT__mul;
+    VPvuTop_IntDivider* __PVT__PvuTop__DOT__div__DOT__intdivider;
+    VPvuTop_IntDivider* __PVT__PvuTop__DOT__div__DOT__intdivider_1;
+    VPvuTop_IntDivider* __PVT__PvuTop__DOT__div__DOT__intdivider_2;
+    VPvuTop_IntDivider* __PVT__PvuTop__DOT__div__DOT__intdivider_3;
+    VPvuTop_Mul* __PVT__PvuTop__DOT__dotproduct__DOT__mul;
+
+    // DESIGN SPECIFIC STATE
+    // Anonymous structures to workaround compiler member-count bugs
+    struct {
+        VL_IN8(clock,0,0);
+        VL_IN8(reset,0,0);
+        VL_IN8(io_op,2,0);
+        CData/*6:0*/ PvuTop__DOT___frac_norm_1_io_exp_adjust_0;
+        CData/*6:0*/ PvuTop__DOT___frac_norm_1_io_exp_adjust_1;
+        CData/*6:0*/ PvuTop__DOT___frac_norm_1_io_exp_adjust_2;
+        CData/*6:0*/ PvuTop__DOT___frac_norm_1_io_exp_adjust_3;
+        CData/*6:0*/ PvuTop__DOT___decode2_io_Exp_0;
+        CData/*6:0*/ PvuTop__DOT___decode2_io_Exp_1;
+        CData/*6:0*/ PvuTop__DOT___decode2_io_Exp_2;
+        CData/*6:0*/ PvuTop__DOT___decode2_io_Exp_3;
+        CData/*6:0*/ PvuTop__DOT___decode1_io_Exp_0;
+        CData/*6:0*/ PvuTop__DOT___decode1_io_Exp_1;
+        CData/*6:0*/ PvuTop__DOT___decode1_io_Exp_2;
+        CData/*6:0*/ PvuTop__DOT___decode1_io_Exp_3;
+        CData/*0:0*/ PvuTop__DOT___GEN_3;
+        CData/*6:0*/ PvuTop__DOT____VdfgTmp_hb997c512__0;
+        CData/*6:0*/ PvuTop__DOT____VdfgTmp_h4b480731__0;
+        CData/*6:0*/ PvuTop__DOT____VdfgTmp_hf4884ee9__0;
+        CData/*6:0*/ PvuTop__DOT____VdfgTmp_hd6f5e9bb__0;
+        CData/*3:0*/ PvuTop__DOT__decode1__DOT__same_length_0;
+        CData/*3:0*/ PvuTop__DOT__decode1__DOT__same_length_1;
+        CData/*3:0*/ PvuTop__DOT__decode1__DOT__same_length_2;
+        CData/*3:0*/ PvuTop__DOT__decode1__DOT__same_length_3;
+        QData/*63:0*/ PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__decode1__DOT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__decode1__DOT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__decode1__DOT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes;
+        CData/*3:0*/ PvuTop__DOT__decode2__DOT__same_length_0;
+        CData/*3:0*/ PvuTop__DOT__decode2__DOT__same_length_1;
+        CData/*3:0*/ PvuTop__DOT__decode2__DOT__same_length_2;
+        CData/*3:0*/ PvuTop__DOT__decode2__DOT__same_length_3;
+        QData/*63:0*/ PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__decode2__DOT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__decode2__DOT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__decode2__DOT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes;
+        CData/*0:0*/ PvuTop__DOT__add__DOT___GEN;
+        CData/*0:0*/ PvuTop__DOT__add__DOT__mant1_greater;
+        CData/*0:0*/ PvuTop__DOT__add__DOT___GEN_0;
+        CData/*0:0*/ PvuTop__DOT__add__DOT__mant1_greater_1;
+        CData/*0:0*/ PvuTop__DOT__add__DOT___GEN_1;
+        CData/*0:0*/ PvuTop__DOT__add__DOT__mant1_greater_2;
+        CData/*0:0*/ PvuTop__DOT__add__DOT___GEN_2;
+        CData/*0:0*/ PvuTop__DOT__add__DOT__mant1_greater_3;
+        CData/*6:0*/ PvuTop__DOT__fracalign_1__DOT__io_pir_max_exp_0;
+        CData/*6:0*/ PvuTop__DOT__fracalign_1__DOT__io_pir_max_exp_1;
+        CData/*6:0*/ PvuTop__DOT__fracalign_1__DOT__io_pir_max_exp_2;
+        CData/*6:0*/ PvuTop__DOT__fracalign_1__DOT__io_pir_max_exp_3;
+        VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
+        CData/*6:0*/ PvuTop__DOT__frac_norm_1__DOT____VdfgTmp_h11bd50f9__0;
+        QData/*63:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_1__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_2__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes;
+        CData/*7:0*/ PvuTop__DOT__frac_norm_2__DOT____VdfgTmp_h2de102ef__0;
+        VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_1__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_2__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes;
+        CData/*3:0*/ PvuTop__DOT__encode_dot__DOT____Vcellinp__barrel_shifter__io_shift_amount;
+        CData/*3:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_shift_amount;
+        CData/*3:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_1__io_shift_amount;
+        CData/*3:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_2__io_shift_amount;
+        CData/*3:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_3__io_shift_amount;
+    };
+    struct {
+        CData/*0:0*/ __VdfgTmp_h4be4f099__0;
+        CData/*7:0*/ __VdfgTmp_hffa0ba97__0;
+        CData/*6:0*/ __VdfgTmp_h1ec67085__0;
+        CData/*6:0*/ __VdfgTmp_h6fb595b3__0;
+        CData/*6:0*/ __VdfgTmp_h3716be99__0;
+        CData/*6:0*/ __VdfgTmp_hc6283759__0;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule_1__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule_2__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule_3__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod_1__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod_2__DOT__gen_lzc__DOT__index_nodes;
+        QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod_1__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod_2__DOT__gen_lzc__DOT__index_nodes;
+        VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes;
+        CData/*0:0*/ __VstlDidInit;
+        CData/*0:0*/ __VicoDidInit;
+        CData/*0:0*/ __Vtrigrprev__TOP__clock;
+        CData/*0:0*/ __VactDidInit;
+        CData/*0:0*/ __VactContinue;
+        VL_IN16(io_posit_i1_0,15,0);
+        VL_IN16(io_posit_i1_1,15,0);
+        VL_IN16(io_posit_i1_2,15,0);
+        VL_IN16(io_posit_i1_3,15,0);
+        VL_IN16(io_posit_i2_0,15,0);
+        VL_IN16(io_posit_i2_1,15,0);
+        VL_IN16(io_posit_i2_2,15,0);
+        VL_IN16(io_posit_i2_3,15,0);
+        VL_OUT16(io_posit_o_0,15,0);
+        VL_OUT16(io_posit_o_1,15,0);
+        VL_OUT16(io_posit_o_2,15,0);
+        VL_OUT16(io_posit_o_3,15,0);
+        VL_OUT16(io_posit_dot_o,15,0);
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac1_align_0;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac1_align_1;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac1_align_2;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac1_align_3;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac2_align_0;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac2_align_1;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac2_align_2;
+        SData/*13:0*/ PvuTop__DOT___fracalign_1_io_pir_frac2_align_3;
+        SData/*11:0*/ PvuTop__DOT___decode2_io_Frac_0;
+        SData/*11:0*/ PvuTop__DOT___decode2_io_Frac_1;
+        SData/*11:0*/ PvuTop__DOT___decode2_io_Frac_2;
+        SData/*11:0*/ PvuTop__DOT___decode2_io_Frac_3;
+        SData/*11:0*/ PvuTop__DOT___decode1_io_Frac_0;
+        SData/*11:0*/ PvuTop__DOT___decode1_io_Frac_1;
+        SData/*11:0*/ PvuTop__DOT___decode1_io_Frac_2;
+        SData/*11:0*/ PvuTop__DOT___decode1_io_Frac_3;
+        SData/*11:0*/ PvuTop__DOT____Vcellinp__frac_norm_1__io_pir_frac_i_3;
+        SData/*11:0*/ PvuTop__DOT____Vcellinp__frac_norm_1__io_pir_frac_i_2;
+        SData/*11:0*/ PvuTop__DOT____Vcellinp__frac_norm_1__io_pir_frac_i_1;
+        SData/*11:0*/ PvuTop__DOT____Vcellinp__frac_norm_1__io_pir_frac_i_0;
+        SData/*12:0*/ PvuTop__DOT____Vcellinp__encode__io_pir_frac_3;
+        SData/*12:0*/ PvuTop__DOT____Vcellinp__encode__io_pir_frac_2;
+        SData/*12:0*/ PvuTop__DOT____Vcellinp__encode__io_pir_frac_1;
+    };
+    struct {
+        SData/*12:0*/ PvuTop__DOT____Vcellinp__encode__io_pir_frac_0;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT___barrel_shifter_3_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT___barrel_shifter_2_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT___barrel_shifter_1_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT___barrel_shifter_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__operand_0;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__operand_1;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__operand_2;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__operand_3;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT____Vcellinp__lzcModule__in_i;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT____Vcellinp__lzcModule_1__in_i;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT____Vcellinp__lzcModule_2__in_i;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT____Vcellinp__lzcModule_3__in_i;
+        SData/*15:0*/ PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__in_tmp;
+        SData/*15:0*/ PvuTop__DOT__decode1__DOT__lzcModule_1__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp;
+        SData/*15:0*/ PvuTop__DOT__decode1__DOT__lzcModule_2__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp;
+        SData/*15:0*/ PvuTop__DOT__decode1__DOT__lzcModule_3__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode1__DOT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT___barrel_shifter_3_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT___barrel_shifter_2_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT___barrel_shifter_1_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT___barrel_shifter_io_result_o;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__operand_0;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__operand_1;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__operand_2;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__operand_3;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT____Vcellinp__lzcModule__in_i;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT____Vcellinp__lzcModule_1__in_i;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT____Vcellinp__lzcModule_2__in_i;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT____Vcellinp__lzcModule_3__in_i;
+        SData/*15:0*/ PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__in_tmp;
+        SData/*15:0*/ PvuTop__DOT__decode2__DOT__lzcModule_1__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__lzcModule_1__DOT__gen_lzc__DOT__in_tmp;
+        SData/*15:0*/ PvuTop__DOT__decode2__DOT__lzcModule_2__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__lzcModule_2__DOT__gen_lzc__DOT__in_tmp;
+        SData/*15:0*/ PvuTop__DOT__decode2__DOT__lzcModule_3__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*14:0*/ PvuTop__DOT__decode2__DOT__lzcModule_3__DOT__gen_lzc__DOT__in_tmp;
+        SData/*12:0*/ PvuTop__DOT__add__DOT__sum;
+        SData/*12:0*/ PvuTop__DOT__add__DOT__sum_1;
+        SData/*12:0*/ PvuTop__DOT__add__DOT__sum_2;
+        SData/*12:0*/ PvuTop__DOT__add__DOT__sum_3;
+        SData/*15:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*10:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
+        SData/*11:0*/ PvuTop__DOT__frac_norm_1__DOT__shifter__DOT___temp_results_0_T_2;
+        SData/*15:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_1__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*10:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_1__DOT__gen_lzc__DOT__in_tmp;
+        SData/*11:0*/ PvuTop__DOT__frac_norm_1__DOT__shifter_1__DOT___temp_results_0_T_2;
+        SData/*15:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_2__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*10:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_2__DOT__gen_lzc__DOT__in_tmp;
+        SData/*11:0*/ PvuTop__DOT__frac_norm_1__DOT__shifter_2__DOT___temp_results_0_T_2;
+        SData/*15:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_3__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*10:0*/ PvuTop__DOT__frac_norm_1__DOT__lzcMod_3__DOT__gen_lzc__DOT__in_tmp;
+        SData/*11:0*/ PvuTop__DOT__frac_norm_1__DOT__shifter_3__DOT___temp_results_0_T_2;
+        SData/*14:0*/ PvuTop__DOT__encode__DOT___value_after_round_0_T;
+        SData/*14:0*/ PvuTop__DOT__encode__DOT___value_after_round_1_T;
+        SData/*14:0*/ PvuTop__DOT__encode__DOT___value_after_round_2_T;
+        SData/*14:0*/ PvuTop__DOT__encode__DOT___value_after_round_3_T;
+        SData/*11:0*/ __VdfgTmp_h2299343e__0;
+        SData/*11:0*/ __VdfgTmp_h5b3a16c4__0;
+        SData/*11:0*/ __VdfgTmp_h87d0ba2c__0;
+    };
+    struct {
+        SData/*11:0*/ __VdfgTmp_h64874eba__0;
+        SData/*11:0*/ __VdfgTmp_h79bf5980__0;
+        SData/*11:0*/ __VdfgTmp_h085a2b98__0;
+        SData/*11:0*/ __VdfgTmp_h980bc3a7__0;
+        SData/*11:0*/ __VdfgTmp_hcba88845__0;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule_1__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule_2__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule_3__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule_1__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule_2__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule_3__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod_1__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod_2__DOT__gen_lzc__DOT__sel_nodes;
+        SData/*15:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_1__DOT__lzcMod_3__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*25:0*/ PvuTop__DOT___dotproduct_io_pir_frac_o;
+        IData/*25:0*/ PvuTop__DOT____Vcellinp__frac_norm__io_pir_frac_i;
+        IData/*25:0*/ PvuTop__DOT____Vcellinp__frac_norm_2__io_pir_frac_i_3;
+        IData/*25:0*/ PvuTop__DOT____Vcellinp__frac_norm_2__io_pir_frac_i_2;
+        IData/*25:0*/ PvuTop__DOT____Vcellinp__frac_norm_2__io_pir_frac_i_1;
+        IData/*25:0*/ PvuTop__DOT____Vcellinp__frac_norm_2__io_pir_frac_i_0;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT__pir_frac_cmp_tmp_0;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT__pir_frac_cmp_tmp_1;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT__pir_frac_cmp_tmp_2;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT__pir_frac_cmp_tmp_3;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT___pir_frac_cmp_0_T_1;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT___pir_frac_cmp_1_T_1;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT___pir_frac_cmp_2_T_1;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT___pir_frac_cmp_3_T_1;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT____Vcellinp__csaTree__io_operands_i_3;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT____Vcellinp__csaTree__io_operands_i_2;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT____Vcellinp__csaTree__io_operands_i_1;
+        IData/*25:0*/ PvuTop__DOT__dotproduct__DOT____Vcellinp__csaTree__io_operands_i_0;
+        IData/*25:0*/ PvuTop__DOT__frac_norm__DOT___shifter_io_result_o;
+        IData/*24:0*/ PvuTop__DOT__frac_norm__DOT____Vcellinp__lzcMod__in_i;
+        IData/*31:0*/ PvuTop__DOT__frac_norm__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*24:0*/ PvuTop__DOT__frac_norm__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
+        IData/*25:0*/ PvuTop__DOT__frac_norm_2__DOT___shifter_3_io_result_o;
+        IData/*25:0*/ PvuTop__DOT__frac_norm_2__DOT___shifter_2_io_result_o;
+        IData/*25:0*/ PvuTop__DOT__frac_norm_2__DOT___shifter_1_io_result_o;
+        IData/*25:0*/ PvuTop__DOT__frac_norm_2__DOT___shifter_io_result_o;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT____Vcellinp__lzcMod__in_i;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT____Vcellinp__lzcMod_1__in_i;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT____Vcellinp__lzcMod_2__in_i;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT____Vcellinp__lzcMod_3__in_i;
+        IData/*31:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
+        IData/*31:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_1__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_1__DOT__gen_lzc__DOT__in_tmp;
+        IData/*31:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_2__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_2__DOT__gen_lzc__DOT__in_tmp;
+        IData/*31:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_3__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*24:0*/ PvuTop__DOT__frac_norm_2__DOT__lzcMod_3__DOT__gen_lzc__DOT__in_tmp;
+        IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod_1__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod_2__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_2__DOT__lzcMod_3__DOT__gen_lzc__DOT__sel_nodes;
+        IData/*31:0*/ __VstlIterCount;
+        IData/*31:0*/ __VicoIterCount;
+        IData/*31:0*/ __VactIterCount;
+        QData/*43:0*/ PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o;
+    };
+    struct {
+        QData/*43:0*/ PvuTop__DOT__encode_dot__DOT____Vcellinp__barrel_shifter__io_operand_i;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT___barrel_shifter_3_io_result_o;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT___barrel_shifter_2_io_result_o;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT___barrel_shifter_1_io_result_o;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT___barrel_shifter_io_result_o;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_operand_i;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_1__io_operand_i;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_2__io_operand_i;
+        QData/*43:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_3__io_operand_i;
+        VlUnpacked<CData/*0:0*/, 30> __Vm_traceActivity;
+    };
+    VlTriggerVec<35> __VstlTriggered;
+    VlTriggerVec<35> __VicoTriggered;
+    VlTriggerVec<35> __VactTriggered;
+    VlTriggerVec<35> __VnbaTriggered;
+
+    // INTERNAL VARIABLES
+    VPvuTop__Syms* const vlSymsp;
+
+    // CONSTRUCTORS
+    VPvuTop___024root(VPvuTop__Syms* symsp, const char* v__name);
+    ~VPvuTop___024root();
+    VL_UNCOPYABLE(VPvuTop___024root);
+
+    // INTERNAL METHODS
+    void __Vconfigure(bool first);
+} VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
+
+
+#endif  // guard
