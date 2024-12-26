@@ -4,7 +4,7 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
+class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
 // Fixed parameters
   val es: Int         = 2
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
@@ -16,12 +16,12 @@ class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     val pir_sign2_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_exp1_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
     val pir_exp2_i        = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-    val pir_frac1_aligned = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
-    val pir_frac2_aligned = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
+    val pir_frac1_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
+    val pir_frac2_aligned = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
 
     val pir_sign_o    = Output(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_exp_o     = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-    val pir_frac_o    = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
+    val pir_frac_o    = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
     val overflow      = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Overflow flag
     val frac_truncate = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Fraction_Truncate flag
   })
@@ -57,8 +57,8 @@ class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 
     }.otherwise{ //符号不同，执行加法
       val sum      = io.pir_frac1_aligned(i) +& io.pir_frac2_aligned(i)
-      val carry    = sum(FRAC_WIDTH)
-      val new_frac = Mux(carry, sum >> 1, sum(FRAC_WIDTH-1, 0))
+      val carry    = sum(ALIGN_WIDTH)
+      val new_frac = Mux(carry, sum >> 1, sum(ALIGN_WIDTH-1, 0))
       val new_exp  = Mux(carry, io.pir_exp1_i(i) + 1.S, io.pir_exp1_i(i))
     
     //赋值结果符号、指数和尾数
@@ -68,7 +68,7 @@ class Sub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 
     //溢出、截断标志
       io.overflow(i)  := carry
-      io.frac_truncate(i) := carry && (sum(FRAC_WIDTH-1, 0).orR)
+      io.frac_truncate(i) := carry && (sum(ALIGN_WIDTH-1, 0).orR)
 
     } 
   }

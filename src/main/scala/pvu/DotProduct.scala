@@ -9,7 +9,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
   val EXP_WIDTH: Int  = nd + es + 1 
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
-  val MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
+  val MUL_WIDTH: Int  = 2 * (ALIGN_WIDTH + 1)
 
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -29,7 +29,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   val pir_exp_mul  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
   val pir_frac_mul = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
 
-  val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE))
+  val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
   mul.io.pir_sign1_i := io.pir_sign1_i
   mul.io.pir_sign2_i := io.pir_sign2_i
   mul.io.pir_exp1_i  := io.pir_exp1_i

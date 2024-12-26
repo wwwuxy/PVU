@@ -18,7 +18,7 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     val Frac = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
   })
 
-  // Handling symbols and operand
+  // Handling symbols and operand 将负数转换为补码
   val operand = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W))) // Remove the sign bit
   for (i <- 0 until VECTOR_SIZE) {
     io.Sign(i) := io.posit(i)(POSIT_WIDTH - 1)
@@ -29,7 +29,7 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val R0          = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val lzc_operand = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
   val lzc         = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
-  val lzc_zeros   = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
+  val lzc_zeros   = Wire(Vec(VECTOR_SIZE, UInt(0.W)))
 
   for (i <- 0 until VECTOR_SIZE) {
     R0(i)          := operand(i)(POSIT_WIDTH - 2)
@@ -44,6 +44,8 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     lzc_zeros(i)      := lzcModule.io.empty_o
   }
 
+  // printf("lzc[0] = %d, lzc_zeros[0] = %d\n", lzc(0), lzc_zeros(0))
+
   // Get the regime value
   val same_length = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
   val regime_r    = Wire(Vec(VECTOR_SIZE, SInt((nd + 1).W)))
@@ -52,6 +54,8 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     same_length(i) := Mux(lzc_zeros(i) === 1.U, (POSIT_WIDTH - 1).U, lzc(i))
     regime_r(i)    := (Mux(R0(i) === 1.U, Cat(0.U, same_length(i) - 1.U), Cat(1.U, ~same_length(i) + 1.U))).asSInt // regime value, Convert negative numbers to two's complement
   }
+
+  // printf("same_length[0] = %d, regime_r[0] = %d\n", same_length(0), regime_r(0))
 
   // Left shift the regime
   val operand_after_shift = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
@@ -73,7 +77,9 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   // Extract the fraction
   val implicit_bits = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   for (i <- 0 until VECTOR_SIZE) {
-    implicit_bits(i) := operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2).orR // |operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2)
+    implicit_bits(i) := operand(i)(POSIT_WIDTH - 2, 0).orR // |operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2)
     io.Frac(i) := Cat(implicit_bits(i), operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2))
   }
+
+  // printf("implicit_bits(0) = %d, io.Frac(0) = %b\n", implicit_bits(0), io.Frac(0));
 }

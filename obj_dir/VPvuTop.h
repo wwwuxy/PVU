@@ -13,9 +13,6 @@
 class VPvuTop__Syms;
 class VPvuTop___024root;
 class VerilatedVcdC;
-class VPvuTop_Mul;
-class VPvuTop_IntDivider;
-
 
 // This class is the main interface to the Verilated model
 class VPvuTop VL_NOT_FINAL : public VerilatedModel {
@@ -32,28 +29,13 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&reset,0,0);
     VL_IN8(&io_op,2,0);
     VL_IN16(&io_posit_i1_0,15,0);
-    VL_IN16(&io_posit_i1_1,15,0);
-    VL_IN16(&io_posit_i1_2,15,0);
-    VL_IN16(&io_posit_i1_3,15,0);
     VL_IN16(&io_posit_i2_0,15,0);
-    VL_IN16(&io_posit_i2_1,15,0);
-    VL_IN16(&io_posit_i2_2,15,0);
-    VL_IN16(&io_posit_i2_3,15,0);
     VL_OUT16(&io_posit_o_0,15,0);
-    VL_OUT16(&io_posit_o_1,15,0);
-    VL_OUT16(&io_posit_o_2,15,0);
-    VL_OUT16(&io_posit_o_3,15,0);
     VL_OUT16(&io_posit_dot_o,15,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
-    VPvuTop_Mul* const __PVT__PvuTop__DOT__mul;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_1;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_2;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_3;
-    VPvuTop_Mul* const __PVT__PvuTop__DOT__dotproduct__DOT__mul;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

@@ -1,0 +1,10 @@
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PvuTop.scala:203:5: not found: value frac_norm[0m
+[0m[[0m[31merror[0m] [0m[0m    frac_norm.io.pir_frac_i := pir_frac_rst_add[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PvuTop.scala:204:32: not found: value frac_norm[0m
+[0m[[0m[31merror[0m] [0m[0m    pir_frac_normed         := frac_norm.io.pir_frac_o[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PvuTop.scala:205:32: not found: value frac_norm[0m
+[0m[[0m[31merror[0m] [0m[0m    pir_exp_adjust          := frac_norm.io.exp_adjust[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

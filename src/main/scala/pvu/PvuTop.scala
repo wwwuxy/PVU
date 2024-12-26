@@ -18,7 +18,7 @@
    val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
    val EXP_WIDTH: Int  = nd + es + 1 
    val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
-   val MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
+   val MUL_WIDTH: Int  = 2 * (ALIGN_WIDTH + 1)
  
    val io = IO(new Bundle {
      val posit_i1 = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
@@ -56,7 +56,8 @@
 //***********************//
   val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-  val pir_frac_rst_addsub = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
+  val pir_frac_rst_add    = Wire(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
+  val pir_frac_rst_sub    = Wire(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
   val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align
 
@@ -66,11 +67,14 @@
   val pir_frac_dot = Wire(UInt(MUL_WIDTH.W))
 
   //初始化中间变量
-  pir_sign_rst        := VecInit(Seq.fill(VECTOR_SIZE)(0.U(1.W)))
-  pir_exp_rst         := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
-  pir_frac_rst_addsub := VecInit(Seq.fill(VECTOR_SIZE)(0.U(FRAC_WIDTH.W)))
-  pir_frac_rst_muldiv := VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W)))
-  pir_max_exp         := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
+  for(i <- 0 until VECTOR_SIZE){
+    pir_sign_rst(i)        := 0.U
+    pir_exp_rst(i)         := 0.S
+    pir_frac_rst_add(i)    := 0.U
+    pir_frac_rst_sub(i)    := 0.U
+    pir_frac_rst_muldiv(i) := 0.U
+    pir_max_exp(i)         := 0.S
+  }
 
   pir_sign_dot := 0.U
   pir_exp_dot  := 0.S
@@ -81,7 +85,7 @@
     val frac_truncate = Wire(Vec(VECTOR_SIZE, UInt(1.W)))  //尾数截断
   
     val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
-    val add       = Module(new Add(POSIT_WIDTH, VECTOR_SIZE))
+    val add       = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
 
     fracalign.io.pir_exp1_i  := pir_exp1
     fracalign.io.pir_frac1_i := pir_frac1
@@ -95,19 +99,19 @@
     add.io.pir_frac1_aligned := fracalign.io.pir_frac1_align
     add.io.pir_frac2_aligned := fracalign.io.pir_frac2_align
   
-    pir_sign_rst        := add.io.pir_sign_o
-    pir_exp_rst         := add.io.pir_exp_o
-    pir_frac_rst_addsub := add.io.pir_frac_o
-    pir_max_exp         := fracalign.io.pir_max_exp
-    overflow            := add.io.overflow
-    frac_truncate       := add.io.frac_truncate
+    pir_sign_rst     := add.io.pir_sign_o
+    pir_exp_rst      := add.io.pir_exp_o
+    pir_frac_rst_add := add.io.pir_frac_o
+    pir_max_exp      := fracalign.io.pir_max_exp
+    overflow         := add.io.overflow
+    frac_truncate    := add.io.frac_truncate
 
   }.elsewhen(io.op === 2.U){  //Sub
     val overflow      = Wire(Vec(VECTOR_SIZE, UInt(1.W))) 
     val frac_truncate = Wire(Vec(VECTOR_SIZE, UInt(1.W))) 
 
     val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
-    val sub       = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE))
+    val sub       = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
 
     fracalign.io.pir_exp1_i  := pir_exp1
     fracalign.io.pir_frac1_i := pir_frac1
@@ -121,15 +125,15 @@
     sub.io.pir_frac1_aligned := fracalign.io.pir_frac1_align
     sub.io.pir_frac2_aligned := fracalign.io.pir_frac2_align
   
-    pir_sign_rst        := sub.io.pir_sign_o
-    pir_exp_rst         := sub.io.pir_exp_o
-    pir_frac_rst_addsub := sub.io.pir_frac_o
-    pir_max_exp         := fracalign.io.pir_max_exp
-    overflow            := sub.io.overflow
-    frac_truncate       := sub.io.frac_truncate
+    pir_sign_rst     := sub.io.pir_sign_o
+    pir_exp_rst      := sub.io.pir_exp_o
+    pir_frac_rst_sub := sub.io.pir_frac_o
+    pir_max_exp      := fracalign.io.pir_max_exp
+    overflow         := sub.io.overflow
+    frac_truncate    := sub.io.frac_truncate
   
   }.elsewhen(io.op === 3.U){  //Mul
-    val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE))
+    val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
   
     mul.io.pir_sign1_i := pir_sign1
     mul.io.pir_sign2_i := pir_sign2
@@ -143,7 +147,7 @@
     pir_frac_rst_muldiv := mul.io.pir_frac_o
   
   }.elsewhen(io.op === 4.U){  //Div
-    val div = Module(new Div(POSIT_WIDTH, VECTOR_SIZE))
+    val div = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
   
     div.io.pir_sign1_i := pir_sign1
     div.io.pir_sign2_i := pir_sign2
@@ -172,6 +176,8 @@
     pir_frac_dot := dotproduct.io.pir_frac_o
   }
 
+   printf("pir_frac_rst_add: %b\n", pir_frac_rst_add(0))
+
 //***********************//
 //fraction normalization//
 //***********************//
@@ -187,22 +193,29 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
-  frac_norm.io.pir_frac_i := pir_frac_dot
-  pir_frac_normed_dot     := frac_norm.io.pir_frac_o
-  pir_exp_adjusi_dot      := frac_norm.io.exp_adjust
+  val frac_norm_dot = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
+  frac_norm_dot.io.pir_frac_i := pir_frac_dot
+  pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
+  pir_exp_adjusi_dot          := frac_norm_dot.io.exp_adjust
   
-  }.elsewhen(io.op === 1.U || io.op === 2.U){ //Add Sub
-    val frac_norm = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, FRAC_WIDTH, 1))
-    frac_norm.io.pir_frac_i := pir_frac_rst_addsub
-    pir_frac_normed         := frac_norm.io.pir_frac_o
-    pir_exp_adjust          := frac_norm.io.exp_adjust
+  }.elsewhen(io.op === 1.U){ //Add
+    val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+    frac_norm_add.io.pir_frac_i := pir_frac_rst_add
+    pir_frac_normed             := frac_norm_add.io.pir_frac_o
+    pir_exp_adjust              := frac_norm_add.io.exp_adjust
+  }.elsewhen(io.op === 2.U){ //Sub
+    val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+    frac_norm_sub.io.pir_frac_i := pir_frac_rst_sub
+    pir_frac_normed             := frac_norm_sub.io.pir_frac_o
+    pir_exp_adjust              := frac_norm_sub.io.exp_adjust
   }.elsewhen(io.op === 3.U || io.op === 4.U){                            //Mul Div                
     val frac_norm = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
     frac_norm.io.pir_frac_i := pir_frac_rst_muldiv
     pir_frac_normed         := frac_norm.io.pir_frac_o
     pir_exp_adjust          := frac_norm.io.exp_adjust
   }
+
+  printf("pir_frac_normed: %b\n", pir_frac_normed(0))
 
 //***************//
 //**Adjust EXP**//

@@ -15,24 +15,9 @@ VPvuTop::VPvuTop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , reset{vlSymsp->TOP.reset}
     , io_op{vlSymsp->TOP.io_op}
     , io_posit_i1_0{vlSymsp->TOP.io_posit_i1_0}
-    , io_posit_i1_1{vlSymsp->TOP.io_posit_i1_1}
-    , io_posit_i1_2{vlSymsp->TOP.io_posit_i1_2}
-    , io_posit_i1_3{vlSymsp->TOP.io_posit_i1_3}
     , io_posit_i2_0{vlSymsp->TOP.io_posit_i2_0}
-    , io_posit_i2_1{vlSymsp->TOP.io_posit_i2_1}
-    , io_posit_i2_2{vlSymsp->TOP.io_posit_i2_2}
-    , io_posit_i2_3{vlSymsp->TOP.io_posit_i2_3}
     , io_posit_o_0{vlSymsp->TOP.io_posit_o_0}
-    , io_posit_o_1{vlSymsp->TOP.io_posit_o_1}
-    , io_posit_o_2{vlSymsp->TOP.io_posit_o_2}
-    , io_posit_o_3{vlSymsp->TOP.io_posit_o_3}
     , io_posit_dot_o{vlSymsp->TOP.io_posit_dot_o}
-    , __PVT__PvuTop__DOT__mul{vlSymsp->TOP.__PVT__PvuTop__DOT__mul}
-    , __PVT__PvuTop__DOT__div__DOT__intdivider{vlSymsp->TOP.__PVT__PvuTop__DOT__div__DOT__intdivider}
-    , __PVT__PvuTop__DOT__div__DOT__intdivider_1{vlSymsp->TOP.__PVT__PvuTop__DOT__div__DOT__intdivider_1}
-    , __PVT__PvuTop__DOT__div__DOT__intdivider_2{vlSymsp->TOP.__PVT__PvuTop__DOT__div__DOT__intdivider_2}
-    , __PVT__PvuTop__DOT__div__DOT__intdivider_3{vlSymsp->TOP.__PVT__PvuTop__DOT__div__DOT__intdivider_3}
-    , __PVT__PvuTop__DOT__dotproduct__DOT__mul{vlSymsp->TOP.__PVT__PvuTop__DOT__dotproduct__DOT__mul}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

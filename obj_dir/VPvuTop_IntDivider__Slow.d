@@ -5,4 +5,4 @@ VPvuTop_IntDivider__Slow.o: VPvuTop_IntDivider__Slow.cpp \
  /usr/local/share/verilator/include/verilated_types.h \
  /usr/local/share/verilator/include/verilated_funcs.h \
  VPvuTop_IntDivider.h VPvuTop__Syms.h VPvuTop.h VPvuTop___024root.h \
- VPvuTop_Mul.h
+ VPvuTop_Radix4BoothMultiplier.h

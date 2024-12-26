@@ -26,7 +26,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
   for(i <- 0 until VECTOR_SIZE){
     
   //计算前导0的个数
-    val lzcMod              = Module(new LZC(WIDTH - 1, true, nd))
+    val lzcMod              = Module(new LZC(WIDTH, true, nd))
         lzcMod.io.in_i     := io.pir_frac_i(i)
         leading_zero_count := lzcMod.io.cnt_o
     val lzc_zeroes          = lzcMod.io.empty_o
@@ -41,7 +41,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
       exp_adjust_reg := -((leading_zero_count - (DECIMAL_POINT.U - 1.U)).asSInt)
     }
 
-    io.exp_adjust(i) := exp_adjust_reg
+    io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
 
   //使用barrel_shifter左移，使DECIMAL_POINT位上为1
     val frac_shifted = Wire(UInt(WIDTH.W))
@@ -55,8 +55,10 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
       val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
       val sticky_bit  = sticky_bits.orR.asUInt
       io.pir_frac_o(i) := Cat(frac_shifted(WIDTH - 1, WIDTH - FRAC_WIDTH) ,sticky_bit)
+      io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
     }else{
       io.pir_frac_o(i) := frac_shifted
+      io.exp_adjust(i) := exp_adjust_reg
     }
   }
 } 

@@ -12,10 +12,11 @@ class FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val A
   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
   
   val io = IO(new Bundle {
-    val pir_frac1_i     = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))  
-    val pir_frac2_i     = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))  
-    val pir_exp1_i      = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   
-    val pir_exp2_i      = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   
+    val pir_frac1_i = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
+    val pir_frac2_i = Input(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
+    val pir_exp1_i  = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
+    val pir_exp2_i  = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
+    
     val pir_frac1_align = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
     val pir_frac2_align = Output(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
     val pir_max_exp     = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //for encode and fraction_normalize 
@@ -49,8 +50,19 @@ class FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val A
     val shift_amount1 = (io.pir_max_exp(i) - io.pir_exp1_i(i)).asUInt
     val shift_amount2 = (io.pir_max_exp(i) - io.pir_exp2_i(i)).asUInt
 
+    when(shift_amount1 === 0.U && shift_amount2 =/= 0.U){
+      io.pir_frac1_align(i) := frac1_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
+      io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2)
+    }.elsewhen(shift_amount2 === 0.U && shift_amount1 =/= 0.U){
+      io.pir_frac2_align(i) := frac2_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
+      io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1)
+    }.elsewhen(shift_amount1 === 0.U && shift_amount2 === 0.U){
+      io.pir_frac1_align(i) := frac1_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
+      io.pir_frac2_align(i) := frac2_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
+    }.otherwise {
     // Ensure shift_amount <= ALIGN_WIDTH
     io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1)
     io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2)
+    }
   }
 }

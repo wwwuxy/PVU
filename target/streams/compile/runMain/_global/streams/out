@@ -1,0 +1,30 @@
+[0m[[0m[31merror[0m] [0m[0mcirct.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac1_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
+[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac2_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
+[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac1_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
+[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac2_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
+[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m

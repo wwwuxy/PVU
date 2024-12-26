@@ -19,6 +19,10 @@ verilog:
 
 run:${CSRCS} ${VSRCS}
 	verilator ${VERILATOR_FLAGS} ${CSRCS} ${VSRCS}
+	./obj_dir/VPvuTop
+
+wave:
+	gtkwave *.vcd
 
 git:
 	git add .

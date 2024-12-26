@@ -32,6 +32,8 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     es_value(i) := io.pir_exp(i)(es - 1, 0)
   }
 
+  // printf("regime_k[0] = %d, es_value[0] = %d\n", regime_k(0), es_value(0))
+
   //初始化regime
   val k_sign       = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val regime_init  = Wire(UInt((POSIT_WIDTH - 1).W))
@@ -51,12 +53,16 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     regime_width(i) := Mux(k_sign(i) === 1.U, ((~regime_k(i) + 1.U) + 1.U), regime_k(i) + 2.U)
   }
 
+  // printf("regime_width[0] = %d\n", regime_width(0))
+
   //拼接各个部分（位宽溢出）
   var TMP_WIDTH   = POSIT_WIDTH - 1 + es + FRAC_WIDTH
   val reg_es_frac = Wire(Vec(VECTOR_SIZE, UInt(TMP_WIDTH.W)))
   for(i <- 0 until VECTOR_SIZE){
     reg_es_frac(i) := Cat(regime(i), es_value(i), io.pir_frac(i)(FRAC_WIDTH - 1, 0))
   }
+
+  // printf("reg_es_frac[0] = %b\n", reg_es_frac(0))
 
   //进行右移操作(先左移再右移)
   var MAX_SHIFT   = FRAC_WIDTH + es + 1
@@ -75,11 +81,14 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
 
   for(i <- 0 until VECTOR_SIZE){
     value_before_shift(i) := reg_es_frac(i) << MAX_SHIFT
-    val barrel_shifter = Module(new BarrelShifter(TMP_WIDTH + MAX_SHIFT, SHIFT_WIDTH, false))
+    val barrel_shifter = Module(new BarrelShifter(TMP_WIDTH + MAX_SHIFT, SHIFT_WIDTH, true))
     barrel_shifter.io.operand_i    := value_before_shift(i)
     barrel_shifter.io.shift_amount := shift(i)
     value_after_shift(i)           := barrel_shifter.io.result_o
   }
+
+  // printf("value_before_shift[0] = %b\n", value_before_shift(0))
+  // printf("value_after_shift[0]  = %b\n", value_after_shift(0))
 
   //进行舍入操作  --> RNE舍入
   val value_before_round = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
@@ -95,6 +104,9 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
    val round_value       = round_bit & (sticky_bit | value_before_round(i)(0))
    value_after_round(i) := value_before_round(i) + round_value
   }
+
+  // printf("value_before_round[0] = %b\n", value_before_round(0))
+  // printf("value_after_round[0]  = %b\n", value_after_round(0))
 
   //输出Posit --> 转换为补码
   for(i <- 0 until VECTOR_SIZE){

@@ -1,4 +1,3 @@
-// See README.md for license details.
 
 ThisBuild / scalaVersion     := "2.13.12"
 ThisBuild / version          := "0.1.0"

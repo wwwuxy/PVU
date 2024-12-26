@@ -16,17 +16,12 @@ object Elaborate extends App{
         "--target:systemverilog"
         )
     firtoolOpts = firtoolOpts ++ Array(
-        "--lowering-options=" + Seq(
-            // "locationInfoStyle=wrapWithLineInfo",
-            // "disallowLocalVariables",
-            // "disallowPackedArrays"
-            // "mitigateVivadoArrayIndexConstPropBug"
-        ).mkString(","),
-        "--disable-all-randomization"
-    )
+    "--preserve-aggregate=all",
+    "--disable-all-randomization"
+)
 
     ChiselStage.emitSystemVerilogFile(
-        new PvuTop(16, 4, 14),
+        new PvuTop(16, 1, 14),
         filltlflag,
         firtoolOpts
     )
