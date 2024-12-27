@@ -50,19 +50,21 @@ class FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val A
     val shift_amount1 = (io.pir_max_exp(i) - io.pir_exp1_i(i)).asUInt
     val shift_amount2 = (io.pir_max_exp(i) - io.pir_exp2_i(i)).asUInt
 
+    // printf("shift_amount1 = %d, shift_amount2 = %d\n", shift_amount1, shift_amount2)
+
     when(shift_amount1 === 0.U && shift_amount2 =/= 0.U){
       io.pir_frac1_align(i) := frac1_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
-      io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2)
+      io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 + ALIGN_WIDTH.U - FRAC_WIDTH.U > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2 + ALIGN_WIDTH.U - FRAC_WIDTH.U)
     }.elsewhen(shift_amount2 === 0.U && shift_amount1 =/= 0.U){
       io.pir_frac2_align(i) := frac2_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
-      io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1)
+      io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 + ALIGN_WIDTH.U - FRAC_WIDTH.U> ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1 + ALIGN_WIDTH.U - FRAC_WIDTH.U)
     }.elsewhen(shift_amount1 === 0.U && shift_amount2 === 0.U){
       io.pir_frac1_align(i) := frac1_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
       io.pir_frac2_align(i) := frac2_shifted(i) >> ALIGN_WIDTH - FRAC_WIDTH
     }.otherwise {
     // Ensure shift_amount <= ALIGN_WIDTH
-    io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1)
-    io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2)
+    io.pir_frac1_align(i) := frac1_shifted(i) >> Mux(shift_amount1 + ALIGN_WIDTH.U - FRAC_WIDTH.U> ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount1 + ALIGN_WIDTH.U - FRAC_WIDTH.U)
+    io.pir_frac2_align(i) := frac2_shifted(i) >> Mux(shift_amount2 + ALIGN_WIDTH.U - FRAC_WIDTH.U> ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount2 + ALIGN_WIDTH.U - FRAC_WIDTH.U)
     }
   }
 }

@@ -1,30 +1,26 @@
-[0m[[0m[31merror[0m] [0m[0mcirct.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
-[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
-[0m[[0m[31merror[0m] [0m[0m1[0m
-[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
-[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac1_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
-[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac2_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
-[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
-[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
-[0m[[0m[31merror[0m] [0m[0m1[0m
-[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
-[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac1_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
-[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FractionAlignment_AddSub.scala:7:7: error: sink "io.pir_frac2_align[0]" not fully initialized in "FractionAlignment_AddSub"[0m
-[0m[[0m[31merror[0m] [0m[0mclass FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mchisel3.package$ChiselException: Connection between sink (PositDecode.io.Exp[0]: IO[SInt<8>]) and source (PositDecode.io_Exp_0_?: OpResult[UInt<4>]) failed @: Sink (SInt<8>) and Source (UInt<4>) have different types.[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PositDecode.$anonfun$new$22(PositDecode.scala:74)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PositDecode.<init>(PositDecode.scala:72)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$decode1$2(PvuTop.scala:42)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$decode1$1(PvuTop.scala:42)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.<init>(PvuTop.scala:42)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$.$anonfun$new$1(Elaborate.scala:24)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.stage.phases.Elaborate.$anonfun$transform$2(Elaborate.scala:48)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.$anonfun$buildImpl$1(Builder.scala:1023)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.buildImpl(Builder.scala:1017)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.$anonfun$build$1(Builder.scala:1008)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.$anonfun$makeScope$4(Logger.scala:148)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:146)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:133)[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) chisel3.package$ChiselException: Connection between sink (PositDecode.io.Exp[0]: IO[SInt<8>]) and source (PositDecode.io_Exp_0_?: OpResult[UInt<4>]) failed @: Sink (SInt<8>) and Source (UInt<4>) have different types.[0m

@@ -28,10 +28,10 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&clock,0,0);
     VL_IN8(&reset,0,0);
     VL_IN8(&io_op,2,0);
-    VL_IN16(&io_posit_i1_0,15,0);
-    VL_IN16(&io_posit_i2_0,15,0);
-    VL_OUT16(&io_posit_o_0,15,0);
-    VL_OUT16(&io_posit_dot_o,15,0);
+    VL_IN(&io_posit_i1_0,31,0);
+    VL_IN(&io_posit_i2_0,31,0);
+    VL_OUT(&io_posit_o_0,31,0);
+    VL_OUT(&io_posit_dot_o,31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

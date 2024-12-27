@@ -5,5 +5,4 @@ VPvuTop___024root__DepSet_h08eac463__0.o: \
  /usr/local/share/verilator/include/verilated_config.h \
  /usr/local/share/verilator/include/verilated_types.h \
  /usr/local/share/verilator/include/verilated_funcs.h VPvuTop__Syms.h \
- VPvuTop.h VPvuTop___024root.h VPvuTop_IntDivider.h \
- VPvuTop_Radix4BoothMultiplier.h
+ VPvuTop.h VPvuTop___024root.h

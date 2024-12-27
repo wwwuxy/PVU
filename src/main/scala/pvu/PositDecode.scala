@@ -71,8 +71,10 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val es_value = Wire(Vec(VECTOR_SIZE, UInt(2.W)))
   for (i <- 0 until VECTOR_SIZE) {
     es_value(i) := Mux(lzc_zeros(i) === 1.U, 0.U, operand_after_shift(i)(POSIT_WIDTH - 2, POSIT_WIDTH - 3))
-    io.Exp(i)   := (regime_r(i) << 2) | es_value(i).asSInt
+    io.Exp(i)   := Cat(regime_r(i), es_value(i)).asSInt
   }
+
+  // printf("es_value[0] = %b, io.Exp[0] = %b\n", es_value(0), io.Exp(0))
 
   // Extract the fraction
   val implicit_bits = Wire(Vec(VECTOR_SIZE, UInt(1.W)))

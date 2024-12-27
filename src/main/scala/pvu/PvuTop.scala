@@ -176,7 +176,7 @@
     pir_frac_dot := dotproduct.io.pir_frac_o
   }
 
-   printf("pir_frac_rst_add: %b\n", pir_frac_rst_add(0))
+  //  printf("pir_frac_rst_add: %b\n", pir_frac_rst_add(0))
 
 //***********************//
 //fraction normalization//
@@ -215,7 +215,7 @@
     pir_exp_adjust          := frac_norm.io.exp_adjust
   }
 
-  printf("pir_frac_normed: %b\n", pir_frac_normed(0))
+  // printf("pir_frac_normed: %b\n", pir_frac_normed(0))
 
 //***************//
 //**Adjust EXP**//
