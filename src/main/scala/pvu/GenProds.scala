@@ -21,7 +21,7 @@ import chisel3.util._
 
 
 class GenProds(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
-  val COUNT: Int   = (WIDTH_B + 1) / 2
+  val COUNT: Int   = WIDTH_B / 2
   val WIDTH_O: Int = WIDTH_A + WIDTH_B
   
   val io = IO(new Bundle {

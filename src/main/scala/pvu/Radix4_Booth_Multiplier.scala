@@ -7,7 +7,7 @@ import chisel3.util._
 class Radix4BoothMultiplier(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
   // 根据给定参数计算 COUNT
   val WIDTH_O: Int = WIDTH_A +  WIDTH_B  // 默认为 WIDTH_A + WIDTH_B
-  val COUNT: Int   = (WIDTH_B + 1) / 2
+  val COUNT: Int   = WIDTH_B / 2
 
   val io = IO(new Bundle {
     val operand_a = Input(UInt(WIDTH_A.W))
