@@ -1,4 +1,4 @@
-VPvuTop__Trace__1__Slow.o: VPvuTop__Trace__1__Slow.cpp \
+VPvuTop__Trace__3.o: VPvuTop__Trace__3.cpp \
  /usr/local/share/verilator/include/verilated_vcd_c.h \
  /usr/local/share/verilator/include/verilated.h \
  /usr/local/share/verilator/include/verilatedos.h \

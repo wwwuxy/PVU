@@ -44,7 +44,7 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
   }
 
   //计算指数
-  // 定义最大指数值
+  // 定义最大指数值,处理指数溢出时
   val maxExp = ((1.U << (EXP_WIDTH - 1)) - 1.U).asSInt
 
   for (i <- 0 until VECTOR_SIZE) {

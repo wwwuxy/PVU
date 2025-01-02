@@ -21,7 +21,7 @@ import chisel3.util._
 
 
 class GenProds(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
-  val COUNT: Int   = (WIDTH_B + 2) / 2
+  val COUNT: Int   = (WIDTH_B + 1) / 2
   val WIDTH_O: Int = WIDTH_A + WIDTH_B
   
   val io = IO(new Bundle {
@@ -30,66 +30,76 @@ class GenProds(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
     val partial_prods = Output(Vec(COUNT, UInt(WIDTH_O.W)))  // 生成的部分积
   })
 
-  // 定义内部信号
-  val multiplier  = Wire(UInt((WIDTH_B + 3).W))
-  multiplier     := Cat(0.U(2.W), io.operand_b, 0.U(1.W))  // {2'b00, operand_b, 1'b0}
+  // printf("COUNT = %d\n", COUNT.U)
+
+  // 定义内部信号,对乘数B进行Booth编码
+  val multiplier  = Wire(UInt((WIDTH_B + 1).W))
+      multiplier := Cat(io.operand_b, 0.U(1.W))  // {operand_b, 1'b0} --> 必须为奇数位宽
+  printf("multiplier = %b\n", multiplier)
 
   val codes      = Wire(Vec(COUNT, UInt(3.W)))
-  val temp_prods = Wire(Vec(COUNT, UInt((WIDTH_O + 1).W)))  // 假设 GenProduct 输出 WIDTH_O +1 bits
+  val temp_prods = Wire(Vec(COUNT, UInt((WIDTH_A + 1).W)))  // 部分积位宽为 WIDTH_A + 1
   val signs      = Wire(Vec(COUNT, Bool()))
 
-  // Assign codes
+  // 第一个 code 取 multiplier 的低 3 位
   codes(0) := multiplier(2, 0)
 
-  // Instantiate GenProduct for codes(0)
-  val genProd0 = Module(new GenProduct(WIDTH = WIDTH_A))
-  genProd0.io.multiplicand := io.operand_a
-  genProd0.io.code         := codes(0)
-  temp_prods(0)            := genProd0.io.partial_prod
-  signs(0)                 := genProd0.io.sign
+  // 实例化一个 GenProduct，用 codes(0) 生成第一个部分积
+  val genProdFirst = Module(new GenProduct(WIDTH = WIDTH_A))
+  genProdFirst.io.multiplicand := io.operand_a
+  genProdFirst.io.code         := codes(0)
+  temp_prods(0)                := genProdFirst.io.partial_prod
+  signs(0)                     := genProdFirst.io.sign
 
-  // Assign partial_prods(0)
-  io.partial_prods(0) := Cat(~signs(0), signs(0), signs(0), temp_prods(0))
+  // 进行符号扩展, 拼接了 { ~signs(0), signs(0), signs(0), temp_prods(0) }
+  io.partial_prods(0) := Cat(0.U((WIDTH_O - 3 - WIDTH_A - 1).W), ~signs(0), signs(0), signs(0), temp_prods(0))
+  printf("signs[0] = %b\n", ~signs(0))
+  printf("partial_prods[0] = %x\n", io.partial_prods(0))
 
-  // Generate partial products for i = 1 to COUNT-2
+  // 生成中间 (i = 1 到 COUNT-2) 的部分积
   for (i <- 1 until COUNT - 1) {
+    // 截取 multiplier 的 (2*i+2) 到 (2*i) 三位，作为 codes(i)
     codes(i) := multiplier((2 * i + 2), (2 * i))
+    printf("codes[%d] = %b\n", i.U, codes(i))
     
-    // Instantiate GenProduct for codes(i)
+
     val genProd = Module(new GenProduct(WIDTH = WIDTH_A))
     genProd.io.multiplicand := io.operand_a
     genProd.io.code         := codes(i)
     temp_prods(i)           := genProd.io.partial_prod
     signs(i)                := genProd.io.sign
 
-    // Compute partial_prods(i)
-    // {1'b1, ~signs[i], temp_prods[i], 1'b0, signs[i-1]} << (2*i - 2)
+    // 拼接出部分积：{1'b1, ~signs(i), temp_prods(i), 1'b0, signs(i - 1)}
+    // 然后左移 (2*i - 2) 位，并最终截断到 WIDTH_O 宽度
+    // 这里的 1'b1 或 ~signs(i) 之类的拼接，是针对最终补码或对齐设计
     val concatenated = Cat(
+      0.U((WIDTH_O - 5 - WIDTH_A).W),
       1.U(1.W),
       ~signs(i),
       temp_prods(i),
       0.U(1.W),
       signs(i - 1)
     )
-    io.partial_prods(i) := (concatenated << (2 * i - 2)) (WIDTH_O - 1, 0) // 截断到 WIDTH_O 位
+    io.partial_prods(i) := (concatenated << (2 * i - 2)) // 进行左移
   }
 
-  // Assign codes[COUNT-1]
+   // 处理最后一个 code，即 codes(COUNT - 1)
   codes(COUNT - 1) := multiplier((2 * COUNT), (2 * COUNT - 2))
 
-  // Instantiate GenProduct for codes[COUNT-1]
+  // 实例化最后一个 GenProduct
   val genProdLast = Module(new GenProduct(WIDTH = WIDTH_A))
   genProdLast.io.multiplicand := io.operand_a
   genProdLast.io.code         := codes(COUNT - 1)
   temp_prods(COUNT - 1)       := genProdLast.io.partial_prod
   signs(COUNT - 1)            := genProdLast.io.sign
 
-  // Assign partial_prods[COUNT-1]
-  // {temp_prods[COUNT-1], 1'b0, signs[COUNT-2]} << (2*COUNT - 4)
+  // 对最后一个部分积进行拼接：{temp_prods(COUNT - 1), 1'b0, signs(COUNT - 2)}
+  // 然后左移 (2 * COUNT - 4) 位
   val concatenatedLast = Cat(
+    0.U((WIDTH_O - 3 - WIDTH_A).W),
     temp_prods(COUNT - 1),
     0.U(1.W),
     signs(COUNT - 2)
   )
-  io.partial_prods(COUNT - 1) := (concatenatedLast << (2 * COUNT - 4)) (WIDTH_O - 1, 0) // 截断到 WIDTH_O 位
+  io.partial_prods(COUNT - 1) := (concatenatedLast << (2 * COUNT - 4)) // 进行左移
 }

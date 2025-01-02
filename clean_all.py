@@ -24,3 +24,4 @@ def clean_verilog(file_path, lines_to_remove=0):
 
 if __name__ == "__main__":
     clean_verilog('./generated/PvuTop.sv', lines_to_remove=3)
+    

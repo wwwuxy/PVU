@@ -14,7 +14,18 @@ package pvu
 
 import chisel3._
 import chisel3.util._
-
+/*
+The radix-4 booth encoding is as follows:
+    code | value | operation
+    000  |  +0   |     0
+    001  |  +1   |    1*A
+    010  |  +1   |    1*A
+    011  |  +2   |    2*A
+    100  |  -2   |   -2*A
+    101  |  -1   |   -1*A
+    110  |  -1   |   -1*A
+    111  |   0   |     0
+*/
 
 class BoothEncoder extends Module {
   val io = IO(new Bundle {
@@ -22,24 +33,42 @@ class BoothEncoder extends Module {
     val neg  = Output(Bool())    // 负操作指示
     val zero = Output(Bool())    // 零操作指示
     val one  = Output(Bool())    // +1*A 或 -1*A 指示
-    val two  = Output(Bool())    // +2*A 或 -2*A 指示
+    val two  = Output(Bool())    // +2*A 或 -2*A 指示 左移一位表示乘2
   })
 
-  // 计算 neg 信号
-  // 当 code 为 100、101、110 时，neg = 1
-  io.neg := (io.code(2) & ~io.code(0)) | (io.code(2) & ~io.code(1))
+  // 先将所有输出信号初始化为 false
+  io.neg  := false.B
+  io.zero := false.B
+  io.one  := false.B
+  io.two  := false.B
 
-  // 计算 zero 信号
-  // 当 code 为 000 或 111 时，zero = 1
-  io.zero := (~io.code.orR) | (io.code.andR)
-
-  // 计算 two 信号
-  // 当 code 为 011 或 100 时，two = 1
-  io.two := (~io.code(2) & io.code(1) & io.code(0)) | (io.code(2) & ~io.code(1) & ~io.code(0))
-
-  // 计算 one 信号
-  // 当 code 为 001、010、101、110 时，one = 1
-  io.one := (io.code(1) & ~io.code(0)) | (~io.code(1) & io.code(0))
+  switch (io.code) {
+    is("b000".U) {
+      io.zero := true.B          // 0
+    }
+    is("b001".U) {
+      io.one  := true.B          // +1
+    }
+    is("b010".U) {
+      io.one  := true.B          // +1
+    }
+    is("b011".U) {
+      io.two  := true.B          // +2
+    }
+    is("b100".U) {
+      io.neg  := true.B          // 负
+      io.two  := true.B          // -2
+    }
+    is("b101".U) {
+      io.neg  := true.B          // 负
+      io.one  := true.B          // -1
+    }
+    is("b110".U) {
+      io.neg  := true.B          // 负
+      io.one  := true.B          // -1
+    }
+    is("b111".U) {
+      io.zero := true.B          // 0
+    }
+  }
 }
-
-

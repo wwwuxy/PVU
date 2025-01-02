@@ -1,5 +1,5 @@
-//PVU TOP
-/* 支持五种操作类型 --> op控制
+  //PVU TOP
+  /* 支持五种操作类型 --> op控制
     1 --> 加法
     2 --> 减法
     3 --> 乘法
@@ -16,7 +16,7 @@
  class PvuTop(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
    val es: Int         = 2
    val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-   val EXP_WIDTH: Int  = nd + es + 1 
+   val EXP_WIDTH: Int  = nd + es + 1
    val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
    val MUL_WIDTH: Int  = 2 * (ALIGN_WIDTH + 1)
  
@@ -29,9 +29,9 @@
      val posit_dot_o = Output(UInt(POSIT_WIDTH.W))
  })
  
- //**********//
- //**decode**//
- //**********//
+   //**********//
+   //**decode**//
+   //**********//
   val pir_sign1 = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val pir_sign2 = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val pir_exp1  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
@@ -44,36 +44,38 @@
 
   decode1.io.posit := io.posit_i1
   decode2.io.posit := io.posit_i2
-  pir_sign1 := decode1.io.Sign
-  pir_exp1  := decode1.io.Exp
-  pir_frac1 := decode1.io.Frac
-  pir_sign2 := decode2.io.Sign
-  pir_exp2  := decode2.io.Exp
-  pir_frac2 := decode2.io.Frac
+  pir_sign1        := decode1.io.Sign
+  pir_exp1         := decode1.io.Exp
+  pir_frac1        := decode1.io.Frac
+  pir_sign2        := decode2.io.Sign
+  pir_exp2         := decode2.io.Exp
+  pir_frac2        := decode2.io.Frac
 
-//***********************//
-//get operand and compute//
-//***********************//
-  val pir_sign_rst        = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
-  val pir_exp_rst         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-  val pir_frac_rst_add    = Wire(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
-  val pir_frac_rst_sub    = Wire(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
-  val pir_frac_rst_muldiv = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
-  val pir_max_exp         = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))   //fraction_align
+  //***********************//
+  //get operand and compute//
+  //***********************//
+  val pir_sign_rst     = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
+  val pir_exp_rst      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
+  val pir_frac_rst_add = Wire(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
+  val pir_frac_rst_sub = Wire(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
+  val pir_frac_rst_mul = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
+  val pir_frac_rst_div = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
+  val pir_max_exp      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))    //fraction_align
 
-  //for dotproduct, output is scalar
+    //for dotproduct, output is scalar
   val pir_sign_dot = Wire(UInt(1.W))
   val pir_exp_dot  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_dot = Wire(UInt(MUL_WIDTH.W))
 
-  //初始化中间变量
+    //初始化中间变量
   for(i <- 0 until VECTOR_SIZE){
-    pir_sign_rst(i)        := 0.U
-    pir_exp_rst(i)         := 0.S
-    pir_frac_rst_add(i)    := 0.U
-    pir_frac_rst_sub(i)    := 0.U
-    pir_frac_rst_muldiv(i) := 0.U
-    pir_max_exp(i)         := 0.S
+    pir_sign_rst(i)     := 0.U
+    pir_exp_rst(i)      := 0.S
+    pir_frac_rst_add(i) := 0.U
+    pir_frac_rst_sub(i) := 0.U
+    pir_frac_rst_mul(i) := 0.U
+    pir_frac_rst_div(i) := 0.U
+    pir_max_exp(i)      := 0.S
   }
 
   pir_sign_dot := 0.U
@@ -94,7 +96,7 @@
 
     add.io.pir_sign1_i       := pir_sign1
     add.io.pir_sign2_i       := pir_sign2
-    add.io.pir_exp1_i        := pir_exp1 
+    add.io.pir_exp1_i        := pir_exp1
     add.io.pir_exp2_i        := pir_exp2
     add.io.pir_frac1_aligned := fracalign.io.pir_frac1_align
     add.io.pir_frac2_aligned := fracalign.io.pir_frac2_align
@@ -107,8 +109,8 @@
     frac_truncate    := add.io.frac_truncate
 
   }.elsewhen(io.op === 2.U){  //Sub
-    val overflow      = Wire(Vec(VECTOR_SIZE, UInt(1.W))) 
-    val frac_truncate = Wire(Vec(VECTOR_SIZE, UInt(1.W))) 
+    val overflow      = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
+    val frac_truncate = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
 
     val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
     val sub       = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
@@ -142,9 +144,9 @@
     mul.io.pir_frac1_i := pir_frac1
     mul.io.pir_frac2_i := pir_frac2
   
-    pir_sign_rst        := mul.io.pir_sign_o
-    pir_exp_rst         := mul.io.pir_exp_o
-    pir_frac_rst_muldiv := mul.io.pir_frac_o
+    pir_sign_rst     := mul.io.pir_sign_o
+    pir_exp_rst      := mul.io.pir_exp_o
+    pir_frac_rst_mul := mul.io.pir_frac_o
   
   }.elsewhen(io.op === 4.U){  //Div
     val div = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
@@ -156,9 +158,9 @@
     div.io.pir_frac1_i := pir_frac1
     div.io.pir_frac2_i := pir_frac2
   
-    pir_sign_rst        := div.io.pir_sign_o
-    pir_exp_rst         := div.io.pir_exp_o
-    pir_frac_rst_muldiv := div.io.pir_frac_o
+    pir_sign_rst     := div.io.pir_sign_o
+    pir_exp_rst      := div.io.pir_exp_o
+    pir_frac_rst_div := div.io.pir_frac_o
   
   }.elsewhen(io.op === 5.U){  //DotProduct, 先相乘再相加，对阶在DotProduct中实现，输入向量 输出标量
    val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
@@ -178,9 +180,9 @@
 
   //  printf("pir_frac_rst_add: %b\n", pir_frac_rst_add(0))
 
-//***********************//
-//fraction normalization//
-//***********************//
+  //***********************//
+  //fraction normalization//
+  //***********************//
   val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
   val pir_exp_adjusi_dot  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
@@ -193,35 +195,40 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
-  frac_norm_dot.io.pir_frac_i := pir_frac_dot
-  pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
-  pir_exp_adjusi_dot          := frac_norm_dot.io.exp_adjust
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
+      frac_norm_dot.io.pir_frac_i := pir_frac_dot
+      pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
+      pir_exp_adjusi_dot          := frac_norm_dot.io.exp_adjust
   
   }.elsewhen(io.op === 1.U){ //Add
-    val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
-    frac_norm_add.io.pir_frac_i := pir_frac_rst_add
-    pir_frac_normed             := frac_norm_add.io.pir_frac_o
-    pir_exp_adjust              := frac_norm_add.io.exp_adjust
+    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+        frac_norm_add.io.pir_frac_i := pir_frac_rst_add
+        pir_frac_normed             := frac_norm_add.io.pir_frac_o
+        pir_exp_adjust              := frac_norm_add.io.exp_adjust
   }.elsewhen(io.op === 2.U){ //Sub
-    val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
-    frac_norm_sub.io.pir_frac_i := pir_frac_rst_sub
-    pir_frac_normed             := frac_norm_sub.io.pir_frac_o
-    pir_exp_adjust              := frac_norm_sub.io.exp_adjust
-  }.elsewhen(io.op === 3.U || io.op === 4.U){                            //Mul Div                
-    val frac_norm = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
-    frac_norm.io.pir_frac_i := pir_frac_rst_muldiv
-    pir_frac_normed         := frac_norm.io.pir_frac_o
-    pir_exp_adjust          := frac_norm.io.exp_adjust
+    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+        frac_norm_sub.io.pir_frac_i := pir_frac_rst_sub
+        pir_frac_normed             := frac_norm_sub.io.pir_frac_o
+        pir_exp_adjust              := frac_norm_sub.io.exp_adjust
+  }.elsewhen(io.op === 3.U){  //Mul           
+    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
+        frac_norm_mul.io.pir_frac_i := pir_frac_rst_mul
+        pir_frac_normed             := frac_norm_mul.io.pir_frac_o
+        pir_exp_adjust              := frac_norm_mul.io.exp_adjust
+  }.elsewhen(io.op === 4.U){  //Div    
+    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
+        frac_norm_div.io.pir_frac_i := pir_frac_rst_div
+        pir_frac_normed             := frac_norm_div.io.pir_frac_o
+        pir_exp_adjust              := frac_norm_div.io.exp_adjust
   }
 
-  // printf("pir_frac_normed: %b\n", pir_frac_normed(0))
+    // printf("pir_frac_normed: %b\n", pir_frac_normed(0))
 
-//***************//
-//**Adjust EXP**//
-//**************//
-  val pir_exp_rst_adjusied = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-  val pir_exp_rst_adjusied_dot      = Wire(SInt(EXP_WIDTH.W))
+  //***************//
+  //**Adjust EXP**//
+  //**************//
+  val pir_exp_rst_adjusied     = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
+  val pir_exp_rst_adjusied_dot = Wire(SInt(EXP_WIDTH.W))
 
   //初始化中间变量
   pir_exp_rst_adjusied     := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
@@ -235,51 +242,22 @@
     }
   }
 
-//***********//
-//**encode**//
-//*********//
+  //***********//
+  //**encode**//
+  //*********//
   when(io.op === 5.U){
-    val encode_dot = Module(new PositEncode_DotProduct(POSIT_WIDTH))
-    encode_dot.io.pir_sign := pir_sign_dot
-    encode_dot.io.pir_exp  := pir_exp_rst_adjusied_dot
-    encode_dot.io.pir_frac := pir_frac_normed_dot
-    io.posit_dot_o         := encode_dot.io.posit
-    io.posit_o             := VecInit(Seq.fill(VECTOR_SIZE)(0.U(POSIT_WIDTH.W)))
+    val encode_dot              = Module(new PositEncode_DotProduct(POSIT_WIDTH))
+        encode_dot.io.pir_sign := pir_sign_dot
+        encode_dot.io.pir_exp  := pir_exp_rst_adjusied_dot
+        encode_dot.io.pir_frac := pir_frac_normed_dot
+        io.posit_dot_o         := encode_dot.io.posit
+        io.posit_o             := VecInit(Seq.fill(VECTOR_SIZE)(0.U(POSIT_WIDTH.W)))
   }.otherwise{
-    val encode = Module(new PositEncode(POSIT_WIDTH, VECTOR_SIZE))
-    encode.io.pir_sign := pir_sign_rst
-    encode.io.pir_exp  := pir_exp_rst_adjusied
-    encode.io.pir_frac := pir_frac_normed
-    io.posit_o         := encode.io.posit
-    io.posit_dot_o     := 0.U
+    val encode              = Module(new PositEncode(POSIT_WIDTH, VECTOR_SIZE))
+        encode.io.pir_sign := pir_sign_rst
+        encode.io.pir_exp  := pir_exp_rst_adjusied
+        encode.io.pir_frac := pir_frac_normed
+        io.posit_o         := encode.io.posit
+        io.posit_dot_o     := 0.U
   }
 }
-
-// object PvuTop extends App{
-//     var filltlflag = Array[String]()
-//     filltlflag = filltlflag ++ Array(
-//         "--target-dir", "generated",
-//         "--target:verilog",
-//         // "--split-verilog",
-//         // "--lowering-options=" + Seq(
-//         //     "disallowLocalVariables",
-//         //     "disallowPackedArrays"
-//         // ).mkString(","),
-//         // "--disable-all-randomization"
-//         )
-
-//     (new ChiselStage).emitVerilog(
-//         new PvuTop(16, 4, 14),
-//         filltlflag
-//     )
-
-//   object PvuTop extends App {
-//     emitVerilog(new PvuTop(16, 4, 14), Array("--target-dir", "vsrc"))
-// }
-
-// object PvuTopApp extends App {
-//   (new ChiselStage).emitSystemVerilog(
-//     new PvuTop(16, 4, 14),
-//     Array("--target-dir", "vsrc")
-//   )
-// }
