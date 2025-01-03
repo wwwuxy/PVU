@@ -32,8 +32,14 @@ push:
 	git push
 
 count:
+	@echo "Number of Scala files:"
+	@echo $(shell find . -type f -name "*.scala" | wc -l)
 	@echo "Total lines of Scala code:"
 	@echo $(shell find src -name "*.scala" -type f | xargs cat | wc -l)
+	@echo "Total lines of Verilog code:"
+	@echo $(shell find vsrc -name "*.sv" -type f | xargs cat | wc -l)
+
+
 
 
 defalut:

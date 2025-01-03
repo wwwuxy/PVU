@@ -25,8 +25,9 @@ VM_TRACE_FST = 0
 VM_CLASSES_FAST += \
 	VPvuTop \
 	VPvuTop___024root__DepSet_h08eac463__0 \
+	VPvuTop___024root__DepSet_h08eac463__1 \
 	VPvuTop___024root__DepSet_h6498118e__0 \
-	VPvuTop___024root__DepSet_h6498118e__1 \
+	VPvuTop_Mul__DepSet_h12f5d732__0 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
@@ -34,15 +35,23 @@ VM_CLASSES_SLOW += \
 	VPvuTop___024root__Slow \
 	VPvuTop___024root__DepSet_h08eac463__0__Slow \
 	VPvuTop___024root__DepSet_h6498118e__0__Slow \
+	VPvuTop_Mul__Slow \
+	VPvuTop_Mul__DepSet_he434566a__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
 	VPvuTop__Trace__0 \
+	VPvuTop__Trace__1 \
+	VPvuTop__Trace__2 \
+	VPvuTop__Trace__3 \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \
 	VPvuTop__Syms \
 	VPvuTop__Trace__0__Slow \
+	VPvuTop__Trace__1__Slow \
+	VPvuTop__Trace__2__Slow \
+	VPvuTop__Trace__3__Slow \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \

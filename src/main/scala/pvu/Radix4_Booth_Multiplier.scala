@@ -12,14 +12,19 @@ class Radix4BoothMultiplier(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
   val io = IO(new Bundle {
     val operand_a = Input(UInt(WIDTH_A.W))
     val operand_b = Input(UInt(WIDTH_B.W))
-    val sum_o     = Output(UInt(WIDTH_O.W))
-    val carry_o   = Output(UInt(WIDTH_O.W))
+
+    val sum_o   = Output(UInt(WIDTH_O.W))
+    val carry_o = Output(UInt(WIDTH_O.W))
   })
 
   // 生成部分积
   val genProds = Module(new GenProds(WIDTH_A, WIDTH_B))
   genProds.io.operand_a := io.operand_a
   genProds.io.operand_b := io.operand_b
+
+  for(i <- 0 until COUNT) {
+    printf("genProds.io.partial_prods[%d] = %b\n", i.U, genProds.io.partial_prods(i))
+  }
 
   // 使用 csa_tree 将多个部分积进行并行压缩
   val csaTree = Module(new CsaTree(N = COUNT, WIDTH_I = WIDTH_O))

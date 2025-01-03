@@ -8,9 +8,14 @@
 #include "verilated.h"
 
 class VPvuTop__Syms;
+class VPvuTop_Mul;
+
 
 class VPvuTop___024root final : public VerilatedModule {
   public:
+    // CELLS
+    VPvuTop_Mul* __PVT__PvuTop__DOT__mul;
+    VPvuTop_Mul* __PVT__PvuTop__DOT__dotproduct__DOT__mul;
 
     // DESIGN SPECIFIC STATE
     // Anonymous structures to workaround compiler member-count bugs
@@ -177,63 +182,6 @@ class VPvuTop___024root final : public VerilatedModule {
         CData/*0:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT__genProdLast__DOT__boothEncoder__DOT____VdfgTmp_hb44b9117__0;
         CData/*0:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT__genProdLast__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
         CData/*0:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT__genProdLast__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT___mul_io_pir_sign_o;
-        CData/*2:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT____Vcellinp__genProd_12__io_code;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-    };
-    struct {
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
-        CData/*0:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
         VlWide<12>/*383:0*/ PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
         VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm_add__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
         VlWide<5>/*159:0*/ PvuTop__DOT__frac_norm_sub__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
@@ -243,11 +191,8 @@ class VPvuTop___024root final : public VerilatedModule {
         CData/*4:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_shift_amount;
         CData/*0:0*/ PvuTop__DOT__encode__DOT____VdfgTmp_h1c349387__0;
         CData/*0:0*/ __VdfgTmp_h62078fbd__0;
-        CData/*7:0*/ __VdfgTmp_h06753e69__0;
-        CData/*5:0*/ __VdfgTmp_h4d079806__0;
-        CData/*5:0*/ __VdfgTmp_h73314445__0;
+        CData/*7:0*/ __VdfgTmp_hc87411a5__0;
         CData/*0:0*/ __VdfgTmp_h17e26bb5__0;
-        CData/*0:0*/ __VdfgTmp_h17e4e3f4__0;
         VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
         VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
         VlWide<12>/*383:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes;
@@ -260,7 +205,6 @@ class VPvuTop___024root final : public VerilatedModule {
         CData/*0:0*/ __Vtrigrprev__TOP__clock;
         CData/*0:0*/ __VactDidInit;
         CData/*0:0*/ __VactContinue;
-        SData/*8:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__sum;
         SData/*8:0*/ __VdfgTmp_h0a432aee__0;
         VL_IN(io_posit_i1_0,31,0);
         VL_IN(io_posit_i2_0,31,0);
@@ -272,13 +216,13 @@ class VPvuTop___024root final : public VerilatedModule {
         IData/*29:0*/ PvuTop__DOT____Vcellout__fracalign_1__io_pir_frac1_align;
         IData/*28:0*/ PvuTop__DOT____Vcellinp__encode__io_pir_frac;
         IData/*30:0*/ PvuTop__DOT__decode1__DOT___barrel_shifter_io_result_o;
+    };
+    struct {
         IData/*30:0*/ PvuTop__DOT__decode1__DOT___operand_0_T_6;
         IData/*30:0*/ PvuTop__DOT__decode1__DOT____Vcellinp__lzcModule__in_i;
         IData/*31:0*/ PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
         IData/*30:0*/ PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__in_tmp;
         IData/*30:0*/ PvuTop__DOT__decode2__DOT___barrel_shifter_io_result_o;
-    };
-    struct {
         IData/*30:0*/ PvuTop__DOT__decode2__DOT___operand_0_T_6;
         IData/*30:0*/ PvuTop__DOT__decode2__DOT____Vcellinp__lzcModule__in_i;
         IData/*31:0*/ PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
@@ -288,7 +232,6 @@ class VPvuTop___024root final : public VerilatedModule {
         VlWide<3>/*89:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__reciprocalMod__DOT__x2_x_new_full;
         VlWide<3>/*89:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__reciprocalMod__DOT__x3_x_new_full;
         VlWide<113>/*3599:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT____Vcellout__genProds__io_partial_prods;
-        VlWide<4>/*119:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___io_partial_prods_0_T_1;
         VlWide<4>/*123:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT___csa_tree_B_io_sum_o;
         VlWide<4>/*123:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT___csa_tree_B_io_carry_o;
         VlWide<4>/*123:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT___csa_tree_A_io_sum_o;
@@ -297,23 +240,11 @@ class VPvuTop___024root final : public VerilatedModule {
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT___csa_tree_B_io_carry_o;
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT___csa_tree_A_io_sum_o;
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT___csa_tree_A_io_carry_o;
+        VlWide<4>/*119:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT____VdfgTmp_h142e7f94__0;
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT___csa_tree_B_io_sum_o;
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT___csa_tree_B_io_carry_o;
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT___csa_tree_A_io_sum_o;
         VlWide<4>/*122:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT___csa_tree_A_io_carry_o;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProdLast_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_12_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_11_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_10_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_9_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_8_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_7_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_5_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_4_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_3_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_2_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_1_io_partial_prod;
-        IData/*30:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_io_partial_prod;
         IData/*29:0*/ PvuTop__DOT__frac_norm_add__DOT___shifter_io_result_o;
         IData/*29:0*/ PvuTop__DOT__frac_norm_add__DOT____Vcellinp__shifter__io_operand_i;
         IData/*31:0*/ PvuTop__DOT__frac_norm_add__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
@@ -343,8 +274,6 @@ class VPvuTop___024root final : public VerilatedModule {
         VlWide<4>/*119:0*/ __VdfgTmp_hd8744e72__0;
         VlWide<4>/*119:0*/ __VdfgTmp_hf34dff92__0;
         VlWide<4>/*119:0*/ __VdfgTmp_h55fb8d4d__0;
-    };
-    struct {
         VlWide<4>/*119:0*/ __VdfgTmp_h6f28208e__0;
         VlWide<3>/*91:0*/ __VdfgTmp_h7d087c26__0;
         VlWide<4>/*97:0*/ __VdfgTmp_h4c832caa__0;
@@ -353,6 +282,8 @@ class VPvuTop___024root final : public VerilatedModule {
         VlWide<4>/*119:0*/ __VdfgTmp_he2ebaa9c__0;
         VlWide<4>/*119:0*/ __VdfgTmp_hccbd30a4__0;
         VlWide<4>/*105:0*/ __VdfgTmp_h01e20962__0;
+    };
+    struct {
         VlWide<4>/*113:0*/ __VdfgTmp_h8ec4a9af__0;
         IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
         IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
@@ -394,11 +325,6 @@ class VPvuTop___024root final : public VerilatedModule {
         QData/*61:0*/ PvuTop__DOT__dotproduct__DOT__pir_frac_cmp_tmp;
         QData/*61:0*/ PvuTop__DOT__dotproduct__DOT___pir_frac_cmp_0_T_1;
         QData/*61:0*/ PvuTop__DOT__dotproduct__DOT____Vcellinp__csaTree__io_operands_i;
-        QData/*59:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__genProds__DOT___io_partial_prods_0_T_1;
-        QData/*62:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__csaTree__DOT___csa_tree_B_io_sum_o;
-        QData/*62:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__csaTree__DOT___csa_tree_B_io_carry_o;
-        QData/*62:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__csaTree__DOT___csa_tree_A_io_sum_o;
-        QData/*62:0*/ PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__DOT__csaTree__DOT___csa_tree_A_io_carry_o;
         QData/*61:0*/ PvuTop__DOT__frac_norm_dot__DOT___shifter_io_result_o;
         QData/*60:0*/ PvuTop__DOT__frac_norm_dot__DOT____Vcellinp__lzcMod__in_i;
         QData/*63:0*/ PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
@@ -409,21 +335,8 @@ class VPvuTop___024root final : public VerilatedModule {
         QData/*61:0*/ PvuTop__DOT__frac_norm_mul__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
         QData/*61:0*/ PvuTop__DOT__frac_norm_div__DOT___shifter_io_result_o;
         QData/*61:0*/ PvuTop__DOT__frac_norm_div__DOT____Vcellinp__shifter__io_operand_i;
-    };
-    struct {
         QData/*63:0*/ PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
         QData/*61:0*/ PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
-        QData/*37:0*/ __VdfgTmp_ha92d35ff__0;
-        QData/*59:0*/ __VdfgTmp_h06f2217f__0;
-        QData/*45:0*/ __VdfgTmp_hf293b01d__0;
-        QData/*53:0*/ __VdfgTmp_h705df0d9__0;
-        QData/*59:0*/ __VdfgTmp_h78d5643b__0;
-        QData/*59:0*/ __VdfgTmp_h18a29784__0;
-        QData/*59:0*/ __VdfgTmp_h11508155__0;
-        QData/*59:0*/ __VdfgTmp_hc014e5bc__0;
-        QData/*59:0*/ __VdfgTmp_h52bae079__0;
-        QData/*59:0*/ __VdfgTmp_hf3614e3c__0;
-        QData/*59:0*/ __VdfgTmp_h4df9372c__0;
         QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
         QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
         QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;

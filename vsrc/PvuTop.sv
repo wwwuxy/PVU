@@ -256,31 +256,10 @@ module GenProds(	// src/main/scala/pvu/GenProds.scala:23:7
   wire        _genProd_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
   wire [30:0] _genProdFirst_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:48:28
   wire        _genProdFirst_io_sign;	// src/main/scala/pvu/GenProds.scala:48:28
-  wire [59:0] _io_partial_prods_0_T_1 =
-    {26'h0,
-     ~_genProdFirst_io_sign,
-     {2{_genProdFirst_io_sign}},
-     _genProdFirst_io_partial_prod};	// src/main/scala/pvu/GenProds.scala:48:28, :55:{29,66}
   `ifndef SYNTHESIS	// src/main/scala/pvu/GenProds.scala:38:9
     always @(posedge clock) begin	// src/main/scala/pvu/GenProds.scala:38:9
-      if ((`PRINTF_COND_) & ~reset) begin	// src/main/scala/pvu/GenProds.scala:38:9, :63:11
+      if ((`PRINTF_COND_) & ~reset)	// src/main/scala/pvu/GenProds.scala:38:9
         $fwrite(32'h80000002, "multiplier = %b\n", {io_operand_b, 1'h0});	// src/main/scala/pvu/GenProds.scala:37:24, :38:9
-        $fwrite(32'h80000002, "signs[0] = %b\n", ~_genProdFirst_io_sign);	// src/main/scala/pvu/GenProds.scala:38:9, :48:28, :55:66, :56:9
-        $fwrite(32'h80000002, "partial_prods[0] = %x\n", _io_partial_prods_0_T_1);	// src/main/scala/pvu/GenProds.scala:38:9, :55:29, :57:9
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 1'h1, io_operand_b[3:1]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 2'h2, io_operand_b[5:3]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 2'h3, io_operand_b[7:5]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h4, io_operand_b[9:7]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h5, io_operand_b[11:9]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h6, io_operand_b[13:11]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h7, io_operand_b[15:13]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'h8, io_operand_b[17:15]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'h9, io_operand_b[19:17]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hA, io_operand_b[21:19]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hB, io_operand_b[23:21]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hC, io_operand_b[25:23]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hD, io_operand_b[27:25]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-      end
     end // always @(posedge)
   `endif // not def SYNTHESIS
   GenProduct genProdFirst (	// src/main/scala/pvu/GenProds.scala:48:28
@@ -448,7 +427,10 @@ module GenProds(	// src/main/scala/pvu/GenProds.scala:23:7
        _genProd_io_sign,
        2'h0}},
      {{26'h1, ~_genProd_io_sign, _genProd_io_partial_prod, 1'h0, _genProdFirst_io_sign}},
-     {_io_partial_prods_0_T_1}};	// src/main/scala/pvu/GenProds.scala:23:7, :37:24, :48:28, :55:{23,29}, :66:25, :75:27, :78:7, :83:{25,42}, :90:27, :104:31
+     {{26'h0,
+       ~_genProdFirst_io_sign,
+       {2{_genProdFirst_io_sign}},
+       _genProdFirst_io_partial_prod}}};	// src/main/scala/pvu/GenProds.scala:23:7, :37:24, :45:12, :48:28, :55:{29,66}, :66:25, :75:27, :78:7, :83:{25,42}, :90:27, :104:31
 endmodule
 
 module Compressor3to2(	// src/main/scala/pvu/Compressor3to2.scala:7:7
@@ -641,9 +623,45 @@ module Radix4BoothMultiplier(	// src/main/scala/pvu/Radix4_Booth_Multiplier.scal
                 io_carry_o	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
 );
 
-  wire [63:0]       _csaTree_io_sum_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:23
-  wire [63:0]       _csaTree_io_carry_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:23
+  wire [63:0]       _csaTree_io_sum_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:29:23
+  wire [63:0]       _csaTree_io_carry_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:29:23
   wire [14:0][59:0] _genProds_io_partial_prods;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24
+  `ifndef SYNTHESIS	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:11
+    always @(posedge clock) begin	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:11
+      if ((`PRINTF_COND_) & ~reset) begin	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 1'h0,
+                _genProds_io_partial_prods[4'h0]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 1'h1,
+                _genProds_io_partial_prods[4'h1]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 2'h2,
+                _genProds_io_partial_prods[4'h2]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 2'h3,
+                _genProds_io_partial_prods[4'h3]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h4,
+                _genProds_io_partial_prods[4'h4]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h5,
+                _genProds_io_partial_prods[4'h5]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h6,
+                _genProds_io_partial_prods[4'h6]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h7,
+                _genProds_io_partial_prods[4'h7]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'h8,
+                _genProds_io_partial_prods[4'h8]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'h9,
+                _genProds_io_partial_prods[4'h9]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hA,
+                _genProds_io_partial_prods[4'hA]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hB,
+                _genProds_io_partial_prods[4'hB]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hC,
+                _genProds_io_partial_prods[4'hC]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hD,
+                _genProds_io_partial_prods[4'hD]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hE,
+                _genProds_io_partial_prods[4'hE]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+      end
+    end // always @(posedge)
+  `endif // not def SYNTHESIS
   GenProds genProds (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24
     .clock            (clock),
     .reset            (reset),
@@ -651,13 +669,13 @@ module Radix4BoothMultiplier(	// src/main/scala/pvu/Radix4_Booth_Multiplier.scal
     .io_operand_b     (io_operand_b),
     .io_partial_prods (_genProds_io_partial_prods)
   );
-  CsaTree_6 csaTree (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:23
+  CsaTree_6 csaTree (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:29:23
     .io_operands_i (_genProds_io_partial_prods),	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24
     .io_sum_o      (_csaTree_io_sum_o),
     .io_carry_o    (_csaTree_io_carry_o)
   );
-  assign io_sum_o = _csaTree_io_sum_o[59:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :25:23, :29:14
-  assign io_carry_o = _csaTree_io_carry_o[59:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :25:23, :30:14
+  assign io_sum_o = _csaTree_io_sum_o[59:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :29:23, :33:14
+  assign io_carry_o = _csaTree_io_carry_o[59:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :29:23, :34:14
 endmodule
 
 module Mul(	// src/main/scala/pvu/Mul.scala:7:7
@@ -746,105 +764,69 @@ module GenProds_1(	// src/main/scala/pvu/GenProds.scala:23:7
   output [29:0][119:0] io_partial_prods	// src/main/scala/pvu/GenProds.scala:27:14
 );
 
-  wire [60:0]  _genProdLast_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:90:27
-  wire [60:0]  _genProd_27_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_27_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_26_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_26_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_25_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_25_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_24_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_24_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_23_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_23_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_22_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_22_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_21_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_21_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_20_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_20_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_19_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_19_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_18_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_18_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_17_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_17_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_16_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_16_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_15_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_15_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_14_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_14_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_13_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_13_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_12_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_12_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_11_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_11_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_10_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_10_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_9_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_9_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_8_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_8_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_7_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_7_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_6_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_6_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_5_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_5_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_4_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_4_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_3_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_3_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_2_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_2_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_1_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_1_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProd_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire         _genProd_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
-  wire [60:0]  _genProdFirst_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:48:28
-  wire         _genProdFirst_io_sign;	// src/main/scala/pvu/GenProds.scala:48:28
-  wire [119:0] _io_partial_prods_0_T_1 =
-    {56'h0,
-     ~_genProdFirst_io_sign,
-     {2{_genProdFirst_io_sign}},
-     _genProdFirst_io_partial_prod};	// src/main/scala/pvu/GenProds.scala:48:28, :55:{29,66}
+  wire [60:0] _genProdLast_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:90:27
+  wire [60:0] _genProd_27_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_27_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_26_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_26_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_25_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_25_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_24_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_24_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_23_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_23_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_22_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_22_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_21_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_21_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_20_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_20_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_19_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_19_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_18_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_18_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_17_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_17_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_16_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_16_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_15_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_15_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_14_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_14_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_13_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_13_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_12_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_12_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_11_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_11_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_10_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_10_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_9_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_9_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_8_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_8_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_7_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_7_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_6_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_6_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_5_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_5_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_4_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_4_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_3_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_3_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_2_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_2_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_1_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_1_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProd_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire        _genProd_io_sign;	// src/main/scala/pvu/GenProds.scala:66:25
+  wire [60:0] _genProdFirst_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:48:28
+  wire        _genProdFirst_io_sign;	// src/main/scala/pvu/GenProds.scala:48:28
   `ifndef SYNTHESIS	// src/main/scala/pvu/GenProds.scala:38:9
     always @(posedge clock) begin	// src/main/scala/pvu/GenProds.scala:38:9
-      if ((`PRINTF_COND_) & ~reset) begin	// src/main/scala/pvu/GenProds.scala:38:9, :63:11
+      if ((`PRINTF_COND_) & ~reset)	// src/main/scala/pvu/GenProds.scala:38:9
         $fwrite(32'h80000002, "multiplier = %b\n", {io_operand_b, 1'h0});	// src/main/scala/pvu/GenProds.scala:37:24, :38:9
-        $fwrite(32'h80000002, "signs[0] = %b\n", ~_genProdFirst_io_sign);	// src/main/scala/pvu/GenProds.scala:38:9, :48:28, :55:66, :56:9
-        $fwrite(32'h80000002, "partial_prods[0] = %x\n", _io_partial_prods_0_T_1);	// src/main/scala/pvu/GenProds.scala:38:9, :55:29, :57:9
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 1'h1, io_operand_b[3:1]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 2'h2, io_operand_b[5:3]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 2'h3, io_operand_b[7:5]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h4, io_operand_b[9:7]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h5, io_operand_b[11:9]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h6, io_operand_b[13:11]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 3'h7, io_operand_b[15:13]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'h8, io_operand_b[17:15]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'h9, io_operand_b[19:17]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hA, io_operand_b[21:19]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hB, io_operand_b[23:21]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hC, io_operand_b[25:23]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hD, io_operand_b[27:25]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hE, io_operand_b[29:27]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 4'hF, io_operand_b[31:29]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h10, io_operand_b[33:31]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h11, io_operand_b[35:33]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h12, io_operand_b[37:35]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h13, io_operand_b[39:37]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h14, io_operand_b[41:39]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h15, io_operand_b[43:41]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h16, io_operand_b[45:43]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h17, io_operand_b[47:45]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h18, io_operand_b[49:47]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h19, io_operand_b[51:49]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h1A, io_operand_b[53:51]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h1B, io_operand_b[55:53]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-        $fwrite(32'h80000002, "codes[%d] = %b\n", 5'h1C, io_operand_b[57:55]);	// src/main/scala/pvu/GenProds.scala:38:9, :62:27, :63:11
-      end
     end // always @(posedge)
   `endif // not def SYNTHESIS
   GenProduct_15 genProdFirst (	// src/main/scala/pvu/GenProds.scala:48:28
@@ -1192,7 +1174,10 @@ module GenProds_1(	// src/main/scala/pvu/GenProds.scala:23:7
        _genProd_io_sign,
        2'h0}},
      {{56'h1, ~_genProd_io_sign, _genProd_io_partial_prod, 1'h0, _genProdFirst_io_sign}},
-     {_io_partial_prods_0_T_1}};	// src/main/scala/pvu/GenProds.scala:23:7, :37:24, :48:28, :55:{23,29}, :66:25, :75:27, :78:7, :83:{25,42}, :90:27, :104:31
+     {{56'h0,
+       ~_genProdFirst_io_sign,
+       {2{_genProdFirst_io_sign}},
+       _genProdFirst_io_partial_prod}}};	// src/main/scala/pvu/GenProds.scala:23:7, :37:24, :48:28, :55:{29,66}, :66:25, :75:27, :78:7, :83:{25,42}, :90:27, :104:31
 endmodule
 
 module Compressor3to2_1(	// src/main/scala/pvu/Compressor3to2.scala:7:7
@@ -1431,9 +1416,75 @@ module Radix4BoothMultiplier_1(	// src/main/scala/pvu/Radix4_Booth_Multiplier.sc
                  io_carry_o	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
 );
 
-  wire [124:0]       _csaTree_io_sum_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:23
-  wire [124:0]       _csaTree_io_carry_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:23
+  wire [124:0]       _csaTree_io_sum_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:29:23
+  wire [124:0]       _csaTree_io_carry_o;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:29:23
   wire [29:0][119:0] _genProds_io_partial_prods;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24
+  `ifndef SYNTHESIS	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:11
+    always @(posedge clock) begin	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:11
+      if ((`PRINTF_COND_) & ~reset) begin	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 1'h0,
+                _genProds_io_partial_prods[5'h0]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 1'h1,
+                _genProds_io_partial_prods[5'h1]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 2'h2,
+                _genProds_io_partial_prods[5'h2]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 2'h3,
+                _genProds_io_partial_prods[5'h3]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h4,
+                _genProds_io_partial_prods[5'h4]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h5,
+                _genProds_io_partial_prods[5'h5]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h6,
+                _genProds_io_partial_prods[5'h6]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 3'h7,
+                _genProds_io_partial_prods[5'h7]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'h8,
+                _genProds_io_partial_prods[5'h8]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'h9,
+                _genProds_io_partial_prods[5'h9]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hA,
+                _genProds_io_partial_prods[5'hA]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hB,
+                _genProds_io_partial_prods[5'hB]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hC,
+                _genProds_io_partial_prods[5'hC]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hD,
+                _genProds_io_partial_prods[5'hD]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hE,
+                _genProds_io_partial_prods[5'hE]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 4'hF,
+                _genProds_io_partial_prods[5'hF]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h10,
+                _genProds_io_partial_prods[5'h10]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h11,
+                _genProds_io_partial_prods[5'h11]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h12,
+                _genProds_io_partial_prods[5'h12]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h13,
+                _genProds_io_partial_prods[5'h13]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h14,
+                _genProds_io_partial_prods[5'h14]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h15,
+                _genProds_io_partial_prods[5'h15]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h16,
+                _genProds_io_partial_prods[5'h16]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h17,
+                _genProds_io_partial_prods[5'h17]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h18,
+                _genProds_io_partial_prods[5'h18]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h19,
+                _genProds_io_partial_prods[5'h19]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h1A,
+                _genProds_io_partial_prods[5'h1A]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h1B,
+                _genProds_io_partial_prods[5'h1B]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h1C,
+                _genProds_io_partial_prods[5'h1C]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+        $fwrite(32'h80000002, "genProds.io.partial_prods[%d] = %b\n", 5'h1D,
+                _genProds_io_partial_prods[5'h1D]);	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24, :25:11
+      end
+    end // always @(posedge)
+  `endif // not def SYNTHESIS
   GenProds_1 genProds (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24
     .clock            (clock),
     .reset            (reset),
@@ -1441,13 +1492,13 @@ module Radix4BoothMultiplier_1(	// src/main/scala/pvu/Radix4_Booth_Multiplier.sc
     .io_operand_b     (io_operand_b),
     .io_partial_prods (_genProds_io_partial_prods)
   );
-  CsaTree_21 csaTree (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:25:23
+  CsaTree_21 csaTree (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:29:23
     .io_operands_i (_genProds_io_partial_prods),	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:20:24
     .io_sum_o      (_csaTree_io_sum_o),
     .io_carry_o    (_csaTree_io_carry_o)
   );
-  assign io_sum_o = _csaTree_io_sum_o[119:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :25:23, :29:14
-  assign io_carry_o = _csaTree_io_carry_o[119:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :25:23, :30:14
+  assign io_sum_o = _csaTree_io_sum_o[119:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :29:23, :33:14
+  assign io_carry_o = _csaTree_io_carry_o[119:0];	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7, :29:23, :34:14
 endmodule
 
 module IntDivider(	// src/main/scala/pvu/IntDivider.scala:9:7

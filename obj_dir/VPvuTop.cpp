@@ -18,6 +18,8 @@ VPvuTop::VPvuTop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , io_posit_i2_0{vlSymsp->TOP.io_posit_i2_0}
     , io_posit_o_0{vlSymsp->TOP.io_posit_o_0}
     , io_posit_dot_o{vlSymsp->TOP.io_posit_dot_o}
+    , __PVT__PvuTop__DOT__mul{vlSymsp->TOP.__PVT__PvuTop__DOT__mul}
+    , __PVT__PvuTop__DOT__dotproduct__DOT__mul{vlSymsp->TOP.__PVT__PvuTop__DOT__dotproduct__DOT__mul}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

@@ -53,14 +53,14 @@ class GenProds(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
 
   // 进行符号扩展, 拼接了 { ~signs(0), signs(0), signs(0), temp_prods(0) }
   io.partial_prods(0) := Cat(0.U((WIDTH_O - 3 - WIDTH_A - 1).W), ~signs(0), signs(0), signs(0), temp_prods(0))
-  printf("signs[0] = %b\n", ~signs(0))
-  printf("partial_prods[0] = %x\n", io.partial_prods(0))
+  // printf("signs[0] = %b\n", ~signs(0))
+  // printf("partial_prods[0] = %x\n", io.partial_prods(0))
 
   // 生成中间 (i = 1 到 COUNT-2) 的部分积
   for (i <- 1 until COUNT - 1) {
     // 截取 multiplier 的 (2*i+2) 到 (2*i) 三位，作为 codes(i)
     codes(i) := multiplier((2 * i + 2), (2 * i))
-    printf("codes[%d] = %b\n", i.U, codes(i))
+    // printf("codes[%d] = %b\n", i.U, codes(i))
     
 
     val genProd = Module(new GenProduct(WIDTH = WIDTH_A))

@@ -13,6 +13,8 @@
 class VPvuTop__Syms;
 class VPvuTop___024root;
 class VerilatedVcdC;
+class VPvuTop_Mul;
+
 
 // This class is the main interface to the Verilated model
 class VPvuTop VL_NOT_FINAL : public VerilatedModel {
@@ -36,6 +38,8 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
+    VPvuTop_Mul* const __PVT__PvuTop__DOT__mul;
+    VPvuTop_Mul* const __PVT__PvuTop__DOT__dotproduct__DOT__mul;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

@@ -15,6 +15,7 @@
 
 // INCLUDE MODULE CLASSES
 #include "VPvuTop___024root.h"
+#include "VPvuTop_Mul.h"
 
 // SYMS CLASS (contains all model state)
 class VPvuTop__Syms final : public VerilatedSyms {
@@ -28,6 +29,8 @@ class VPvuTop__Syms final : public VerilatedSyms {
 
     // MODULE INSTANCE STATE
     VPvuTop___024root              TOP;
+    VPvuTop_Mul                    TOP__PvuTop__DOT__dotproduct__DOT__mul;
+    VPvuTop_Mul                    TOP__PvuTop__DOT__mul;
 
     // CONSTRUCTORS
     VPvuTop__Syms(VerilatedContext* contextp, const char* namep, VPvuTop* modelp);
