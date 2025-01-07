@@ -5,19 +5,19 @@ import chisel3._
 import chisel3.util._
 
 class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-  val es: Int         = 2
-  val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es + 1 
-  val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
-  val MUL_WIDTH: Int  = 2 * (ALIGN_WIDTH + 1)
+  var es: Int         = 2
+  var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int  = nd + es + 1 
+  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
 
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_sign2_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_exp1_i  = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
     val pir_exp2_i  = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-    val pir_frac1_i = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
-    val pir_frac2_i = Input(Vec(VECTOR_SIZE, UInt(ALIGN_WIDTH.W)))
+    val pir_frac1_i = Input(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH+1).W)))
+    val pir_frac2_i = Input(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH+1).W)))
 
     val pir_sign_o = Output(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_exp_o  = Output(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
@@ -35,12 +35,12 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
   val frac     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
 
   for (i <- 0 until VECTOR_SIZE) {
-    val radix4BoothMultiplier = Module(new Radix4BoothMultiplier(ALIGN_WIDTH, ALIGN_WIDTH))
+    val radix4BoothMultiplier = Module(new Radix4BoothMultiplier(FRAC_WIDTH+1, FRAC_WIDTH+1))
     radix4BoothMultiplier.io.operand_a := io.pir_frac1_i(i)
     radix4BoothMultiplier.io.operand_b := io.pir_frac2_i(i)
     sum_frac(i)                        := radix4BoothMultiplier.io.sum_o
     carry(i)                           := radix4BoothMultiplier.io.carry_o
-    frac(i)                            := sum_frac(i) + carry(i)                 //最后一次尾数和
+    frac(i)                            := (sum_frac(i) + carry(i)) << 1         //左移一位进行缩放，后续尾数标准化时指数减一
   }
 
   //计算指数

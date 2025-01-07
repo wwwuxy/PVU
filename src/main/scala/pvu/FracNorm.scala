@@ -7,17 +7,19 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
-  val es: Int         = 2
-  val nd: Int         = log2Ceil(WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es + 1 
-  val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
+class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int, val OP: Int) extends Module {
+  var es: Int         = 2
+  var nd: Int         = log2Ceil(WIDTH - 1)
+  var EXP_WIDTH: Int  = nd + es + 1 
+  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
   
+  // printf("DECIMAL_POINT = %d\n", DECIMAL_POINT.asUInt)
+
   val io = IO(new Bundle {
     val pir_frac_i = Input(Vec(VECTOR_SIZE, UInt(WIDTH.W)))
     
     val exp_adjust = Output(Vec(VECTOR_SIZE, SInt((EXP_WIDTH).W)))
-    val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W + 1.W)))
+    val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH + 1).W)))
   })
 
   val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
@@ -36,12 +38,17 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     when(lzc_zeroes) {
       exp_adjust_reg := 0.S   // 尾数全0，不需要规格化
     }.elsewhen(leading_zero_count <= (DECIMAL_POINT - 1).U) {
-      exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
+      when(OP.U === 3.U) {
+        exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt - 1.S
+      }.otherwise {
+        exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
+      }
     }.otherwise {
       exp_adjust_reg := -((leading_zero_count - (DECIMAL_POINT.U - 1.U)).asSInt)
     }
 
-    io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
+    // io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
+    // io.exp_adjust(i) := exp_adjust_reg
 
   //使用barrel_shifter左移，使DECIMAL_POINT位上为1
     val frac_shifted = Wire(UInt(WIDTH.W))
@@ -55,7 +62,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
       val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
       val sticky_bit  = sticky_bits.orR.asUInt
       io.pir_frac_o(i) := Cat(frac_shifted(WIDTH - 1, WIDTH - FRAC_WIDTH) ,sticky_bit)
-      io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
+      io.exp_adjust(i) := exp_adjust_reg 
     }else{
       io.pir_frac_o(i) := frac_shifted
       io.exp_adjust(i) := exp_adjust_reg

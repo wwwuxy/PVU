@@ -25,9 +25,20 @@ VM_TRACE_FST = 0
 VM_CLASSES_FAST += \
 	VPvuTop \
 	VPvuTop___024root__DepSet_h08eac463__0 \
-	VPvuTop___024root__DepSet_h08eac463__1 \
 	VPvuTop___024root__DepSet_h6498118e__0 \
+	VPvuTop___024root__DepSet_h6498118e__1 \
+	VPvuTop_Mul__DepSet_h16f1ba1a__0 \
 	VPvuTop_Mul__DepSet_h12f5d732__0 \
+	VPvuTop_Compressor4to2__DepSet_h621f074e__0 \
+	VPvuTop_Compressor4to2__DepSet_h621f074e__1 \
+	VPvuTop_Compressor4to2__DepSet_h621f074e__2 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__0 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__1 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__2 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__3 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__4 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__5 \
+	VPvuTop_Compressor4to2_6__DepSet_h6886782c__6 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
@@ -37,6 +48,10 @@ VM_CLASSES_SLOW += \
 	VPvuTop___024root__DepSet_h6498118e__0__Slow \
 	VPvuTop_Mul__Slow \
 	VPvuTop_Mul__DepSet_he434566a__0__Slow \
+	VPvuTop_Compressor4to2__Slow \
+	VPvuTop_Compressor4to2__DepSet_h49a2d95a__0__Slow \
+	VPvuTop_Compressor4to2_6__Slow \
+	VPvuTop_Compressor4to2_6__DepSet_h3276d08d__0__Slow \
 
 # Generated support classes, fast-path, compile with highest optimization
 VM_SUPPORT_FAST += \
@@ -44,6 +59,9 @@ VM_SUPPORT_FAST += \
 	VPvuTop__Trace__1 \
 	VPvuTop__Trace__2 \
 	VPvuTop__Trace__3 \
+	VPvuTop__Trace__4 \
+	VPvuTop__Trace__5 \
+	VPvuTop__Trace__6 \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \
@@ -52,6 +70,9 @@ VM_SUPPORT_SLOW += \
 	VPvuTop__Trace__1__Slow \
 	VPvuTop__Trace__2__Slow \
 	VPvuTop__Trace__3__Slow \
+	VPvuTop__Trace__4__Slow \
+	VPvuTop__Trace__5__Slow \
+	VPvuTop__Trace__6__Slow \
 
 # Global classes, need linked once per executable, fast-path, compile with highest optimization
 VM_GLOBAL_FAST += \

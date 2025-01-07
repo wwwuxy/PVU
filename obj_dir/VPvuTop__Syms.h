@@ -16,6 +16,8 @@
 // INCLUDE MODULE CLASSES
 #include "VPvuTop___024root.h"
 #include "VPvuTop_Mul.h"
+#include "VPvuTop_Compressor4to2.h"
+#include "VPvuTop_Compressor4to2_6.h"
 
 // SYMS CLASS (contains all model state)
 class VPvuTop__Syms final : public VerilatedSyms {
@@ -29,8 +31,34 @@ class VPvuTop__Syms final : public VerilatedSyms {
 
     // MODULE INSTANCE STATE
     VPvuTop___024root              TOP;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6       TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
     VPvuTop_Mul                    TOP__PvuTop__DOT__dotproduct__DOT__mul;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
     VPvuTop_Mul                    TOP__PvuTop__DOT__mul;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2         TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
 
     // CONSTRUCTORS
     VPvuTop__Syms(VerilatedContext* contextp, const char* namep, VPvuTop* modelp);

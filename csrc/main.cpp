@@ -300,57 +300,55 @@ int main(int argc, char** argv) {
     //===============================================================
     // 测试用例1:测试加法
     //===============================================================
-    // {
-    //     // 设置输入：i1= 0x4000(1.0?), i2= 0x4000(1.0?), op= 0(假设是加法)
-    //     printf("Test Add\n");
-    //     uint32_t i1  = 0x5A000000;
-    //     uint32_t i2  = 0x48000000;
-    //     uint8_t  op  = 1; // 假设 0 代表加法
+    {
+        printf("Test Add\n");
+        uint32_t i1  = 0x5A000000;
+        uint32_t i2  = 0x48000000;
+        uint8_t  op  = 1; // 假设 0 代表加法
 
-    //     // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
-    //     // 如果 dot 是某些累加结果，需要根据设计改
-    //     uint32_t expected_o     = 0x5C000000; 
-    //     uint32_t expected_dot_o = 0; 
+        // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
+        // 如果 dot 是某些累加结果，需要根据设计改
+        uint32_t expected_o     = 0x5C000000; 
+        uint32_t expected_dot_o = 0; 
 
-    //     // 写入输入
-    //     set_inputs(dut, i1, i2, op);
+        // 写入输入
+        set_inputs(dut, i1, i2, op);
 
-    //     // 等待两拍时钟
-    //     for (int cycle = 0; cycle < 2; ++cycle) {
-    //         toggle_clock(dut, tfp, main_time);
-    //     }
+        // 等待两拍时钟
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
 
-    //     // 比对输出
-    //     check_outputs(dut, expected_o, expected_dot_o);
-    // }
+        // 比对输出
+        check_outputs(dut, expected_o, expected_dot_o);
+    }
 
 
     //===============================================================
     // 测试用例2: 测试减法
     //===============================================================
-    // {
-    //     // 设置输入：i1= 0x4000(1.0?), i2= 0x4000(1.0?), op= 0(假设是加法)
-    //     printf("Test Sub\n");
-    //     uint32_t i1  = 0x5A000000;
-    //     uint32_t i2  = 0x48000000;
-    //     uint8_t  op  = 2; // 假设 0 代表加法
+    {
+        printf("Test Sub\n");
+        uint32_t i1  = 0x5A000000;
+        uint32_t i2  = 0x48000000;
+        uint8_t  op  = 2; // 假设 0 代表加法
 
-    //     // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
-    //     // 如果 dot 是某些累加结果，需要根据设计改
-    //     uint32_t expected_o     = 0x58000000; 
-    //     uint32_t expected_dot_o = 0; 
+        // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
+        // 如果 dot 是某些累加结果，需要根据设计改
+        uint32_t expected_o     = 0x58000000; 
+        uint32_t expected_dot_o = 0; 
 
-    //     // 写入输入
-    //     set_inputs(dut, i1, i2, op);
+        // 写入输入
+        set_inputs(dut, i1, i2, op);
 
-    //     // 等待两拍时钟
-    //     for (int cycle = 0; cycle < 2; ++cycle) {
-    //         toggle_clock(dut, tfp, main_time);
-    //     }
+        // 等待两拍时钟
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
 
-    //     // 比对输出
-    //     check_outputs(dut, expected_o, expected_dot_o);
-    // }
+        // 比对输出
+        check_outputs(dut, expected_o, expected_dot_o);
+    }
 
     //===============================================================
     // 测试用例2: (例如乘法: 2.0 * 3.0 = 6.0?)
@@ -359,11 +357,11 @@ int main(int argc, char** argv) {
         // i1= 0x6000(2.0?), i2= 0x6C00(3.0?), op= 1(假设是乘法)
         printf("Test Mul\n");
         uint32_t i1  = 0x48000000; 
-        uint32_t i2  = 0x4C000000; 
+        uint32_t i2  = 0x5E000000; 
         uint8_t  op  = 3;      // 乘法
 
         // 期望输出: 6.0 => 0x7A00(?), dot => 0x7A00(?)
-        uint32_t expected_o     = 0x54000000; 
+        uint32_t expected_o     = 0x63000000; 
         uint32_t expected_dot_o = 0; 
 
         set_inputs(dut, i1, i2, op);

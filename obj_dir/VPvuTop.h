@@ -14,6 +14,7 @@ class VPvuTop__Syms;
 class VPvuTop___024root;
 class VerilatedVcdC;
 class VPvuTop_Mul;
+class VPvuTop_Compressor4to2_6;
 
 
 // This class is the main interface to the Verilated model
@@ -39,6 +40,20 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
     VPvuTop_Mul* const __PVT__PvuTop__DOT__mul;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
     VPvuTop_Mul* const __PVT__PvuTop__DOT__dotproduct__DOT__mul;
 
     // Root instance pointer to allow access to model internals,

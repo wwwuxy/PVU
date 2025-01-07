@@ -5,10 +5,9 @@ import chisel3._
 import chisel3.util._
 
 class Add(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-  val es: Int         = 2
-  val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  val EXP_WIDTH: Int  = nd + es + 1 
-  val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
+  var es: Int         = 2
+  var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int  = nd + es + 1 
 
   val io = IO(new Bundle {
     val pir_sign1_i       = Input(Vec(VECTOR_SIZE, UInt(1.W)))

@@ -14,11 +14,11 @@
  import chisel3.stage._
  
  class PvuTop(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-   val es: Int         = 2
-   val nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-   val EXP_WIDTH: Int  = nd + es + 1
-   val FRAC_WIDTH: Int = POSIT_WIDTH - es - 2
-   val MUL_WIDTH: Int  = 2 * (ALIGN_WIDTH + 1)
+   var es: Int         = 2
+   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
+   var EXP_WIDTH: Int  = nd + es + 1
+   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3   //rigime位宽至少为2，再去除一位符号位，故减3
+   var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
  
    val io = IO(new Bundle {
      val posit_i1 = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
@@ -36,8 +36,8 @@
   val pir_sign2 = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val pir_exp1  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
   val pir_exp2  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-  val pir_frac1 = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
-  val pir_frac2 = Wire(Vec(VECTOR_SIZE, UInt(FRAC_WIDTH.W)))
+  val pir_frac1 = Wire(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH + 1).W)))
+  val pir_frac2 = Wire(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH + 1).W)))
 
   val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))
   val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))
@@ -188,6 +188,7 @@
   val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   val pir_frac_normed_dot = Wire(UInt(MUL_WIDTH.W))
 
+  val carry_width = log2Ceil(VECTOR_SIZE + 3) // --> ???
   //初始化中间变量
   pir_exp_adjust      := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
   pir_exp_adjusi_dot  := 0.S(EXP_WIDTH.W)
@@ -195,28 +196,28 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, 1))
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, carry_width))
       frac_norm_dot.io.pir_frac_i := pir_frac_dot
       pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
       pir_exp_adjusi_dot          := frac_norm_dot.io.exp_adjust
   
   }.elsewhen(io.op === 1.U){ //Add
-    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, 1))
         frac_norm_add.io.pir_frac_i := pir_frac_rst_add
         pir_frac_normed             := frac_norm_add.io.pir_frac_o
         pir_exp_adjust              := frac_norm_add.io.exp_adjust
   }.elsewhen(io.op === 2.U){ //Sub
-    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, 2))
         frac_norm_sub.io.pir_frac_i := pir_frac_rst_sub
         pir_frac_normed             := frac_norm_sub.io.pir_frac_o
         pir_exp_adjust              := frac_norm_sub.io.exp_adjust
   }.elsewhen(io.op === 3.U){  //Mul           
-    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
+    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, 3))
         frac_norm_mul.io.pir_frac_i := pir_frac_rst_mul
         pir_frac_normed             := frac_norm_mul.io.pir_frac_o
         pir_exp_adjust              := frac_norm_mul.io.exp_adjust
   }.elsewhen(io.op === 4.U){  //Div    
-    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
+    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, carry_width, 4))
         frac_norm_div.io.pir_frac_i := pir_frac_rst_div
         pir_frac_normed             := frac_norm_div.io.pir_frac_o
         pir_exp_adjust              := frac_norm_div.io.exp_adjust

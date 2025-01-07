@@ -8,4 +8,5 @@ VPvuTop__Trace__2.o: VPvuTop__Trace__2.cpp \
  /usr/local/share/verilator/include/verilated_trace.h \
  /usr/local/share/verilator/include/verilated_trace_defs.h \
  VPvuTop__Syms.h /usr/local/share/verilator/include/verilated.h VPvuTop.h \
- VPvuTop___024root.h VPvuTop_Mul.h
+ VPvuTop___024root.h VPvuTop_Mul.h VPvuTop_Compressor4to2.h \
+ VPvuTop_Compressor4to2_6.h
