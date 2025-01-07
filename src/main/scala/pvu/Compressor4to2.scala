@@ -60,22 +60,16 @@ class Compressor4to2(val WIDTH_I: Int, val WIDTH_O: Int) extends Module {
     cinVec(i + 1) := counter.io.cout
   }
 
-  // 最后一位的 carry + cin 可能进位 2 bit（加法结果可能达到 "10"）
   val carryTemp = Wire(UInt(2.W))
   carryTemp := carryVec(WIDTH_I - 1).asUInt + cinVec(WIDTH_I).asUInt
 
-  // sum_o 直接是所有 sumVec 组合成的宽度为 WIDTH_I 的结果(低 WIDTH_I bits)，
-  // 再留高 2 bits 用于后续扩展（或置 0）。
-  // 这里把高 2 bits 置 0，则 sum_o = {0, sumVec}，与 Verilog 里保持一致；
-  // 当然也可以只保持 WIDTH_I 位看需求。
+
   val sumCat = Wire(UInt(WIDTH_I.W))
   sumCat := sumVec.asUInt
   io.sum_o := sumVec.asUInt   // 也可以只用 sumVec.asUInt，如果需要占满 outWIDTH_I，可以改写
 
-  // carry_o = {carryTemp[1:0], carryVec[WIDTH_I-2:0], 1'b0}
-  // Verilog 中:
-  //   assign carry_o = {carry_temp, carry[WIDTH_I_I-2:0], 1'b0};
-  // 这里按照相同的格式拼接。
+
+  // 进位需要左移一位，因为 进位 比 和 高一位
   val carryCat = Wire(UInt(WIDTH_I.W))
   carryCat := carryVec.asUInt
   io.carry_o := Cat(carryTemp, carryCat(WIDTH_I - 2, 0), 0.U(1.W))

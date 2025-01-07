@@ -15,14 +15,6 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
     // DESIGN SPECIFIC STATE
     // Anonymous structures to workaround compiler member-count bugs
     struct {
-        CData/*0:0*/ __PVT___counter_117_io_cout;
-        CData/*0:0*/ __PVT___counter_116_io_cout;
-        CData/*0:0*/ __PVT___counter_115_io_cout;
-        CData/*0:0*/ __PVT___counter_114_io_cout;
-        CData/*0:0*/ __PVT___counter_113_io_cout;
-        CData/*0:0*/ __PVT___counter_112_io_cout;
-        CData/*0:0*/ __PVT___counter_111_io_cout;
-        CData/*0:0*/ __PVT___counter_110_io_cout;
         CData/*0:0*/ __PVT___counter_109_io_cout;
         CData/*0:0*/ __PVT___counter_108_io_cout;
         CData/*0:0*/ __PVT___counter_107_io_cout;
@@ -79,8 +71,6 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ __PVT___counter_56_io_cout;
         CData/*0:0*/ __PVT___counter_55_io_cout;
         CData/*0:0*/ __PVT___counter_54_io_cout;
-    };
-    struct {
         CData/*0:0*/ __PVT___counter_53_io_cout;
         CData/*0:0*/ __PVT___counter_52_io_cout;
         CData/*0:0*/ __PVT___counter_51_io_cout;
@@ -89,6 +79,8 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ __PVT___counter_48_io_cout;
         CData/*0:0*/ __PVT___counter_47_io_cout;
         CData/*0:0*/ __PVT___counter_46_io_cout;
+    };
+    struct {
         CData/*0:0*/ __PVT___counter_45_io_cout;
         CData/*0:0*/ __PVT___counter_44_io_cout;
         CData/*0:0*/ __PVT___counter_43_io_cout;
@@ -145,8 +137,6 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_4__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_4__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_5__DOT____VdfgTmp_hdcc6bc88__0;
-    };
-    struct {
         CData/*0:0*/ counter_5__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_6__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_6__DOT____VdfgTmp_h31758f64__0;
@@ -155,6 +145,8 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_8__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_8__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_9__DOT____VdfgTmp_hdcc6bc88__0;
+    };
+    struct {
         CData/*0:0*/ counter_9__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_10__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_10__DOT____VdfgTmp_h31758f64__0;
@@ -211,8 +203,6 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_36__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_36__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_37__DOT____VdfgTmp_hdcc6bc88__0;
-    };
-    struct {
         CData/*0:0*/ counter_37__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_38__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_38__DOT____VdfgTmp_h31758f64__0;
@@ -221,6 +211,8 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_40__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_40__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_41__DOT____VdfgTmp_hdcc6bc88__0;
+    };
+    struct {
         CData/*0:0*/ counter_41__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_42__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_42__DOT____VdfgTmp_h31758f64__0;
@@ -277,8 +269,6 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_68__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_68__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_69__DOT____VdfgTmp_hdcc6bc88__0;
-    };
-    struct {
         CData/*0:0*/ counter_69__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_70__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_70__DOT____VdfgTmp_h31758f64__0;
@@ -287,6 +277,8 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_72__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_72__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_73__DOT____VdfgTmp_hdcc6bc88__0;
+    };
+    struct {
         CData/*0:0*/ counter_73__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_74__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_74__DOT____VdfgTmp_h31758f64__0;
@@ -343,8 +335,6 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_100__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_100__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_101__DOT____VdfgTmp_hdcc6bc88__0;
-    };
-    struct {
         CData/*0:0*/ counter_101__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_102__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_102__DOT____VdfgTmp_h31758f64__0;
@@ -353,6 +343,8 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_104__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_104__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_105__DOT____VdfgTmp_hdcc6bc88__0;
+    };
+    struct {
         CData/*0:0*/ counter_105__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_106__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_106__DOT____VdfgTmp_h31758f64__0;
@@ -362,28 +354,12 @@ class VPvuTop_Compressor4to2_6 final : public VerilatedModule {
         CData/*0:0*/ counter_108__DOT____VdfgTmp_h31758f64__0;
         CData/*0:0*/ counter_109__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_109__DOT____VdfgTmp_h31758f64__0;
+        CData/*0:0*/ __PVT__counter_110__DOT___carryWire_T_4;
         CData/*0:0*/ counter_110__DOT____VdfgTmp_hdcc6bc88__0;
         CData/*0:0*/ counter_110__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_111__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_111__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_112__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_112__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_113__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_113__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_114__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_114__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_115__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_115__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_116__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_116__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ counter_117__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_117__DOT____VdfgTmp_h31758f64__0;
-        CData/*0:0*/ __PVT__counter_118__DOT___carryWire_T_4;
-        CData/*0:0*/ counter_118__DOT____VdfgTmp_hdcc6bc88__0;
-        CData/*0:0*/ counter_118__DOT____VdfgTmp_h31758f64__0;
-        VL_INW(io_operands_i,479,0,15);
-        VL_OUTW(io_sum_o,119,0,4);
-        VL_OUTW(io_carry_o,119,0,4);
+        VL_INW(io_operands_i,447,0,14);
+        VL_OUTW(io_sum_o,111,0,4);
+        VL_OUTW(io_carry_o,111,0,4);
     };
 
     // INTERNAL VARIABLES

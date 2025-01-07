@@ -1860,7 +1860,7 @@ module Compressor4to2(	// src/main/scala/pvu/Compressor4to2.scala:29:7
      _counter_3_io_sum,
      _counter_2_io_sum,
      _counter_1_io_sum,
-     _counter_io_sum};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :48:25, :73:22
+     _counter_io_sum};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :48:25, :69:22
   assign io_carry_o =
     {_counter_54_io_carry,
      _counter_53_io_carry,
@@ -1917,7 +1917,7 @@ module Compressor4to2(	// src/main/scala/pvu/Compressor4to2.scala:29:7
      _counter_2_io_carry,
      _counter_1_io_carry,
      _counter_io_carry,
-     1'h0};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :44:13, :48:25, :81:14
+     1'h0};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :44:13, :48:25, :75:14
 endmodule
 
 module CsaTree_1(	// src/main/scala/pvu/CsaTree.scala:7:7
@@ -2082,24 +2082,24 @@ module Mul(	// src/main/scala/pvu/Mul.scala:7:7
 endmodule
 
 module IntReciprocal(	// src/main/scala/pvu/IntReciprocal.scala:7:7
-  input  [29:0] io_num_i,	// src/main/scala/pvu/IntReciprocal.scala:8:14
-  output [59:0] io_reciprocal_o	// src/main/scala/pvu/IntReciprocal.scala:8:14
+  input  [27:0] io_num_i,	// src/main/scala/pvu/IntReciprocal.scala:8:14
+  output [55:0] io_reciprocal_o	// src/main/scala/pvu/IntReciprocal.scala:8:14
 );
 
-  wire [59:0] _GEN = {30'h0, io_num_i};	// src/main/scala/pvu/IntReciprocal.scala:17:23
-  wire [59:0] x0 = 60'h40000000 / _GEN;	// src/main/scala/pvu/IntReciprocal.scala:17:23
-  wire [89:0] x1_x_new_full = {30'h0, x0} * {30'h0, 60'h80000000 - _GEN * x0};	// src/main/scala/pvu/IntReciprocal.scala:17:23, :28:22, :35:20, :41:25
-  wire [89:0] x2_x_new_full =
-    {30'h0, x1_x_new_full[89:30]} * {30'h0, 60'h80000000 - _GEN * x1_x_new_full[89:30]};	// src/main/scala/pvu/IntReciprocal.scala:17:23, :28:22, :35:20, :41:25, :44:{29,43}
-  wire [89:0] x3_x_new_full =
-    {30'h0, x2_x_new_full[89:30]} * {30'h0, 60'h80000000 - _GEN * x2_x_new_full[89:30]};	// src/main/scala/pvu/IntReciprocal.scala:17:23, :28:22, :35:20, :41:25, :44:{29,43}
-  assign io_reciprocal_o = x3_x_new_full[89:30];	// src/main/scala/pvu/IntReciprocal.scala:7:7, :41:25, :44:{29,43}
+  wire [55:0] _GEN = {28'h0, io_num_i};	// src/main/scala/pvu/IntReciprocal.scala:20:23
+  wire [55:0] x0 = 56'h10000000 / _GEN;	// src/main/scala/pvu/IntReciprocal.scala:20:23
+  wire [83:0] x1_x_new_full = {28'h0, x0} * {28'h0, 56'h20000000 - _GEN * x0};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25
+  wire [83:0] x2_x_new_full =
+    {28'h0, x1_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x1_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25, :47:{29,38}
+  wire [83:0] x3_x_new_full =
+    {28'h0, x2_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x2_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25, :47:{29,38}
+  assign io_reciprocal_o = x3_x_new_full[83:28];	// src/main/scala/pvu/IntReciprocal.scala:7:7, :44:25, :47:{29,38}
 endmodule
 
 module GenProduct_14(	// src/main/scala/pvu/GenProduct.scala:17:7
-  input  [59:0] io_multiplicand,	// src/main/scala/pvu/GenProduct.scala:18:14
+  input  [55:0] io_multiplicand,	// src/main/scala/pvu/GenProduct.scala:18:14
   input  [2:0]  io_code,	// src/main/scala/pvu/GenProduct.scala:18:14
-  output [60:0] io_partial_prod,	// src/main/scala/pvu/GenProduct.scala:18:14
+  output [56:0] io_partial_prod,	// src/main/scala/pvu/GenProduct.scala:18:14
   output        io_sign	// src/main/scala/pvu/GenProduct.scala:18:14
 );
 
@@ -2114,78 +2114,74 @@ module GenProduct_14(	// src/main/scala/pvu/GenProduct.scala:17:7
     .io_two  (_boothEncoder_io_two)
   );
   assign io_partial_prod =
-    {61{_boothEncoder_io_neg}}
+    {57{_boothEncoder_io_neg}}
     ^ (_boothEncoder_io_one
          ? {1'h0, io_multiplicand}
-         : _boothEncoder_io_two ? {io_multiplicand, 1'h0} : 61'h0);	// src/main/scala/pvu/GenProduct.scala:17:7, :27:28, :34:30, :35:14, :36:37, :37:{14,33}, :39:14, :43:25
+         : _boothEncoder_io_two ? {io_multiplicand, 1'h0} : 57'h0);	// src/main/scala/pvu/GenProduct.scala:17:7, :27:28, :34:30, :35:14, :36:37, :37:{14,33}, :39:14, :43:25
   assign io_sign = _boothEncoder_io_neg;	// src/main/scala/pvu/GenProduct.scala:17:7, :27:28
 endmodule
 
 module GenProds_1(	// src/main/scala/pvu/GenProds.scala:23:7
-  input  [59:0]        io_operand_a,	// src/main/scala/pvu/GenProds.scala:27:14
+  input  [55:0]        io_operand_a,	// src/main/scala/pvu/GenProds.scala:27:14
                        io_operand_b,	// src/main/scala/pvu/GenProds.scala:27:14
-  output [30:0][119:0] io_partial_prods	// src/main/scala/pvu/GenProds.scala:27:14
+  output [28:0][111:0] io_partial_prods	// src/main/scala/pvu/GenProds.scala:27:14
 );
 
-  wire [60:0] _genProd_28_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire        _genProd_28_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_27_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire        _genProd_27_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_26_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_26_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_26_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_25_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_25_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_25_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_24_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_24_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_24_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_23_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_23_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_23_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_22_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_22_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_22_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_21_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_21_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_21_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_20_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_20_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_20_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_19_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_19_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_19_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_18_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_18_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_18_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_17_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_17_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_17_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_16_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_16_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_16_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_15_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_15_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_15_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_14_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_14_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_14_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_13_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_13_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_13_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_12_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_12_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_12_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_11_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_11_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_11_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_10_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_10_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_10_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_9_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_9_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_9_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_8_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_8_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_8_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_7_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_7_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_7_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_6_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_6_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_6_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_5_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_5_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_5_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_4_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_4_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_4_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_3_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_3_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_3_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_2_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_2_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_2_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_1_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_1_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_1_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProd_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
+  wire [56:0] _genProd_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:64:25
   wire        _genProd_io_sign;	// src/main/scala/pvu/GenProds.scala:64:25
-  wire [60:0] _genProdFirst_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:46:28
+  wire [56:0] _genProdFirst_io_partial_prod;	// src/main/scala/pvu/GenProds.scala:46:28
   wire        _genProdFirst_io_sign;	// src/main/scala/pvu/GenProds.scala:46:28
   GenProduct_14 genProdFirst (	// src/main/scala/pvu/GenProds.scala:46:28
     .io_multiplicand (io_operand_a),
@@ -2355,217 +2351,177 @@ module GenProds_1(	// src/main/scala/pvu/GenProds.scala:23:7
     .io_partial_prod (_genProd_26_io_partial_prod),
     .io_sign         (_genProd_26_io_sign)
   );
-  GenProduct_14 genProd_27 (	// src/main/scala/pvu/GenProds.scala:64:25
-    .io_multiplicand (io_operand_a),
-    .io_code         (io_operand_b[57:55]),	// src/main/scala/pvu/GenProds.scala:60:27
-    .io_partial_prod (_genProd_27_io_partial_prod),
-    .io_sign         (_genProd_27_io_sign)
-  );
-  GenProduct_14 genProd_28 (	// src/main/scala/pvu/GenProds.scala:64:25
-    .io_multiplicand (io_operand_a),
-    .io_code         (io_operand_b[59:57]),	// src/main/scala/pvu/GenProds.scala:60:27
-    .io_partial_prod (_genProd_28_io_partial_prod),
-    .io_sign         (_genProd_28_io_sign)
-  );
   assign io_partial_prods =
-    {{{61'h0, _genProd_28_io_sign, 58'h0}},
-     {{~_genProd_28_io_sign,
-       _genProd_28_io_partial_prod,
-       1'h0,
-       _genProd_27_io_sign,
-       56'h0}},
-     {{2'h1,
-       ~_genProd_27_io_sign,
-       _genProd_27_io_partial_prod,
-       1'h0,
-       _genProd_26_io_sign,
-       54'h0}},
-     {{4'h1,
-       ~_genProd_26_io_sign,
+    {{{57'h0, _genProd_26_io_sign, 54'h0}},
+     {{~_genProd_26_io_sign,
        _genProd_26_io_partial_prod,
        1'h0,
        _genProd_25_io_sign,
        52'h0}},
-     {{6'h1,
+     {{2'h1,
        ~_genProd_25_io_sign,
        _genProd_25_io_partial_prod,
        1'h0,
        _genProd_24_io_sign,
        50'h0}},
-     {{8'h1,
+     {{4'h1,
        ~_genProd_24_io_sign,
        _genProd_24_io_partial_prod,
        1'h0,
        _genProd_23_io_sign,
        48'h0}},
-     {{10'h1,
+     {{6'h1,
        ~_genProd_23_io_sign,
        _genProd_23_io_partial_prod,
        1'h0,
        _genProd_22_io_sign,
        46'h0}},
-     {{12'h1,
+     {{8'h1,
        ~_genProd_22_io_sign,
        _genProd_22_io_partial_prod,
        1'h0,
        _genProd_21_io_sign,
        44'h0}},
-     {{14'h1,
+     {{10'h1,
        ~_genProd_21_io_sign,
        _genProd_21_io_partial_prod,
        1'h0,
        _genProd_20_io_sign,
        42'h0}},
-     {{16'h1,
+     {{12'h1,
        ~_genProd_20_io_sign,
        _genProd_20_io_partial_prod,
        1'h0,
        _genProd_19_io_sign,
        40'h0}},
-     {{18'h1,
+     {{14'h1,
        ~_genProd_19_io_sign,
        _genProd_19_io_partial_prod,
        1'h0,
        _genProd_18_io_sign,
        38'h0}},
-     {{20'h1,
+     {{16'h1,
        ~_genProd_18_io_sign,
        _genProd_18_io_partial_prod,
        1'h0,
        _genProd_17_io_sign,
        36'h0}},
-     {{22'h1,
+     {{18'h1,
        ~_genProd_17_io_sign,
        _genProd_17_io_partial_prod,
        1'h0,
        _genProd_16_io_sign,
        34'h0}},
-     {{24'h1,
+     {{20'h1,
        ~_genProd_16_io_sign,
        _genProd_16_io_partial_prod,
        1'h0,
        _genProd_15_io_sign,
        32'h0}},
-     {{26'h1,
+     {{22'h1,
        ~_genProd_15_io_sign,
        _genProd_15_io_partial_prod,
        1'h0,
        _genProd_14_io_sign,
        30'h0}},
-     {{28'h1,
+     {{24'h1,
        ~_genProd_14_io_sign,
        _genProd_14_io_partial_prod,
        1'h0,
        _genProd_13_io_sign,
        28'h0}},
-     {{30'h1,
+     {{26'h1,
        ~_genProd_13_io_sign,
        _genProd_13_io_partial_prod,
        1'h0,
        _genProd_12_io_sign,
        26'h0}},
-     {{32'h1,
+     {{28'h1,
        ~_genProd_12_io_sign,
        _genProd_12_io_partial_prod,
        1'h0,
        _genProd_11_io_sign,
        24'h0}},
-     {{34'h1,
+     {{30'h1,
        ~_genProd_11_io_sign,
        _genProd_11_io_partial_prod,
        1'h0,
        _genProd_10_io_sign,
        22'h0}},
-     {{36'h1,
+     {{32'h1,
        ~_genProd_10_io_sign,
        _genProd_10_io_partial_prod,
        1'h0,
        _genProd_9_io_sign,
        20'h0}},
-     {{38'h1,
+     {{34'h1,
        ~_genProd_9_io_sign,
        _genProd_9_io_partial_prod,
        1'h0,
        _genProd_8_io_sign,
        18'h0}},
-     {{40'h1,
+     {{36'h1,
        ~_genProd_8_io_sign,
        _genProd_8_io_partial_prod,
        1'h0,
        _genProd_7_io_sign,
        16'h0}},
-     {{42'h1,
+     {{38'h1,
        ~_genProd_7_io_sign,
        _genProd_7_io_partial_prod,
        1'h0,
        _genProd_6_io_sign,
        14'h0}},
-     {{44'h1,
+     {{40'h1,
        ~_genProd_6_io_sign,
        _genProd_6_io_partial_prod,
        1'h0,
        _genProd_5_io_sign,
        12'h0}},
-     {{46'h1,
+     {{42'h1,
        ~_genProd_5_io_sign,
        _genProd_5_io_partial_prod,
        1'h0,
        _genProd_4_io_sign,
        10'h0}},
-     {{48'h1,
+     {{44'h1,
        ~_genProd_4_io_sign,
        _genProd_4_io_partial_prod,
        1'h0,
        _genProd_3_io_sign,
        8'h0}},
-     {{50'h1,
+     {{46'h1,
        ~_genProd_3_io_sign,
        _genProd_3_io_partial_prod,
        1'h0,
        _genProd_2_io_sign,
        6'h0}},
-     {{52'h1,
+     {{48'h1,
        ~_genProd_2_io_sign,
        _genProd_2_io_partial_prod,
        1'h0,
        _genProd_1_io_sign,
        4'h0}},
-     {{54'h1,
+     {{50'h1,
        ~_genProd_1_io_sign,
        _genProd_1_io_partial_prod,
        1'h0,
        _genProd_io_sign,
        2'h0}},
-     {{56'h1, ~_genProd_io_sign, _genProd_io_partial_prod, 1'h0, _genProdFirst_io_sign}},
-     {{56'h0,
+     {{52'h1, ~_genProd_io_sign, _genProd_io_partial_prod, 1'h0, _genProdFirst_io_sign}},
+     {{52'h0,
        ~_genProdFirst_io_sign,
        {2{_genProdFirst_io_sign}},
        _genProdFirst_io_partial_prod}}};	// src/main/scala/pvu/GenProds.scala:23:7, :35:24, :46:28, :53:{23,29,30}, :64:25, :75:7, :80:{25,42}, :101:{31,52}
 endmodule
 
 module Compressor3to2_1(	// src/main/scala/pvu/Compressor3to2.scala:21:7
-  input  [2:0][119:0] io_operands_i,	// src/main/scala/pvu/Compressor3to2.scala:22:14
-  output [119:0]      io_sum_o,	// src/main/scala/pvu/Compressor3to2.scala:22:14
+  input  [2:0][111:0] io_operands_i,	// src/main/scala/pvu/Compressor3to2.scala:22:14
+  output [111:0]      io_sum_o,	// src/main/scala/pvu/Compressor3to2.scala:22:14
                       io_carry_o	// src/main/scala/pvu/Compressor3to2.scala:22:14
 );
 
-  wire _fa_119_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_118_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_118_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_117_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_117_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_116_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_116_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_115_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_115_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_114_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_114_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_113_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_113_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_112_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_112_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
   wire _fa_111_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
-  wire _fa_111_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
   wire _fa_110_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
   wire _fa_110_io_carry;	// src/main/scala/pvu/Compressor3to2.scala:35:20
   wire _fa_109_io_sum;	// src/main/scala/pvu/Compressor3to2.scala:35:20
@@ -3570,74 +3526,10 @@ module Compressor3to2_1(	// src/main/scala/pvu/Compressor3to2.scala:21:7
     .io_y     (io_operands_i[2'h1][111]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
     .io_z     (io_operands_i[2'h2][111]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
     .io_sum   (_fa_111_io_sum),
-    .io_carry (_fa_111_io_carry)
-  );
-  FullAdder fa_112 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][112]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][112]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][112]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_112_io_sum),
-    .io_carry (_fa_112_io_carry)
-  );
-  FullAdder fa_113 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][113]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][113]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][113]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_113_io_sum),
-    .io_carry (_fa_113_io_carry)
-  );
-  FullAdder fa_114 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][114]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][114]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][114]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_114_io_sum),
-    .io_carry (_fa_114_io_carry)
-  );
-  FullAdder fa_115 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][115]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][115]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][115]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_115_io_sum),
-    .io_carry (_fa_115_io_carry)
-  );
-  FullAdder fa_116 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][116]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][116]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][116]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_116_io_sum),
-    .io_carry (_fa_116_io_carry)
-  );
-  FullAdder fa_117 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][117]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][117]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][117]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_117_io_sum),
-    .io_carry (_fa_117_io_carry)
-  );
-  FullAdder fa_118 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][118]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][118]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][118]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_118_io_sum),
-    .io_carry (_fa_118_io_carry)
-  );
-  FullAdder fa_119 (	// src/main/scala/pvu/Compressor3to2.scala:35:20
-    .io_x     (io_operands_i[2'h0][119]),	// src/main/scala/pvu/Compressor3to2.scala:36:32
-    .io_y     (io_operands_i[2'h1][119]),	// src/main/scala/pvu/Compressor3to2.scala:37:32
-    .io_z     (io_operands_i[2'h2][119]),	// src/main/scala/pvu/Compressor3to2.scala:38:32
-    .io_sum   (_fa_119_io_sum),
     .io_carry (/* unused */)
   );
   assign io_sum_o =
-    {_fa_119_io_sum,
-     _fa_118_io_sum,
-     _fa_117_io_sum,
-     _fa_116_io_sum,
-     _fa_115_io_sum,
-     _fa_114_io_sum,
-     _fa_113_io_sum,
-     _fa_112_io_sum,
-     _fa_111_io_sum,
+    {_fa_111_io_sum,
      _fa_110_io_sum,
      _fa_109_io_sum,
      _fa_108_io_sum,
@@ -3750,15 +3642,7 @@ module Compressor3to2_1(	// src/main/scala/pvu/Compressor3to2.scala:21:7
      _fa_1_io_sum,
      _fa_io_sum};	// src/main/scala/pvu/Compressor3to2.scala:21:7, :35:20, :45:23
   assign io_carry_o =
-    {_fa_118_io_carry,
-     _fa_117_io_carry,
-     _fa_116_io_carry,
-     _fa_115_io_carry,
-     _fa_114_io_carry,
-     _fa_113_io_carry,
-     _fa_112_io_carry,
-     _fa_111_io_carry,
-     _fa_110_io_carry,
+    {_fa_110_io_carry,
      _fa_109_io_carry,
      _fa_108_io_carry,
      _fa_107_io_carry,
@@ -3873,8 +3757,8 @@ module Compressor3to2_1(	// src/main/scala/pvu/Compressor3to2.scala:21:7
 endmodule
 
 module CsaTree_7(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [2:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+  input  [2:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
                       io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
@@ -3886,36 +3770,12 @@ module CsaTree_7(	// src/main/scala/pvu/CsaTree.scala:7:7
 endmodule
 
 module Compressor4to2_6(	// src/main/scala/pvu/Compressor4to2.scala:29:7
-  input  [3:0][119:0] io_operands_i,	// src/main/scala/pvu/Compressor4to2.scala:31:14
-  output [119:0]      io_sum_o,	// src/main/scala/pvu/Compressor4to2.scala:31:14
+  input  [3:0][111:0] io_operands_i,	// src/main/scala/pvu/Compressor4to2.scala:31:14
+  output [111:0]      io_sum_o,	// src/main/scala/pvu/Compressor4to2.scala:31:14
                       io_carry_o	// src/main/scala/pvu/Compressor4to2.scala:31:14
 );
 
-  wire _counter_119_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_118_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_118_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_118_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_117_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_117_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_117_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_116_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_116_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_116_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_115_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_115_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_115_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_114_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_114_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_114_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_113_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_113_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_113_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_112_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_112_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_112_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
   wire _counter_111_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_111_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
-  wire _counter_111_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
   wire _counter_110_io_sum;	// src/main/scala/pvu/Compressor4to2.scala:48:25
   wire _counter_110_io_carry;	// src/main/scala/pvu/Compressor4to2.scala:48:25
   wire _counter_110_io_cout;	// src/main/scala/pvu/Compressor4to2.scala:48:25
@@ -5366,99 +5226,11 @@ module Compressor4to2_6(	// src/main/scala/pvu/Compressor4to2.scala:29:7
     .io_x4    (io_operands_i[2'h3][111]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
     .io_cin   (_counter_110_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
     .io_sum   (_counter_111_io_sum),
-    .io_carry (_counter_111_io_carry),
-    .io_cout  (_counter_111_io_cout)
-  );
-  Counter5to3 counter_112 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][112]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][112]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][112]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][112]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_111_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_112_io_sum),
-    .io_carry (_counter_112_io_carry),
-    .io_cout  (_counter_112_io_cout)
-  );
-  Counter5to3 counter_113 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][113]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][113]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][113]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][113]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_112_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_113_io_sum),
-    .io_carry (_counter_113_io_carry),
-    .io_cout  (_counter_113_io_cout)
-  );
-  Counter5to3 counter_114 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][114]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][114]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][114]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][114]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_113_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_114_io_sum),
-    .io_carry (_counter_114_io_carry),
-    .io_cout  (_counter_114_io_cout)
-  );
-  Counter5to3 counter_115 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][115]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][115]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][115]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][115]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_114_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_115_io_sum),
-    .io_carry (_counter_115_io_carry),
-    .io_cout  (_counter_115_io_cout)
-  );
-  Counter5to3 counter_116 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][116]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][116]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][116]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][116]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_115_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_116_io_sum),
-    .io_carry (_counter_116_io_carry),
-    .io_cout  (_counter_116_io_cout)
-  );
-  Counter5to3 counter_117 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][117]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][117]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][117]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][117]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_116_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_117_io_sum),
-    .io_carry (_counter_117_io_carry),
-    .io_cout  (_counter_117_io_cout)
-  );
-  Counter5to3 counter_118 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][118]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][118]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][118]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][118]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_117_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_118_io_sum),
-    .io_carry (_counter_118_io_carry),
-    .io_cout  (_counter_118_io_cout)
-  );
-  Counter5to3 counter_119 (	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_x1    (io_operands_i[2'h0][119]),	// src/main/scala/pvu/Compressor4to2.scala:49:39
-    .io_x2    (io_operands_i[2'h1][119]),	// src/main/scala/pvu/Compressor4to2.scala:50:39
-    .io_x3    (io_operands_i[2'h2][119]),	// src/main/scala/pvu/Compressor4to2.scala:51:39
-    .io_x4    (io_operands_i[2'h3][119]),	// src/main/scala/pvu/Compressor4to2.scala:52:39
-    .io_cin   (_counter_118_io_cout),	// src/main/scala/pvu/Compressor4to2.scala:48:25
-    .io_sum   (_counter_119_io_sum),
     .io_carry (/* unused */),
     .io_cout  (/* unused */)
   );
   assign io_sum_o =
-    {_counter_119_io_sum,
-     _counter_118_io_sum,
-     _counter_117_io_sum,
-     _counter_116_io_sum,
-     _counter_115_io_sum,
-     _counter_114_io_sum,
-     _counter_113_io_sum,
-     _counter_112_io_sum,
-     _counter_111_io_sum,
+    {_counter_111_io_sum,
      _counter_110_io_sum,
      _counter_109_io_sum,
      _counter_108_io_sum,
@@ -5569,17 +5341,9 @@ module Compressor4to2_6(	// src/main/scala/pvu/Compressor4to2.scala:29:7
      _counter_3_io_sum,
      _counter_2_io_sum,
      _counter_1_io_sum,
-     _counter_io_sum};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :48:25, :73:22
+     _counter_io_sum};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :48:25, :69:22
   assign io_carry_o =
-    {_counter_118_io_carry,
-     _counter_117_io_carry,
-     _counter_116_io_carry,
-     _counter_115_io_carry,
-     _counter_114_io_carry,
-     _counter_113_io_carry,
-     _counter_112_io_carry,
-     _counter_111_io_carry,
-     _counter_110_io_carry,
+    {_counter_110_io_carry,
      _counter_109_io_carry,
      _counter_108_io_carry,
      _counter_107_io_carry,
@@ -5690,12 +5454,12 @@ module Compressor4to2_6(	// src/main/scala/pvu/Compressor4to2.scala:29:7
      _counter_2_io_carry,
      _counter_1_io_carry,
      _counter_io_carry,
-     1'h0};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :44:13, :48:25, :81:14
+     1'h0};	// src/main/scala/pvu/Compressor4to2.scala:29:7, :44:13, :48:25, :75:14
 endmodule
 
 module CsaTree_8(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [3:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+  input  [3:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
                       io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
@@ -5707,15 +5471,15 @@ module CsaTree_8(	// src/main/scala/pvu/CsaTree.scala:7:7
 endmodule
 
 module CsaTree_9(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [6:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+  input  [6:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
                       io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
-  wire [119:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
-  wire [119:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
   CsaTree_7 csa_tree_A (	// src/main/scala/pvu/CsaTree.scala:61:28
     .io_operands_i (io_operands_i[3'h0 +: 3]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
     .io_sum_o      (_csa_tree_A_io_sum_o),
@@ -5737,16 +5501,47 @@ module CsaTree_9(	// src/main/scala/pvu/CsaTree.scala:7:7
   );
 endmodule
 
-module CsaTree_12(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [7:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+module CsaTree_13(	// src/main/scala/pvu/CsaTree.scala:7:7
+  input  [13:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]       io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+                       io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
+);
+
+  wire [111:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  CsaTree_9 csa_tree_A (	// src/main/scala/pvu/CsaTree.scala:61:28
+    .io_operands_i (io_operands_i[4'h0 +: 7]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
+    .io_sum_o      (_csa_tree_A_io_sum_o),
+    .io_carry_o    (_csa_tree_A_io_carry_o)
+  );
+  CsaTree_9 csa_tree_B (	// src/main/scala/pvu/CsaTree.scala:66:28
+    .io_operands_i (io_operands_i[4'h7 +: 7]),	// src/main/scala/pvu/CsaTree.scala:46:28, :57:23
+    .io_sum_o      (_csa_tree_B_io_sum_o),
+    .io_carry_o    (_csa_tree_B_io_carry_o)
+  );
+  Compressor4to2_6 compressor (	// src/main/scala/pvu/CsaTree.scala:79:28
+    .io_operands_i
+      ({{_csa_tree_B_io_carry_o},
+        {_csa_tree_B_io_sum_o},
+        {_csa_tree_A_io_carry_o},
+        {_csa_tree_A_io_sum_o}}),	// src/main/scala/pvu/CsaTree.scala:61:28, :66:28, :72:28
+    .io_sum_o      (io_sum_o),
+    .io_carry_o    (io_carry_o)
+  );
+endmodule
+
+module CsaTree_19(	// src/main/scala/pvu/CsaTree.scala:7:7
+  input  [7:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]      io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
                       io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
-  wire [119:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
-  wire [119:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
   CsaTree_8 csa_tree_A (	// src/main/scala/pvu/CsaTree.scala:61:28
     .io_operands_i (io_operands_i[3'h0 +: 4]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
     .io_sum_o      (_csa_tree_A_io_sum_o),
@@ -5768,22 +5563,22 @@ module CsaTree_12(	// src/main/scala/pvu/CsaTree.scala:7:7
   );
 endmodule
 
-module CsaTree_13(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [14:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]       io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+module CsaTree_20(	// src/main/scala/pvu/CsaTree.scala:7:7
+  input  [14:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]       io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
                        io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
-  wire [119:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
-  wire [119:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
   CsaTree_9 csa_tree_A (	// src/main/scala/pvu/CsaTree.scala:61:28
     .io_operands_i (io_operands_i[4'h0 +: 7]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
     .io_sum_o      (_csa_tree_A_io_sum_o),
     .io_carry_o    (_csa_tree_A_io_carry_o)
   );
-  CsaTree_12 csa_tree_B (	// src/main/scala/pvu/CsaTree.scala:66:28
+  CsaTree_19 csa_tree_B (	// src/main/scala/pvu/CsaTree.scala:66:28
     .io_operands_i (io_operands_i[4'h7 +: 8]),	// src/main/scala/pvu/CsaTree.scala:46:28, :57:23
     .io_sum_o      (_csa_tree_B_io_sum_o),
     .io_carry_o    (_csa_tree_B_io_carry_o)
@@ -5799,54 +5594,23 @@ module CsaTree_13(	// src/main/scala/pvu/CsaTree.scala:7:7
   );
 endmodule
 
-module CsaTree_20(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [15:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]       io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
-                       io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
-);
-
-  wire [119:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
-  wire [119:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
-  CsaTree_12 csa_tree_A (	// src/main/scala/pvu/CsaTree.scala:61:28
-    .io_operands_i (io_operands_i[4'h0 +: 8]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
-    .io_sum_o      (_csa_tree_A_io_sum_o),
-    .io_carry_o    (_csa_tree_A_io_carry_o)
-  );
-  CsaTree_12 csa_tree_B (	// src/main/scala/pvu/CsaTree.scala:66:28
-    .io_operands_i (io_operands_i[4'h8 +: 8]),	// src/main/scala/pvu/CsaTree.scala:46:28, :57:23
-    .io_sum_o      (_csa_tree_B_io_sum_o),
-    .io_carry_o    (_csa_tree_B_io_carry_o)
-  );
-  Compressor4to2_6 compressor (	// src/main/scala/pvu/CsaTree.scala:79:28
-    .io_operands_i
-      ({{_csa_tree_B_io_carry_o},
-        {_csa_tree_B_io_sum_o},
-        {_csa_tree_A_io_carry_o},
-        {_csa_tree_A_io_sum_o}}),	// src/main/scala/pvu/CsaTree.scala:61:28, :66:28, :72:28
-    .io_sum_o      (io_sum_o),
-    .io_carry_o    (io_carry_o)
-  );
-endmodule
-
 module CsaTree_21(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [30:0][119:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [119:0]       io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
+  input  [28:0][111:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [111:0]       io_sum_o,	// src/main/scala/pvu/CsaTree.scala:8:14
                        io_carry_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
-  wire [119:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
-  wire [119:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
-  wire [119:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_B_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_B_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:66:28
+  wire [111:0] _csa_tree_A_io_sum_o;	// src/main/scala/pvu/CsaTree.scala:61:28
+  wire [111:0] _csa_tree_A_io_carry_o;	// src/main/scala/pvu/CsaTree.scala:61:28
   CsaTree_13 csa_tree_A (	// src/main/scala/pvu/CsaTree.scala:61:28
-    .io_operands_i (io_operands_i[5'h0 +: 15]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
+    .io_operands_i (io_operands_i[5'h0 +: 14]),	// src/main/scala/pvu/CsaTree.scala:45:28, :53:23
     .io_sum_o      (_csa_tree_A_io_sum_o),
     .io_carry_o    (_csa_tree_A_io_carry_o)
   );
   CsaTree_20 csa_tree_B (	// src/main/scala/pvu/CsaTree.scala:66:28
-    .io_operands_i (io_operands_i[5'hF +: 16]),	// src/main/scala/pvu/CsaTree.scala:46:28, :57:23
+    .io_operands_i (io_operands_i[5'hE +: 15]),	// src/main/scala/pvu/CsaTree.scala:46:28, :57:23
     .io_sum_o      (_csa_tree_B_io_sum_o),
     .io_carry_o    (_csa_tree_B_io_carry_o)
   );
@@ -5862,13 +5626,13 @@ module CsaTree_21(	// src/main/scala/pvu/CsaTree.scala:7:7
 endmodule
 
 module Radix4BoothMultiplier_1(	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:7:7
-  input  [59:0]  io_operand_a,	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
+  input  [55:0]  io_operand_a,	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
                  io_operand_b,	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
-  output [119:0] io_sum_o,	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
+  output [111:0] io_sum_o,	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
                  io_carry_o	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:12:14
 );
 
-  wire [30:0][119:0] _genProds_io_partial_prods;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
+  wire [28:0][111:0] _genProds_io_partial_prods;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
   GenProds_1 genProds (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
     .io_operand_a     (io_operand_a),
     .io_operand_b     (io_operand_b),
@@ -5882,26 +5646,26 @@ module Radix4BoothMultiplier_1(	// src/main/scala/pvu/Radix4_Booth_Multiplier.sc
 endmodule
 
 module IntDivider(	// src/main/scala/pvu/IntDivider.scala:9:7
-  input  [29:0] io_dividend,	// src/main/scala/pvu/IntDivider.scala:10:14
+  input  [27:0] io_dividend,	// src/main/scala/pvu/IntDivider.scala:10:14
                 io_divisor,	// src/main/scala/pvu/IntDivider.scala:10:14
-  output [59:0] io_quotient	// src/main/scala/pvu/IntDivider.scala:10:14
+  output [55:0] io_quotient	// src/main/scala/pvu/IntDivider.scala:10:14
 );
 
-  wire [119:0] _boothMult_io_sum_o;	// src/main/scala/pvu/IntDivider.scala:26:25
-  wire [119:0] _boothMult_io_carry_o;	// src/main/scala/pvu/IntDivider.scala:26:25
-  wire [59:0]  _reciprocalMod_io_reciprocal_o;	// src/main/scala/pvu/IntDivider.scala:17:29
-  wire [89:0]  _product_T = _boothMult_io_sum_o[89:0] + _boothMult_io_carry_o[89:0];	// src/main/scala/pvu/IntDivider.scala:26:25, :30:36
-  IntReciprocal reciprocalMod (	// src/main/scala/pvu/IntDivider.scala:17:29
+  wire [111:0] _boothMult_io_sum_o;	// src/main/scala/pvu/IntDivider.scala:27:25
+  wire [111:0] _boothMult_io_carry_o;	// src/main/scala/pvu/IntDivider.scala:27:25
+  wire [55:0]  _reciprocalMod_io_reciprocal_o;	// src/main/scala/pvu/IntDivider.scala:18:29
+  wire [56:0]  _product_T = _boothMult_io_sum_o[56:0] + _boothMult_io_carry_o[56:0];	// src/main/scala/pvu/IntDivider.scala:27:25, :31:36
+  IntReciprocal reciprocalMod (	// src/main/scala/pvu/IntDivider.scala:18:29
     .io_num_i        (io_divisor),
     .io_reciprocal_o (_reciprocalMod_io_reciprocal_o)
   );
-  Radix4BoothMultiplier_1 boothMult (	// src/main/scala/pvu/IntDivider.scala:26:25
-    .io_operand_a ({io_dividend, 30'h0}),	// src/main/scala/pvu/IntDivider.scala:22:37
-    .io_operand_b (_reciprocalMod_io_reciprocal_o),	// src/main/scala/pvu/IntDivider.scala:17:29
+  Radix4BoothMultiplier_1 boothMult (	// src/main/scala/pvu/IntDivider.scala:27:25
+    .io_operand_a ({io_dividend, 28'h0}),	// src/main/scala/pvu/IntDivider.scala:23:37
+    .io_operand_b (_reciprocalMod_io_reciprocal_o),	// src/main/scala/pvu/IntDivider.scala:18:29
     .io_sum_o     (_boothMult_io_sum_o),
     .io_carry_o   (_boothMult_io_carry_o)
   );
-  assign io_quotient = _product_T[89:30];	// src/main/scala/pvu/IntDivider.scala:9:7, :30:36, :33:{27,41}
+  assign io_quotient = {_product_T[56:28], 27'h0};	// src/main/scala/pvu/IntDivider.scala:9:7, :31:36, :36:{15,27}
 endmodule
 
 module Div(	// src/main/scala/pvu/Div.scala:8:7
@@ -5909,14 +5673,14 @@ module Div(	// src/main/scala/pvu/Div.scala:8:7
                      io_pir_sign2_i,	// src/main/scala/pvu/Div.scala:15:14
   input  [0:0][7:0]  io_pir_exp1_i,	// src/main/scala/pvu/Div.scala:15:14
                      io_pir_exp2_i,	// src/main/scala/pvu/Div.scala:15:14
-  input  [0:0][29:0] io_pir_frac1_i,	// src/main/scala/pvu/Div.scala:15:14
+  input  [0:0][27:0] io_pir_frac1_i,	// src/main/scala/pvu/Div.scala:15:14
                      io_pir_frac2_i,	// src/main/scala/pvu/Div.scala:15:14
   output [0:0]       io_pir_sign_o,	// src/main/scala/pvu/Div.scala:15:14
   output [0:0][7:0]  io_pir_exp_o,	// src/main/scala/pvu/Div.scala:15:14
-  output [0:0][61:0] io_pir_frac_o	// src/main/scala/pvu/Div.scala:15:14
+  output [0:0][55:0] io_pir_frac_o	// src/main/scala/pvu/Div.scala:15:14
 );
 
-  wire [59:0] _intdivider_io_quotient;	// src/main/scala/pvu/Div.scala:32:41
+  wire [55:0] _intdivider_io_quotient;	// src/main/scala/pvu/Div.scala:32:41
   wire        _GEN = /*cast(bit)*/io_pir_sign1_i;	// src/main/scala/pvu/Div.scala:8:7
   wire        _GEN_0 = /*cast(bit)*/io_pir_sign2_i;	// src/main/scala/pvu/Div.scala:8:7
   IntDivider intdivider (	// src/main/scala/pvu/Div.scala:32:41
@@ -5926,7 +5690,7 @@ module Div(	// src/main/scala/pvu/Div.scala:8:7
   );
   assign io_pir_sign_o = /*cast(bit[0:0])*/_GEN ^ _GEN_0;	// src/main/scala/pvu/Div.scala:8:7
   assign io_pir_exp_o = {1{io_pir_exp1_i[1'h0] - io_pir_exp2_i[1'h0]}};	// src/main/scala/pvu/Div.scala:8:7, :37:52
-  assign io_pir_frac_o = {1{{2'h0, _intdivider_io_quotient}}};	// src/main/scala/pvu/Div.scala:8:7, :32:41, :35:32
+  assign io_pir_frac_o = {1{_intdivider_io_quotient}};	// src/main/scala/pvu/Div.scala:8:7, :32:41
 endmodule
 
 module CompTree(	// src/main/scala/pvu/CompTree.scala:13:7
@@ -6201,25 +5965,25 @@ module FracNorm_3(	// src/main/scala/pvu/FracNorm.scala:10:7
   wire [55:0] _shifter_io_result_o;	// src/main/scala/pvu/FracNorm.scala:55:30
   wire [5:0]  _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm.scala:31:37
   wire        _lzcMod_empty_o;	// src/main/scala/pvu/FracNorm.scala:31:37
-  wire [5:0]  _exp_adjust_reg_T_10 = 6'h2 - _lzcMod_cnt_o - 6'h1;	// src/main/scala/pvu/FracNorm.scala:31:37, :40:35, :44:{44,65}
-  wire [5:0]  _exp_adjust_reg_T_18 = 6'h0 - (_lzcMod_cnt_o - 6'h1);	// src/main/scala/pvu/FracNorm.scala:31:37, :47:{25,47}
+  wire [5:0]  _exp_adjust_reg_T_10 = 6'h1 - _lzcMod_cnt_o - 6'h1;	// src/main/scala/pvu/FracNorm.scala:31:37, :44:{44,65}
+  wire [5:0]  _exp_adjust_reg_T_18 = 6'h0 - _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm.scala:31:37, :40:35, :47:25
   LZC #(
     .MODE(1),
     .WIDTH(56)
   ) lzcMod (	// src/main/scala/pvu/FracNorm.scala:31:37
-    .in_i    (io_pir_frac_i[1'h0]),	// src/main/scala/pvu/FracNorm.scala:32:28
+    .in_i    (io_pir_frac_i[1'h0]),	// src/main/scala/pvu/FracNorm.scala:32:28, :39:22
     .cnt_o   (_lzcMod_cnt_o),
     .empty_o (_lzcMod_empty_o)
   );
   BarrelShifter_2 shifter (	// src/main/scala/pvu/FracNorm.scala:55:30
-    .io_operand_i    (io_pir_frac_i[1'h0]),	// src/main/scala/pvu/FracNorm.scala:32:28
+    .io_operand_i    (io_pir_frac_i[1'h0]),	// src/main/scala/pvu/FracNorm.scala:32:28, :39:22
     .io_shift_amount (_lzcMod_cnt_o),	// src/main/scala/pvu/FracNorm.scala:31:37
     .io_result_o     (_shifter_io_result_o)
   );
   assign io_exp_adjust =
     {1{_lzcMod_empty_o
          ? 9'h0
-         : _lzcMod_cnt_o < 6'h2
+         : _lzcMod_cnt_o == 6'h0
              ? {{3{_exp_adjust_reg_T_10[5]}}, _exp_adjust_reg_T_10}
              : {{3{_exp_adjust_reg_T_18[5]}}, _exp_adjust_reg_T_18}}};	// src/main/scala/pvu/FracNorm.scala:10:7, :31:37, :38:22, :39:22, :40:{35,61}, :41:26, :44:{24,65}, :47:{22,25}
   assign io_pir_frac_o =
@@ -6349,7 +6113,7 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
   wire [61:0]      _dotproduct_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:166:27
   wire [0:0]       _div_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:152:21
   wire [0:0][7:0]  _div_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:152:21
-  wire [0:0][61:0] _div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:152:21
+  wire [0:0][55:0] _div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:152:21
   wire [0:0]       _mul_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:138:21
   wire [0:0][7:0]  _mul_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:138:21
   wire [0:0][55:0] _mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:138:21
@@ -6465,8 +6229,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
     .io_pir_sign2_i (_decode2_io_Sign),	// src/main/scala/pvu/PvuTop.scala:43:23
     .io_pir_exp1_i  (_decode1_io_Exp),	// src/main/scala/pvu/PvuTop.scala:42:23
     .io_pir_exp2_i  (_decode2_io_Exp),	// src/main/scala/pvu/PvuTop.scala:43:23
-    .io_pir_frac1_i ({1{{2'h0, _decode1_io_Frac[1'h0]}}}),	// src/main/scala/pvu/PvuTop.scala:42:23, :72:25, :85:14, :93:30, :152:21, :158:24
-    .io_pir_frac2_i ({1{{2'h0, _decode2_io_Frac[1'h0]}}}),	// src/main/scala/pvu/PvuTop.scala:43:23, :72:25, :85:14, :95:30, :152:21, :159:24
+    .io_pir_frac1_i (_decode1_io_Frac),	// src/main/scala/pvu/PvuTop.scala:42:23
+    .io_pir_frac2_i (_decode2_io_Frac),	// src/main/scala/pvu/PvuTop.scala:43:23
     .io_pir_sign_o  (_div_io_pir_sign_o),
     .io_pir_exp_o   (_div_io_pir_exp_o),
     .io_pir_frac_o  (_div_io_pir_frac_o)
@@ -6506,7 +6270,7 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
   );
   FracNorm_3 frac_norm_div (	// src/main/scala/pvu/PvuTop.scala:220:46
     .io_pir_frac_i
-      ({1{_GEN | _GEN_0 | _GEN_1 | ~_GEN_2 ? 56'h0 : _div_io_pir_frac_o[1'h0][55:0]}}),	// src/main/scala/pvu/PvuTop.scala:62:30, :72:25, :77:25, :85:{14,22}, :111:{20,28}, :137:{20,28}, :151:{20,28}, :152:21, :163:22, :195:{23,33}
+      ({1{_GEN | _GEN_0 | _GEN_1 | ~_GEN_2 ? 56'h0 : _div_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/PvuTop.scala:62:30, :72:25, :77:25, :85:{14,22}, :111:{20,28}, :137:{20,28}, :151:{20,28}, :152:21, :163:22, :195:{23,33}
     .io_exp_adjust (_frac_norm_div_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_div_io_pir_frac_o)
   );

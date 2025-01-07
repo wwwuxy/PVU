@@ -29,6 +29,8 @@ VM_CLASSES_FAST += \
 	VPvuTop___024root__DepSet_h6498118e__1 \
 	VPvuTop_Mul__DepSet_h16f1ba1a__0 \
 	VPvuTop_Mul__DepSet_h12f5d732__0 \
+	VPvuTop_CsaTree_9__DepSet_ha8784957__0 \
+	VPvuTop_CsaTree_9__DepSet_h34025dec__0 \
 	VPvuTop_Compressor4to2__DepSet_h621f074e__0 \
 	VPvuTop_Compressor4to2__DepSet_h621f074e__1 \
 	VPvuTop_Compressor4to2__DepSet_h621f074e__2 \
@@ -38,7 +40,6 @@ VM_CLASSES_FAST += \
 	VPvuTop_Compressor4to2_6__DepSet_h6886782c__3 \
 	VPvuTop_Compressor4to2_6__DepSet_h6886782c__4 \
 	VPvuTop_Compressor4to2_6__DepSet_h6886782c__5 \
-	VPvuTop_Compressor4to2_6__DepSet_h6886782c__6 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
@@ -48,6 +49,8 @@ VM_CLASSES_SLOW += \
 	VPvuTop___024root__DepSet_h6498118e__0__Slow \
 	VPvuTop_Mul__Slow \
 	VPvuTop_Mul__DepSet_he434566a__0__Slow \
+	VPvuTop_CsaTree_9__Slow \
+	VPvuTop_CsaTree_9__DepSet_hefbcc277__0__Slow \
 	VPvuTop_Compressor4to2__Slow \
 	VPvuTop_Compressor4to2__DepSet_h49a2d95a__0__Slow \
 	VPvuTop_Compressor4to2_6__Slow \
@@ -61,7 +64,6 @@ VM_SUPPORT_FAST += \
 	VPvuTop__Trace__3 \
 	VPvuTop__Trace__4 \
 	VPvuTop__Trace__5 \
-	VPvuTop__Trace__6 \
 
 # Generated support classes, non-fast-path, compile with low/medium optimization
 VM_SUPPORT_SLOW += \

@@ -217,7 +217,7 @@
         pir_frac_normed             := frac_norm_mul.io.pir_frac_o
         pir_exp_adjust              := frac_norm_mul.io.exp_adjust
   }.elsewhen(io.op === 4.U){  //Div    
-    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, carry_width, 4))
+    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, 4))
         frac_norm_div.io.pir_frac_i := pir_frac_rst_div
         pir_frac_normed             := frac_norm_div.io.pir_frac_o
         pir_exp_adjust              := frac_norm_div.io.exp_adjust

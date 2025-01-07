@@ -351,16 +351,14 @@ int main(int argc, char** argv) {
     }
 
     //===============================================================
-    // 测试用例2: (例如乘法: 2.0 * 3.0 = 6.0?)
+    // 测试用例3: 测试乘法
     //===============================================================
     {
-        // i1= 0x6000(2.0?), i2= 0x6C00(3.0?), op= 1(假设是乘法)
         printf("Test Mul\n");
         uint32_t i1  = 0x48000000; 
         uint32_t i2  = 0x5E000000; 
         uint8_t  op  = 3;      // 乘法
 
-        // 期望输出: 6.0 => 0x7A00(?), dot => 0x7A00(?)
         uint32_t expected_o     = 0x63000000; 
         uint32_t expected_dot_o = 0; 
 
@@ -373,7 +371,26 @@ int main(int argc, char** argv) {
         check_outputs(dut, expected_o, expected_dot_o);
     }
 
-    // 你可以继续添加更多单元素的测试用例
+    //===============================================================
+    // 测试用例4: 测试除法
+    //===============================================================
+    {
+        printf("Test Div\n");
+        uint32_t i1  = 0x54000000; 
+        uint32_t i2  = 0x48000000; 
+        uint8_t  op  = 4;      // 乘法
+
+        uint32_t expected_o     = 0x4C000000; 
+        uint32_t expected_dot_o = 0; 
+
+        set_inputs(dut, i1, i2, op);
+
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
+
+        check_outputs(dut, expected_o, expected_dot_o);
+    }
 
     // 仿真结束收尾
     tfp->close();
