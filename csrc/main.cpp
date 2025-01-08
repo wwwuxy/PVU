@@ -213,16 +213,16 @@ int main(int argc, char** argv) {
 
 #else
 //每个数组只有 一个 元素，便于波形调试
+
 //----------------------------------------------------------------------
 // 1) 检查输出：仅对单一 io_posit_o_0 以及 io_posit_dot_o 进行比较
 //----------------------------------------------------------------------
-void check_outputs(VPvuTop* dut, uint32_t expected_o, uint32_t expected_dot_o)
+void check_outputs(VPvuTop* dut, uint32_t expected_o)
 {
     bool pass = true;
 
     // 读取实际输出
     uint32_t actual_o     = static_cast<uint32_t>(dut->io_posit_o_0);
-    uint32_t actual_dot_o = static_cast<uint32_t>(dut->io_posit_dot_o);
 
     // 比对主输出
     if (actual_o != expected_o) {
@@ -232,15 +232,28 @@ void check_outputs(VPvuTop* dut, uint32_t expected_o, uint32_t expected_dot_o)
         pass = false;
     }
 
-    // 比对 dot 输出
-    // if (actual_dot_o != expected_dot_o) {
-    //     std::cerr << "Mismatch at io_posit_dot_o: "
-    //               << "Expected 0x" << std::hex << expected_dot_o
-    //               << ", Got 0x" << actual_dot_o << std::dec << "\n";
-    //     pass = false;
-    // }
+    if (pass) {
+        std::cout << "Test Passed.\n";
+    } else {
+        std::cerr << "Test Failed.\n";
+    }
+}
 
-    // 最终打印测试结果
+void check_outputs_dot(VPvuTop* dut, uint32_t expected_o)
+{
+    bool pass = true;
+
+    // 读取实际输出
+    uint32_t actual_o     = static_cast<uint32_t>(dut->io_posit_dot_o);
+
+    // 比对主输出
+    if (actual_o != expected_o) {
+        std::cerr << "Mismatch at io_posit_o_0: "
+                  << "Expected 0x" << std::hex << expected_o
+                  << ", Got 0x" << actual_o << std::dec << "\n";
+        pass = false;
+    }
+    
     if (pass) {
         std::cout << "Test Passed.\n";
     } else {
@@ -308,8 +321,7 @@ int main(int argc, char** argv) {
 
         // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
         // 如果 dot 是某些累加结果，需要根据设计改
-        uint32_t expected_o     = 0x5C000000; 
-        uint32_t expected_dot_o = 0; 
+        uint32_t expected_o = 0x5C000000; 
 
         // 写入输入
         set_inputs(dut, i1, i2, op);
@@ -320,7 +332,7 @@ int main(int argc, char** argv) {
         }
 
         // 比对输出
-        check_outputs(dut, expected_o, expected_dot_o);
+        check_outputs(dut, expected_o);
     }
 
 
@@ -335,8 +347,7 @@ int main(int argc, char** argv) {
 
         // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
         // 如果 dot 是某些累加结果，需要根据设计改
-        uint32_t expected_o     = 0x58000000; 
-        uint32_t expected_dot_o = 0; 
+        uint32_t expected_o = 0x58000000; 
 
         // 写入输入
         set_inputs(dut, i1, i2, op);
@@ -347,7 +358,7 @@ int main(int argc, char** argv) {
         }
 
         // 比对输出
-        check_outputs(dut, expected_o, expected_dot_o);
+        check_outputs(dut, expected_o);
     }
 
     //===============================================================
@@ -355,12 +366,11 @@ int main(int argc, char** argv) {
     //===============================================================
     {
         printf("Test Mul\n");
-        uint32_t i1  = 0x48000000; 
-        uint32_t i2  = 0x5E000000; 
+        uint32_t i1  = 0x54000000; 
+        uint32_t i2  = 0x48000000; 
         uint8_t  op  = 3;      // 乘法
 
-        uint32_t expected_o     = 0x63000000; 
-        uint32_t expected_dot_o = 0; 
+        uint32_t expected_o = 0x5C000000;  
 
         set_inputs(dut, i1, i2, op);
 
@@ -368,7 +378,7 @@ int main(int argc, char** argv) {
             toggle_clock(dut, tfp, main_time);
         }
 
-        check_outputs(dut, expected_o, expected_dot_o);
+        check_outputs(dut, expected_o);
     }
 
     //===============================================================
@@ -378,10 +388,9 @@ int main(int argc, char** argv) {
         printf("Test Div\n");
         uint32_t i1  = 0x54000000; 
         uint32_t i2  = 0x48000000; 
-        uint8_t  op  = 4;      // 乘法
+        uint8_t  op  = 4;      // 除法
 
-        uint32_t expected_o     = 0x4C000000; 
-        uint32_t expected_dot_o = 0; 
+        uint32_t expected_o = 0x4C000000;  
 
         set_inputs(dut, i1, i2, op);
 
@@ -389,8 +398,29 @@ int main(int argc, char** argv) {
             toggle_clock(dut, tfp, main_time);
         }
 
-        check_outputs(dut, expected_o, expected_dot_o);
+        check_outputs(dut, expected_o);
     }
+
+    //===============================================================
+    // 测试用例5: 测试点积
+    //===============================================================
+    {
+        printf("Test Dot\n");
+        uint32_t i1  = 0x48000000; 
+        uint32_t i2  = 0x48000000; 
+        uint8_t  op  = 5;      // 点积
+
+        uint32_t expected_o = 0x50000000; 
+
+        set_inputs(dut, i1, i2, op);
+
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
+
+        check_outputs_dot(dut, expected_o);
+    }
+
 
     // 仿真结束收尾
     tfp->close();

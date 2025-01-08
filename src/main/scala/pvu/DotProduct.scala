@@ -9,7 +9,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
   var EXP_WIDTH: Int  = nd + es + 1 
   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
-  var MUL_WIDTH: Int  = 2 * (ALIGN_WIDTH + 1)
+  var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
 
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -52,9 +52,10 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   pir_frac_cmp               := frac_compare.io.pir_frac_align
 
 //将负Posit数的尾数转换为补码
-val pir_frac_cmp_tmp = RegInit(VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W))))
+  val pir_frac_cmp_tmp = RegInit(VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W))))
+  pir_frac_cmp_tmp(0) := Mux(pir_sign_mul(0) === 1.U, ~pir_frac_cmp(0) + 1.U, pir_frac_cmp(0))  //初始化第一个元素，防止VECTOR_SIZE为1时出错
   
-  for (i <- 0 until VECTOR_SIZE) {
+  for (i <- 1 until VECTOR_SIZE) {
     pir_frac_cmp_tmp(i) := pir_frac_cmp(i)
     when (pir_sign_mul(i) === 1.U) {
       pir_frac_cmp(i) := ~pir_frac_cmp_tmp(i) + 1.U

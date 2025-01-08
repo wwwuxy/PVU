@@ -1,13 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/FractionAlignment_AddSub.scala:34:32: overloaded method + with alternatives:[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Double)Double <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Float)Float <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Long)Long <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Int)Int <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Char)Int <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Short)Int <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: Byte)Int <and>[0m
-[0m[[0m[31merror[0m] [0m[0m  (x: String)String[0m
-[0m[[0m[31merror[0m] [0m[0m cannot be applied to (chisel3.UInt)[0m
-[0m[[0m[31merror[0m] [0m[0m  if (ALIGN_WIDTH > FRAC_WIDTH + 1.U) {[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/FractionAlignment_DotProduct.scala:31:29: not found: value frac_shifted[0m
+[0m[[0m[31merror[0m] [0m[0m    io.pir_frac_align(i) := frac_shifted(i) >> Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount).asUInt[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -184,23 +184,21 @@
   //fraction normalization//
   //***********************//
   val pir_exp_adjust      = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
-  val pir_exp_adjusi_dot  = Wire(SInt(EXP_WIDTH.W))
+  val pir_exp_adjust_dot  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_normed     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   val pir_frac_normed_dot = Wire(UInt(MUL_WIDTH.W))
 
-  val carry_width = log2Ceil(VECTOR_SIZE + 3) // --> ???
   //初始化中间变量
   pir_exp_adjust      := VecInit(Seq.fill(VECTOR_SIZE)(0.S(EXP_WIDTH.W)))
-  pir_exp_adjusi_dot  := 0.S(EXP_WIDTH.W)
+  pir_exp_adjust_dot  := 0.S(EXP_WIDTH.W)
   pir_frac_normed     := VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W)))
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, 1, MUL_WIDTH, carry_width))
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, MUL_WIDTH, 1))
       frac_norm_dot.io.pir_frac_i := pir_frac_dot
       pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
-      pir_exp_adjusi_dot          := frac_norm_dot.io.exp_adjust
-  
+      pir_exp_adjust_dot          := frac_norm_dot.io.exp_adjust
   }.elsewhen(io.op === 1.U){ //Add
     val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, 1))
         frac_norm_add.io.pir_frac_i := pir_frac_rst_add
@@ -236,7 +234,7 @@
   pir_exp_rst_adjusied_dot := 0.S(EXP_WIDTH.W)
 
   when(io.op === 5.U){
-    pir_exp_rst_adjusied_dot := pir_exp_adjusi_dot
+    pir_exp_rst_adjusied_dot := pir_exp_adjust_dot + pir_exp_dot
   }.otherwise{
     for(i <- 0 until VECTOR_SIZE){
       pir_exp_rst_adjusied(i) := pir_exp_rst(i) + pir_exp_adjust(i)

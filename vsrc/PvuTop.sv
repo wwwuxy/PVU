@@ -2035,8 +2035,8 @@ module Radix4BoothMultiplier(	// src/main/scala/pvu/Radix4_Booth_Multiplier.scal
 
   wire [14:0][55:0] _genProds_io_partial_prods;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
   GenProds genProds (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
-    .io_operand_a     (io_operand_a),
-    .io_operand_b     (io_operand_b),
+    .io_operand_a     (io_operand_a < io_operand_b ? io_operand_a : io_operand_b),	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:22:44
+    .io_operand_b     (io_operand_b < io_operand_a ? io_operand_a : io_operand_b),	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:23:44
     .io_partial_prods (_genProds_io_partial_prods)
   );
   CsaTree_6 csaTree (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:30:23
@@ -5634,8 +5634,8 @@ module Radix4BoothMultiplier_1(	// src/main/scala/pvu/Radix4_Booth_Multiplier.sc
 
   wire [28:0][111:0] _genProds_io_partial_prods;	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
   GenProds_1 genProds (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:21:24
-    .io_operand_a     (io_operand_a),
-    .io_operand_b     (io_operand_b),
+    .io_operand_a     (io_operand_a < io_operand_b ? io_operand_a : io_operand_b),	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:22:44
+    .io_operand_b     (io_operand_b < io_operand_a ? io_operand_a : io_operand_b),	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:23:44
     .io_partial_prods (_genProds_io_partial_prods)
   );
   CsaTree_21 csaTree (	// src/main/scala/pvu/Radix4_Booth_Multiplier.scala:30:23
@@ -5702,36 +5702,33 @@ module CompTree(	// src/main/scala/pvu/CompTree.scala:13:7
 endmodule
 
 module FractionAlignment_DotProduct(	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:8:7
-  input  [0:0][55:0] io_pir_frac_i,	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:16:14
-  input  [0:0][7:0]  io_pir_exp_i,	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:16:14
-  output [0:0][55:0] io_pir_frac_align,	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:16:14
-  output [7:0]       io_pir_max_exp	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:16:14
+  input  [0:0][55:0] io_pir_frac_i,	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:15:14
+  input  [0:0][7:0]  io_pir_exp_i,	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:15:14
+  output [0:0][55:0] io_pir_frac_align,	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:15:14
+  output [7:0]       io_pir_max_exp	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:15:14
 );
 
-  wire [7:0] _comptree_io_result_o;	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:25:26
-  wire [7:0] _shift_amount_T = _comptree_io_result_o - io_pir_exp_i[1'h0];	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:25:26, :26:28, :43:{40,62}
-  wire [7:0] shift_amount = $signed(_shift_amount_T) < 8'sh0 ? 8'h0 : _shift_amount_T;	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:43:{40,62}
-  CompTree comptree (	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:25:26
+  wire [7:0] _comptree_io_result_o;	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:24:26
+  wire [7:0] _shift_amount_T = _comptree_io_result_o - io_pir_exp_i[1'h0];	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:24:26, :25:28, :30:{40,62}
+  wire [7:0] shift_amount = $signed(_shift_amount_T) < 8'sh0 ? 8'h0 : _shift_amount_T;	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:30:{40,62}
+  CompTree comptree (	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:24:26
     .io_operands_i (io_pir_exp_i),
     .io_result_o   (_comptree_io_result_o)
   );
   assign io_pir_frac_align =
-    {1{{io_pir_frac_i[1'h0][52:0], 3'h0}
-    >> ($signed(shift_amount) > 8'sh1E ? 8'h1E : shift_amount)}};	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:8:7, :33:{25,45}, :43:62, :44:{45,51,65}
-  assign io_pir_max_exp = _comptree_io_result_o;	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:8:7, :25:26
+    {1{io_pir_frac_i[1'h0] >> ($signed(shift_amount) > 8'sh1E ? 8'h1E : shift_amount)}};	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:8:7, :30:62, :31:{46,52,66}
+  assign io_pir_max_exp = _comptree_io_result_o;	// src/main/scala/pvu/FractionAlignment_DotProduct.scala:8:7, :24:26
 endmodule
 
 module CsaTree_29(	// src/main/scala/pvu/CsaTree.scala:7:7
-  input  [0:0][61:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
-  output [61:0]      io_sum_o	// src/main/scala/pvu/CsaTree.scala:8:14
+  input  [0:0][55:0] io_operands_i,	// src/main/scala/pvu/CsaTree.scala:8:14
+  output [55:0]      io_sum_o	// src/main/scala/pvu/CsaTree.scala:8:14
 );
 
   assign io_sum_o = io_operands_i[1'h0];	// src/main/scala/pvu/CsaTree.scala:7:7, :21:16
 endmodule
 
 module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
-  input              clock,	// src/main/scala/pvu/DotProduct.scala:7:7
-                     reset,	// src/main/scala/pvu/DotProduct.scala:7:7
   input  [0:0]       io_pir_sign1_i,	// src/main/scala/pvu/DotProduct.scala:14:14
                      io_pir_sign2_i,	// src/main/scala/pvu/DotProduct.scala:14:14
   input  [0:0][7:0]  io_pir_exp1_i,	// src/main/scala/pvu/DotProduct.scala:14:14
@@ -5740,20 +5737,12 @@ module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
                      io_pir_frac2_i,	// src/main/scala/pvu/DotProduct.scala:14:14
   output             io_pir_sign_o,	// src/main/scala/pvu/DotProduct.scala:14:14
   output [7:0]       io_pir_exp_o,	// src/main/scala/pvu/DotProduct.scala:14:14
-  output [61:0]      io_pir_frac_o	// src/main/scala/pvu/DotProduct.scala:14:14
+  output [55:0]      io_pir_frac_o	// src/main/scala/pvu/DotProduct.scala:14:14
 );
 
-  wire [0:0]       _mul_io_pir_sign_o;	// src/main/scala/pvu/DotProduct.scala:32:19
+  wire [0:0][55:0] _frac_compare_io_pir_frac_align;	// src/main/scala/pvu/DotProduct.scala:48:39
   wire [0:0][7:0]  _mul_io_pir_exp_o;	// src/main/scala/pvu/DotProduct.scala:32:19
   wire [0:0][55:0] _mul_io_pir_frac_o;	// src/main/scala/pvu/DotProduct.scala:32:19
-  reg  [0:0][61:0] pir_frac_cmp_tmp;	// src/main/scala/pvu/DotProduct.scala:55:31
-  wire [61:0]      _pir_frac_cmp_0_T_1 = ~pir_frac_cmp_tmp[1'h0] + 62'h1;	// src/main/scala/pvu/DotProduct.scala:46:26, :55:31, :58:25, :60:{26,47}
-  always @(posedge clock) begin	// src/main/scala/pvu/DotProduct.scala:7:7
-    if (reset)	// src/main/scala/pvu/DotProduct.scala:7:7
-      pir_frac_cmp_tmp <= '{62'h0};	// src/main/scala/pvu/DotProduct.scala:55:{31,39}
-    else if (_mul_io_pir_sign_o[1'h0])	// src/main/scala/pvu/DotProduct.scala:32:19, :46:26, :59:27
-      pir_frac_cmp_tmp[1'h0] <= _pir_frac_cmp_0_T_1;	// src/main/scala/pvu/DotProduct.scala:46:26, :55:31, :60:47
-  end // always @(posedge)
   Mul mul (	// src/main/scala/pvu/DotProduct.scala:32:19
     .io_pir_sign1_i (io_pir_sign1_i),
     .io_pir_sign2_i (io_pir_sign2_i),
@@ -5761,22 +5750,21 @@ module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
     .io_pir_exp2_i  (io_pir_exp2_i),
     .io_pir_frac1_i (io_pir_frac1_i),
     .io_pir_frac2_i (io_pir_frac2_i),
-    .io_pir_sign_o  (_mul_io_pir_sign_o),
+    .io_pir_sign_o  (/* unused */),
     .io_pir_exp_o   (_mul_io_pir_exp_o),
     .io_pir_frac_o  (_mul_io_pir_frac_o)
   );
   FractionAlignment_DotProduct frac_compare (	// src/main/scala/pvu/DotProduct.scala:48:39
-    .io_pir_frac_i     ({1{_mul_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/DotProduct.scala:32:19, :42:16, :46:26, :48:39
+    .io_pir_frac_i     (_mul_io_pir_frac_o),	// src/main/scala/pvu/DotProduct.scala:32:19
     .io_pir_exp_i      (_mul_io_pir_exp_o),	// src/main/scala/pvu/DotProduct.scala:32:19
-    .io_pir_frac_align (/* unused */),
+    .io_pir_frac_align (_frac_compare_io_pir_frac_align),
     .io_pir_max_exp    (io_pir_exp_o)
   );
-  CsaTree_29 csaTree (	// src/main/scala/pvu/DotProduct.scala:71:23
-    .io_operands_i
-      ({1{_mul_io_pir_sign_o[1'h0] ? _pir_frac_cmp_0_T_1 : pir_frac_cmp_tmp[1'h0]}}),	// src/main/scala/pvu/DotProduct.scala:32:19, :46:26, :55:31, :58:25, :59:{27,36}, :60:{23,47}, :62:23
+  CsaTree_29 csaTree (	// src/main/scala/pvu/DotProduct.scala:72:23
+    .io_operands_i (_frac_compare_io_pir_frac_align),	// src/main/scala/pvu/DotProduct.scala:48:39
     .io_sum_o      (io_pir_frac_o)
   );
-  assign io_pir_sign_o = 1'h0;	// src/main/scala/pvu/DotProduct.scala:7:7, :46:26
+  assign io_pir_sign_o = 1'h0;	// src/main/scala/pvu/DotProduct.scala:7:7, :77:14
 endmodule
 
 // external module LZC
@@ -5810,8 +5798,8 @@ module FracNorm_DotProduct(	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7
   wire [55:0] _shifter_io_result_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:46:30
   wire [5:0]  _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:27:37
   wire        _lzcMod_empty_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:27:37
-  wire [5:0]  _exp_adjust_reg_T_2 = 6'h2 - _lzcMod_cnt_o - 6'h1;	// src/main/scala/pvu/FracNorm_DotProduct.scala:27:37, :36:35, :37:{42,63}
-  wire [5:0]  _exp_adjust_reg_T_10 = 6'h0 - (_lzcMod_cnt_o - 6'h1);	// src/main/scala/pvu/FracNorm_DotProduct.scala:27:37, :39:{25,47}
+  wire [5:0]  _exp_adjust_reg_T_2 = 6'h1 - _lzcMod_cnt_o - 6'h1;	// src/main/scala/pvu/FracNorm_DotProduct.scala:27:37, :37:{42,63}
+  wire [5:0]  _exp_adjust_reg_T_10 = 6'h0 - _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:27:37, :36:35, :39:25
   LZC #(
     .MODE(1),
     .WIDTH(55)
@@ -5828,7 +5816,7 @@ module FracNorm_DotProduct(	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7
   assign io_exp_adjust =
     _lzcMod_empty_o
       ? 9'h0
-      : _lzcMod_cnt_o < 6'h2
+      : _lzcMod_cnt_o == 6'h0
           ? {{3{_exp_adjust_reg_T_2[5]}}, _exp_adjust_reg_T_2}
           : {{3{_exp_adjust_reg_T_10[5]}}, _exp_adjust_reg_T_10};	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7, :27:37, :34:22, :35:22, :36:{35,61}, :37:{22,63}, :39:{22,25}
   assign io_pir_frac_o = {_shifter_io_result_o[55:29], |(_shifter_io_result_o[27:0])};	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7, :46:30, :53:37, :54:37, :55:{27,40}
@@ -6097,20 +6085,21 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
                 io_posit_dot_o	// src/main/scala/pvu/PvuTop.scala:23:15
 );
 
-  wire [0:0][31:0] _encode_io_posit;	// src/main/scala/pvu/PvuTop.scala:257:37
-  wire [31:0]      _encode_dot_io_posit;	// src/main/scala/pvu/PvuTop.scala:250:41
-  wire [0:0][8:0]  _frac_norm_div_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:220:46
-  wire [0:0][27:0] _frac_norm_div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:220:46
-  wire [0:0][8:0]  _frac_norm_mul_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:215:46
-  wire [0:0][27:0] _frac_norm_mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:215:46
-  wire [0:0][7:0]  _frac_norm_sub_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:210:46
-  wire [0:0][27:0] _frac_norm_sub_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:210:46
-  wire [0:0][7:0]  _frac_norm_add_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:205:46
-  wire [0:0][27:0] _frac_norm_add_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:205:46
-  wire [8:0]       _frac_norm_dot_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:199:44
-  wire [27:0]      _frac_norm_dot_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:199:44
+  wire [0:0][31:0] _encode_io_posit;	// src/main/scala/pvu/PvuTop.scala:255:37
+  wire [31:0]      _encode_dot_io_posit;	// src/main/scala/pvu/PvuTop.scala:248:41
+  wire [0:0][8:0]  _frac_norm_div_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:218:46
+  wire [0:0][27:0] _frac_norm_div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:218:46
+  wire [0:0][8:0]  _frac_norm_mul_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:213:46
+  wire [0:0][27:0] _frac_norm_mul_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:213:46
+  wire [0:0][7:0]  _frac_norm_sub_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:208:46
+  wire [0:0][27:0] _frac_norm_sub_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:208:46
+  wire [0:0][7:0]  _frac_norm_add_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:203:46
+  wire [0:0][27:0] _frac_norm_add_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:203:46
+  wire [8:0]       _frac_norm_dot_io_exp_adjust;	// src/main/scala/pvu/PvuTop.scala:198:44
+  wire [27:0]      _frac_norm_dot_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:198:44
   wire             _dotproduct_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:166:27
-  wire [61:0]      _dotproduct_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:166:27
+  wire [7:0]       _dotproduct_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:166:27
+  wire [55:0]      _dotproduct_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:166:27
   wire [0:0]       _div_io_pir_sign_o;	// src/main/scala/pvu/PvuTop.scala:152:21
   wire [0:0][7:0]  _div_io_pir_exp_o;	// src/main/scala/pvu/PvuTop.scala:152:21
   wire [0:0][55:0] _div_io_pir_frac_o;	// src/main/scala/pvu/PvuTop.scala:152:21
@@ -6139,7 +6128,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
   wire             _GEN_2 = io_op == 3'h4;	// src/main/scala/pvu/PvuTop.scala:151:20
   wire             _GEN_3 = io_op == 3'h5;	// src/main/scala/pvu/PvuTop.scala:165:20
   wire             _GEN_4 = _GEN | _GEN_0 | _GEN_1 | _GEN_2;	// src/main/scala/pvu/PvuTop.scala:81:16, :85:{14,22}, :111:{20,28}, :137:{20,28}, :151:{20,28}, :165:28
-  wire [7:0][55:0] _GEN_5 =
+  wire             _GEN_5 = _GEN_4 | ~_GEN_3;	// src/main/scala/pvu/PvuTop.scala:81:16, :82:16, :85:22, :111:28, :137:28, :151:28, :165:{20,28}
+  wire [7:0][55:0] _GEN_6 =
     {{56'h0},
      {56'h0},
      {56'h0},
@@ -6147,8 +6137,8 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
      {{28'h0, _frac_norm_mul_io_pir_frac_o[1'h0]}},
      {{28'h0, _frac_norm_sub_io_pir_frac_o[1'h0]}},
      {{28'h0, _frac_norm_add_io_pir_frac_o[1'h0]}},
-     {56'h0}};	// src/main/scala/pvu/PvuTop.scala:72:25, :85:14, :111:20, :137:20, :151:20, :165:20, :195:{23,33}, :198:22, :201:35, :204:28, :205:46, :207:37, :209:28, :210:46, :212:37, :214:28, :215:46, :217:37, :219:28, :220:46, :222:37
-  wire [7:0][7:0]  _GEN_6 =
+     {56'h0}};	// src/main/scala/pvu/PvuTop.scala:72:25, :85:14, :111:20, :137:20, :151:20, :165:20, :194:{23,33}, :197:22, :200:35, :202:28, :203:46, :205:37, :207:28, :208:46, :210:37, :212:28, :213:46, :215:37, :217:28, :218:46, :220:37
+  wire [7:0][7:0]  _GEN_7 =
     {{8'h0},
      {8'h0},
      {8'h0},
@@ -6156,7 +6146,7 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
      {_frac_norm_mul_io_exp_adjust[1'h0][7:0]},
      {_frac_norm_sub_io_exp_adjust[1'h0]},
      {_frac_norm_add_io_exp_adjust[1'h0]},
-     {8'h0}};	// src/main/scala/pvu/PvuTop.scala:72:25, :85:14, :111:20, :137:20, :151:20, :165:20, :193:{23,33}, :198:22, :204:28, :205:46, :208:37, :209:28, :210:46, :213:37, :214:28, :215:46, :218:37, :219:28, :220:46, :223:37, :235:{28,38}
+     {8'h0}};	// src/main/scala/pvu/PvuTop.scala:72:25, :85:14, :111:20, :137:20, :151:20, :165:20, :192:{23,33}, :197:22, :202:28, :203:46, :206:37, :207:28, :208:46, :211:37, :212:28, :213:46, :216:37, :217:28, :218:46, :221:37, :233:{28,38}
   PositDecode decode1 (	// src/main/scala/pvu/PvuTop.scala:42:23
     .io_posit ({1{io_posit_i1_0}}),	// src/main/scala/pvu/PvuTop.scala:16:8
     .io_Sign  (_decode1_io_Sign),
@@ -6236,8 +6226,6 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
     .io_pir_frac_o  (_div_io_pir_frac_o)
   );
   DotProduct dotproduct (	// src/main/scala/pvu/PvuTop.scala:166:27
-    .clock          (clock),
-    .reset          (reset),
     .io_pir_sign1_i (_decode1_io_Sign),	// src/main/scala/pvu/PvuTop.scala:42:23
     .io_pir_sign2_i (_decode2_io_Sign),	// src/main/scala/pvu/PvuTop.scala:43:23
     .io_pir_exp1_i  (_decode1_io_Exp),	// src/main/scala/pvu/PvuTop.scala:42:23
@@ -6245,42 +6233,46 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
     .io_pir_frac1_i (_decode1_io_Frac),	// src/main/scala/pvu/PvuTop.scala:42:23
     .io_pir_frac2_i (_decode2_io_Frac),	// src/main/scala/pvu/PvuTop.scala:43:23
     .io_pir_sign_o  (_dotproduct_io_pir_sign_o),
-    .io_pir_exp_o   (/* unused */),
+    .io_pir_exp_o   (_dotproduct_io_pir_exp_o),
     .io_pir_frac_o  (_dotproduct_io_pir_frac_o)
   );
-  FracNorm_DotProduct frac_norm_dot (	// src/main/scala/pvu/PvuTop.scala:199:44
-    .io_pir_frac_i (_GEN_4 | ~_GEN_3 ? 56'h0 : _dotproduct_io_pir_frac_o[55:0]),	// src/main/scala/pvu/PvuTop.scala:81:16, :83:16, :85:22, :111:28, :137:28, :151:28, :165:{20,28}, :166:27, :178:18, :195:{23,33}
+  FracNorm_DotProduct frac_norm_dot (	// src/main/scala/pvu/PvuTop.scala:198:44
+    .io_pir_frac_i (_GEN_5 ? 56'h0 : _dotproduct_io_pir_frac_o),	// src/main/scala/pvu/PvuTop.scala:82:16, :83:16, :85:22, :111:28, :137:28, :151:28, :165:28, :166:27, :194:{23,33}
     .io_exp_adjust (_frac_norm_dot_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_dot_io_pir_frac_o)
   );
-  FracNorm frac_norm_add (	// src/main/scala/pvu/PvuTop.scala:205:46
+  FracNorm frac_norm_add (	// src/main/scala/pvu/PvuTop.scala:203:46
     .io_pir_frac_i ({1{_GEN ? _add_io_pir_frac_o[1'h0] : 30'h0}}),	// src/main/scala/pvu/PvuTop.scala:59:30, :72:25, :74:25, :85:{14,22}, :90:27, :106:22
     .io_exp_adjust (_frac_norm_add_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_add_io_pir_frac_o)
   );
-  FracNorm_1 frac_norm_sub (	// src/main/scala/pvu/PvuTop.scala:210:46
+  FracNorm_1 frac_norm_sub (	// src/main/scala/pvu/PvuTop.scala:208:46
     .io_pir_frac_i ({1{_GEN | ~_GEN_0 ? 30'h0 : _sub_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/PvuTop.scala:60:30, :72:25, :74:25, :75:25, :85:{14,22}, :111:{20,28}, :116:27, :132:22
     .io_exp_adjust (_frac_norm_sub_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_sub_io_pir_frac_o)
   );
-  FracNorm_2 frac_norm_mul (	// src/main/scala/pvu/PvuTop.scala:215:46
-    .io_pir_frac_i ({1{_GEN | _GEN_0 | ~_GEN_1 ? 56'h0 : _mul_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/PvuTop.scala:61:30, :72:25, :76:25, :85:{14,22}, :111:{20,28}, :137:{20,28}, :138:21, :149:22, :195:{23,33}
+  FracNorm_2 frac_norm_mul (	// src/main/scala/pvu/PvuTop.scala:213:46
+    .io_pir_frac_i ({1{_GEN | _GEN_0 | ~_GEN_1 ? 56'h0 : _mul_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/PvuTop.scala:61:30, :72:25, :76:25, :85:{14,22}, :111:{20,28}, :137:{20,28}, :138:21, :149:22, :194:{23,33}
     .io_exp_adjust (_frac_norm_mul_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_mul_io_pir_frac_o)
   );
-  FracNorm_3 frac_norm_div (	// src/main/scala/pvu/PvuTop.scala:220:46
+  FracNorm_3 frac_norm_div (	// src/main/scala/pvu/PvuTop.scala:218:46
     .io_pir_frac_i
-      ({1{_GEN | _GEN_0 | _GEN_1 | ~_GEN_2 ? 56'h0 : _div_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/PvuTop.scala:62:30, :72:25, :77:25, :85:{14,22}, :111:{20,28}, :137:{20,28}, :151:{20,28}, :152:21, :163:22, :195:{23,33}
+      ({1{_GEN | _GEN_0 | _GEN_1 | ~_GEN_2 ? 56'h0 : _div_io_pir_frac_o[1'h0]}}),	// src/main/scala/pvu/PvuTop.scala:62:30, :72:25, :77:25, :85:{14,22}, :111:{20,28}, :137:{20,28}, :151:{20,28}, :152:21, :163:22, :194:{23,33}
     .io_exp_adjust (_frac_norm_div_io_exp_adjust),
     .io_pir_frac_o (_frac_norm_div_io_pir_frac_o)
   );
-  PositEncode_DotProduct encode_dot (	// src/main/scala/pvu/PvuTop.scala:250:41
+  PositEncode_DotProduct encode_dot (	// src/main/scala/pvu/PvuTop.scala:248:41
     .io_pir_sign (~_GEN_4 & _GEN_3 & _dotproduct_io_pir_sign_o),	// src/main/scala/pvu/PvuTop.scala:81:16, :85:22, :111:28, :137:28, :151:28, :165:{20,28}, :166:27
-    .io_pir_exp  (_GEN_3 ? _frac_norm_dot_io_exp_adjust[7:0] : 8'h0),	// src/main/scala/pvu/PvuTop.scala:165:20, :193:{23,33}, :199:44, :202:35, :235:{28,38}, :236:28, :238:22, :239:30
-    .io_pir_frac (_GEN_3 ? _frac_norm_dot_io_pir_frac_o : 28'h0),	// src/main/scala/pvu/PvuTop.scala:165:20, :196:23, :198:22, :199:44, :201:35
+    .io_pir_exp
+      (_GEN_3
+         ? (_GEN_3 ? _frac_norm_dot_io_exp_adjust[7:0] : 8'h0)
+           + (_GEN_5 ? 8'h0 : _dotproduct_io_pir_exp_o)
+         : 8'h0),	// src/main/scala/pvu/PvuTop.scala:82:16, :85:22, :111:28, :137:28, :151:28, :165:{20,28}, :166:27, :192:{23,33}, :193:23, :197:22, :198:44, :201:35, :233:{28,38}, :234:28, :236:22, :237:{30,52}
+    .io_pir_frac (_GEN_3 ? _frac_norm_dot_io_pir_frac_o : 28'h0),	// src/main/scala/pvu/PvuTop.scala:165:20, :195:23, :197:22, :198:44, :200:35
     .io_posit    (_encode_dot_io_posit)
   );
-  PositEncode encode (	// src/main/scala/pvu/PvuTop.scala:257:37
+  PositEncode encode (	// src/main/scala/pvu/PvuTop.scala:255:37
     .io_pir_sign
       ({1{_GEN
             ? _add_io_pir_sign_o[1'h0]
@@ -6298,12 +6290,12 @@ module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
                      ? _sub_io_pir_exp_o[1'h0]
                      : _GEN_1
                          ? _mul_io_pir_exp_o[1'h0]
-                         : _GEN_2 ? _div_io_pir_exp_o[1'h0] : 8'h0) + _GEN_6[io_op]}}),	// src/main/scala/pvu/PvuTop.scala:72:25, :73:25, :85:{14,22}, :90:27, :105:22, :111:{20,28}, :116:27, :131:22, :137:{20,28}, :138:21, :148:22, :151:{20,28}, :152:21, :162:22, :165:20, :193:{23,33}, :198:22, :204:28, :208:37, :209:28, :213:37, :214:28, :218:37, :219:28, :223:37, :231:38, :235:{28,38}, :238:22, :242:{31,49}
-    .io_pir_frac ({1{_GEN_5[io_op][27:0]}}),	// src/main/scala/pvu/PvuTop.scala:85:14, :111:20, :137:20, :151:20, :165:20, :195:23, :198:22, :204:28, :207:37, :209:28, :212:37, :214:28, :217:37, :219:28, :222:37, :257:37, :260:28
+                         : _GEN_2 ? _div_io_pir_exp_o[1'h0] : 8'h0) + _GEN_7[io_op]}}),	// src/main/scala/pvu/PvuTop.scala:72:25, :73:25, :85:{14,22}, :90:27, :105:22, :111:{20,28}, :116:27, :131:22, :137:{20,28}, :138:21, :148:22, :151:{20,28}, :152:21, :162:22, :165:20, :192:{23,33}, :197:22, :202:28, :206:37, :207:28, :211:37, :212:28, :216:37, :217:28, :221:37, :229:38, :233:{28,38}, :236:22, :240:{31,49}
+    .io_pir_frac ({1{_GEN_6[io_op][27:0]}}),	// src/main/scala/pvu/PvuTop.scala:85:14, :111:20, :137:20, :151:20, :165:20, :194:23, :197:22, :202:28, :205:37, :207:28, :210:37, :212:28, :215:37, :217:28, :220:37, :255:37, :258:28
     .io_posit    (_encode_io_posit)
   );
-  assign io_posit_o_0 = _GEN_3 ? 32'h0 : _encode_io_posit[1'h0];	// src/main/scala/pvu/PvuTop.scala:16:8, :72:25, :165:20, :249:22, :255:{32,42}, :257:37, :261:28
-  assign io_posit_dot_o = _GEN_3 ? _encode_dot_io_posit : 32'h0;	// src/main/scala/pvu/PvuTop.scala:16:8, :165:20, :249:22, :250:41, :254:32, :255:{32,42}, :262:28
+  assign io_posit_o_0 = _GEN_3 ? 32'h0 : _encode_io_posit[1'h0];	// src/main/scala/pvu/PvuTop.scala:16:8, :72:25, :165:20, :247:22, :253:{32,42}, :255:37, :259:28
+  assign io_posit_dot_o = _GEN_3 ? _encode_dot_io_posit : 32'h0;	// src/main/scala/pvu/PvuTop.scala:16:8, :165:20, :247:22, :248:41, :252:32, :253:{32,42}, :260:28
 endmodule
 
 

@@ -17,10 +17,10 @@ class Radix4BoothMultiplier(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
     val carry_o = Output(UInt(WIDTH_O.W))
   })
 
-  // 生成部分积
+  // 生成部分积，目前只能将较大的乘数进行Booth编码
   val genProds = Module(new GenProds(WIDTH_A, WIDTH_B))
-  genProds.io.operand_a := io.operand_a
-  genProds.io.operand_b := io.operand_b
+  genProds.io.operand_a := io.operand_a.min(io.operand_b)
+  genProds.io.operand_b := io.operand_b.max(io.operand_a)
 
   // for(i <- 0 until COUNT) {
   //   printf("genProds.io.partial_prods[%d] = %b\n", i.U, genProds.io.partial_prods(i))

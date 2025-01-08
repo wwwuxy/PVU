@@ -8,7 +8,7 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class FracNorm_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
+class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
   var es: Int         = 2
   var nd: Int         = log2Ceil(WIDTH - 1)
   var EXP_WIDTH: Int  = nd + es + 1 

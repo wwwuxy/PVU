@@ -6,7 +6,6 @@ import chisel3._
 import chisel3.util._
 
 class FractionAlignment_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-  // Fixed parameters
   var es: Int         = 2
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
   var EXP_WIDTH: Int  = nd + es + 1
@@ -18,29 +17,17 @@ class FractionAlignment_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, v
     val pir_exp_i      = Input(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
 
     val pir_frac_align = Output(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
-    val pir_max_exp    = Output(SInt(EXP_WIDTH.W))                    //for encode and fraction_normalize 
+    val pir_max_exp    = Output(SInt(EXP_WIDTH.W))
   })
 
-  // Calculate the maximum exponent of each vector element
+  // 计算每个向量元素的最大指数
     val comptree = Module(new CompTree(VECTOR_SIZE, EXP_WIDTH))
     comptree.io.operands_i := io.pir_exp_i
     io.pir_max_exp         := comptree.io.result_o
 
-  // Align score to ALIGN_WIDTH
-    val frac_shifted = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
-    if(ALIGN_WIDTH > FRAC_WIDTH){
-      for(i <- 0 until VECTOR_SIZE){
-        frac_shifted(i) := io.pir_frac_i(i) << (ALIGN_WIDTH - FRAC_WIDTH)
-      }
-    } else {
-      for(i <- 0 until VECTOR_SIZE){
-        frac_shifted(i) := io.pir_frac_i(i) >> (FRAC_WIDTH - ALIGN_WIDTH)
-      }
-    }
-
-  // Calculate the amount of shift required and ensure shift_amount <= ALIGN_WIDTH
+  // 计算所需的移位量并确保 shift_amount <= ALIGN_WIDTH
   for(i <- 0 until VECTOR_SIZE){
-    val shift_amount = (io.pir_max_exp - io.pir_exp_i(i)).max(0.S)
-    io.pir_frac_align(i) := frac_shifted(i) >> Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount).asUInt
+    val shift_amount = (io.pir_max_exp - io.pir_exp_i(i)).max(0.S)  //取与0的最大值 ---> 防御性编程
+    io.pir_frac_align(i) := io.pir_frac_i(i) >> Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount).asUInt
   }
 }
