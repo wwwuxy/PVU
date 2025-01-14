@@ -17,8 +17,9 @@
    var es: Int         = 2
    var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
    var EXP_WIDTH: Int  = nd + es + 1
-   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3   //rigime位宽至少为2，再去除一位符号位，故减3
+   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3               //rigime位宽至少为2，再去除一位符号位，故减3
    var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
+   val SUM_WIDTH: Int  = MUL_WIDTH + log2Ceil(VECTOR_SIZE)
  
    val io = IO(new Bundle {
      val posit_i1 = Input(Vec(VECTOR_SIZE,UInt(POSIT_WIDTH.W)))
@@ -65,7 +66,7 @@
     //for dotproduct, output is scalar
   val pir_sign_dot = Wire(UInt(1.W))
   val pir_exp_dot  = Wire(SInt(EXP_WIDTH.W))
-  val pir_frac_dot = Wire(UInt(MUL_WIDTH.W))
+  val pir_frac_dot = Wire(UInt((SUM_WIDTH + 1).W))
 
     //初始化中间变量
   for(i <- 0 until VECTOR_SIZE){
@@ -96,8 +97,8 @@
 
     add.io.pir_sign1_i       := pir_sign1
     add.io.pir_sign2_i       := pir_sign2
-    add.io.pir_exp1_i        := pir_exp1
-    add.io.pir_exp2_i        := pir_exp2
+    add.io.pir_exp1_i        := fracalign.io.pir_max_exp
+    add.io.pir_exp2_i        := fracalign.io.pir_max_exp
     add.io.pir_frac1_aligned := fracalign.io.pir_frac1_align
     add.io.pir_frac2_aligned := fracalign.io.pir_frac2_align
   
@@ -122,8 +123,8 @@
   
     sub.io.pir_sign1_i       := pir_sign1
     sub.io.pir_sign2_i       := pir_sign2
-    sub.io.pir_exp1_i        := pir_exp1
-    sub.io.pir_exp2_i        := pir_exp2
+    sub.io.pir_exp1_i        := fracalign.io.pir_max_exp
+    sub.io.pir_exp2_i        := fracalign.io.pir_max_exp
     sub.io.pir_frac1_aligned := fracalign.io.pir_frac1_align
     sub.io.pir_frac2_aligned := fracalign.io.pir_frac2_align
   
@@ -178,8 +179,6 @@
     pir_frac_dot := dotproduct.io.pir_frac_o
   }
 
-  //  printf("pir_frac_rst_add: %b\n", pir_frac_rst_add(0))
-
   //***********************//
   //fraction normalization//
   //***********************//
@@ -195,7 +194,7 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, MUL_WIDTH, 1))
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE) + 1))
       frac_norm_dot.io.pir_frac_i := pir_frac_dot
       pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
       pir_exp_adjust_dot          := frac_norm_dot.io.exp_adjust

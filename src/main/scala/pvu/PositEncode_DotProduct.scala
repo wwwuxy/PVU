@@ -28,16 +28,20 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
       regime_k := io.pir_exp(EXP_WIDTH - 1, es)
       es_value := io.pir_exp(es - 1, 0)
 
+      // printf("regime_k = %b, es_value = %b\n", regime_k, es_value)
+
     //初始化regime
   val k_sign      = Wire(UInt(1.W))
   val regime_init = Wire(UInt((POSIT_WIDTH - 1).W))
-  val regime      = Wire(UInt((POSIT_WIDTH- 1).W))
+  val regime      = Wire(UInt((POSIT_WIDTH - 1).W))
 
   regime_init := 1.U
 
   k_sign := io.pir_exp(EXP_WIDTH - 1)
   regime := Mux(k_sign === 1.U, regime_init, ~regime_init)
     //当k_sign为1时，regime为负数，即0000...1（-k），当k_sign为0时，regime为正数，即1111...0（k-1）
+
+  // printf("k_sign = %b, regime = %b\n", k_sign, regime)
 
     //计算regime位宽
   val regime_width  = Wire(UInt(nd.W))
@@ -48,6 +52,9 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
   val reg_es_frac  = Wire(UInt(TMP_WIDTH.W))
       reg_es_frac := Cat(regime, es_value, io.pir_frac(FRAC_WIDTH - 1, 0))
 
+  // printf("regime_width = %b\n", regime_width)
+  // printf("reg_es_frac = %b\n", reg_es_frac)
+
     //进行右移操作(先左移再右移)
   var MAX_SHIFT   = FRAC_WIDTH + es + 1
   var SHIFT_WIDTH = log2Ceil(MAX_SHIFT)
@@ -56,16 +63,19 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
   shift := Mux(regime_width >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width + FRAC_WIDTH.U + es.U  - POSIT_WIDTH.U + 1.U)
     //如果regime_bits>=n，说明regime占据了所有位，此时右移位数为最大右移位数,在两次移位后，posit则全是regime位，且位宽位n位
     //如果regime_bits<n，说明右移后需要对mant的低位进行舍入，舍入的位数即位移量，设为x， reg+esp+mant-x = n-1， x = reg+esp+mant-n+1
-    //右移的数据量计算是为了让 右移后的低MAX_SHIFT_AMOUNT位成为舍入位，其上的n位是有效数据位
+    //右移的数据量计算是为了让 右移后的低MAX_SHIFT位成为舍入位，其上的n位是有效数据位
 
   val value_before_shift = Wire(UInt(TMP_WIDTH.W + MAX_SHIFT.W))
   val value_after_shift  = Wire(UInt(TMP_WIDTH.W + MAX_SHIFT.W))
 
       value_before_shift             := reg_es_frac << MAX_SHIFT
-  val barrel_shifter                  = Module(new BarrelShifter(TMP_WIDTH + MAX_SHIFT, SHIFT_WIDTH, false))
+  val barrel_shifter                  = Module(new BarrelShifter(TMP_WIDTH + MAX_SHIFT, SHIFT_WIDTH, true))
       barrel_shifter.io.operand_i    := value_before_shift
       barrel_shifter.io.shift_amount := shift
       value_after_shift              := barrel_shifter.io.result_o
+
+  // printf("value_before_shift = %b\n", value_before_shift)
+  // printf("value_after_shift = %b\n", value_after_shift)
 
     //进行舍入操作  --> RNE舍入
   val value_before_round = Wire(UInt((POSIT_WIDTH - 1).W))
@@ -81,11 +91,14 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
   val round_value        = round_bit & (sticky_bit | value_before_round(0))
       value_after_round := value_before_round + round_value
 
+  // printf("value_before_round = %b\n", value_before_round)
+  // printf("value_after_round = %b\n", value_after_round)
+
     //输出Posit --> 转换为补码
   val result = Wire(UInt(POSIT_WIDTH.W))
 
   result   := Mux(io.pir_sign === 1.U, Cat(1.U, ~value_after_round + 1.U), Cat(0.U, value_after_round))
-  io.posit := Mux(frac_hide === 1.U, result, 0.U)
+  io.posit := result
 }
 
 

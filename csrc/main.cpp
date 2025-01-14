@@ -4,13 +4,13 @@
 #include "VPvuTop.h"       // 由 Verilator 生成
 #include "VPvuTop__Syms.h" // 由 Verilator 生成
 
-#if 0
+#if 1
+//VECTOR_SIZE = 4测试向量运算
 //-----------------------------
 // 检查输出是否正确
 //-----------------------------
 void check_outputs(VPvuTop* dut,
-                   const uint32_t expected_o[4],
-                   uint32_t expected_dot_o)
+                   const uint32_t expected_o[4])
 {
     bool pass = true;
 
@@ -20,7 +20,6 @@ void check_outputs(VPvuTop* dut,
         static_cast<uint32_t>(dut->io_posit_o_2),
         static_cast<uint32_t>(dut->io_posit_o_3)
     };
-    uint32_t actual_dot_o = static_cast<uint32_t>(dut->io_posit_dot_o);
 
     for (int i = 0; i < 4; ++i) {
         if (actual_o[i] != expected_o[i]) {
@@ -30,18 +29,36 @@ void check_outputs(VPvuTop* dut,
             pass = false;
         }
     }
-    if (actual_dot_o != expected_dot_o) {
-        std::cerr << "Mismatch at io_posit_dot_o: "
-                  << "Expected 0x" << std::hex << expected_dot_o
-                  << ", Got 0x" << actual_dot_o << std::dec << "\n";
-        pass = false;
-    }
+
     if (pass) {
         std::cout << "Test Passed.\n";
     } else {
         std::cerr << "Test Failed.\n";
     }
 }
+
+void check_outputs_dot(VPvuTop* dut, uint32_t expected_o)
+{
+    bool pass = true;
+
+    // 读取实际输出
+    uint32_t actual_o     = static_cast<uint32_t>(dut->io_posit_dot_o);
+
+    // 比对主输出
+    if (actual_o != expected_o) {
+        std::cerr << "Mismatch at io_posit_o_0: "
+                  << "Expected 0x" << std::hex << expected_o
+                  << ", Got 0x" << actual_o << std::dec << "\n";
+        pass = false;
+    }
+    
+    if (pass) {
+        std::cout << "Test Passed.\n";
+    } else {
+        std::cerr << "Test Failed.\n";
+    }
+}
+
 
 //-----------------------------
 // 给输入赋值
@@ -105,104 +122,96 @@ int main(int argc, char** argv) {
     dut->reset = 0;
 
     //--------------------------------------------------
-    // 测试用例1: 加法示例 (1.0 + 1.0 -> 2.0)
+    // 测试用例1: 加法示例
     //--------------------------------------------------
     {
-        // i1[] = 1.0, 1.0, 1.0, 1.0
-        // i2[] = 1.0, 1.0, 1.0, 1.0
-        // op = 0 (加法)
-        // 期望: out[0..3] 全部是 2.0, dot = 8.0? (2+2+2+2)
-        uint32_t test_i1[4] = {0x4000, 0x4000, 0x4000, 0x4000}; // 1.0?
-        uint32_t test_i2[4] = {0x4000, 0x4000, 0x4000, 0x4000}; // 1.0?
+        printf("Test Add\n");
+        uint32_t test_i1[4] = {0x5A000000, 0x5A000000, 0x48000000, 0x60000000};
+        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x50000000, 0x60000000};
         uint8_t  test_op    = 1; // 加法
 
-        // 2.0 => 0x6000? (示例)
-        // 8.0 => 0x7C00? (示例)
-        uint32_t expected_o[4]  = {0x6000, 0x6000, 0x6000, 0x6000}; 
-        uint32_t expected_dot_o = 0x7C00; // 8.0 ?
+        uint32_t expected_o[4]  = {0x5C000000, 0x5C000000, 0x54000000, 0x64000000}; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
             toggle_clock(dut, tfp, main_time);
         }
-        check_outputs(dut, expected_o, expected_dot_o);
+        check_outputs(dut, expected_o);
     }
 
     //--------------------------------------------------
-    // 测试用例2: 加法示例 (2.0 + 3.0 -> 5.0)
+    // 测试用例2: 减法示例
     //--------------------------------------------------
-    // {
-    //     // i1[] = 2.0, 2.0, 3.0, 3.0
-    //     // i2[] = 3.0, 3.0, 2.0, 2.0
-    //     // op = 0 (加法)
-    //     // 期望: 
-    //     //   out[0] = 2+3=5.0 => 0x7400?
-    //     //   out[1] = 2+3=5.0 => 0x7400?
-    //     //   out[2] = 3+2=5.0 => 0x7400?
-    //     //   out[3] = 3+2=5.0 => 0x7400?
-    //     // dot = 5+5+5+5=20 => 0x7A00? (示例)
-    //     uint32_t test_i1[4] = {0x6000, 0x6000, 0x6C00, 0x6C00}; // 2.0, 2.0, 3.0, 3.0
-    //     uint32_t test_i2[4] = {0x6C00, 0x6C00, 0x6000, 0x6000}; // 3.0, 3.0, 2.0, 2.0
-    //     uint8_t  test_op    = 1; // 加法
+    {
+        printf("Test Sub\n");
+        uint32_t test_i1[4] = {0x5A000000, 0x5A000000, 0x5A000000, 0x48000000};
+        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x48000000, 0x5A000000};
+        uint8_t  test_op    = 2; // 加法
 
-    //     uint32_t expected_o[4]  = {0x7400, 0x7400, 0x7400, 0x7400}; // 5.0 ?
-    //     uint32_t expected_dot_o = 0x7A00; // 20 ?
+        uint32_t expected_o[4]  = {0x58000000, 0x58000000, 0x58000000, 0xA8000000}; 
 
-    //     set_inputs(dut, test_i1, test_i2, test_op);
-    //     for (int cycle = 0; cycle < 2; ++cycle) {
-    //         toggle_clock(dut, tfp, main_time);
-    //     }
-    //     check_outputs(dut, expected_o, expected_dot_o);
-    // }
+        set_inputs(dut, test_i1, test_i2, test_op);
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
+        check_outputs(dut, expected_o);
+    }
+
 
     //--------------------------------------------------
-    // 测试用例3: 乘法示例 (2.0 * 3.0 -> 6.0)
+    // 测试用例3: 乘法示例
     //--------------------------------------------------
-    // {
-    //     // i1[] = 2.0, 3.0, 2.0, 3.0
-    //     // i2[] = 3.0, 2.0, 3.0, 2.0
-    //     // op = 1 (乘法)
-    //     // 期望: 2*3=6 => 0x7A00? (示例), 3*2=6 => 0x7A00?
-    //     // dot = sum of out[] => 6+6+6+6=24 => 0x7E00? (示例)
-    //     uint32_t test_i1[4] = {0x6000, 0x6C00, 0x6000, 0x6C00};
-    //     uint32_t test_i2[4] = {0x6C00, 0x6000, 0x6C00, 0x6000};
-    //     uint8_t  test_op    = 3; // 乘法
+    {
+        printf("Test Mul\n");
+        uint32_t test_i1[4] = {0x54000000, 0x54000000, 0x48000000, 0x48000000};
+        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x54000000, 0x54000000};
+        uint8_t  test_op    = 3; // 乘法
 
-    //     uint32_t expected_o[4]  = {0x7A00, 0x7A00, 0x7A00, 0x7A00}; // 6.0 ?
-    //     uint32_t expected_dot_o = 0x7E00; // 24 ?
+        uint32_t expected_o[4]  = {0x5c000000, 0x5c000000, 0x5c000000, 0x5c000000}; 
 
-    //     set_inputs(dut, test_i1, test_i2, test_op);
-    //     for (int cycle = 0; cycle < 2; ++cycle) {
-    //         toggle_clock(dut, tfp, main_time);
-    //     }
-    //     check_outputs(dut, expected_o, expected_dot_o);
-    // }
+        set_inputs(dut, test_i1, test_i2, test_op);
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
+        check_outputs(dut, expected_o);
+    }
 
     //--------------------------------------------------
-    // 测试用例4: 带有负数示例 (-1.0 + 2.0 -> 1.0)
+    // 测试用例4: 除法示例
     //--------------------------------------------------
-    // {
-    //     // i1[] = -1.0, -1.0, -1.0, -1.0
-    //     // i2[] =  2.0,  2.0,  2.0,  2.0
-    //     // op = 0 (加法)
-    //     // out[] = 1.0 => 0x4000?, dot = 4.0 => 0x7000? (纯示例)
-    //     uint32_t test_i1[4] = {0xC000, 0xC000, 0xC000, 0xC000}; // -1.0?
-    //     uint32_t test_i2[4] = {0x6000, 0x6000, 0x6000, 0x6000}; // 2.0?
-    //     uint8_t  test_op    = 1; // 加法
+    {
+        printf("Test Div\n");
+        uint32_t test_i1[4] = {0x54000000, 0x54000000, 0x58000000, 0x48000000};
+        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x50000000, 0x58000000};
+        uint8_t  test_op    = 4; // 除法
 
-    //     uint32_t expected_o[4]  = {0x4000, 0x4000, 0x4000, 0x4000}; // 1.0?
-    //     uint32_t expected_dot_o = 0x7000; // 4.0 ?
+        uint32_t expected_o[4]  = {0x4c000000, 0x4c000000, 0x48000000, 0x30000000}; 
 
-    //     set_inputs(dut, test_i1, test_i2, test_op);
-    //     for (int cycle = 0; cycle < 2; ++cycle) {
-    //         toggle_clock(dut, tfp, main_time);
-    //     }
-    //     check_outputs(dut, expected_o, expected_dot_o);
-    // }
+        set_inputs(dut, test_i1, test_i2, test_op);
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
+        check_outputs(dut, expected_o);
+    }
 
     //--------------------------------------------------
-    // 更多用例（小数、大数、特殊场景等）可继续添加
+    // 测试用例4: 点积示例
     //--------------------------------------------------
+    {
+        printf("Test Dot\n");
+        uint32_t test_i1[4] = {0x48000000, 0x48000000, 0x48000000, 0x48000000};
+        uint32_t test_i2[4] = {0x48000000, 0x54000000, 0x64000000, 0x60000000};
+        uint8_t  test_op    = 5; // 点积
+
+        uint32_t expected_o  = 0x6b000000; 
+
+        set_inputs(dut, test_i1, test_i2, test_op);
+        for (int cycle = 0; cycle < 2; ++cycle) {
+            toggle_clock(dut, tfp, main_time);
+        }
+        check_outputs_dot(dut, expected_o);
+    }
+
 
     // 收尾
     tfp->close();
@@ -315,13 +324,11 @@ int main(int argc, char** argv) {
     //===============================================================
     {
         printf("Test Add\n");
-        uint32_t i1  = 0x5A000000;
-        uint32_t i2  = 0x48000000;
+        uint32_t i1  = 0x48000000;
+        uint32_t i2  = 0x50000000;
         uint8_t  op  = 1; // 假设 0 代表加法
 
-        // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
-        // 如果 dot 是某些累加结果，需要根据设计改
-        uint32_t expected_o = 0x5C000000; 
+        uint32_t expected_o = 0x54000000; 
 
         // 写入输入
         set_inputs(dut, i1, i2, op);

@@ -24,7 +24,7 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
     frac_hide(i) := io.pir_frac(i)(FRAC_WIDTH)
   }
   
-  //获取es和rigime的二进制
+  //获取es和rigime的二进制,regime的基底是16，即2的4次方
   val regime_k = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
   val es_value = Wire(Vec(VECTOR_SIZE, UInt(es.W)))
   for(i <- 0 until VECTOR_SIZE){

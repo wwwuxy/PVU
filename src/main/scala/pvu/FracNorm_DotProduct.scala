@@ -21,13 +21,20 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
     val pir_frac_o = Output(UInt((FRAC_WIDTH+1).W))
   })
 
+  // printf("DECIMAL_POINT = %d\n", DECIMAL_POINT.U)
+
   val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
 
   //计算前导0的个数
-    val lzcMod              = Module(new LZC(WIDTH - 1, true, nd))
+    val lzcMod              = Module(new LZC(WIDTH, true, nd))
     lzcMod.io.in_i         := io.pir_frac_i
     val leading_zero_count  = lzcMod.io.cnt_o
     val lzc_zeroes          = lzcMod.io.empty_o
+    
+    val shift_flag  = Wire(Bool())
+        shift_flag := false.B   //默认值
+    val shift_amount = Wire(UInt(LZC_WIDTH.W))
+        shift_amount := 0.U
 
   //计算指数位移量(指数几乎不会溢出)
     val exp_adjust_reg = Wire(SInt((EXP_WIDTH+1).W))
@@ -35,24 +42,35 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
       exp_adjust_reg := 0.S   // 尾数全0，不需要规格化
     }.elsewhen(leading_zero_count <= (DECIMAL_POINT - 1).U) {
       exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
+      shift_amount   := DECIMAL_POINT.U - leading_zero_count - 1.U
+      shift_flag     := true.B
     }.otherwise {
       exp_adjust_reg := -((leading_zero_count - (DECIMAL_POINT.U - 1.U)).asSInt)
+      shift_amount   := leading_zero_count - (DECIMAL_POINT.U - 1.U)
+      shift_flag     := false.B
     }
 
-    io.exp_adjust := exp_adjust_reg
+    io.exp_adjust := exp_adjust_reg + Mux(io.pir_frac_i(WIDTH - DECIMAL_POINT), 1.S, 0.S)  //若有进位则需 加上 进位值
 
   //使用barrel_shifter左移，使DECIMAL_POINT位上为1
     val frac_shifted = Wire(UInt(WIDTH.W))
-    val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
-    shifter.io.operand_i    := io.pir_frac_i
-    shifter.io.shift_amount := leading_zero_count
-    frac_shifted            := shifter.io.result_o
+    when(shift_flag){
+      val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, true))
+      shifter.io.operand_i    := io.pir_frac_i
+      shifter.io.shift_amount := shift_amount
+      frac_shifted            := shifter.io.result_o
+    }.otherwise{
+      val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
+      shifter.io.operand_i    := io.pir_frac_i
+      shifter.io.shift_amount := shift_amount
+      frac_shifted            := shifter.io.result_o
+    }
 
   //保留前FRAC_WITH + 1位，低位舍入
     when(WIDTH.asUInt > (FRAC_WIDTH + 1).U){
-      val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
+      val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - DECIMAL_POINT - 1, 0)
       val sticky_bit  = sticky_bits.orR.asUInt
-      io.pir_frac_o := Cat(frac_shifted(WIDTH - 1, WIDTH - FRAC_WIDTH) ,sticky_bit)
+      io.pir_frac_o := Cat(frac_shifted(WIDTH - DECIMAL_POINT, WIDTH - DECIMAL_POINT - FRAC_WIDTH + 1) ,sticky_bit)
     }.otherwise{
       io.pir_frac_o := frac_shifted
     }

@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/FractionAlignment_DotProduct.scala:31:29: not found: value frac_shifted[0m
-[0m[[0m[31merror[0m] [0m[0m    io.pir_frac_align(i) := frac_shifted(i) >> Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount).asUInt[0m
-[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/FracNorm_DotProduct.scala:57:78: value asBoolean is not a member of chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean asBool or asBools?[0m
+[0m[[0m[31merror[0m] [0m[0m    val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, shift_flag.asBoolean))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                             ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

@@ -7,9 +7,10 @@ import chisel3.util._
 class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
   var es: Int         = 2
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1 
+  var EXP_WIDTH: Int  = nd + es + 1
   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
   var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
+  val SUM_WIDTH: Int  = MUL_WIDTH + log2Ceil(VECTOR_SIZE)
 
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -21,7 +22,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
 
     val pir_sign_o = Output(UInt(1.W))
     val pir_exp_o  = Output(SInt(EXP_WIDTH.W))
-    val pir_frac_o = Output(UInt(MUL_WIDTH.W))
+    val pir_frac_o = Output(UInt((SUM_WIDTH+1).W))
   })
 
 //通过MUL进行累乘计算
@@ -55,21 +56,16 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   val pir_frac_cmp_tmp = RegInit(VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W))))
   pir_frac_cmp_tmp(0) := Mux(pir_sign_mul(0) === 1.U, ~pir_frac_cmp(0) + 1.U, pir_frac_cmp(0))  //初始化第一个元素，防止VECTOR_SIZE为1时出错
   
-  for (i <- 1 until VECTOR_SIZE) {
-    pir_frac_cmp_tmp(i) := pir_frac_cmp(i)
-    when (pir_sign_mul(i) === 1.U) {
-      pir_frac_cmp(i) := ~pir_frac_cmp_tmp(i) + 1.U
-    }.otherwise {
-      pir_frac_cmp(i) := pir_frac_cmp_tmp(i)
-    }
+  for (i <- 0 until VECTOR_SIZE) {
+    pir_frac_cmp_tmp(i) := Mux(pir_sign_mul(i) === 1.U, ~pir_frac_cmp(i) + 1.U, pir_frac_cmp(i))
   }
 
 //通过CsaTree进行累加
-  val sum        = Wire(UInt(MUL_WIDTH.W))
-  val carry      = Wire(UInt(MUL_WIDTH.W))
-  val sum_result = Wire(UInt(MUL_WIDTH.W + 1.W))
+  val sum        = Wire(UInt(SUM_WIDTH.W))
+  val carry      = Wire(UInt(SUM_WIDTH.W))
+  val sum_result = Wire(UInt((SUM_WIDTH+1).W))
 
-  val csaTree = Module(new CsaTree(VECTOR_SIZE, MUL_WIDTH, MUL_WIDTH))
+  val csaTree = Module(new CsaTree(VECTOR_SIZE, SUM_WIDTH, SUM_WIDTH))
   csaTree.io.operands_i := pir_frac_cmp
   sum                   := csaTree.io.sum_o
   carry                 := csaTree.io.carry_o
@@ -77,7 +73,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   sum_result := carry + sum
 
 //输出结果 
-  io.pir_sign_o := sum_result(MUL_WIDTH)
+  io.pir_sign_o := sum_result(SUM_WIDTH)
   io.pir_exp_o  := pir_exp_cmp
-  io.pir_frac_o := sum_result(MUL_WIDTH - 1, 0)
+  io.pir_frac_o := sum_result
 }
