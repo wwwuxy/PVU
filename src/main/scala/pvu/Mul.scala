@@ -11,6 +11,8 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
   var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
 
+  printf("Module Mul:\n\n")
+
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_sign2_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -40,9 +42,12 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
     radix4BoothMultiplier.io.operand_b := io.pir_frac2_i(i)
     sum_frac(i)                        := radix4BoothMultiplier.io.sum_o
     carry(i)                           := radix4BoothMultiplier.io.carry_o
-    frac(i)                            := (sum_frac(i) + carry(i)) << 1         //左移一位进行缩放，后续尾数标准化时指数减一
+    frac(i)                            := (sum_frac(i) + carry(i))         //左移一位进行缩放，后续尾数标准化时指数减一
   }
 
+  printf("sum_frac = %b\n", sum_frac(0))
+  printf("carry = %b\n", carry(0))
+  printf("frac = %b\n", frac(0))
 
   //计算指数
   // 定义最大指数值,处理指数溢出时

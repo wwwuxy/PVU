@@ -176,7 +176,7 @@ VL_ATTR_COLD void VPvuTop___024root___eval_settle(VPvuTop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 VPvuTop___024root___dump_triggers__stl(vlSelf);
 #endif
-                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 6291, "", "Settle region did not converge.");
+                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 6298, "", "Settle region did not converge.");
             }
             vlSelf->__VstlIterCount = ((IData)(1U) 
                                        + vlSelf->__VstlIterCount);
@@ -481,8 +481,6 @@ VL_ATTR_COLD void VPvuTop___024root___ctor_var_reset(VPvuTop___024root* vlSelf) 
     VL_RAND_RESET_W(84, vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__reciprocalMod__DOT__x2_x_new_full);
     VL_RAND_RESET_W(84, vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__reciprocalMod__DOT__x3_x_new_full);
     VL_RAND_RESET_W(3248, vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT____Vcellout__genProds__io_partial_prods);
-    vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT____Vcellinp__genProds__io_operand_b = VL_RAND_RESET_Q(56);
-    vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT____Vcellinp__genProds__io_operand_a = VL_RAND_RESET_Q(56);
     vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod = VL_RAND_RESET_Q(57);
     vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod = VL_RAND_RESET_Q(57);
     vlSelf->PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_24_io_partial_prod = VL_RAND_RESET_Q(57);
@@ -683,11 +681,12 @@ VL_ATTR_COLD void VPvuTop___024root___ctor_var_reset(VPvuTop___024root* vlSelf) 
     vlSelf->__VdfgTmp_h4e1badcc__0 = 0;
     vlSelf->__VdfgTmp_h4ac99e53__0 = 0;
     vlSelf->__VdfgTmp_h2a2fbaba__0 = 0;
-    vlSelf->__VdfgTmp_h74feb0c2__0 = 0;
-    vlSelf->__VdfgTmp_h748e0daf__0 = 0;
-    VL_ZERO_RESET_W(770, vlSelf->__VdfgTmp_hd76e8294__0);
-    VL_ZERO_RESET_W(742, vlSelf->__VdfgTmp_h62601199__0);
-    VL_ZERO_RESET_W(442, vlSelf->__VdfgTmp_h59a102d6__0);
+    vlSelf->__VdfgTmp_h80ce342d__0 = 0;
+    vlSelf->__VdfgTmp_h7007ff78__0 = 0;
+    vlSelf->__VdfgTmp_h297294cf__0 = 0;
+    VL_ZERO_RESET_W(770, vlSelf->__VdfgTmp_h3fa43af7__0);
+    VL_ZERO_RESET_W(742, vlSelf->__VdfgTmp_h4023b914__0);
+    VL_ZERO_RESET_W(442, vlSelf->__VdfgTmp_heb0c548a__0);
     vlSelf->__VdfgTmp_ha7cf127c__0 = 0;
     vlSelf->__VdfgTmp_h758fe8fa__0 = 0;
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes = VL_RAND_RESET_I(32);
@@ -708,7 +707,7 @@ VL_ATTR_COLD void VPvuTop___024root___ctor_var_reset(VPvuTop___024root* vlSelf) 
     vlSelf->__VicoDidInit = 0;
     vlSelf->__Vtrigrprev__TOP__clock = VL_RAND_RESET_I(1);
     vlSelf->__VactDidInit = 0;
-    for (int __Vi0 = 0; __Vi0 < 24; ++__Vi0) {
+    for (int __Vi0 = 0; __Vi0 < 26; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = 0;
     }
 }

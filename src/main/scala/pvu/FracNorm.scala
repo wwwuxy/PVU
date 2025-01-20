@@ -41,7 +41,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
       exp_adjust_reg := 0.S   // 尾数全0，不需要规格化
     }.elsewhen(leading_zero_count <= (DECIMAL_POINT - 1).U) {
       when(OP.U === 3.U) {
-        exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt - 1.S
+        exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
       }.otherwise {
         exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
       }

@@ -402,12 +402,14 @@ VL_ATTR_COLD void VPvuTop___024root___eval_triggers__stl(VPvuTop___024root* vlSe
 
 void VPvuTop___024root___ico_sequent__TOP__0(VPvuTop___024root* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__0(VPvuTop___024root* vlSelf);
+void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0(VPvuTop_Mul* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__1(VPvuTop___024root* vlSelf);
+void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__2(VPvuTop___024root* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__3(VPvuTop___024root* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__4(VPvuTop___024root* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__5(VPvuTop___024root* vlSelf);
-void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0(VPvuTop_Mul* vlSelf);
+void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__6(VPvuTop___024root* vlSelf);
 void VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor__0(VPvuTop_Compressor4to2* vlSelf);
 void VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor__0(VPvuTop_Compressor4to2* vlSelf);
@@ -423,7 +425,7 @@ void VPvuTop_CsaTree_9___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__
 void VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__csa_tree_B__DOT__compressor__0(VPvuTop_Compressor4to2_6* vlSelf);
 void VPvuTop_CsaTree_9___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__0(VPvuTop_CsaTree_9* vlSelf);
 void VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__csa_tree_B__DOT__compressor__0(VPvuTop_Compressor4to2_6* vlSelf);
-void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul* vlSelf);
+void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__3(VPvuTop_Mul* vlSelf);
 void VPvuTop_CsaTree_9___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__1(VPvuTop_CsaTree_9* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__7(VPvuTop___024root* vlSelf);
 void VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__compressor__0(VPvuTop_Compressor4to2* vlSelf);
@@ -434,7 +436,7 @@ void VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider
 void VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor__0(VPvuTop_Compressor4to2_6* vlSelf);
 void VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__compressor__0(VPvuTop_Compressor4to2_6* vlSelf);
 void VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__compressor__0(VPvuTop_Compressor4to2_6* vlSelf);
-void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul* vlSelf);
+void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__4(VPvuTop_Mul* vlSelf);
 void VPvuTop___024root___ico_comb__TOP__8(VPvuTop___024root* vlSelf);
 void VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor__0(VPvuTop_Compressor4to2* vlSelf);
 void VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor__0(VPvuTop_Compressor4to2* vlSelf);
@@ -465,6 +467,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     // Body
     if (vlSelf->__VstlTriggered.at(0U)) {
         VPvuTop___024root___ico_sequent__TOP__0(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -492,9 +496,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     }
     if ((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U))) {
         VPvuTop___024root___ico_comb__TOP__0(vlSelf);
-    }
-    if ((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(6U))) {
-        VPvuTop___024root___ico_comb__TOP__1(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -519,9 +522,44 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
         vlSelf->__Vm_traceActivity[2U] = 1U;
         vlSelf->__Vm_traceActivity[1U] = 1U;
         vlSelf->__Vm_traceActivity[0U] = 1U;
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0((&vlSymsp->TOP__PvuTop__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
+    }
+    if ((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(6U))) {
+        VPvuTop___024root___ico_comb__TOP__1(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
+        vlSelf->__Vm_traceActivity[0x17U] = 1U;
+        vlSelf->__Vm_traceActivity[0x16U] = 1U;
+        vlSelf->__Vm_traceActivity[0x15U] = 1U;
+        vlSelf->__Vm_traceActivity[0x14U] = 1U;
+        vlSelf->__Vm_traceActivity[0x13U] = 1U;
+        vlSelf->__Vm_traceActivity[0x12U] = 1U;
+        vlSelf->__Vm_traceActivity[0x11U] = 1U;
+        vlSelf->__Vm_traceActivity[0x10U] = 1U;
+        vlSelf->__Vm_traceActivity[0xfU] = 1U;
+        vlSelf->__Vm_traceActivity[0xeU] = 1U;
+        vlSelf->__Vm_traceActivity[0xdU] = 1U;
+        vlSelf->__Vm_traceActivity[0xcU] = 1U;
+        vlSelf->__Vm_traceActivity[0xbU] = 1U;
+        vlSelf->__Vm_traceActivity[0xaU] = 1U;
+        vlSelf->__Vm_traceActivity[9U] = 1U;
+        vlSelf->__Vm_traceActivity[8U] = 1U;
+        vlSelf->__Vm_traceActivity[7U] = 1U;
+        vlSelf->__Vm_traceActivity[6U] = 1U;
+        vlSelf->__Vm_traceActivity[5U] = 1U;
+        vlSelf->__Vm_traceActivity[4U] = 1U;
+        vlSelf->__Vm_traceActivity[3U] = 1U;
+        vlSelf->__Vm_traceActivity[2U] = 1U;
+        vlSelf->__Vm_traceActivity[1U] = 1U;
+        vlSelf->__Vm_traceActivity[0U] = 1U;
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1((&vlSymsp->TOP__PvuTop__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
     }
     if ((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(1U))) {
         VPvuTop___024root___ico_comb__TOP__2(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -552,6 +590,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     }
     if ((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(4U))) {
         VPvuTop___024root___ico_comb__TOP__4(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -582,7 +622,9 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     }
     if (((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U)) 
          | vlSelf->__VstlTriggered.at(6U))) {
-        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0((&vlSymsp->TOP__PvuTop__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2((&vlSymsp->TOP__PvuTop__DOT__mul));
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -607,7 +649,7 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
         vlSelf->__Vm_traceActivity[2U] = 1U;
         vlSelf->__Vm_traceActivity[1U] = 1U;
         vlSelf->__Vm_traceActivity[0U] = 1U;
-        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
         VPvuTop___024root___ico_comb__TOP__6(vlSelf);
         VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor));
         VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor));
@@ -623,8 +665,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
         VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__csa_tree_B__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__csa_tree_B__DOT__compressor));
         VPvuTop_CsaTree_9___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__0((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B));
         VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__csa_tree_B__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__csa_tree_B__DOT__compressor));
-        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1((&vlSymsp->TOP__PvuTop__DOT__mul));
-        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__3((&vlSymsp->TOP__PvuTop__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__3((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
         VPvuTop_CsaTree_9___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__1((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A));
         VPvuTop___024root___ico_comb__TOP__7(vlSelf);
         VPvuTop_CsaTree_9___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__1((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A));
@@ -637,8 +679,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
         VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor));
         VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__compressor__0((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A__compressor));
         VPvuTop_Compressor4to2_6___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__compressor__0((&vlSymsp->TOP__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__compressor));
-        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2((&vlSymsp->TOP__PvuTop__DOT__mul));
-        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__4((&vlSymsp->TOP__PvuTop__DOT__mul));
+        VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__4((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul));
         VPvuTop___024root___ico_comb__TOP__8(vlSelf);
         VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor));
         VPvuTop_Compressor4to2___ico_comb__TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor__0((&vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__radix4BoothMultiplier__DOT__csaTree__DOT__compressor));
@@ -655,6 +697,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     if ((((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U)) 
           | vlSelf->__VstlTriggered.at(6U)) | vlSelf->__VstlTriggered.at(9U))) {
         VPvuTop___024root___ico_comb__TOP__12(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -687,6 +731,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     if ((((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U)) 
           | vlSelf->__VstlTriggered.at(6U)) | vlSelf->__VstlTriggered.at(0xbU))) {
         VPvuTop___024root___ico_comb__TOP__14(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -719,6 +765,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     if ((((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U)) 
           | vlSelf->__VstlTriggered.at(6U)) | vlSelf->__VstlTriggered.at(0xdU))) {
         VPvuTop___024root___ico_comb__TOP__16(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -751,6 +799,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     if ((((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U)) 
           | vlSelf->__VstlTriggered.at(6U)) | vlSelf->__VstlTriggered.at(7U))) {
         VPvuTop___024root___ico_comb__TOP__18(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -783,6 +833,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
     if ((((vlSelf->__VstlTriggered.at(0U) | vlSelf->__VstlTriggered.at(3U)) 
           | vlSelf->__VstlTriggered.at(6U)) | vlSelf->__VstlTriggered.at(0xfU))) {
         VPvuTop___024root___ico_comb__TOP__20(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -812,6 +864,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
            | vlSelf->__VstlTriggered.at(6U)) | vlSelf->__VstlTriggered.at(7U)) 
          | vlSelf->__VstlTriggered.at(8U))) {
         VPvuTop___024root___ico_comb__TOP__21(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;
@@ -858,6 +912,8 @@ VL_ATTR_COLD void VPvuTop___024root___eval_stl(VPvuTop___024root* vlSelf) {
             | vlSelf->__VstlTriggered.at(0xdU)) | vlSelf->__VstlTriggered.at(0xeU)) 
           | vlSelf->__VstlTriggered.at(0xfU)) | vlSelf->__VstlTriggered.at(0x10U))) {
         VPvuTop___024root___ico_comb__TOP__24(vlSelf);
+        vlSelf->__Vm_traceActivity[0x19U] = 1U;
+        vlSelf->__Vm_traceActivity[0x18U] = 1U;
         vlSelf->__Vm_traceActivity[0x17U] = 1U;
         vlSelf->__Vm_traceActivity[0x16U] = 1U;
         vlSelf->__Vm_traceActivity[0x15U] = 1U;

@@ -33,7 +33,6 @@ class GenProds(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
   // 定义内部信号,对乘数B进行Booth编码
   val multiplier  = Wire(UInt((WIDTH_B + 1).W))
       multiplier := Cat(io.operand_b, 0.U(1.W))  // {operand_b, 1'b0} --> 必须为奇数位宽
-  // printf("multiplier = %b\n", multiplier)
 
   val codes      = Wire(Vec(COUNT - 1, UInt(3.W)))
   val temp_prods = Wire(Vec(COUNT - 1, UInt((WIDTH_A + 1).W)))  // 部分积位宽为 WIDTH_A + 1
@@ -78,25 +77,14 @@ class GenProds(val WIDTH_A: Int,val WIDTH_B: Int) extends Module {
       signs(i - 1)
     )
     io.partial_prods(i) := (concatenated << (2 * (i - 1))) // 进行左移
+
+    // printf("signs[%d] = %b\n", i.U, signs(i))
+    // printf("temp_prods[%d] = %b\n\n", i.U, temp_prods(i))
+    // printf("partial_prods[%d] = %b\n", i.U, io.partial_prods(i))
+
   }
 
-  // 处理最后一个 code，即 codes(COUNT - 1)
-  // codes(COUNT - 1) := multiplier((2 * COUNT), (2 * COUNT - 2))
-
-  // 实例化最后一个 GenProduct
-  // val genProdLast = Module(new GenProduct(WIDTH = WIDTH_A))
-  // genProdLast.io.multiplicand := io.operand_a
-  // genProdLast.io.code         := codes(COUNT - 1)
-  // temp_prods(COUNT - 1)       := genProdLast.io.partial_prod
-  // signs(COUNT - 1)            := genProdLast.io.sign
-
-  // 对最后一个部分积进行拼接：{temp_prods(COUNT - 1), 1'b0, signs(COUNT - 2)}
-  // 然后左移 (2 * COUNT - 4) 位
-
   //符号补偿
-  val concatenatedLast = Cat(
-    0.U((WIDTH_O - 1).W),
-    signs(COUNT - 2)
-  )
+  val concatenatedLast = signs(COUNT - 2)
   io.partial_prods(COUNT - 1) := (concatenatedLast << (2 * (COUNT - 2))) // 进行左移
 }

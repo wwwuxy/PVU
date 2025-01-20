@@ -116,12 +116,10 @@ class VPvuTop_Mul final : public VerilatedModule {
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_29__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_30__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_31__DOT___io_carry_T;
-        CData/*0:0*/ __VdfgTmp_h3bc26ad5__0;
+        CData/*0:0*/ __VdfgTmp_he79a7065__0;
         SData/*8:0*/ __PVT__sum;
         VL_IN(io_pir_frac1_i,27,0);
         VL_IN(io_pir_frac2_i,27,0);
-        IData/*27:0*/ radix4BoothMultiplier__DOT____Vcellinp__genProds__io_operand_b;
-        IData/*27:0*/ radix4BoothMultiplier__DOT____Vcellinp__genProds__io_operand_a;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_12_io_partial_prod;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_11_io_partial_prod;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_10_io_partial_prod;
@@ -132,7 +130,8 @@ class VPvuTop_Mul final : public VerilatedModule {
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_1_io_partial_prod;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_io_partial_prod;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProdFirst_io_partial_prod;
-        VlWide<7>/*217:0*/ __VdfgTmp_hd44a9f03__0;
+        IData/*28:0*/ __VdfgTmp_h35f5b851__0;
+        VlWide<7>/*217:0*/ __VdfgTmp_h20ff595f__0;
         VL_OUT64(io_pir_frac_o,55,0);
         VlWide<7>/*223:0*/ radix4BoothMultiplier__DOT__csaTree__DOT____Vcellinp__compressor__io_operands_i;
         VlWide<7>/*223:0*/ radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT____Vcellinp__compressor__io_operands_i;

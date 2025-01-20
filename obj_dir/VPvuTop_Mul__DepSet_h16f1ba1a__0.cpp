@@ -7,10 +7,10 @@
 #include "VPvuTop_Compressor4to2.h"
 #include "VPvuTop_Mul.h"
 
-VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul* vlSelf) {
+VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__3(VPvuTop_Mul* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__3\n"); );
     // Init
     VlWide<4>/*127:0*/ __Vtemp_h165a67a0__0;
     // Body
@@ -1606,10 +1606,10 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul*
                                   >> 0x20U)) << 8U));
 }
 
-VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul* vlSelf) {
+VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__4(VPvuTop_Mul* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__4\n"); );
     // Body
     vlSelf->radix4BoothMultiplier__DOT__csaTree__DOT____Vcellinp__compressor__io_operands_i[0U] 
         = (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__compressor->__PVT__io_sum_o);

@@ -373,11 +373,11 @@ int main(int argc, char** argv) {
     //===============================================================
     {
         printf("Test Mul\n");
-        uint32_t i1  = 0x4c000000; 
-        uint32_t i2  = 0x54000000; 
+        uint32_t i1  = 0x48000000; 
+        uint32_t i2  = 0x50000000; 
         uint8_t  op  = 3;      // 乘法
 
-        uint32_t expected_o = 0x60800000;  
+        uint32_t expected_o = 0x58000000;  
 
         set_inputs(dut, i1, i2, op);
 

@@ -194,8 +194,8 @@ class VPvuTop___024root final : public VerilatedModule {
         CData/*4:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_shift_amount;
         CData/*0:0*/ PvuTop__DOT__encode__DOT____VdfgTmp_h1c349387__0;
         CData/*7:0*/ __VdfgTmp_h2a2fbaba__0;
-        CData/*7:0*/ __VdfgTmp_h74feb0c2__0;
-        CData/*0:0*/ __VdfgTmp_h748e0daf__0;
+        CData/*7:0*/ __VdfgTmp_h80ce342d__0;
+        CData/*0:0*/ __VdfgTmp_h297294cf__0;
         CData/*5:0*/ __VdfgTmp_ha7cf127c__0;
         CData/*0:0*/ __VdfgTmp_h758fe8fa__0;
         VlWide<5>/*159:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes;
@@ -257,9 +257,9 @@ class VPvuTop___024root final : public VerilatedModule {
         VlWide<3>/*89:0*/ PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_operand_i;
         IData/*29:0*/ __VdfgTmp_h4e1badcc__0;
         IData/*29:0*/ __VdfgTmp_h4ac99e53__0;
-        VlWide<25>/*769:0*/ __VdfgTmp_hd76e8294__0;
-        VlWide<24>/*741:0*/ __VdfgTmp_h62601199__0;
-        VlWide<14>/*441:0*/ __VdfgTmp_h59a102d6__0;
+        VlWide<25>/*769:0*/ __VdfgTmp_h3fa43af7__0;
+        VlWide<24>/*741:0*/ __VdfgTmp_h4023b914__0;
+        VlWide<14>/*441:0*/ __VdfgTmp_heb0c548a__0;
         IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
         IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__decode2__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
         IData/*31:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_add__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
@@ -268,8 +268,6 @@ class VPvuTop___024root final : public VerilatedModule {
         IData/*31:0*/ __VicoIterCount;
         IData/*31:0*/ __VactIterCount;
         QData/*56:0*/ PvuTop__DOT____Vcellinp__frac_norm_dot__io_pir_frac_i;
-        QData/*55:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT____Vcellinp__genProds__io_operand_b;
-        QData/*55:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT____Vcellinp__genProds__io_operand_a;
         QData/*56:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod;
         QData/*56:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod;
         QData/*56:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_24_io_partial_prod;
@@ -293,10 +291,10 @@ class VPvuTop___024root final : public VerilatedModule {
         QData/*56:0*/ PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__genProds__DOT___genProd_6_io_partial_prod;
         QData/*53:0*/ PvuTop__DOT__frac_norm_dot__DOT__frac_shifted;
         QData/*63:0*/ PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
-    };
-    struct {
         QData/*56:0*/ PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
         QData/*56:0*/ PvuTop__DOT__frac_norm_dot__DOT__shifter__DOT___temp_results_0_T_2;
+    };
+    struct {
         QData/*56:0*/ PvuTop__DOT__frac_norm_dot__DOT__shifter_1__DOT___temp_results_0_T_2;
         QData/*55:0*/ PvuTop__DOT__frac_norm_mul__DOT___shifter_io_result_o;
         QData/*55:0*/ PvuTop__DOT__frac_norm_mul__DOT____Vcellinp__shifter__io_operand_i;
@@ -306,10 +304,11 @@ class VPvuTop___024root final : public VerilatedModule {
         QData/*55:0*/ PvuTop__DOT__frac_norm_div__DOT____Vcellinp__shifter__io_operand_i;
         QData/*63:0*/ PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
         QData/*55:0*/ PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__in_tmp;
+        QData/*56:0*/ __VdfgTmp_h7007ff78__0;
         QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
         QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_mul__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
         QData/*63:0*/ __Vtrigrprev__TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes;
-        VlUnpacked<CData/*0:0*/, 24> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 26> __Vm_traceActivity;
     };
     VlTriggerVec<17> __VstlTriggered;
     VlTriggerVec<17> __VicoTriggered;
