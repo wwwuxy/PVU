@@ -22,6 +22,7 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
   })
 
   // printf("DECIMAL_POINT = %d\n", DECIMAL_POINT.U)
+  // printf("pir_frac_i = %b\n", io.pir_frac_i)
 
   val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
 
@@ -50,7 +51,10 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
       shift_flag     := false.B
     }
 
-    io.exp_adjust := exp_adjust_reg + Mux(io.pir_frac_i(WIDTH - DECIMAL_POINT), 1.S, 0.S)  //若有进位则需 加上 进位值
+    io.exp_adjust := exp_adjust_reg
+
+    // io.exp_adjust := exp_adjust_reg + Mux(io.pir_frac_i(WIDTH - (DECIMAL_POINT - 1)), 1.S, 0.S)  //若有进位则需 加上 进位值
+    // printf("add: %b\n", io.pir_frac_i(WIDTH - DECIMAL_POINT - 1))
 
   //使用barrel_shifter左移，使DECIMAL_POINT位上为1
     val frac_shifted = Wire(UInt(WIDTH.W))

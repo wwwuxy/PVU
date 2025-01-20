@@ -43,6 +43,7 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
     frac(i)                            := (sum_frac(i) + carry(i)) << 1         //左移一位进行缩放，后续尾数标准化时指数减一
   }
 
+
   //计算指数
   // 定义最大指数值,处理指数溢出时
   val maxExp = ((1.U << (EXP_WIDTH - 1)) - 1.U).asSInt
@@ -54,4 +55,9 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
    io.pir_exp_o(i)  := Mux(carry === 1.U, maxExp, sum(EXP_WIDTH - 1, 0).asSInt)
    io.pir_frac_o(i) := Mux(carry === 1.U, 0.U, frac(i)) //溢出时尾数为0
   }
+
+  // printf("mul result:\n")
+  // printf("pir_sign_o = %b\n", io.pir_sign_o(0))
+  // printf("pir_exp_o = %b\n", io.pir_exp_o(0))
+  // printf("pir_frac_o = %b\n", io.pir_frac_o(0))
 }

@@ -194,7 +194,7 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE) + 1))
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, 4))
       frac_norm_dot.io.pir_frac_i := pir_frac_dot
       pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
       pir_exp_adjust_dot          := frac_norm_dot.io.exp_adjust

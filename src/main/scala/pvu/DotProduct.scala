@@ -60,6 +60,13 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
     pir_frac_cmp_tmp(i) := Mux(pir_sign_mul(i) === 1.U, ~pir_frac_cmp(i) + 1.U, pir_frac_cmp(i))
   }
 
+//打印各部分乘法结果
+// printf("dot every mul result:\n")
+// for(i <- 0 until VECTOR_SIZE){
+//   printf("pir_sign_mul[%d] = %b, pir_exp_mul[%d] = %b, pir_frac_mul[%d] = %b\n", i.U, pir_sign_mul(i), i.U, pir_exp_mul(i), i.U, pir_frac_mul(i))
+// }
+
+
 //通过CsaTree进行累加
   val sum        = Wire(UInt(SUM_WIDTH.W))
   val carry      = Wire(UInt(SUM_WIDTH.W))
@@ -76,4 +83,8 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   io.pir_sign_o := sum_result(SUM_WIDTH)
   io.pir_exp_o  := pir_exp_cmp
   io.pir_frac_o := sum_result
+
+  // printf("dot result:\n")
+  // printf("pir_sign_o = %b, pir_exp_o = %b, pir_frac_o = %b\n", io.pir_sign_o, io.pir_exp_o, io.pir_frac_o)
+
 }

@@ -1208,7 +1208,9 @@ VL_ATTR_COLD void VPvuTop___024root__trace_full_sub_22(VPvuTop___024root* vlSelf
     bufp->fullCData(oldp+69514,((0x3fU & vlSelf->PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U])),6);
     bufp->fullWData(oldp+69515,(vlSelf->PvuTop__DOT__frac_norm_div__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes),384);
     bufp->fullCData(oldp+69527,(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT___comptree_io_result_o),8);
-    bufp->fullQData(oldp+69528,(vlSelf->__VdfgTmp_h2666ae02__0),59);
+    bufp->fullQData(oldp+69528,((0x3ffffffffffffffULL 
+                                 & (vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_carry_o 
+                                    + vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_sum_o))),59);
     __Vtemp_h0ba642e7__0[0U] = (IData)(vlSelf->__VdfgTmp_h6038ec7c__0);
     __Vtemp_h0ba642e7__0[1U] = (((IData)(vlSelf->__VdfgTmp_h91e57c42__0) 
                                  << 0x1aU) | (IData)(
@@ -2374,17 +2376,17 @@ VL_ATTR_COLD void VPvuTop___024root__trace_full_sub_22(VPvuTop___024root* vlSelf
     bufp->fullWData(oldp+70012,(vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o),90);
     bufp->fullIData(oldp+70015,(((0xffffffeU & ((IData)(
                                                         (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted 
-                                                         >> 0x1eU)) 
+                                                         >> 0x1dU)) 
                                                 << 1U)) 
-                                 | (0U != (0x1fffffffU 
+                                 | (0U != (0xfffffffU 
                                            & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted))))),28);
-    bufp->fullQData(oldp+70016,(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted),57);
+    bufp->fullQData(oldp+70016,(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted),56);
     bufp->fullQData(oldp+70018,((0x7ffffffffffffffULL 
-                                 & ((IData)(vlSelf->__VdfgTmp_h5fff1d24__0)
+                                 & ((IData)(vlSelf->__VdfgTmp_h758fe8fa__0)
                                      ? (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter__DOT___temp_results_0_T_2 
                                         >> 1U) : vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter__DOT___temp_results_0_T_2))),59);
     bufp->fullQData(oldp+70020,((0x7ffffffffffffffULL 
-                                 & ((IData)(vlSelf->__VdfgTmp_h5fff1d24__0)
+                                 & ((IData)(vlSelf->__VdfgTmp_h758fe8fa__0)
                                      ? (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter_1__DOT___temp_results_0_T_2 
                                         << 1U) : vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter_1__DOT___temp_results_0_T_2))),59);
     bufp->fullWData(oldp+70022,(vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_3__io_operand_i),90);
@@ -2724,15 +2726,15 @@ VL_ATTR_COLD void VPvuTop___024root__trace_full_sub_22(VPvuTop___024root* vlSelf
     bufp->fullCData(oldp+70119,(vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_2__io_shift_amount),5);
     bufp->fullCData(oldp+70120,(vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_3__io_shift_amount),5);
     bufp->fullCData(oldp+70121,(((5U == (IData)(vlSelf->io_op))
-                                  ? (IData)(vlSelf->__VdfgTmp_h12c96a73__0)
+                                  ? (IData)(vlSelf->__VdfgTmp_hd9a2d8e3__0)
                                   : 0U)),8);
     bufp->fullIData(oldp+70122,(((5U == (IData)(vlSelf->io_op))
                                   ? ((0xffffffeU & 
                                       ((IData)((vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted 
-                                                >> 0x1eU)) 
+                                                >> 0x1dU)) 
                                        << 1U)) | (0U 
                                                   != 
-                                                  (0x1fffffffU 
+                                                  (0xfffffffU 
                                                    & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted))))
                                   : 0U)),28);
     if ((1U == (IData)(vlSelf->io_op))) {
@@ -2973,47 +2975,36 @@ VL_ATTR_COLD void VPvuTop___024root__trace_full_sub_22(VPvuTop___024root* vlSelf
     bufp->fullQData(oldp+70161,(vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_io_result_o),56);
     bufp->fullQData(oldp+70163,(vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o),56);
     bufp->fullQData(oldp+70165,(vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_2_io_result_o),56);
-    bufp->fullSData(oldp+70167,((0x1ffU & (((1U & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes))
-                                             ? ((3U 
-                                                 > 
-                                                 (0x3fU 
-                                                  & vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]))
-                                                 ? 
-                                                ((0x1c0U 
-                                                  & ((- (IData)(
-                                                                (1U 
-                                                                 & ((((IData)(3U) 
-                                                                      - 
-                                                                      vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
-                                                                     - (IData)(1U)) 
-                                                                    >> 5U)))) 
-                                                     << 6U)) 
-                                                 | (0x3fU 
-                                                    & (((IData)(3U) 
-                                                        - 
-                                                        vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
-                                                       - (IData)(1U))))
-                                                 : 
-                                                ((0x1c0U 
-                                                  & ((- (IData)(
-                                                                (1U 
-                                                                 & ((- 
-                                                                     (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
-                                                                      - (IData)(2U))) 
-                                                                    >> 5U)))) 
-                                                     << 6U)) 
-                                                 | (0x3fU 
-                                                    & (- 
-                                                       (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
-                                                        - (IData)(2U))))))
-                                             : 0U) 
-                                           + (1U & 
-                                              ((~ (IData)(vlSelf->PvuTop__DOT___GEN_8)) 
-                                               & (IData)(
-                                                         (vlSelf->__VdfgTmp_h2666ae02__0 
-                                                          >> 0x38U))))))),9);
+    bufp->fullSData(oldp+70167,(((1U & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes))
+                                  ? ((4U > (0x3fU & 
+                                            vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]))
+                                      ? ((0x1c0U & 
+                                          ((- (IData)(
+                                                      (1U 
+                                                       & ((((IData)(4U) 
+                                                            - 
+                                                            vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
+                                                           - (IData)(1U)) 
+                                                          >> 5U)))) 
+                                           << 6U)) 
+                                         | (0x3fU & 
+                                            (((IData)(4U) 
+                                              - vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
+                                             - (IData)(1U))))
+                                      : ((0x1c0U & 
+                                          ((- (IData)(
+                                                      (1U 
+                                                       & ((- 
+                                                           (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
+                                                            - (IData)(3U))) 
+                                                          >> 5U)))) 
+                                           << 6U)) 
+                                         | (0x3fU & 
+                                            (- (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
+                                                - (IData)(3U))))))
+                                  : 0U)),9);
     bufp->fullCData(oldp+70168,(((1U & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes))
-                                  ? (IData)(vlSelf->__VdfgTmp_hfa3f98de__0)
+                                  ? (IData)(vlSelf->__VdfgTmp_ha7cf127c__0)
                                   : 0U)),6);
     bufp->fullBit(oldp+70169,((1U & (~ (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes)))));
     bufp->fullQData(oldp+70170,(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes),64);

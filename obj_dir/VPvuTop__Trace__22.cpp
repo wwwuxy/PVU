@@ -1393,7 +1393,9 @@ void VPvuTop___024root__trace_chg_sub_22(VPvuTop___024root* vlSelf, VerilatedVcd
     if (VL_UNLIKELY((vlSelf->__Vm_traceActivity[0x1eU] 
                      | vlSelf->__Vm_traceActivity[0x45U]))) {
         bufp->chgCData(oldp+624,(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT___comptree_io_result_o),8);
-        bufp->chgQData(oldp+625,(vlSelf->__VdfgTmp_h2666ae02__0),59);
+        bufp->chgQData(oldp+625,((0x3ffffffffffffffULL 
+                                  & (vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_carry_o 
+                                     + vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_sum_o))),59);
         __Vtemp_h0ba642e7__0[0U] = (IData)(vlSelf->__VdfgTmp_h6038ec7c__0);
         __Vtemp_h0ba642e7__0[1U] = (((IData)(vlSelf->__VdfgTmp_h91e57c42__0) 
                                      << 0x1aU) | (IData)(
@@ -2635,17 +2637,17 @@ void VPvuTop___024root__trace_chg_sub_22(VPvuTop___024root* vlSelf, VerilatedVcd
         bufp->chgWData(oldp+1109,(vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o),90);
         bufp->chgIData(oldp+1112,(((0xffffffeU & ((IData)(
                                                           (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted 
-                                                           >> 0x1eU)) 
+                                                           >> 0x1dU)) 
                                                   << 1U)) 
-                                   | (0U != (0x1fffffffU 
+                                   | (0U != (0xfffffffU 
                                              & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted))))),28);
-        bufp->chgQData(oldp+1113,(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted),57);
+        bufp->chgQData(oldp+1113,(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted),56);
         bufp->chgQData(oldp+1115,((0x7ffffffffffffffULL 
-                                   & ((IData)(vlSelf->__VdfgTmp_h5fff1d24__0)
+                                   & ((IData)(vlSelf->__VdfgTmp_h758fe8fa__0)
                                        ? (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter__DOT___temp_results_0_T_2 
                                           >> 1U) : vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter__DOT___temp_results_0_T_2))),59);
         bufp->chgQData(oldp+1117,((0x7ffffffffffffffULL 
-                                   & ((IData)(vlSelf->__VdfgTmp_h5fff1d24__0)
+                                   & ((IData)(vlSelf->__VdfgTmp_h758fe8fa__0)
                                        ? (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter_1__DOT___temp_results_0_T_2 
                                           << 1U) : vlSelf->PvuTop__DOT__frac_norm_dot__DOT__shifter_1__DOT___temp_results_0_T_2))),59);
     }
@@ -2997,14 +2999,14 @@ void VPvuTop___024root__trace_chg_sub_22(VPvuTop___024root* vlSelf, VerilatedVcd
     bufp->chgCData(oldp+1216,(vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_2__io_shift_amount),5);
     bufp->chgCData(oldp+1217,(vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter_3__io_shift_amount),5);
     bufp->chgCData(oldp+1218,(((5U == (IData)(vlSelf->io_op))
-                                ? (IData)(vlSelf->__VdfgTmp_h12c96a73__0)
+                                ? (IData)(vlSelf->__VdfgTmp_hd9a2d8e3__0)
                                 : 0U)),8);
     bufp->chgIData(oldp+1219,(((5U == (IData)(vlSelf->io_op))
                                 ? ((0xffffffeU & ((IData)(
                                                           (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted 
-                                                           >> 0x1eU)) 
+                                                           >> 0x1dU)) 
                                                   << 1U)) 
-                                   | (0U != (0x1fffffffU 
+                                   | (0U != (0xfffffffU 
                                              & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted))))
                                 : 0U)),28);
     if ((1U == (IData)(vlSelf->io_op))) {
@@ -3244,43 +3246,34 @@ void VPvuTop___024root__trace_chg_sub_22(VPvuTop___024root* vlSelf, VerilatedVcd
     bufp->chgQData(oldp+1258,(vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_io_result_o),56);
     bufp->chgQData(oldp+1260,(vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_1_io_result_o),56);
     bufp->chgQData(oldp+1262,(vlSelf->PvuTop__DOT__frac_norm_div__DOT___shifter_2_io_result_o),56);
-    bufp->chgSData(oldp+1264,((0x1ffU & (((1U & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes))
-                                           ? ((3U > 
-                                               (0x3fU 
-                                                & vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]))
-                                               ? ((0x1c0U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & ((((IData)(3U) 
-                                                                       - 
-                                                                       vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
-                                                                      - (IData)(1U)) 
-                                                                     >> 5U)))) 
-                                                      << 6U)) 
-                                                  | (0x3fU 
-                                                     & (((IData)(3U) 
-                                                         - 
-                                                         vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
-                                                        - (IData)(1U))))
-                                               : ((0x1c0U 
-                                                   & ((- (IData)(
-                                                                 (1U 
-                                                                  & ((- 
-                                                                      (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
-                                                                       - (IData)(2U))) 
-                                                                     >> 5U)))) 
-                                                      << 6U)) 
-                                                  | (0x3fU 
-                                                     & (- 
-                                                        (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
-                                                         - (IData)(2U))))))
-                                           : 0U) + 
-                                         (1U & ((~ (IData)(vlSelf->PvuTop__DOT___GEN_8)) 
-                                                & (IData)(
-                                                          (vlSelf->__VdfgTmp_h2666ae02__0 
-                                                           >> 0x38U))))))),9);
+    bufp->chgSData(oldp+1264,(((1U & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes))
+                                ? ((4U > (0x3fU & vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]))
+                                    ? ((0x1c0U & ((- (IData)(
+                                                             (1U 
+                                                              & ((((IData)(4U) 
+                                                                   - 
+                                                                   vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
+                                                                  - (IData)(1U)) 
+                                                                 >> 5U)))) 
+                                                  << 6U)) 
+                                       | (0x3fU & (
+                                                   ((IData)(4U) 
+                                                    - 
+                                                    vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U]) 
+                                                   - (IData)(1U))))
+                                    : ((0x1c0U & ((- (IData)(
+                                                             (1U 
+                                                              & ((- 
+                                                                  (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
+                                                                   - (IData)(3U))) 
+                                                                 >> 5U)))) 
+                                                  << 6U)) 
+                                       | (0x3fU & (- 
+                                                   (vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__index_nodes[0U] 
+                                                    - (IData)(3U))))))
+                                : 0U)),9);
     bufp->chgCData(oldp+1265,(((1U & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes))
-                                ? (IData)(vlSelf->__VdfgTmp_hfa3f98de__0)
+                                ? (IData)(vlSelf->__VdfgTmp_ha7cf127c__0)
                                 : 0U)),6);
     bufp->chgBit(oldp+1266,((1U & (~ (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes)))));
     bufp->chgQData(oldp+1267,(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__lzcMod__DOT__gen_lzc__DOT__sel_nodes),64);

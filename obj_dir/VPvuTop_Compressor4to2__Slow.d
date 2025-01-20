@@ -5,5 +5,4 @@ VPvuTop_Compressor4to2__Slow.o: VPvuTop_Compressor4to2__Slow.cpp \
  /usr/local/share/verilator/include/verilated_types.h \
  /usr/local/share/verilator/include/verilated_funcs.h \
  VPvuTop_Compressor4to2.h VPvuTop__Syms.h VPvuTop.h VPvuTop___024root.h \
- VPvuTop_IntDivider.h VPvuTop_Radix4BoothMultiplier.h \
- VPvuTop_CsaTree_30.h VPvuTop_Compressor4to2_24.h
+ VPvuTop_Mul.h VPvuTop_CsaTree_9.h VPvuTop_Compressor4to2_6.h

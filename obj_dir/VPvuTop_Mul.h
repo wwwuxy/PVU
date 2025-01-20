@@ -24,6 +24,8 @@ class VPvuTop_Mul final : public VerilatedModule {
     // DESIGN SPECIFIC STATE
     // Anonymous structures to workaround compiler member-count bugs
     struct {
+        VL_IN8(clock,0,0);
+        VL_IN8(reset,0,0);
         VL_IN8(io_pir_sign1_i,0,0);
         VL_IN8(io_pir_sign2_i,0,0);
         VL_IN8(io_pir_exp1_i,7,0);
@@ -86,10 +88,10 @@ class VPvuTop_Mul final : public VerilatedModule {
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_2__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_4__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_5__DOT___io_carry_T;
-        CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_6__DOT___io_carry_T;
-        CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_7__DOT___io_carry_T;
     };
     struct {
+        CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_6__DOT___io_carry_T;
+        CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_7__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_8__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_9__DOT___io_carry_T;
         CData/*0:0*/ __PVT__radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A__DOT__compressor__DOT__fa_10__DOT___io_carry_T;

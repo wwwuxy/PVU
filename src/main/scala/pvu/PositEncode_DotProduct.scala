@@ -18,6 +18,8 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
     val posit = Output(UInt(POSIT_WIDTH.W))
   })
 
+  // printf("pir_sign = %b, pir_exp = %b, pir_frac = %b\n", io.pir_sign, io.pir_exp, io.pir_frac)
+
     //提取尾数隐藏位
   val frac_hide  = Wire(UInt(1.W))
       frac_hide := io.pir_frac(FRAC_WIDTH)

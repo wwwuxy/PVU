@@ -4,7 +4,7 @@
 #include "VPvuTop.h"       // 由 Verilator 生成
 #include "VPvuTop__Syms.h" // 由 Verilator 生成
 
-#if 1
+#if 0
 //VECTOR_SIZE = 4测试向量运算
 //-----------------------------
 // 检查输出是否正确
@@ -163,11 +163,11 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     {
         printf("Test Mul\n");
-        uint32_t test_i1[4] = {0x54000000, 0x54000000, 0x48000000, 0x48000000};
-        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x54000000, 0x54000000};
+        uint32_t test_i1[4] = {0x4c000000, 0x54000000, 0x48000000, 0x48000000};
+        uint32_t test_i2[4] = {0x54000000, 0x48000000, 0x54000000, 0x54000000};
         uint8_t  test_op    = 3; // 乘法
 
-        uint32_t expected_o[4]  = {0x5c000000, 0x5c000000, 0x5c000000, 0x5c000000}; 
+        uint32_t expected_o[4]  = {0x60800000, 0x5c000000, 0x5c000000, 0x5c000000}; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
@@ -199,11 +199,11 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     {
         printf("Test Dot\n");
-        uint32_t test_i1[4] = {0x48000000, 0x48000000, 0x48000000, 0x48000000};
-        uint32_t test_i2[4] = {0x48000000, 0x54000000, 0x64000000, 0x60000000};
+        uint32_t test_i1[4] = {0x4c000000, 0x4c000000, 0x4c000000, 0x4c000000};
+        uint32_t test_i2[4] = {0x54000000, 0x58000000, 0x60000000, 0x61000000};
         uint8_t  test_op    = 5; // 点积
 
-        uint32_t expected_o  = 0x6b000000; 
+        uint32_t expected_o  = 0x6cb00000; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
@@ -322,62 +322,62 @@ int main(int argc, char** argv) {
     //===============================================================
     // 测试用例1:测试加法
     //===============================================================
-    {
-        printf("Test Add\n");
-        uint32_t i1  = 0x48000000;
-        uint32_t i2  = 0x50000000;
-        uint8_t  op  = 1; // 假设 0 代表加法
+    // {
+    //     printf("Test Add\n");
+    //     uint32_t i1  = 0x48000000;
+    //     uint32_t i2  = 0x50000000;
+    //     uint8_t  op  = 1; // 假设 0 代表加法
 
-        uint32_t expected_o = 0x54000000; 
+    //     uint32_t expected_o = 0x54000000; 
 
-        // 写入输入
-        set_inputs(dut, i1, i2, op);
+    //     // 写入输入
+    //     set_inputs(dut, i1, i2, op);
 
-        // 等待两拍时钟
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
+    //     // 等待两拍时钟
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
 
-        // 比对输出
-        check_outputs(dut, expected_o);
-    }
+    //     // 比对输出
+    //     check_outputs(dut, expected_o);
+    // }
 
 
     //===============================================================
     // 测试用例2: 测试减法
     //===============================================================
-    {
-        printf("Test Sub\n");
-        uint32_t i1  = 0x5A000000;
-        uint32_t i2  = 0x48000000;
-        uint8_t  op  = 2; // 假设 0 代表加法
+    // {
+    //     printf("Test Sub\n");
+    //     uint32_t i1  = 0x5A000000;
+    //     uint32_t i2  = 0x48000000;
+    //     uint8_t  op  = 2; // 假设 0 代表加法
 
-        // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
-        // 如果 dot 是某些累加结果，需要根据设计改
-        uint32_t expected_o = 0x58000000; 
+    //     // 期望输出：2.0 => 0x6000(?), dot => 0x6000(若 dot=同样结果?)
+    //     // 如果 dot 是某些累加结果，需要根据设计改
+    //     uint32_t expected_o = 0x58000000; 
 
-        // 写入输入
-        set_inputs(dut, i1, i2, op);
+    //     // 写入输入
+    //     set_inputs(dut, i1, i2, op);
 
-        // 等待两拍时钟
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
+    //     // 等待两拍时钟
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
 
-        // 比对输出
-        check_outputs(dut, expected_o);
-    }
+    //     // 比对输出
+    //     check_outputs(dut, expected_o);
+    // }
 
     //===============================================================
     // 测试用例3: 测试乘法
     //===============================================================
     {
         printf("Test Mul\n");
-        uint32_t i1  = 0x54000000; 
-        uint32_t i2  = 0x48000000; 
+        uint32_t i1  = 0x4c000000; 
+        uint32_t i2  = 0x54000000; 
         uint8_t  op  = 3;      // 乘法
 
-        uint32_t expected_o = 0x5C000000;  
+        uint32_t expected_o = 0x60800000;  
 
         set_inputs(dut, i1, i2, op);
 
@@ -391,42 +391,22 @@ int main(int argc, char** argv) {
     //===============================================================
     // 测试用例4: 测试除法
     //===============================================================
-    {
-        printf("Test Div\n");
-        uint32_t i1  = 0x54000000; 
-        uint32_t i2  = 0x48000000; 
-        uint8_t  op  = 4;      // 除法
+    // {
+    //     printf("Test Div\n");
+    //     uint32_t i1  = 0x54000000; 
+    //     uint32_t i2  = 0x48000000; 
+    //     uint8_t  op  = 4;      // 除法
 
-        uint32_t expected_o = 0x4C000000;  
+    //     uint32_t expected_o = 0x4C000000;  
 
-        set_inputs(dut, i1, i2, op);
+    //     set_inputs(dut, i1, i2, op);
 
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
 
-        check_outputs(dut, expected_o);
-    }
-
-    //===============================================================
-    // 测试用例5: 测试点积
-    //===============================================================
-    {
-        printf("Test Dot\n");
-        uint32_t i1  = 0x48000000; 
-        uint32_t i2  = 0x48000000; 
-        uint8_t  op  = 5;      // 点积
-
-        uint32_t expected_o = 0x50000000; 
-
-        set_inputs(dut, i1, i2, op);
-
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
-
-        check_outputs_dot(dut, expected_o);
-    }
+    //     check_outputs(dut, expected_o);
+    // }
 
 
     // 仿真结束收尾

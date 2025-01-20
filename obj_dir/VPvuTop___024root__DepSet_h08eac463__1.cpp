@@ -827,6 +827,8 @@ void VPvuTop___024root___eval_triggers__act(VPvuTop___024root* vlSelf) {
                                                       vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes[0xbU]))));
     vlSelf->__VactTriggered.at(0x39U) = (vlSelf->PvuTop__DOT__frac_norm_div__DOT__lzcMod_3__DOT__gen_lzc__DOT__sel_nodes 
                                          != vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_3__DOT__gen_lzc__DOT__sel_nodes);
+    vlSelf->__VactTriggered.at(0x3aU) = ((IData)(vlSelf->clock) 
+                                         & (~ (IData)(vlSelf->__Vtrigrprev__TOP__clock)));
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes 
         = vlSelf->PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__sel_nodes;
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__decode1__DOT__lzcModule__DOT__gen_lzc__DOT__index_nodes[0U] 
@@ -1253,6 +1255,7 @@ void VPvuTop___024root___eval_triggers__act(VPvuTop___024root* vlSelf) {
         = vlSelf->PvuTop__DOT__frac_norm_div__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes[0xaU];
     vlSelf->__Vtrigrprev__TOP__PvuTop__DOT__frac_norm_div__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes[0xbU] 
         = vlSelf->PvuTop__DOT__frac_norm_div__DOT__lzcMod_3__DOT__gen_lzc__DOT__index_nodes[0xbU];
+    vlSelf->__Vtrigrprev__TOP__clock = vlSelf->clock;
     if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->__VactDidInit))))) {
         vlSelf->__VactDidInit = 1U;
         vlSelf->__VactTriggered.at(0U) = 1U;
@@ -2248,5 +2251,62 @@ void VPvuTop___024root___eval_act(VPvuTop___024root* vlSelf) {
            | vlSelf->__VactTriggered.at(0x30U)) | vlSelf->__VactTriggered.at(0x37U)) 
          | vlSelf->__VactTriggered.at(0x38U))) {
         VPvuTop___024root___ico_comb__TOP__101(vlSelf);
+    }
+}
+
+VL_INLINE_OPT void VPvuTop___024root___nba_sequent__TOP__0(VPvuTop___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___nba_sequent__TOP__0\n"); );
+    // Body
+    if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->reset))))) {
+        VL_FWRITEF(0x80000002U,"dot every mul result:\npir_sign_mul[0] = %b, pir_exp_mul[0] = %b, pir_frac_mul[0] = %b\npir_sign_mul[1] = %b, pir_exp_mul[1] = %b, pir_frac_mul[1] = %b\npir_sign_mul[2] = %b, pir_exp_mul[2] = %b, pir_frac_mul[2] = %b\npir_sign_mul[3] = %b, pir_exp_mul[3] = %b, pir_frac_mul[3] = %b\ndot result:\npir_sign_o = 0, pir_exp_o = %b, pir_frac_o = %b\n",
+                   1,(1U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT___mul_io_pir_sign_o)),
+                   8,(IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeA__DOT____Vcellinp__comparator__io_operand_a),
+                   56,((0x100U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__sum))
+                        ? 0ULL : (0xfffffffffffffeULL 
+                                  & ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__csaTree__DOT__compressor.__PVT__io_sum_o 
+                                      + vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier__csaTree__DOT__compressor.__PVT__io_carry_o) 
+                                     << 1U))),1,(1U 
+                                                 & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT___mul_io_pir_sign_o) 
+                                                    >> 1U)),
+                   8,(IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeA__DOT____Vcellinp__comparator__io_operand_b),
+                   56,((0x100U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__sum_1))
+                        ? 0ULL : (0xfffffffffffffeULL 
+                                  & ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1__csaTree__DOT__compressor.__PVT__io_sum_o 
+                                      + vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1__csaTree__DOT__compressor.__PVT__io_carry_o) 
+                                     << 1U))),1,(1U 
+                                                 & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT___mul_io_pir_sign_o) 
+                                                    >> 2U)),
+                   8,(IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeB__DOT____Vcellinp__comparator__io_operand_a),
+                   56,((0x100U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__sum_2))
+                        ? 0ULL : (0xfffffffffffffeULL 
+                                  & ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2__csaTree__DOT__compressor.__PVT__io_sum_o 
+                                      + vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2__csaTree__DOT__compressor.__PVT__io_carry_o) 
+                                     << 1U))),1,(1U 
+                                                 & ((IData)(vlSelf->PvuTop__DOT__dotproduct__DOT___mul_io_pir_sign_o) 
+                                                    >> 3U)),
+                   8,(IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeB__DOT____Vcellinp__comparator__io_operand_b),
+                   56,((0x100U & (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__sum_3))
+                        ? 0ULL : (0xfffffffffffffeULL 
+                                  & ((vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3__csaTree__DOT__compressor.__PVT__io_sum_o 
+                                      + vlSymsp->TOP__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3__csaTree__DOT__compressor.__PVT__io_carry_o) 
+                                     << 1U))),8,(IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT___comptree_io_result_o),
+                   59,(0x3ffffffffffffffULL & (vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_carry_o 
+                                               + vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_sum_o)));
+    }
+    if (VL_UNLIKELY((1U & (~ (IData)(vlSelf->reset))))) {
+        VL_FWRITEF(0x80000002U,"pir_sign = 0, pir_exp = %b, pir_frac = %b\n",
+                   8,((5U == (IData)(vlSelf->io_op))
+                       ? (IData)(vlSelf->__VdfgTmp_hd9a2d8e3__0)
+                       : 0U),28,((5U == (IData)(vlSelf->io_op))
+                                  ? ((0xffffffeU & 
+                                      ((IData)((vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted 
+                                                >> 0x1dU)) 
+                                       << 1U)) | (0U 
+                                                  != 
+                                                  (0xfffffffU 
+                                                   & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted))))
+                                  : 0U));
     }
 }

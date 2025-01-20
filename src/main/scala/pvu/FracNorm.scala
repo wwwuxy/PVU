@@ -14,7 +14,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
   
   // printf("DECIMAL_POINT = %d\n", DECIMAL_POINT.asUInt)
-
+  
   val io = IO(new Bundle {
     val pir_frac_i = Input(Vec(VECTOR_SIZE, UInt(WIDTH.W)))
     
@@ -25,6 +25,8 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
   val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
   val leading_zero_count  = Wire(UInt(nd.W))
   
+  printf("pir_frac_i = %b\n", io.pir_frac_i(0))
+
   for(i <- 0 until VECTOR_SIZE){
     
   //计算前导0的个数
@@ -68,4 +70,9 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
       io.exp_adjust(i) := exp_adjust_reg
     }
   }
+
+  // printf("Fractional Normalization:\n")
+  // printf("pir_frac_o = %b\n", io.pir_frac_o(0))
+  // printf("exp_adjust = %d\n", io.exp_adjust(0))
+  
 } 

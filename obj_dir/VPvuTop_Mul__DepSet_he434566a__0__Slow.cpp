@@ -11,6 +11,8 @@ VL_ATTR_COLD void VPvuTop_Mul___ctor_var_reset(VPvuTop_Mul* vlSelf) {
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ctor_var_reset\n"); );
     // Body
+    vlSelf->clock = VL_RAND_RESET_I(1);
+    vlSelf->reset = VL_RAND_RESET_I(1);
     vlSelf->io_pir_sign1_i = VL_RAND_RESET_I(1);
     vlSelf->io_pir_sign2_i = VL_RAND_RESET_I(1);
     vlSelf->io_pir_exp1_i = VL_RAND_RESET_I(8);
