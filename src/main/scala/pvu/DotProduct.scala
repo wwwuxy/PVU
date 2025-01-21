@@ -61,9 +61,9 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   }
 
 //打印各部分乘法结果
-// printf("dot every mul result:\n")
+// printf("dot every mul result:\n\n")
 // for(i <- 0 until VECTOR_SIZE){
-//   printf("pir_sign_mul[%d] = %b, pir_exp_mul[%d] = %b, pir_frac_mul[%d] = %b\n", i.U, pir_sign_mul(i), i.U, pir_exp_mul(i), i.U, pir_frac_mul(i))
+//   printf("pir_exp_cmp[%d] = %b, pir_frac_cmp[%d] = %b\n", i.U, pir_exp_mul(i), i.U, pir_frac_mul(i))
 // }
 
 

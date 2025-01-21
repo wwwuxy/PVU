@@ -12,16 +12,6 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0(VPvuTop_Mul*
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__0\n"); );
     // Body
-    vlSelf->__VdfgTmp_h35f5b851__0 = ((0x10000000U 
-                                       & (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac 
-                                          << 1U)) | vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac);
-}
-
-VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1\n"); );
-    // Body
     vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4 
         = ((1U == (7U & (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                          >> 3U))) | (2U == (7U & (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
@@ -432,12 +422,12 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul*
            ^ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg));
 }
 
-VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul* vlSelf) {
+VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1(VPvuTop_Mul* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__1\n"); );
     // Init
-    VlWide<3>/*95:0*/ __Vtemp_h4a8855e1__0;
+    VlWide<3>/*95:0*/ __Vtemp_h7b2a0cec__0;
     // Body
     vlSelf->__PVT__sum = (0x1ffU & (((0x100U & ((IData)(vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Exp) 
                                                 << 1U)) 
@@ -451,7 +441,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((1U == (3U & vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac)) 
                                  | ((2U != (3U & vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac)) 
                                     & (3U == (3U & vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac)))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((IData)(vlSelf->__VdfgTmp_he79a7065__0) 
                                   & (2U == (3U & vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac)))
                                   ? (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac 
@@ -463,7 +453,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 1U))) 
@@ -478,7 +468,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 3U))) 
@@ -493,7 +483,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 0x15U))) 
@@ -508,7 +498,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 0x17U))) 
@@ -523,7 +513,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 0x19U))) 
@@ -538,7 +528,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 5U))) 
@@ -553,7 +543,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 7U))) 
@@ -568,7 +558,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 9U))) 
@@ -576,7 +566,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                   & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                   ? (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac 
                                      << 1U) : 0U))));
-    __Vtemp_h4a8855e1__0[1U] = (0x1000U | (IData)((
+    __Vtemp_h7b2a0cec__0[1U] = (0x1000U | (IData)((
                                                    (((QData)((IData)(
                                                                      (1U 
                                                                       & (~ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))))) 
@@ -593,7 +583,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
                                                                                 | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                                 & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                                               : 
                                                                              (((~ 
                                                                                 ((0U 
@@ -612,7 +602,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                                          ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg) 
                                                                           << 0xcU))))) 
                                                    >> 0x20U)));
-    vlSelf->__VdfgTmp_h20ff595f__0[0U] = (IData)((((QData)((IData)(
+    vlSelf->__VdfgTmp_hb4583435__0[0U] = (IData)((((QData)((IData)(
                                                                    (1U 
                                                                     & (~ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))))) 
                                                    << 0x2bU) 
@@ -628,7 +618,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                                             & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
                                                                                | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                                 & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                                            ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                                            ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                                             : 
                                                                            (((~ 
                                                                               ((0U 
@@ -646,8 +636,8 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                      | (QData)((IData)(
                                                                        ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg) 
                                                                         << 0xcU))))));
-    vlSelf->__VdfgTmp_h20ff595f__0[1U] = __Vtemp_h4a8855e1__0[1U];
-    vlSelf->__VdfgTmp_h20ff595f__0[2U] = ((((- (IData)((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
+    vlSelf->__VdfgTmp_hb4583435__0[1U] = __Vtemp_h7b2a0cec__0[1U];
+    vlSelf->__VdfgTmp_hb4583435__0[2U] = ((((- (IData)((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                             ^ (((0U 
                                                  != 
                                                  (7U 
@@ -656,7 +646,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                 & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
                                                    | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                       & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                 : (
                                                    ((~ 
                                                      ((0U 
@@ -673,7 +663,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                            << 8U) | 
                                           ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg) 
                                            << 6U));
-    vlSelf->__VdfgTmp_h20ff595f__0[3U] = (0x40U | (
+    vlSelf->__VdfgTmp_hb4583435__0[3U] = (0x40U | (
                                                    (0x20U 
                                                     & ((~ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg)) 
                                                        << 5U)) 
@@ -688,7 +678,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                             & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                            ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                            ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                             : 
                                                            (((~ 
                                                               ((0U 
@@ -703,7 +693,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                              << 1U)
                                                              : 0U))) 
                                                          >> 0x18U))));
-    vlSelf->__VdfgTmp_h20ff595f__0[4U] = (((~ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg)) 
+    vlSelf->__VdfgTmp_hb4583435__0[4U] = (((~ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg)) 
                                            << 0x1fU) 
                                           | ((0x7ffffffcU 
                                               & (((- (IData)((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
@@ -716,7 +706,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                     & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
                                                        | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                           & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                    ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                    ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                     : 
                                                    (((~ 
                                                       ((0U 
@@ -732,7 +722,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                      : 0U))) 
                                                  << 2U)) 
                                              | (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg)));
-    vlSelf->__VdfgTmp_h20ff595f__0[5U] = (1U | ((((- (IData)((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
+    vlSelf->__VdfgTmp_hb4583435__0[5U] = (1U | ((((- (IData)((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                                   ^ 
                                                   (((0U 
                                                      != 
@@ -742,7 +732,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                     & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
                                                        | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                           & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                    ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                    ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                     : 
                                                    (((~ 
                                                       ((0U 
@@ -759,7 +749,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                  << 0x1cU) 
                                                 | ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg) 
                                                    << 0x1aU)));
-    vlSelf->__VdfgTmp_h20ff595f__0[6U] = ((0x2000000U 
+    vlSelf->__VdfgTmp_hb4583435__0[6U] = ((0x2000000U 
                                            & ((~ (IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg)) 
                                               << 0x19U)) 
                                           | (0x1ffffffU 
@@ -773,7 +763,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                                                    & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
                                                       | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                          & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                                   ? vlSelf->__VdfgTmp_h35f5b851__0
+                                                   ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                                                    : 
                                                   (((~ 
                                                      ((0U 
@@ -795,7 +785,7 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                               & ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                  | ((~ (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                     & (IData)(vlSelf->radix4BoothMultiplier__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                              ? vlSelf->__VdfgTmp_h35f5b851__0
+                              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
                               : (((~ ((0U == (7U & 
                                               (vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac 
                                                >> 0xbU))) 
@@ -946,8 +936,10 @@ VL_INLINE_OPT void VPvuTop_Mul___ico_comb__TOP__PvuTop__DOT__mul__2(VPvuTop_Mul*
                      << 7U)) | (vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_12_io_partial_prod 
                                 >> 0x16U));
     vlSelf->radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i[6U] 
-        = ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
-           << 2U);
+        = ((((0x8000000U & vlSymsp->TOP.PvuTop__DOT____Vcellout__decode2__io_Frac)
+              ? vlSymsp->TOP.PvuTop__DOT____Vcellout__decode1__io_Frac
+              : 0U) << 4U) | ((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg) 
+                              << 2U));
     vlSelf->radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i[0U] 
         = (IData)((0x1000000000ULL | (((QData)((IData)(vlSelf->__PVT__radix4BoothMultiplier__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg)) 
                                        << 0x3eU) | 

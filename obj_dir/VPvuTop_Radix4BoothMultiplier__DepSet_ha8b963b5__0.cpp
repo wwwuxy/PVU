@@ -7,10 +7,10 @@
 #include "VPvuTop_Compressor4to2.h"
 #include "VPvuTop_Radix4BoothMultiplier.h"
 
-VL_INLINE_OPT void VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__1(VPvuTop_Radix4BoothMultiplier* vlSelf) {
+VL_INLINE_OPT void VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__2(VPvuTop_Radix4BoothMultiplier* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__1\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__2\n"); );
     // Init
     VlWide<4>/*127:0*/ __Vtemp_h49be4455__0;
     // Body
@@ -1606,10 +1606,10 @@ VL_INLINE_OPT void VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__m
                                   >> 0x20U)) << 8U));
 }
 
-VL_INLINE_OPT void VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__2(VPvuTop_Radix4BoothMultiplier* vlSelf) {
+VL_INLINE_OPT void VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__3(VPvuTop_Radix4BoothMultiplier* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__2\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+            VPvuTop_Radix4BoothMultiplier___ico_comb__TOP__PvuTop__DOT__mul__DOT__radix4BoothMultiplier__3\n"); );
     // Body
     vlSelf->csaTree__DOT____Vcellinp__compressor__io_operands_i[0U] 
         = (IData)(vlSelf->__PVT__csaTree__DOT__csa_tree_A__DOT__compressor->__PVT__io_sum_o);

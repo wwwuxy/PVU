@@ -4,7 +4,7 @@
 #include "VPvuTop.h"       // 由 Verilator 生成
 #include "VPvuTop__Syms.h" // 由 Verilator 生成
 
-#if 0
+#if 1
 //VECTOR_SIZE = 4测试向量运算
 //-----------------------------
 // 检查输出是否正确
@@ -163,11 +163,11 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     {
         printf("Test Mul\n");
-        uint32_t test_i1[4] = {0x4c000000, 0x54000000, 0x48000000, 0x48000000};
-        uint32_t test_i2[4] = {0x54000000, 0x48000000, 0x54000000, 0x54000000};
+        uint32_t test_i1[4] = {0x4c000000, 0x4c000000, 0x4c000000, 0x4c000000};
+        uint32_t test_i2[4] = {0x54000000, 0x58000000, 0x60000000, 0x61000000};
         uint8_t  test_op    = 3; // 乘法
 
-        uint32_t expected_o[4]  = {0x60800000, 0x5c000000, 0x5c000000, 0x5c000000}; 
+        uint32_t expected_o[4]  = {0x60800000, 0x62000000, 0x66000000, 0x67800000}; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
@@ -199,11 +199,11 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     {
         printf("Test Dot\n");
-        uint32_t test_i1[4] = {0x4c000000, 0x4c000000, 0x4c000000, 0x4c000000};
-        uint32_t test_i2[4] = {0x54000000, 0x58000000, 0x60000000, 0x61000000};
+        uint32_t test_i1[4] = {0x48000000, 0x48000000, 0x48000000, 0x48000000};
+        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x48000000, 0x48000000};
         uint8_t  test_op    = 5; // 点积
 
-        uint32_t expected_o  = 0x6cb00000; 
+        uint32_t expected_o  = 0x60000000; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
@@ -373,11 +373,11 @@ int main(int argc, char** argv) {
     //===============================================================
     {
         printf("Test Mul\n");
-        uint32_t i1  = 0x48000000; 
-        uint32_t i2  = 0x50000000; 
+        uint32_t i1  = 0x4c000000; 
+        uint32_t i2  = 0x54000000; 
         uint8_t  op  = 3;      // 乘法
 
-        uint32_t expected_o = 0x58000000;  
+        uint32_t expected_o = 0x60800000;  
 
         set_inputs(dut, i1, i2, op);
 

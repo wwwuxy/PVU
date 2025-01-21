@@ -194,27 +194,27 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, 4))
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE+1)+2))
       frac_norm_dot.io.pir_frac_i := pir_frac_dot
       pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
       pir_exp_adjust_dot          := frac_norm_dot.io.exp_adjust
   }.elsewhen(io.op === 1.U){ //Add
-    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, 1))
+    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
         frac_norm_add.io.pir_frac_i := pir_frac_rst_add
         pir_frac_normed             := frac_norm_add.io.pir_frac_o
         pir_exp_adjust              := frac_norm_add.io.exp_adjust
   }.elsewhen(io.op === 2.U){ //Sub
-    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, 2))
+    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
         frac_norm_sub.io.pir_frac_i := pir_frac_rst_sub
         pir_frac_normed             := frac_norm_sub.io.pir_frac_o
         pir_exp_adjust              := frac_norm_sub.io.exp_adjust
   }.elsewhen(io.op === 3.U){  //Mul           
-    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, 3))
+    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2))
         frac_norm_mul.io.pir_frac_i := pir_frac_rst_mul
         pir_frac_normed             := frac_norm_mul.io.pir_frac_o
         pir_exp_adjust              := frac_norm_mul.io.exp_adjust
   }.elsewhen(io.op === 4.U){  //Div    
-    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, 4))
+    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
         frac_norm_div.io.pir_frac_i := pir_frac_rst_div
         pir_frac_normed             := frac_norm_div.io.pir_frac_o
         pir_exp_adjust              := frac_norm_div.io.exp_adjust

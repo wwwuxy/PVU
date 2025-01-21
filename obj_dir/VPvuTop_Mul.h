@@ -130,8 +130,7 @@ class VPvuTop_Mul final : public VerilatedModule {
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_1_io_partial_prod;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProd_io_partial_prod;
         IData/*28:0*/ __PVT__radix4BoothMultiplier__DOT__genProds__DOT___genProdFirst_io_partial_prod;
-        IData/*28:0*/ __VdfgTmp_h35f5b851__0;
-        VlWide<7>/*217:0*/ __VdfgTmp_h20ff595f__0;
+        VlWide<7>/*217:0*/ __VdfgTmp_hb4583435__0;
         VL_OUT64(io_pir_frac_o,55,0);
         VlWide<7>/*223:0*/ radix4BoothMultiplier__DOT__csaTree__DOT____Vcellinp__compressor__io_operands_i;
         VlWide<7>/*223:0*/ radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT____Vcellinp__compressor__io_operands_i;

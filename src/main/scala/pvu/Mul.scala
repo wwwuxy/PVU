@@ -11,7 +11,7 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
   var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
 
-  printf("Module Mul:\n\n")
+  // printf("Module Mul:\n\n")
 
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -45,9 +45,9 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
     frac(i)                            := (sum_frac(i) + carry(i))         //左移一位进行缩放，后续尾数标准化时指数减一
   }
 
-  printf("sum_frac = %b\n", sum_frac(0))
-  printf("carry = %b\n", carry(0))
-  printf("frac = %b\n", frac(0))
+  // printf("sum_frac = %b\n", sum_frac(0))
+  // printf("carry = %b\n", carry(0))
+  // printf("frac = %b\n", frac(0))
 
   //计算指数
   // 定义最大指数值,处理指数溢出时
@@ -61,7 +61,7 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) exte
    io.pir_frac_o(i) := Mux(carry === 1.U, 0.U, frac(i)) //溢出时尾数为0
   }
 
-  // printf("mul result:\n")
+  // printf("mul result:\n\n")
   // printf("pir_sign_o = %b\n", io.pir_sign_o(0))
   // printf("pir_exp_o = %b\n", io.pir_exp_o(0))
   // printf("pir_frac_o = %b\n", io.pir_frac_o(0))

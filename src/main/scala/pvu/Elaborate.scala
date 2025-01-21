@@ -21,7 +21,7 @@ object Elaborate extends App{
 )
 
     ChiselStage.emitSystemVerilogFile(
-        new PvuTop(32, 1, 30),
+        new PvuTop(32, 4, 30),
         filltlflag,
         firtoolOpts
     )

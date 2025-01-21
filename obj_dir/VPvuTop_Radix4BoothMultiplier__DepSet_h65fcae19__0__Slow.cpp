@@ -15,8 +15,6 @@ VL_ATTR_COLD void VPvuTop_Radix4BoothMultiplier___ctor_var_reset(VPvuTop_Radix4B
     vlSelf->io_operand_b = VL_RAND_RESET_I(28);
     vlSelf->io_sum_o = VL_RAND_RESET_Q(56);
     vlSelf->io_carry_o = VL_RAND_RESET_Q(56);
-    vlSelf->__Vcellinp__genProds__io_operand_b = VL_RAND_RESET_I(28);
-    vlSelf->__Vcellinp__genProds__io_operand_a = VL_RAND_RESET_I(28);
     vlSelf->__PVT__genProds__DOT___genProd_12_io_partial_prod = VL_RAND_RESET_I(29);
     vlSelf->__PVT__genProds__DOT___genProd_11_io_partial_prod = VL_RAND_RESET_I(29);
     vlSelf->__PVT__genProds__DOT___genProd_10_io_partial_prod = VL_RAND_RESET_I(29);
@@ -114,6 +112,6 @@ VL_ATTR_COLD void VPvuTop_Radix4BoothMultiplier___ctor_var_reset(VPvuTop_Radix4B
     VL_RAND_RESET_W(224, vlSelf->csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
     VL_RAND_RESET_W(224, vlSelf->csaTree__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
     VL_RAND_RESET_W(224, vlSelf->csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
-    vlSelf->__VdfgTmp_hae9abed7__0 = 0;
-    VL_ZERO_RESET_W(218, vlSelf->__VdfgTmp_h868c68fc__0);
+    vlSelf->__VdfgTmp_hd6a46e59__0 = 0;
+    VL_ZERO_RESET_W(218, vlSelf->__VdfgTmp_h290cb9ab__0);
 }

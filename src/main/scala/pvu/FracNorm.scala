@@ -7,7 +7,7 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int, val OP: Int) extends Module {
+class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
   var es: Int         = 2
   var nd: Int         = log2Ceil(WIDTH - 1)
   var EXP_WIDTH: Int  = nd + es + 1 
@@ -23,30 +23,25 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
   })
 
   val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
-  val leading_zero_count  = Wire(UInt(nd.W))
+  val leading_zero_count  = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
+  val lzc_zeroes          = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   
-  printf("pir_frac_i = %b\n", io.pir_frac_i(0))
-
   for(i <- 0 until VECTOR_SIZE){
     
   //计算前导0的个数
     val lzcMod              = Module(new LZC(WIDTH, true, nd))
         lzcMod.io.in_i     := io.pir_frac_i(i)
-        leading_zero_count := lzcMod.io.cnt_o
-    val lzc_zeroes          = lzcMod.io.empty_o
+        leading_zero_count(i) := lzcMod.io.cnt_o
+        lzc_zeroes(i)         := lzcMod.io.empty_o
 
   //计算指数位移量(指数几乎不会溢出)
     val exp_adjust_reg = Wire(SInt((EXP_WIDTH+1).W))
-    when(lzc_zeroes) {
+    when(lzc_zeroes(i) === 1.U) {
       exp_adjust_reg := 0.S   // 尾数全0，不需要规格化
-    }.elsewhen(leading_zero_count <= (DECIMAL_POINT - 1).U) {
-      when(OP.U === 3.U) {
-        exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
-      }.otherwise {
-        exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
-      }
+    }.elsewhen(leading_zero_count(i) <= (DECIMAL_POINT - 1).U) {
+      exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count(i) - 1.U).asSInt
     }.otherwise {
-      exp_adjust_reg := -((leading_zero_count - (DECIMAL_POINT.U - 1.U)).asSInt)
+      exp_adjust_reg := -((leading_zero_count(i) - (DECIMAL_POINT.U - 1.U)).asSInt)
     }
 
     // io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
@@ -56,7 +51,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     val frac_shifted = Wire(UInt(WIDTH.W))
     val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
     shifter.io.operand_i    := io.pir_frac_i(i)
-    shifter.io.shift_amount := leading_zero_count
+    shifter.io.shift_amount := leading_zero_count(i)
     frac_shifted            := shifter.io.result_o
 
   //保留前FRAC_WITH + 1位，低位舍入
@@ -72,6 +67,7 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
   }
 
   // printf("Fractional Normalization:\n")
+  // printf("pir_frac_i = %b\n", io.pir_frac_i(0))
   // printf("pir_frac_o = %b\n", io.pir_frac_o(0))
   // printf("exp_adjust = %d\n", io.exp_adjust(0))
   

@@ -22,7 +22,8 @@ class GenProduct(val WIDTH: Int) extends Module {
     val partial_prod = Output(UInt((WIDTH + 1).W))  // 生成的部分积
     val sign         = Output(Bool())               // 是否为负部分积
   })
-
+/**  Bilbil
+ 
   // 实例化 BoothEncoder
   val boothEncoder = Module(new BoothEncoder())
   boothEncoder.io.code := io.code
@@ -46,4 +47,31 @@ class GenProduct(val WIDTH: Int) extends Module {
 
   // 输出符号
   io.sign := boothEncoder.io.neg
+
+**/
+//  PDPU
+  // 实例化 BoothEncoder
+  val boothEncoder = Module(new BoothEncoder())
+  boothEncoder.io.code := io.code
+
+  // 定义临时部分积
+  val tempProd = Wire(UInt((WIDTH + 1).W))
+  
+
+  // 根据 Booth 编码生成 tempProd
+  when (boothEncoder.io.one) {
+    tempProd := io.multiplicand
+  } .elsewhen (boothEncoder.io.two) {
+    tempProd := io.multiplicand << 1
+  } .otherwise {
+    tempProd := 0.U
+  }
+
+
+  // 生成最终的部分积，这里不用+1，因为+1放在了下一行的部分积中
+  io.partial_prod := Mux(boothEncoder.io.neg, ~tempProd, tempProd)
+
+  // 输出符号
+  io.sign := boothEncoder.io.neg
+
 }

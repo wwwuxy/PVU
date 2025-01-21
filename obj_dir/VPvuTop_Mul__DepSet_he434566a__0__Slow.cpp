@@ -120,7 +120,6 @@ VL_ATTR_COLD void VPvuTop_Mul___ctor_var_reset(VPvuTop_Mul* vlSelf) {
     VL_RAND_RESET_W(224, vlSelf->radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
     VL_RAND_RESET_W(224, vlSelf->radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
     VL_RAND_RESET_W(224, vlSelf->radix4BoothMultiplier__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
-    vlSelf->__VdfgTmp_h35f5b851__0 = 0;
     vlSelf->__VdfgTmp_he79a7065__0 = 0;
-    VL_ZERO_RESET_W(218, vlSelf->__VdfgTmp_h20ff595f__0);
+    VL_ZERO_RESET_W(218, vlSelf->__VdfgTmp_hb4583435__0);
 }

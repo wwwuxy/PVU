@@ -26,8 +26,10 @@ class FractionAlignment_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, v
     io.pir_max_exp         := comptree.io.result_o
 
   // 计算所需的移位量并确保 shift_amount <= ALIGN_WIDTH
+  val shift_amount = Wire(Vec(VECTOR_SIZE, UInt(EXP_WIDTH.W)))
+
   for(i <- 0 until VECTOR_SIZE){
-    val shift_amount = (io.pir_max_exp - io.pir_exp_i(i)).max(0.S)  //取与0的最大值 ---> 防御性编程
-    io.pir_frac_align(i) := io.pir_frac_i(i) >> Mux(shift_amount > ALIGN_WIDTH.S, ALIGN_WIDTH.S, shift_amount).asUInt
+    shift_amount(i) := (io.pir_max_exp - io.pir_exp_i(i)).asUInt //取与0的最大值 ---> 防御性编程
+    io.pir_frac_align(i) := io.pir_frac_i(i) >> Mux(shift_amount(i) > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount(i))
   }
 }

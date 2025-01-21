@@ -1,24 +1,36 @@
-[0m[[0m[31merror[0m] [0m[0mcirct.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
-[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
-[0m[[0m[31merror[0m] [0m[0m1[0m
-[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
-[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FracNorm_DotProduct.scala:11:7: error: sink "io.exp_adjust" not fully initialized in "FracNorm_DotProduct"[0m
-[0m[[0m[31merror[0m] [0m[0mclass FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
-[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
-[0m[[0m[31merror[0m] [0m[0m1[0m
-[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
-[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/FracNorm_DotProduct.scala:11:7: error: sink "io.exp_adjust" not fully initialized in "FracNorm_DotProduct"[0m
-[0m[[0m[31merror[0m] [0m[0mclass FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {[0m
-[0m[[0m[31merror[0m] [0m[0m      ^[0m
-[0m[[0m[31merror[0m] [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mchisel3.package$ChiselException: Connection between sink (FractionAlignment_DotProduct.shift_amount[0]: Wire[UInt<5>]) and source (FractionAlignment_DotProduct.shift_amount_0_?: OpResult[SInt<8>]) failed @: Sink (UInt<5>) and Source (SInt<8>) have different types.[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.FractionAlignment_DotProduct.$anonfun$new$2(FractionAlignment_DotProduct.scala:32)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.FractionAlignment_DotProduct.<init>(FractionAlignment_DotProduct.scala:31)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.DotProduct.$anonfun$frac_compare$2(DotProduct.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.DotProduct.$anonfun$frac_compare$1(DotProduct.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.DotProduct.<init>(DotProduct.scala:49)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$new$47(PvuTop.scala:167)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$new$46(PvuTop.scala:167)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$new$45(PvuTop.scala:167)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.<init>(When.scala:131)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.elsewhen(When.scala:108)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.<init>(PvuTop.scala:166)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$.$anonfun$new$1(Elaborate.scala:24)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.stage.phases.Elaborate.$anonfun$transform$2(Elaborate.scala:48)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.$anonfun$buildImpl$1(Builder.scala:1023)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.buildImpl(Builder.scala:1017)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.$anonfun$build$1(Builder.scala:1008)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.$anonfun$makeScope$4(Logger.scala:148)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:146)[0m
+[0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:133)[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) chisel3.package$ChiselException: Connection between sink (FractionAlignment_DotProduct.shift_amount[0]: Wire[UInt<5>]) and source (FractionAlignment_DotProduct.shift_amount_0_?: OpResult[SInt<8>]) failed @: Sink (UInt<5>) and Source (SInt<8>) have different types.[0m
