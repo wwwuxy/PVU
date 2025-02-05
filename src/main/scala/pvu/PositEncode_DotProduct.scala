@@ -100,7 +100,13 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
   val result = Wire(UInt(POSIT_WIDTH.W))
 
   result   := Mux(io.pir_sign === 1.U, Cat(1.U, ~value_after_round + 1.U), Cat(0.U, value_after_round))
+
+when(io.pir_exp === 0.S && io.pir_frac === 0.U) {
+  io.posit := 0.U
+}.otherwise {
   io.posit := result
+}
+
 }
 
 

@@ -29,7 +29,7 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val R0          = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val lzc_operand = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
   val lzc         = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
-  val lzc_zeros   = Wire(Vec(VECTOR_SIZE, UInt(0.W)))
+  val lzc_zeros   = Wire(Vec(VECTOR_SIZE, Bool()))
 
   for (i <- 0 until VECTOR_SIZE) {
     R0(i)          := operand(i)(POSIT_WIDTH - 2)
@@ -51,11 +51,14 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val regime_r    = Wire(Vec(VECTOR_SIZE, SInt((nd + 1).W)))
 
   for (i <- 0 until VECTOR_SIZE) {
-    same_length(i) := Mux(lzc_zeros(i) === 1.U, (POSIT_WIDTH - 1).U, lzc(i))
-    regime_r(i)    := (Mux(R0(i) === 1.U, Cat(0.U, same_length(i) - 1.U), Cat(1.U, ~same_length(i) + 1.U))).asSInt // regime value, Convert negative numbers to two's complement
+    same_length(i) := lzc(i)
+    when(lzc_zeros(i) === 1.U) {
+      regime_r(i)    := 0.S
+    }.otherwise {
+      regime_r(i)    := (Mux(R0(i) === 1.U, Cat(0.U, lzc(i) - 1.U), Cat(1.U, ~lzc(i) + 1.U))).asSInt
+    }
+    // printf("lzc_zeros[%d] = %d, lzc[%d] = %d, same_length[%d] = %d, regime_r[%d] = %d\n", i.U, lzc_zeros(i), i.U, lzc(i), i.U, same_length(i), i.U, regime_r(i))
   }
-
-  // printf("same_length[0] = %d, regime_r[0] = %d\n", same_length(0), regime_r(0))
 
   // Left shift the regime
   val operand_after_shift = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
@@ -70,8 +73,13 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   // Get the exponent value
   val es_value = Wire(Vec(VECTOR_SIZE, UInt(2.W)))
   for (i <- 0 until VECTOR_SIZE) {
-    es_value(i) := Mux(lzc_zeros(i) === 1.U, 0.U, operand_after_shift(i)(POSIT_WIDTH - 2, POSIT_WIDTH - 3))
+    when(lzc_zeros(i) === true.B) {
+      es_value(i) := 0.U
+    }.otherwise {
+      es_value(i) := operand_after_shift(i)(POSIT_WIDTH - 2, POSIT_WIDTH - 3)
+    }
     io.Exp(i)   := Cat(regime_r(i), es_value(i)).asSInt
+    // printf("es_value[%d] = %b, regime_r[%d] = %d, io.Exp[%d] = %b\n", i.U, es_value(i), i.U, regime_r(i), i.U, io.Exp(i))
   }
 
   // printf("es_value[0] = %b, io.Exp[0] = %b\n", es_value(0), io.Exp(0))

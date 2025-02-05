@@ -40,7 +40,7 @@ count:
 	@echo $(shell find vsrc -name "*.sv" -type f | xargs cat | wc -l)
 
 
+debug:
+	make verilog
+	make run
 
-
-defalut:
-	verilog

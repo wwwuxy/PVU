@@ -1,6 +1,16 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/FractionAlignment_DotProduct.scala:32:65: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.SInt[0m
-[0m[[0m[31merror[0m] [0m[0m    shift_amount(i) := (io.pir_max_exp - io.pir_exp_i(i)).max(0.U)  //取与0的最大值 ---> 防御性编程[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PositDecode.scala:55:44: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Boolean(true)[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    same_length(i) := Mux(lzc_zeros(i) === true, (POSIT_WIDTH - 1).U, lzc(i))[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PositDecode.scala:56:44: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Boolean(true)[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    regime_r(i)    := Mux(lzc_zeros(i) === true, 0.U, (Mux(R0(i) === 1.U, Cat(0.U, same_length(i) - 1.U), Cat(1.U, ~same_length(i) + 1.U)))).asSInt // regime value, Convert negative numbers to two's complement[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PositDecode.scala:73:41: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : Boolean(true)[0m
+[0m[[0m[31merror[0m] [0m[0m required: chisel3.UInt[0m
+[0m[[0m[31merror[0m] [0m[0m    es_value(i) := Mux(lzc_zeros(i) === true, 0.U, operand_after_shift(i)(POSIT_WIDTH - 2, POSIT_WIDTH - 3))[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

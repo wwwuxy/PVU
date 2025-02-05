@@ -26,16 +26,20 @@ module PositDecode(	// src/main/scala/pvu/PositDecode.scala:7:7
   output [3:0][27:0] io_Frac	// src/main/scala/pvu/PositDecode.scala:13:14
 );
 
-  wire [30:0] _barrel_shifter_3_io_result_o;	// src/main/scala/pvu/PositDecode.scala:64:32
-  wire [30:0] _barrel_shifter_2_io_result_o;	// src/main/scala/pvu/PositDecode.scala:64:32
-  wire [30:0] _barrel_shifter_1_io_result_o;	// src/main/scala/pvu/PositDecode.scala:64:32
-  wire [30:0] _barrel_shifter_io_result_o;	// src/main/scala/pvu/PositDecode.scala:64:32
+  wire [30:0] _barrel_shifter_3_io_result_o;	// src/main/scala/pvu/PositDecode.scala:67:32
+  wire [30:0] _barrel_shifter_2_io_result_o;	// src/main/scala/pvu/PositDecode.scala:67:32
+  wire [30:0] _barrel_shifter_1_io_result_o;	// src/main/scala/pvu/PositDecode.scala:67:32
+  wire [30:0] _barrel_shifter_io_result_o;	// src/main/scala/pvu/PositDecode.scala:67:32
   wire [4:0]  _lzcModule_3_cnt_o;	// src/main/scala/pvu/PositDecode.scala:41:27
+  wire        _lzcModule_3_empty_o;	// src/main/scala/pvu/PositDecode.scala:41:27
   wire [4:0]  _lzcModule_2_cnt_o;	// src/main/scala/pvu/PositDecode.scala:41:27
+  wire        _lzcModule_2_empty_o;	// src/main/scala/pvu/PositDecode.scala:41:27
   wire [4:0]  _lzcModule_1_cnt_o;	// src/main/scala/pvu/PositDecode.scala:41:27
+  wire        _lzcModule_1_empty_o;	// src/main/scala/pvu/PositDecode.scala:41:27
   wire [4:0]  _lzcModule_cnt_o;	// src/main/scala/pvu/PositDecode.scala:41:27
+  wire        _lzcModule_empty_o;	// src/main/scala/pvu/PositDecode.scala:41:27
   wire [30:0] _operand_0_T_6 =
-    io_posit[2'h0][31] ? ~(io_posit[2'h0][30:0]) + 31'h1 : io_posit[2'h0][30:0];	// src/main/scala/pvu/PositDecode.scala:24:{16,30}, :25:{22,44,56,77}
+    io_posit[2'h0][31] ? ~(io_posit[2'h0][30:0]) + 31'h1 : io_posit[2'h0][30:0];	// src/main/scala/pvu/PositDecode.scala:24:30, :25:{22,44,56,77}, :77:19
   wire [30:0] _operand_1_T_6 =
     io_posit[2'h1][31] ? ~(io_posit[2'h1][30:0]) + 31'h1 : io_posit[2'h1][30:0];	// src/main/scala/pvu/PositDecode.scala:24:{16,30}, :25:{22,44,56,77}
   wire [30:0] _operand_2_T_6 =
@@ -48,7 +52,7 @@ module PositDecode(	// src/main/scala/pvu/PositDecode.scala:7:7
   ) lzcModule (	// src/main/scala/pvu/PositDecode.scala:41:27
     .in_i    ({31{_operand_0_T_6[30]}} ^ _operand_0_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22, :35:33, :36:26
     .cnt_o   (_lzcModule_cnt_o),
-    .empty_o (/* unused */)
+    .empty_o (_lzcModule_empty_o)
   );
   LZC #(
     .MODE(1),
@@ -56,7 +60,7 @@ module PositDecode(	// src/main/scala/pvu/PositDecode.scala:7:7
   ) lzcModule_1 (	// src/main/scala/pvu/PositDecode.scala:41:27
     .in_i    ({31{_operand_1_T_6[30]}} ^ _operand_1_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22, :35:33, :36:26
     .cnt_o   (_lzcModule_1_cnt_o),
-    .empty_o (/* unused */)
+    .empty_o (_lzcModule_1_empty_o)
   );
   LZC #(
     .MODE(1),
@@ -64,7 +68,7 @@ module PositDecode(	// src/main/scala/pvu/PositDecode.scala:7:7
   ) lzcModule_2 (	// src/main/scala/pvu/PositDecode.scala:41:27
     .in_i    ({31{_operand_2_T_6[30]}} ^ _operand_2_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22, :35:33, :36:26
     .cnt_o   (_lzcModule_2_cnt_o),
-    .empty_o (/* unused */)
+    .empty_o (_lzcModule_2_empty_o)
   );
   LZC #(
     .MODE(1),
@@ -72,55 +76,63 @@ module PositDecode(	// src/main/scala/pvu/PositDecode.scala:7:7
   ) lzcModule_3 (	// src/main/scala/pvu/PositDecode.scala:41:27
     .in_i    ({31{_operand_3_T_6[30]}} ^ _operand_3_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22, :35:33, :36:26
     .cnt_o   (_lzcModule_3_cnt_o),
-    .empty_o (/* unused */)
+    .empty_o (_lzcModule_3_empty_o)
   );
-  BarrelShifter barrel_shifter (	// src/main/scala/pvu/PositDecode.scala:64:32
+  BarrelShifter barrel_shifter (	// src/main/scala/pvu/PositDecode.scala:67:32
     .io_operand_i    (_operand_0_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22
-    .io_shift_amount (_lzcModule_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :55:67, :66:54
+    .io_shift_amount (_lzcModule_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :58:61, :69:54
     .io_result_o     (_barrel_shifter_io_result_o)
   );
-  BarrelShifter barrel_shifter_1 (	// src/main/scala/pvu/PositDecode.scala:64:32
+  BarrelShifter barrel_shifter_1 (	// src/main/scala/pvu/PositDecode.scala:67:32
     .io_operand_i    (_operand_1_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22
-    .io_shift_amount (_lzcModule_1_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :55:67, :66:54
+    .io_shift_amount (_lzcModule_1_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :58:61, :69:54
     .io_result_o     (_barrel_shifter_1_io_result_o)
   );
-  BarrelShifter barrel_shifter_2 (	// src/main/scala/pvu/PositDecode.scala:64:32
+  BarrelShifter barrel_shifter_2 (	// src/main/scala/pvu/PositDecode.scala:67:32
     .io_operand_i    (_operand_2_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22
-    .io_shift_amount (_lzcModule_2_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :55:67, :66:54
+    .io_shift_amount (_lzcModule_2_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :58:61, :69:54
     .io_result_o     (_barrel_shifter_2_io_result_o)
   );
-  BarrelShifter barrel_shifter_3 (	// src/main/scala/pvu/PositDecode.scala:64:32
+  BarrelShifter barrel_shifter_3 (	// src/main/scala/pvu/PositDecode.scala:67:32
     .io_operand_i    (_operand_3_T_6),	// src/main/scala/pvu/PositDecode.scala:25:22
-    .io_shift_amount (_lzcModule_3_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :55:67, :66:54
+    .io_shift_amount (_lzcModule_3_cnt_o + 5'h1),	// src/main/scala/pvu/PositDecode.scala:41:27, :58:61, :69:54
     .io_result_o     (_barrel_shifter_3_io_result_o)
   );
   assign io_Sign =
     {{io_posit[2'h3][31]},
      {io_posit[2'h2][31]},
      {io_posit[2'h1][31]},
-     {io_posit[2'h0][31]}};	// src/main/scala/pvu/PositDecode.scala:7:7, :24:{16,30}
+     {io_posit[2'h0][31]}};	// src/main/scala/pvu/PositDecode.scala:7:7, :24:{16,30}, :77:19
   assign io_Exp =
-    {{{_operand_3_T_6[30]
-         ? {1'h0, _lzcModule_3_cnt_o - 5'h1}
-         : {1'h1, ~_lzcModule_3_cnt_o + 5'h1},
-       _barrel_shifter_3_io_result_o[30:29]}},
-     {{_operand_2_T_6[30]
-         ? {1'h0, _lzcModule_2_cnt_o - 5'h1}
-         : {1'h1, ~_lzcModule_2_cnt_o + 5'h1},
-       _barrel_shifter_2_io_result_o[30:29]}},
-     {{_operand_1_T_6[30]
-         ? {1'h0, _lzcModule_1_cnt_o - 5'h1}
-         : {1'h1, ~_lzcModule_1_cnt_o + 5'h1},
-       _barrel_shifter_1_io_result_o[30:29]}},
-     {{_operand_0_T_6[30]
-         ? {1'h0, _lzcModule_cnt_o - 5'h1}
-         : {1'h1, ~_lzcModule_cnt_o + 5'h1},
-       _barrel_shifter_io_result_o[30:29]}}};	// src/main/scala/pvu/PositDecode.scala:7:7, :25:{22,34}, :35:33, :41:27, :55:{27,46,67,78,84,100}, :64:32, :73:73, :74:23
+    {{{_lzcModule_3_empty_o
+         ? 6'h0
+         : _operand_3_T_6[30]
+             ? {1'h0, _lzcModule_3_cnt_o - 5'h1}
+             : {1'h1, ~_lzcModule_3_cnt_o + 5'h1},
+       _lzcModule_3_empty_o ? 2'h0 : _barrel_shifter_3_io_result_o[30:29]}},
+     {{_lzcModule_2_empty_o
+         ? 6'h0
+         : _operand_2_T_6[30]
+             ? {1'h0, _lzcModule_2_cnt_o - 5'h1}
+             : {1'h1, ~_lzcModule_2_cnt_o + 5'h1},
+       _lzcModule_2_empty_o ? 2'h0 : _barrel_shifter_2_io_result_o[30:29]}},
+     {{_lzcModule_1_empty_o
+         ? 6'h0
+         : _operand_1_T_6[30]
+             ? {1'h0, _lzcModule_1_cnt_o - 5'h1}
+             : {1'h1, ~_lzcModule_1_cnt_o + 5'h1},
+       _lzcModule_1_empty_o ? 2'h0 : _barrel_shifter_1_io_result_o[30:29]}},
+     {{_lzcModule_empty_o
+         ? 6'h0
+         : _operand_0_T_6[30]
+             ? {1'h0, _lzcModule_cnt_o - 5'h1}
+             : {1'h1, ~_lzcModule_cnt_o + 5'h1},
+       _lzcModule_empty_o ? 2'h0 : _barrel_shifter_io_result_o[30:29]}}};	// src/main/scala/pvu/PositDecode.scala:7:7, :25:{22,34}, :35:33, :41:27, :55:32, :56:22, :58:{22,29,48,61,72,78,86}, :67:32, :76:35, :77:19, :79:{19,44}, :81:23
   assign io_Frac =
     {{{|_operand_3_T_6, _barrel_shifter_3_io_result_o[28:2]}},
      {{|_operand_2_T_6, _barrel_shifter_2_io_result_o[28:2]}},
      {{|_operand_1_T_6, _barrel_shifter_1_io_result_o[28:2]}},
-     {{|_operand_0_T_6, _barrel_shifter_io_result_o[28:2]}}};	// src/main/scala/pvu/PositDecode.scala:7:7, :25:22, :64:32, :82:56, :83:{22,63}
+     {{|_operand_0_T_6, _barrel_shifter_io_result_o[28:2]}}};	// src/main/scala/pvu/PositDecode.scala:7:7, :25:22, :67:32, :90:56, :91:{22,63}
 endmodule
 
 module FractionAlignment_AddSub(	// src/main/scala/pvu/FractionAlignment_AddSub.scala:7:7
@@ -7501,7 +7513,11 @@ module PositEncode_DotProduct(	// src/main/scala/pvu/PositEncode_DotProduct.scal
     .io_result_o     (_barrel_shifter_io_result_o)
   );
   assign io_posit =
-    io_pir_sign ? {1'h1, ~_value_after_round_T + 31'h1} : {1'h0, _value_after_round_T};	// src/main/scala/pvu/PositEncode_DotProduct.scala:7:7, :40:15, :94:47, :102:{18,43,49,68,79}
+    io_pir_exp == 8'h0 & io_pir_frac == 28'h0
+      ? 32'h0
+      : io_pir_sign
+          ? {1'h1, ~_value_after_round_T + 31'h1}
+          : {1'h0, _value_after_round_T};	// src/main/scala/pvu/PositEncode_DotProduct.scala:7:7, :40:15, :94:47, :102:{18,43,49,68,79}, :104:{17,25,40,49}, :105:12, :107:12
 endmodule
 
 module PositEncode(	// src/main/scala/pvu/PositEncode.scala:7:7
