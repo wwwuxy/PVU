@@ -42,7 +42,8 @@ VM_USER_LDLIBS = \
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
 	main \
-	main_resnet \
+	main_resnet_add \
+	main_resnet_dot \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
@@ -60,7 +61,9 @@ VPATH += $(VM_USER_DIR)
 
 main.o: /home/wuxy/PVU/csrc/main.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
-main_resnet.o: /home/wuxy/PVU/csrc/main_resnet.cpp
+main_resnet_add.o: /home/wuxy/PVU/csrc/main_resnet_add.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_resnet_dot.o: /home/wuxy/PVU/csrc/main_resnet_dot.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
