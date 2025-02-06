@@ -171,6 +171,7 @@
 
 //     // 结果报告
 //     std::cout << "\n验证结果\n========="
+//               << "\nposit_dot测试完成！"
 //               << "\n总样本数: " << total
 //               << "\n错误数量: " << errors
 //               << "\n错误率:   " << std::fixed << std::setprecision(2)
