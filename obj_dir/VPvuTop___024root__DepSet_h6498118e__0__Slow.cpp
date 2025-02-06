@@ -475,7 +475,7 @@ VL_ATTR_COLD void VPvuTop___024root___eval_settle(VPvuTop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 VPvuTop___024root___dump_triggers__stl(vlSelf);
 #endif
-                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7628, "", "Settle region did not converge.");
+                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7648, "", "Settle region did not converge.");
             }
             vlSelf->__VstlIterCount = ((IData)(1U) 
                                        + vlSelf->__VstlIterCount);
@@ -1396,6 +1396,10 @@ VL_ATTR_COLD void VPvuTop___024root___ctor_var_reset(VPvuTop___024root* vlSelf) 
     vlSelf->PvuTop__DOT__sub__DOT____VdfgTmp_h957bba59__0 = 0;
     vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_sum_o = VL_RAND_RESET_Q(58);
     vlSelf->PvuTop__DOT__dotproduct__DOT___csaTree_io_carry_o = VL_RAND_RESET_Q(58);
+    vlSelf->PvuTop__DOT__dotproduct__DOT___GEN = VL_RAND_RESET_I(1);
+    vlSelf->PvuTop__DOT__dotproduct__DOT___GEN_0 = VL_RAND_RESET_I(1);
+    vlSelf->PvuTop__DOT__dotproduct__DOT___GEN_1 = VL_RAND_RESET_I(1);
+    vlSelf->PvuTop__DOT__dotproduct__DOT___GEN_2 = VL_RAND_RESET_I(1);
     vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__io_pir_sign_o = VL_RAND_RESET_I(4);
     vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__sum = VL_RAND_RESET_I(9);
     vlSelf->PvuTop__DOT__dotproduct__DOT__mul__DOT__sum_1 = VL_RAND_RESET_I(9);
@@ -1692,10 +1696,14 @@ VL_ATTR_COLD void VPvuTop___024root___ctor_var_reset(VPvuTop___024root* vlSelf) 
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h1c547640__0 = 0;
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h1c07425a__0 = 0;
     vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h1ce7231a__0 = 0;
+    vlSelf->__VdfgTmp_h7e5815f2__0 = 0;
+    vlSelf->__VdfgTmp_h27ab1e15__0 = 0;
+    vlSelf->__VdfgTmp_haff49a00__0 = 0;
+    vlSelf->__VdfgTmp_he0410172__0 = 0;
     vlSelf->__VdfgTmp_h1f706c65__0 = 0;
     vlSelf->__VdfgTmp_hc2b4f641__0 = 0;
     vlSelf->__VdfgTmp_hbc178730__0 = 0;
-    vlSelf->__VdfgTmp_h620802b5__0 = 0;
+    vlSelf->__VdfgTmp_hb5d7aa8c__0 = 0;
     vlSelf->__VdfgTmp_hfa1a2186__0 = 0;
     vlSelf->__VdfgTmp_hf3b4c711__0 = 0;
     vlSelf->__VdfgTmp_hc4e682b5__0 = 0;
@@ -1706,10 +1714,10 @@ VL_ATTR_COLD void VPvuTop___024root___ctor_var_reset(VPvuTop___024root* vlSelf) 
     vlSelf->__VdfgTmp_hf029e323__0 = 0;
     vlSelf->__VdfgTmp_h4d079806__0 = 0;
     vlSelf->__VdfgTmp_h73314445__0 = 0;
-    vlSelf->__VdfgTmp_he474a95c__0 = 0;
-    vlSelf->__VdfgTmp_ha10135d8__0 = 0;
-    vlSelf->__VdfgTmp_h9b414f27__0 = 0;
-    vlSelf->__VdfgTmp_hc2983e0a__0 = 0;
+    vlSelf->__VdfgTmp_h82782eba__0 = 0;
+    vlSelf->__VdfgTmp_h51cce765__0 = 0;
+    vlSelf->__VdfgTmp_h2df6a413__0 = 0;
+    vlSelf->__VdfgTmp_h88c30338__0 = 0;
     vlSelf->__VdfgTmp_h2bfbff40__0 = 0;
     vlSelf->__VdfgTmp_hf9a58d2e__0 = 0;
     vlSelf->__VdfgTmp_h92dbb766__0 = 0;

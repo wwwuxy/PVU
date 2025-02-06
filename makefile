@@ -22,7 +22,7 @@ run:${CSRCS} ${VSRCS}
 	./obj_dir/VPvuTop
 
 wave:
-	gtkwave *.vcd
+	gtkwave pvu_top_wave.vcd
 
 git:
 	git add .

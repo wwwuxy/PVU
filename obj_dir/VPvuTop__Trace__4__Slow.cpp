@@ -19,7 +19,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+68459,"io_x2", false,-1);
     tracep->declBit(c+68460,"io_x3", false,-1);
     tracep->declBit(c+68461,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+68462,"io_sum", false,-1);
     tracep->declBit(c+68463,"io_carry", false,-1);
     tracep->declBit(c+68464,"io_cout", false,-1);
@@ -1151,7 +1151,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+43113,"io_x2", false,-1);
     tracep->declBit(c+43114,"io_x3", false,-1);
     tracep->declBit(c+43115,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+43116,"io_sum", false,-1);
     tracep->declBit(c+43117,"io_carry", false,-1);
     tracep->declBit(c+43118,"io_cout", false,-1);
@@ -2283,7 +2283,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+43911,"io_x2", false,-1);
     tracep->declBit(c+43912,"io_x3", false,-1);
     tracep->declBit(c+43913,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+43914,"io_sum", false,-1);
     tracep->declBit(c+43915,"io_carry", false,-1);
     tracep->declBit(c+43916,"io_cout", false,-1);
@@ -3415,7 +3415,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44695,"io_x2", false,-1);
     tracep->declBit(c+44696,"io_x3", false,-1);
     tracep->declBit(c+44697,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+44698,"io_sum", false,-1);
     tracep->declBit(c+44699,"io_carry", false,-1);
     tracep->declBit(c+44700,"io_cout", false,-1);
@@ -3444,7 +3444,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44716,"io_x1", false,-1);
     tracep->declBit(c+44717,"io_x2", false,-1);
     tracep->declBit(c+44718,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44719,"io_cin", false,-1);
     tracep->declBit(c+44720,"io_sum", false,-1);
     tracep->declBit(c+44721,"io_carry", false,-1);
@@ -3454,7 +3454,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44723,"io_x1", false,-1);
     tracep->declBit(c+44724,"io_x2", false,-1);
     tracep->declBit(c+44725,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44722,"io_cin", false,-1);
     tracep->declBit(c+44726,"io_sum", false,-1);
     tracep->declBit(c+44727,"io_carry", false,-1);
@@ -3464,7 +3464,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44729,"io_x1", false,-1);
     tracep->declBit(c+44730,"io_x2", false,-1);
     tracep->declBit(c+44731,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44728,"io_cin", false,-1);
     tracep->declBit(c+44732,"io_sum", false,-1);
     tracep->declBit(c+44733,"io_carry", false,-1);
@@ -3474,7 +3474,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44735,"io_x1", false,-1);
     tracep->declBit(c+44736,"io_x2", false,-1);
     tracep->declBit(c+44737,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44734,"io_cin", false,-1);
     tracep->declBit(c+44738,"io_sum", false,-1);
     tracep->declBit(c+44739,"io_carry", false,-1);
@@ -3484,7 +3484,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44741,"io_x1", false,-1);
     tracep->declBit(c+44742,"io_x2", false,-1);
     tracep->declBit(c+44743,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44740,"io_cin", false,-1);
     tracep->declBit(c+44744,"io_sum", false,-1);
     tracep->declBit(c+44745,"io_carry", false,-1);
@@ -3494,7 +3494,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44747,"io_x1", false,-1);
     tracep->declBit(c+44748,"io_x2", false,-1);
     tracep->declBit(c+44749,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44746,"io_cin", false,-1);
     tracep->declBit(c+44750,"io_sum", false,-1);
     tracep->declBit(c+44751,"io_carry", false,-1);
@@ -3504,7 +3504,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44753,"io_x1", false,-1);
     tracep->declBit(c+44754,"io_x2", false,-1);
     tracep->declBit(c+44755,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44752,"io_cin", false,-1);
     tracep->declBit(c+44756,"io_sum", false,-1);
     tracep->declBit(c+44757,"io_carry", false,-1);
@@ -3514,7 +3514,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44759,"io_x1", false,-1);
     tracep->declBit(c+44760,"io_x2", false,-1);
     tracep->declBit(c+44761,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44758,"io_cin", false,-1);
     tracep->declBit(c+44762,"io_sum", false,-1);
     tracep->declBit(c+44763,"io_carry", false,-1);
@@ -3524,7 +3524,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44765,"io_x1", false,-1);
     tracep->declBit(c+44766,"io_x2", false,-1);
     tracep->declBit(c+44767,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44764,"io_cin", false,-1);
     tracep->declBit(c+44768,"io_sum", false,-1);
     tracep->declBit(c+44769,"io_carry", false,-1);
@@ -3534,7 +3534,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44771,"io_x1", false,-1);
     tracep->declBit(c+44772,"io_x2", false,-1);
     tracep->declBit(c+44773,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44770,"io_cin", false,-1);
     tracep->declBit(c+44774,"io_sum", false,-1);
     tracep->declBit(c+44775,"io_carry", false,-1);
@@ -3554,7 +3554,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44784,"io_x1", false,-1);
     tracep->declBit(c+44785,"io_x2", false,-1);
     tracep->declBit(c+44786,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44776,"io_cin", false,-1);
     tracep->declBit(c+44787,"io_sum", false,-1);
     tracep->declBit(c+44788,"io_carry", false,-1);
@@ -3564,7 +3564,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+44790,"io_x1", false,-1);
     tracep->declBit(c+44791,"io_x2", false,-1);
     tracep->declBit(c+44792,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+44789,"io_cin", false,-1);
     tracep->declBit(c+44793,"io_sum", false,-1);
     tracep->declBit(c+44794,"io_carry", false,-1);
@@ -4214,7 +4214,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45244,"io_x1", false,-1);
     tracep->declBit(c+45245,"io_x2", false,-1);
     tracep->declBit(c+45246,"io_x3", false,-1);
-    tracep->declBit(c+70202,"io_x4", false,-1);
+    tracep->declBit(c+70210,"io_x4", false,-1);
     tracep->declBit(c+45236,"io_cin", false,-1);
     tracep->declBit(c+45247,"io_sum", false,-1);
     tracep->declBit(c+45248,"io_carry", false,-1);
@@ -4224,7 +4224,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45250,"io_x1", false,-1);
     tracep->declBit(c+45251,"io_x2", false,-1);
     tracep->declBit(c+45252,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45249,"io_cin", false,-1);
     tracep->declBit(c+45253,"io_sum", false,-1);
     tracep->declBit(c+45254,"io_carry", false,-1);
@@ -4234,7 +4234,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45256,"io_x1", false,-1);
     tracep->declBit(c+45257,"io_x2", false,-1);
     tracep->declBit(c+45258,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45255,"io_cin", false,-1);
     tracep->declBit(c+45259,"io_sum", false,-1);
     tracep->declBit(c+45260,"io_carry", false,-1);
@@ -4244,7 +4244,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45262,"io_x1", false,-1);
     tracep->declBit(c+45263,"io_x2", false,-1);
     tracep->declBit(c+45264,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45261,"io_cin", false,-1);
     tracep->declBit(c+45265,"io_sum", false,-1);
     tracep->declBit(c+45266,"io_carry", false,-1);
@@ -4254,7 +4254,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45268,"io_x1", false,-1);
     tracep->declBit(c+45269,"io_x2", false,-1);
     tracep->declBit(c+45270,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45267,"io_cin", false,-1);
     tracep->declBit(c+45271,"io_sum", false,-1);
     tracep->declBit(c+45272,"io_carry", false,-1);
@@ -4264,7 +4264,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45274,"io_x1", false,-1);
     tracep->declBit(c+45275,"io_x2", false,-1);
     tracep->declBit(c+45276,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45273,"io_cin", false,-1);
     tracep->declBit(c+45277,"io_sum", false,-1);
     tracep->declBit(c+45278,"io_carry", false,-1);
@@ -4274,7 +4274,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45280,"io_x1", false,-1);
     tracep->declBit(c+45281,"io_x2", false,-1);
     tracep->declBit(c+45282,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45279,"io_cin", false,-1);
     tracep->declBit(c+45283,"io_sum", false,-1);
     tracep->declBit(c+45284,"io_carry", false,-1);
@@ -4284,7 +4284,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45286,"io_x1", false,-1);
     tracep->declBit(c+45287,"io_x2", false,-1);
     tracep->declBit(c+45288,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45285,"io_cin", false,-1);
     tracep->declBit(c+45289,"io_sum", false,-1);
     tracep->declBit(c+45290,"io_carry", false,-1);
@@ -4294,7 +4294,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45292,"io_x1", false,-1);
     tracep->declBit(c+45293,"io_x2", false,-1);
     tracep->declBit(c+45294,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45291,"io_cin", false,-1);
     tracep->declBit(c+45295,"io_sum", false,-1);
     tracep->declBit(c+45296,"io_carry", false,-1);
@@ -4304,7 +4304,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45298,"io_x1", false,-1);
     tracep->declBit(c+45299,"io_x2", false,-1);
     tracep->declBit(c+45300,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45297,"io_cin", false,-1);
     tracep->declBit(c+45301,"io_sum", false,-1);
     tracep->declBit(c+45302,"io_carry", false,-1);
@@ -4324,7 +4324,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45311,"io_x1", false,-1);
     tracep->declBit(c+45312,"io_x2", false,-1);
     tracep->declBit(c+45313,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45303,"io_cin", false,-1);
     tracep->declBit(c+45314,"io_sum", false,-1);
     tracep->declBit(c+45315,"io_carry", false,-1);
@@ -4334,7 +4334,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45317,"io_x1", false,-1);
     tracep->declBit(c+45318,"io_x2", false,-1);
     tracep->declBit(c+45319,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45316,"io_cin", false,-1);
     tracep->declBit(c+45320,"io_sum", false,-1);
     tracep->declBit(c+45321,"io_carry", false,-1);
@@ -4344,7 +4344,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45323,"io_x1", false,-1);
     tracep->declBit(c+45324,"io_x2", false,-1);
     tracep->declBit(c+45325,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45322,"io_cin", false,-1);
     tracep->declBit(c+45326,"io_sum", false,-1);
     tracep->declBit(c+45327,"io_carry", false,-1);
@@ -4354,7 +4354,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45329,"io_x1", false,-1);
     tracep->declBit(c+45330,"io_x2", false,-1);
     tracep->declBit(c+45331,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45328,"io_cin", false,-1);
     tracep->declBit(c+45332,"io_sum", false,-1);
     tracep->declBit(c+45333,"io_carry", false,-1);
@@ -4364,7 +4364,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45335,"io_x1", false,-1);
     tracep->declBit(c+45336,"io_x2", false,-1);
     tracep->declBit(c+45337,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45334,"io_cin", false,-1);
     tracep->declBit(c+45338,"io_sum", false,-1);
     tracep->declBit(c+45339,"io_carry", false,-1);
@@ -4374,7 +4374,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45341,"io_x1", false,-1);
     tracep->declBit(c+45342,"io_x2", false,-1);
     tracep->declBit(c+45343,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45340,"io_cin", false,-1);
     tracep->declBit(c+45344,"io_sum", false,-1);
     tracep->declBit(c+45345,"io_carry", false,-1);
@@ -4384,7 +4384,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45347,"io_x1", false,-1);
     tracep->declBit(c+45348,"io_x2", false,-1);
     tracep->declBit(c+45349,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45346,"io_cin", false,-1);
     tracep->declBit(c+45350,"io_sum", false,-1);
     tracep->declBit(c+45351,"io_carry", false,-1);
@@ -4394,7 +4394,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45353,"io_x1", false,-1);
     tracep->declBit(c+45354,"io_x2", false,-1);
     tracep->declBit(c+45355,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45352,"io_cin", false,-1);
     tracep->declBit(c+45356,"io_sum", false,-1);
     tracep->declBit(c+45357,"io_carry", false,-1);
@@ -4404,7 +4404,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45359,"io_x1", false,-1);
     tracep->declBit(c+45360,"io_x2", false,-1);
     tracep->declBit(c+45361,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45358,"io_cin", false,-1);
     tracep->declBit(c+45362,"io_sum", false,-1);
     tracep->declBit(c+45363,"io_carry", false,-1);
@@ -4414,7 +4414,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45365,"io_x1", false,-1);
     tracep->declBit(c+45366,"io_x2", false,-1);
     tracep->declBit(c+45367,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45364,"io_cin", false,-1);
     tracep->declBit(c+45368,"io_sum", false,-1);
     tracep->declBit(c+45369,"io_carry", false,-1);
@@ -4434,7 +4434,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45377,"io_x1", false,-1);
     tracep->declBit(c+45378,"io_x2", false,-1);
     tracep->declBit(c+45379,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45370,"io_cin", false,-1);
     tracep->declBit(c+45380,"io_sum", false,-1);
     tracep->declBit(c+45381,"io_carry", false,-1);
@@ -4444,7 +4444,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45383,"io_x1", false,-1);
     tracep->declBit(c+45384,"io_x2", false,-1);
     tracep->declBit(c+45385,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45382,"io_cin", false,-1);
     tracep->declBit(c+45386,"io_sum", false,-1);
     tracep->declBit(c+45387,"io_carry", false,-1);
@@ -4454,7 +4454,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45389,"io_x1", false,-1);
     tracep->declBit(c+45390,"io_x2", false,-1);
     tracep->declBit(c+45391,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45388,"io_cin", false,-1);
     tracep->declBit(c+45392,"io_sum", false,-1);
     tracep->declBit(c+45393,"io_carry", false,-1);
@@ -4464,7 +4464,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45395,"io_x1", false,-1);
     tracep->declBit(c+45396,"io_x2", false,-1);
     tracep->declBit(c+45397,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45394,"io_cin", false,-1);
     tracep->declBit(c+45398,"io_sum", false,-1);
     tracep->declBit(c+45399,"io_carry", false,-1);
@@ -4474,7 +4474,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45401,"io_x1", false,-1);
     tracep->declBit(c+45402,"io_x2", false,-1);
     tracep->declBit(c+45403,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45400,"io_cin", false,-1);
     tracep->declBit(c+45404,"io_sum", false,-1);
     tracep->declBit(c+45405,"io_carry", false,-1);
@@ -4484,7 +4484,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45407,"io_x1", false,-1);
     tracep->declBit(c+45408,"io_x2", false,-1);
     tracep->declBit(c+45409,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45406,"io_cin", false,-1);
     tracep->declBit(c+45410,"io_sum", false,-1);
     tracep->declBit(c+45411,"io_carry", false,-1);
@@ -4494,7 +4494,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45413,"io_x1", false,-1);
     tracep->declBit(c+45414,"io_x2", false,-1);
     tracep->declBit(c+45415,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45412,"io_cin", false,-1);
     tracep->declBit(c+45416,"io_sum", false,-1);
     tracep->declBit(c+45417,"io_carry", false,-1);
@@ -4504,7 +4504,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45419,"io_x1", false,-1);
     tracep->declBit(c+45420,"io_x2", false,-1);
     tracep->declBit(c+45421,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45418,"io_cin", false,-1);
     tracep->declBit(c+45422,"io_sum", false,-1);
     tracep->declBit(c+45423,"io_carry", false,-1);
@@ -4514,7 +4514,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45425,"io_x1", false,-1);
     tracep->declBit(c+45426,"io_x2", false,-1);
     tracep->declBit(c+45427,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45424,"io_cin", false,-1);
     tracep->declBit(c+45428,"io_sum", false,-1);
     tracep->declBit(c+45429,"io_carry", false,-1);
@@ -4524,7 +4524,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45431,"io_x1", false,-1);
     tracep->declBit(c+45432,"io_x2", false,-1);
     tracep->declBit(c+45433,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+45430,"io_cin", false,-1);
     tracep->declBit(c+45434,"io_sum", false,-1);
     tracep->declBit(c+45435,"io_carry", false,-1);
@@ -4547,7 +4547,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+45451,"io_x2", false,-1);
     tracep->declBit(c+45452,"io_x3", false,-1);
     tracep->declBit(c+45453,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+45454,"io_sum", false,-1);
     tracep->declBit(c+45455,"io_carry", false,-1);
     tracep->declBit(c+45456,"io_cout", false,-1);
@@ -5679,7 +5679,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+46235,"io_x2", false,-1);
     tracep->declBit(c+46236,"io_x3", false,-1);
     tracep->declBit(c+46237,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+46238,"io_sum", false,-1);
     tracep->declBit(c+46239,"io_carry", false,-1);
     tracep->declBit(c+46240,"io_cout", false,-1);
@@ -6811,7 +6811,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+47033,"io_x2", false,-1);
     tracep->declBit(c+47034,"io_x3", false,-1);
     tracep->declBit(c+47035,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+47036,"io_sum", false,-1);
     tracep->declBit(c+47037,"io_carry", false,-1);
     tracep->declBit(c+47038,"io_cout", false,-1);
@@ -7943,7 +7943,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+47831,"io_x2", false,-1);
     tracep->declBit(c+47832,"io_x3", false,-1);
     tracep->declBit(c+47833,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+47834,"io_sum", false,-1);
     tracep->declBit(c+47835,"io_carry", false,-1);
     tracep->declBit(c+47836,"io_cout", false,-1);
@@ -9075,7 +9075,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48615,"io_x2", false,-1);
     tracep->declBit(c+48616,"io_x3", false,-1);
     tracep->declBit(c+48617,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+48618,"io_sum", false,-1);
     tracep->declBit(c+48619,"io_carry", false,-1);
     tracep->declBit(c+48620,"io_cout", false,-1);
@@ -9104,7 +9104,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48636,"io_x1", false,-1);
     tracep->declBit(c+48637,"io_x2", false,-1);
     tracep->declBit(c+48638,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48639,"io_cin", false,-1);
     tracep->declBit(c+48640,"io_sum", false,-1);
     tracep->declBit(c+48641,"io_carry", false,-1);
@@ -9114,7 +9114,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48643,"io_x1", false,-1);
     tracep->declBit(c+48644,"io_x2", false,-1);
     tracep->declBit(c+48645,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48642,"io_cin", false,-1);
     tracep->declBit(c+48646,"io_sum", false,-1);
     tracep->declBit(c+48647,"io_carry", false,-1);
@@ -9124,7 +9124,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48649,"io_x1", false,-1);
     tracep->declBit(c+48650,"io_x2", false,-1);
     tracep->declBit(c+48651,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48648,"io_cin", false,-1);
     tracep->declBit(c+48652,"io_sum", false,-1);
     tracep->declBit(c+48653,"io_carry", false,-1);
@@ -9134,7 +9134,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48655,"io_x1", false,-1);
     tracep->declBit(c+48656,"io_x2", false,-1);
     tracep->declBit(c+48657,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48654,"io_cin", false,-1);
     tracep->declBit(c+48658,"io_sum", false,-1);
     tracep->declBit(c+48659,"io_carry", false,-1);
@@ -9144,7 +9144,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48661,"io_x1", false,-1);
     tracep->declBit(c+48662,"io_x2", false,-1);
     tracep->declBit(c+48663,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48660,"io_cin", false,-1);
     tracep->declBit(c+48664,"io_sum", false,-1);
     tracep->declBit(c+48665,"io_carry", false,-1);
@@ -9154,7 +9154,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48667,"io_x1", false,-1);
     tracep->declBit(c+48668,"io_x2", false,-1);
     tracep->declBit(c+48669,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48666,"io_cin", false,-1);
     tracep->declBit(c+48670,"io_sum", false,-1);
     tracep->declBit(c+48671,"io_carry", false,-1);
@@ -9164,7 +9164,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48673,"io_x1", false,-1);
     tracep->declBit(c+48674,"io_x2", false,-1);
     tracep->declBit(c+48675,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48672,"io_cin", false,-1);
     tracep->declBit(c+48676,"io_sum", false,-1);
     tracep->declBit(c+48677,"io_carry", false,-1);
@@ -9174,7 +9174,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48679,"io_x1", false,-1);
     tracep->declBit(c+48680,"io_x2", false,-1);
     tracep->declBit(c+48681,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48678,"io_cin", false,-1);
     tracep->declBit(c+48682,"io_sum", false,-1);
     tracep->declBit(c+48683,"io_carry", false,-1);
@@ -9184,7 +9184,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48685,"io_x1", false,-1);
     tracep->declBit(c+48686,"io_x2", false,-1);
     tracep->declBit(c+48687,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48684,"io_cin", false,-1);
     tracep->declBit(c+48688,"io_sum", false,-1);
     tracep->declBit(c+48689,"io_carry", false,-1);
@@ -9194,7 +9194,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48691,"io_x1", false,-1);
     tracep->declBit(c+48692,"io_x2", false,-1);
     tracep->declBit(c+48693,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48690,"io_cin", false,-1);
     tracep->declBit(c+48694,"io_sum", false,-1);
     tracep->declBit(c+48695,"io_carry", false,-1);
@@ -9214,7 +9214,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48704,"io_x1", false,-1);
     tracep->declBit(c+48705,"io_x2", false,-1);
     tracep->declBit(c+48706,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48696,"io_cin", false,-1);
     tracep->declBit(c+48707,"io_sum", false,-1);
     tracep->declBit(c+48708,"io_carry", false,-1);
@@ -9224,7 +9224,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+48710,"io_x1", false,-1);
     tracep->declBit(c+48711,"io_x2", false,-1);
     tracep->declBit(c+48712,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+48709,"io_cin", false,-1);
     tracep->declBit(c+48713,"io_sum", false,-1);
     tracep->declBit(c+48714,"io_carry", false,-1);
@@ -10174,7 +10174,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+49373,"io_x1", false,-1);
     tracep->declBit(c+49374,"io_x2", false,-1);
     tracep->declBit(c+49375,"io_x3", false,-1);
-    tracep->declBit(c+70202,"io_x4", false,-1);
+    tracep->declBit(c+70210,"io_x4", false,-1);
     tracep->declBit(c+49372,"io_cin", false,-1);
     tracep->declBit(c+49376,"io_sum", false,-1);
     tracep->declBit(c+49377,"io_carry", false,-1);
@@ -10184,7 +10184,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+49379,"io_x1", false,-1);
     tracep->declBit(c+49380,"io_x2", false,-1);
     tracep->declBit(c+49381,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+49378,"io_cin", false,-1);
     tracep->declBit(c+49382,"io_sum", false,-1);
     tracep->declBit(c+49383,"io_carry", false,-1);
@@ -10207,7 +10207,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+49399,"io_x2", false,-1);
     tracep->declBit(c+49400,"io_x3", false,-1);
     tracep->declBit(c+49401,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+49402,"io_sum", false,-1);
     tracep->declBit(c+49403,"io_carry", false,-1);
     tracep->declBit(c+49404,"io_cout", false,-1);
@@ -11339,7 +11339,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+50197,"io_x2", false,-1);
     tracep->declBit(c+50198,"io_x3", false,-1);
     tracep->declBit(c+50199,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+50200,"io_sum", false,-1);
     tracep->declBit(c+50201,"io_carry", false,-1);
     tracep->declBit(c+50202,"io_cout", false,-1);
@@ -12471,7 +12471,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+50981,"io_x2", false,-1);
     tracep->declBit(c+50982,"io_x3", false,-1);
     tracep->declBit(c+50983,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+50984,"io_sum", false,-1);
     tracep->declBit(c+50985,"io_carry", false,-1);
     tracep->declBit(c+50986,"io_cout", false,-1);
@@ -12560,7 +12560,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51045,"io_x1", false,-1);
     tracep->declBit(c+51046,"io_x2", false,-1);
     tracep->declBit(c+51047,"io_x3", false,-1);
-    tracep->declBit(c+70202,"io_x4", false,-1);
+    tracep->declBit(c+70210,"io_x4", false,-1);
     tracep->declBit(c+51044,"io_cin", false,-1);
     tracep->declBit(c+51048,"io_sum", false,-1);
     tracep->declBit(c+51049,"io_carry", false,-1);
@@ -12570,7 +12570,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51051,"io_x1", false,-1);
     tracep->declBit(c+51052,"io_x2", false,-1);
     tracep->declBit(c+51053,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+51050,"io_cin", false,-1);
     tracep->declBit(c+51054,"io_sum", false,-1);
     tracep->declBit(c+51055,"io_carry", false,-1);
@@ -12580,7 +12580,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51057,"io_x1", false,-1);
     tracep->declBit(c+51058,"io_x2", false,-1);
     tracep->declBit(c+51059,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+51056,"io_cin", false,-1);
     tracep->declBit(c+51060,"io_sum", false,-1);
     tracep->declBit(c+51061,"io_carry", false,-1);
@@ -12590,7 +12590,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51063,"io_x1", false,-1);
     tracep->declBit(c+51064,"io_x2", false,-1);
     tracep->declBit(c+51065,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+51062,"io_cin", false,-1);
     tracep->declBit(c+51066,"io_sum", false,-1);
     tracep->declBit(c+51067,"io_carry", false,-1);
@@ -12610,7 +12610,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51076,"io_x1", false,-1);
     tracep->declBit(c+51077,"io_x2", false,-1);
     tracep->declBit(c+51078,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+51068,"io_cin", false,-1);
     tracep->declBit(c+51079,"io_sum", false,-1);
     tracep->declBit(c+51080,"io_carry", false,-1);
@@ -12620,7 +12620,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51082,"io_x1", false,-1);
     tracep->declBit(c+51083,"io_x2", false,-1);
     tracep->declBit(c+51084,"io_x3", false,-1);
-    tracep->declBit(c+70169,"io_x4", false,-1);
+    tracep->declBit(c+70177,"io_x4", false,-1);
     tracep->declBit(c+51081,"io_cin", false,-1);
     tracep->declBit(c+51085,"io_sum", false,-1);
     tracep->declBit(c+51086,"io_carry", false,-1);
@@ -13603,7 +13603,7 @@ VL_ATTR_COLD void VPvuTop___024root__trace_init_sub__TOP__PvuTop__DOT__div__DOT_
     tracep->declBit(c+51759,"io_x2", false,-1);
     tracep->declBit(c+51760,"io_x3", false,-1);
     tracep->declBit(c+51761,"io_x4", false,-1);
-    tracep->declBit(c+70169,"io_cin", false,-1);
+    tracep->declBit(c+70177,"io_cin", false,-1);
     tracep->declBit(c+51762,"io_sum", false,-1);
     tracep->declBit(c+51763,"io_carry", false,-1);
     tracep->declBit(c+51764,"io_cout", false,-1);

@@ -42,6 +42,13 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   pir_exp_mul  := mul.io.pir_exp_o
   pir_frac_mul := mul.io.pir_frac_o
 
+  for(i <- 0 until VECTOR_SIZE){
+    when((io.pir_exp1_i(i) === 0.S && io.pir_frac1_i(i) === 0.U) || (io.pir_exp2_i(i) === 0.S && io.pir_frac2_i(i) === 0.U)) {
+      pir_frac_mul(i) := 0.U
+      pir_exp_mul(i) := 0.S
+    }
+  }
+
 //将尾数进行对阶
   val pir_exp_cmp  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_cmp = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
@@ -79,7 +86,8 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   //最后一次求和
   sum_result := carry + sum
 
-//输出结果 
+//输出结果
+
   io.pir_sign_o := sum_result(SUM_WIDTH)
   io.pir_exp_o  := pir_exp_cmp
   io.pir_frac_o := sum_result

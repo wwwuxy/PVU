@@ -6883,7 +6883,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__79(VPvuTop___024root* vlSe
                                                   : 
                                                  ((3U 
                                                    == (IData)(vlSelf->io_op))
-                                                   ? (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeB__DOT____Vcellinp__comparator__io_operand_b)
+                                                   ? (IData)(vlSelf->__VdfgTmp_h7e5815f2__0)
                                                    : 
                                                   ((4U 
                                                     == (IData)(vlSelf->io_op))
@@ -7171,7 +7171,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__81(VPvuTop___024root* vlSe
                                                   : 
                                                  ((3U 
                                                    == (IData)(vlSelf->io_op))
-                                                   ? (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeB__DOT____Vcellinp__comparator__io_operand_a)
+                                                   ? (IData)(vlSelf->__VdfgTmp_h27ab1e15__0)
                                                    : 
                                                   ((4U 
                                                     == (IData)(vlSelf->io_op))
@@ -7459,7 +7459,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__83(VPvuTop___024root* vlSe
                                                   : 
                                                  ((3U 
                                                    == (IData)(vlSelf->io_op))
-                                                   ? (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeA__DOT____Vcellinp__comparator__io_operand_b)
+                                                   ? (IData)(vlSelf->__VdfgTmp_haff49a00__0)
                                                    : 
                                                   ((4U 
                                                     == (IData)(vlSelf->io_op))
@@ -7747,7 +7747,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__86(VPvuTop___024root* vlSe
                                                   : 
                                                  ((3U 
                                                    == (IData)(vlSelf->io_op))
-                                                   ? (IData)(vlSelf->PvuTop__DOT__dotproduct__DOT__frac_compare__DOT__comptree__DOT__compTreeA__DOT____Vcellinp__comparator__io_operand_a)
+                                                   ? (IData)(vlSelf->__VdfgTmp_he0410172__0)
                                                    : 
                                                   ((4U 
                                                     == (IData)(vlSelf->io_op))

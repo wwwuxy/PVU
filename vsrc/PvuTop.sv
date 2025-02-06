@@ -6992,11 +6992,23 @@ module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
   output [58:0]      io_pir_frac_o	// src/main/scala/pvu/DotProduct.scala:15:14
 );
 
-  wire [57:0]      _csaTree_io_sum_o;	// src/main/scala/pvu/DotProduct.scala:75:23
-  wire [57:0]      _csaTree_io_carry_o;	// src/main/scala/pvu/DotProduct.scala:75:23
-  wire [3:0][55:0] _frac_compare_io_pir_frac_align;	// src/main/scala/pvu/DotProduct.scala:49:39
+  wire [57:0]      _csaTree_io_sum_o;	// src/main/scala/pvu/DotProduct.scala:82:23
+  wire [57:0]      _csaTree_io_carry_o;	// src/main/scala/pvu/DotProduct.scala:82:23
+  wire [3:0][55:0] _frac_compare_io_pir_frac_align;	// src/main/scala/pvu/DotProduct.scala:56:39
   wire [3:0][7:0]  _mul_io_pir_exp_o;	// src/main/scala/pvu/DotProduct.scala:33:19
   wire [3:0][55:0] _mul_io_pir_frac_o;	// src/main/scala/pvu/DotProduct.scala:33:19
+  wire             _GEN =
+    io_pir_exp1_i[2'h0] == 8'h0 & io_pir_frac1_i[2'h0] == 28'h0
+    | io_pir_exp2_i[2'h0] == 8'h0 & io_pir_frac2_i[2'h0] == 28'h0;	// src/main/scala/pvu/DotProduct.scala:36:22, :37:22, :38:22, :39:22, :46:{28,36,57,66,87,95,116}, :48:22
+  wire             _GEN_0 =
+    io_pir_exp1_i[2'h1] == 8'h0 & io_pir_frac1_i[2'h1] == 28'h0
+    | io_pir_exp2_i[2'h1] == 8'h0 & io_pir_frac2_i[2'h1] == 28'h0;	// src/main/scala/pvu/DotProduct.scala:36:22, :37:22, :38:22, :39:22, :46:{28,36,57,66,87,95,116}, :48:22
+  wire             _GEN_1 =
+    io_pir_exp1_i[2'h2] == 8'h0 & io_pir_frac1_i[2'h2] == 28'h0
+    | io_pir_exp2_i[2'h2] == 8'h0 & io_pir_frac2_i[2'h2] == 28'h0;	// src/main/scala/pvu/DotProduct.scala:36:22, :37:22, :38:22, :39:22, :46:{28,36,57,66,87,95,116}, :48:22
+  wire             _GEN_2 =
+    io_pir_exp1_i[2'h3] == 8'h0 & io_pir_frac1_i[2'h3] == 28'h0
+    | io_pir_exp2_i[2'h3] == 8'h0 & io_pir_frac2_i[2'h3] == 28'h0;	// src/main/scala/pvu/DotProduct.scala:36:22, :37:22, :38:22, :39:22, :46:{28,36,57,66,87,95,116}, :48:22
   Mul mul (	// src/main/scala/pvu/DotProduct.scala:33:19
     .io_pir_sign1_i (io_pir_sign1_i),
     .io_pir_sign2_i (io_pir_sign2_i),
@@ -7008,23 +7020,31 @@ module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
     .io_pir_exp_o   (_mul_io_pir_exp_o),
     .io_pir_frac_o  (_mul_io_pir_frac_o)
   );
-  FractionAlignment_DotProduct frac_compare (	// src/main/scala/pvu/DotProduct.scala:49:39
-    .io_pir_frac_i     (_mul_io_pir_frac_o),	// src/main/scala/pvu/DotProduct.scala:33:19
-    .io_pir_exp_i      (_mul_io_pir_exp_o),	// src/main/scala/pvu/DotProduct.scala:33:19
+  FractionAlignment_DotProduct frac_compare (	// src/main/scala/pvu/DotProduct.scala:56:39
+    .io_pir_frac_i
+      ({{_GEN_2 ? 56'h0 : _mul_io_pir_frac_o[2'h3]},
+        {_GEN_1 ? 56'h0 : _mul_io_pir_frac_o[2'h2]},
+        {_GEN_0 ? 56'h0 : _mul_io_pir_frac_o[2'h1]},
+        {_GEN ? 56'h0 : _mul_io_pir_frac_o[2'h0]}}),	// src/main/scala/pvu/DotProduct.scala:31:26, :33:19, :39:22, :43:16, :46:{66,126}, :47:23, :63:41
+    .io_pir_exp_i
+      ({{_GEN_2 ? 8'h0 : _mul_io_pir_exp_o[2'h3]},
+        {_GEN_1 ? 8'h0 : _mul_io_pir_exp_o[2'h2]},
+        {_GEN_0 ? 8'h0 : _mul_io_pir_exp_o[2'h1]},
+        {_GEN ? 8'h0 : _mul_io_pir_exp_o[2'h0]}}),	// src/main/scala/pvu/DotProduct.scala:30:26, :33:19, :39:22, :42:16, :46:{66,126}, :48:22
     .io_pir_frac_align (_frac_compare_io_pir_frac_align),
     .io_pir_max_exp    (io_pir_exp_o)
   );
-  CsaTree_116 csaTree (	// src/main/scala/pvu/DotProduct.scala:75:23
+  CsaTree_116 csaTree (	// src/main/scala/pvu/DotProduct.scala:82:23
     .io_operands_i
       ({{{2'h0, _frac_compare_io_pir_frac_align[2'h3]}},
         {{2'h0, _frac_compare_io_pir_frac_align[2'h2]}},
         {{2'h0, _frac_compare_io_pir_frac_align[2'h1]}},
-        {{2'h0, _frac_compare_io_pir_frac_align[2'h0]}}}),	// src/main/scala/pvu/DotProduct.scala:49:39, :57:55, :60:57, :75:23, :76:25
+        {{2'h0, _frac_compare_io_pir_frac_align[2'h0]}}}),	// src/main/scala/pvu/DotProduct.scala:39:22, :56:39, :64:55, :67:57, :82:23, :83:25
     .io_sum_o      (_csaTree_io_sum_o),
     .io_carry_o    (_csaTree_io_carry_o)
   );
-  assign io_pir_sign_o = 1'h0;	// src/main/scala/pvu/DotProduct.scala:7:7, :80:23
-  assign io_pir_frac_o = {1'h0, _csaTree_io_carry_o + _csaTree_io_sum_o};	// src/main/scala/pvu/DotProduct.scala:7:7, :75:23, :80:{14,23}
+  assign io_pir_sign_o = 1'h0;	// src/main/scala/pvu/DotProduct.scala:7:7, :87:23
+  assign io_pir_frac_o = {1'h0, _csaTree_io_carry_o + _csaTree_io_sum_o};	// src/main/scala/pvu/DotProduct.scala:7:7, :82:23, :87:{14,23}
 endmodule
 
 // external module LZC

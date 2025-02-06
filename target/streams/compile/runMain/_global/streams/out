@@ -1,19 +1,22 @@
-[0m[[0m[31merror[0m] [0m[0mjava.lang.IllegalArgumentException: requirement failed: Too many arguments! More format specifier(s) expected![0m
-[0m[[0m[31merror[0m] [0m[0m    fmt = "lzc_zeros[%d] = %d, lzc[&d] = %d, same_length[%d] = %d, regime_r[%d] = %d[0m
-[0m[[0m[31merror[0m] [0m[0m"[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                     ^[0m
-[0m[[0m[31merror[0m] [0m[0m    data = UInt<1>(0), PositDecode.lzc_zeros[0]: Wire[Bool], UInt<1>(0), PositDecode.lzc[0]: Wire[UInt<5>], UInt<1>(0), PositDecode.same_length[0]: Wire[UInt<5>], UInt<1>(0), PositDecode.regime_r[0]: Wire[SInt<6>][0m
+[0m[[0m[31merror[0m] [0m[0mchisel3.package$ChiselException: Cannot reassign to read-only DotProduct.?: OpResult[Bool][0m
 [0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PositDecode.$anonfun$new$13(PositDecode.scala:61)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PositDecode.$anonfun$new$13$adapted(PositDecode.scala:53)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.Range.foreach(Range.scala:190)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PositDecode.<init>(PositDecode.scala:53)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$decode1$2(PvuTop.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.DotProduct.$anonfun$new$5(DotProduct.scala:62)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.<init>(When.scala:131)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.when$.apply(When.scala:37)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.DotProduct.$anonfun$new$3(DotProduct.scala:60)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.DotProduct.<init>(DotProduct.scala:59)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$new$47(PvuTop.scala:167)[0m
 [0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
 [0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$decode1$1(PvuTop.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$new$46(PvuTop.scala:167)[0m
 [0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.<init>(PvuTop.scala:43)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.$anonfun$new$45(PvuTop.scala:167)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.<init>(When.scala:131)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.elsewhen(When.scala:108)[0m
+[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.<init>(PvuTop.scala:166)[0m
 [0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$.$anonfun$new$1(Elaborate.scala:24)[0m
 [0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.evaluate(Module.scala:88)[0m
 [0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:35)[0m
@@ -28,8 +31,4 @@
 [0m[[0m[31merror[0m] [0m[0m	at logger.Logger$.makeScope(Logger.scala:133)[0m
 [0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
 [0m[[0m[31merror[0m] [0m[0m	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) java.lang.IllegalArgumentException: requirement failed: Too many arguments! More format specifier(s) expected![0m
-[0m[[0m[31merror[0m] [0m[0m    fmt = "lzc_zeros[%d] = %d, lzc[&d] = %d, same_length[%d] = %d, regime_r[%d] = %d[0m
-[0m[[0m[31merror[0m] [0m[0m"[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                     ^[0m
-[0m[[0m[31merror[0m] [0m[0m    data = UInt<1>(0), PositDecode.lzc_zeros[0]: Wire[Bool], UInt<1>(0), PositDecode.lzc[0]: Wire[UInt<5>], UInt<1>(0), PositDecode.same_length[0]: Wire[UInt<5>], UInt<1>(0), PositDecode.regime_r[0]: Wire[SInt<6>][0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) chisel3.package$ChiselException: Cannot reassign to read-only DotProduct.?: OpResult[Bool][0m
