@@ -1,3 +1,6 @@
+#include"../config.h"
+#ifdef CONFIG_RESNET_MUL_P32
+
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 #include <fstream>
@@ -187,5 +190,4 @@ int main(int argc, char** argv) {
     return errors ? EXIT_FAILURE : EXIT_SUCCESS;
 }
 
-
-
+#endif

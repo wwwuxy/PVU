@@ -1,0 +1,25 @@
+mainmenu "Test File Config"
+
+menu "RESNET_P32"
+config RESNET_ADD_P32
+	bool "resnet_add_p32_test"
+	default n
+
+config RESNET_SUB_P32
+	bool "resnet_sub_p32_test"
+	default n
+
+config RESNET_MUL_P32
+	bool "resnet_mul_p32_test"
+	default n
+
+config RESNET_DIV_P32
+	bool "resnet_div_p32_test"
+	default n
+
+endmenu
+
+config SAMPLE_TEST
+	bool "manually_sample_test"
+	default n
+
