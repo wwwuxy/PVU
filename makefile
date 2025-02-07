@@ -14,7 +14,7 @@ VERILATOR_FLAGS += -j 16
 
 
 verilog:
-	sbt -DparallelExecution=true -DmaxThreads=14 "runMain pvu.Elaborate"
+	sbt -DparallelExecution=true -DmaxThreads=16 "runMain pvu.Elaborate"
 	python3 clean_line.py
 
 run:${CSRCS} ${VSRCS}

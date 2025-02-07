@@ -41,10 +41,12 @@ VM_USER_LDLIBS = \
 
 # User .cpp files (from .cpp's on Verilator command line)
 VM_USER_CLASSES = \
-	main \
-	main_resnet_add \
-	main_resnet_dot \
-	main_resnet_sub \
+	main_resnet_add_p32 \
+	main_resnet_div_p32 \
+	main_resnet_dot_p32 \
+	main_resnet_mul_p32 \
+	main_resnet_sub_p32 \
+	main_simple_test \
 
 # User .cpp directories (from .cpp's on Verilator command line)
 VM_USER_DIR = \
@@ -60,13 +62,17 @@ include $(VERILATOR_ROOT)/include/verilated.mk
 ### Executable rules... (from --exe)
 VPATH += $(VM_USER_DIR)
 
-main.o: /home/wuxy/PVU/csrc/main.cpp
+main_resnet_add_p32.o: /home/wuxy/PVU/csrc/main_resnet_add_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
-main_resnet_add.o: /home/wuxy/PVU/csrc/main_resnet_add.cpp
+main_resnet_div_p32.o: /home/wuxy/PVU/csrc/main_resnet_div_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
-main_resnet_dot.o: /home/wuxy/PVU/csrc/main_resnet_dot.cpp
+main_resnet_dot_p32.o: /home/wuxy/PVU/csrc/main_resnet_dot_p32.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
-main_resnet_sub.o: /home/wuxy/PVU/csrc/main_resnet_sub.cpp
+main_resnet_mul_p32.o: /home/wuxy/PVU/csrc/main_resnet_mul_p32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_resnet_sub_p32.o: /home/wuxy/PVU/csrc/main_resnet_sub_p32.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+main_simple_test.o: /home/wuxy/PVU/csrc/main_simple_test.cpp
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 
 ### Link rules... (from --exe)
