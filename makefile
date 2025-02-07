@@ -17,8 +17,6 @@ $(CONFIG_H): .config
 	@echo "#ifndef CONFIG_H" >> $(CONFIG_H)
 	@echo "#define CONFIG_H" >> $(CONFIG_H)
 	@echo "" >> $(CONFIG_H)
-
-	# 使用 awk 处理 .config 文件
 	@awk 'BEGIN { FS="="; OFS=" "; } \
 		/^[^#]/ { \
 			if ($$2 == "y") { \
