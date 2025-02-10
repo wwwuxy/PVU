@@ -4,12 +4,10 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-  // Fixed parameters
-  var es: Int         = 2
+class FractionAlignment_AddSub(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val ES: Int) extends Module {
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1
-  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var EXP_WIDTH: Int  = nd + ES + 1
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
   
   val io = IO(new Bundle {
     val pir_frac1_i = Input(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH+1).W)))

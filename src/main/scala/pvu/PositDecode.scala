@@ -4,11 +4,10 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
-  var es: Int         = 2
+class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) extends Module {
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1 
-  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var EXP_WIDTH: Int  = nd + ES + 1 
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
 
   val io = IO(new Bundle {
     val posit = Input(Vec(VECTOR_SIZE, UInt(POSIT_WIDTH.W)))
@@ -88,7 +87,7 @@ class PositDecode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   val implicit_bits = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   for (i <- 0 until VECTOR_SIZE) {
     implicit_bits(i) := operand(i)(POSIT_WIDTH - 2, 0).orR // |operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2)
-    io.Frac(i) := Cat(implicit_bits(i), operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2))
+    io.Frac(i) := Cat(implicit_bits(i), operand_after_shift(i)(POSIT_WIDTH - 2 - ES, 2))
   }
 
   // printf("implicit_bits(0) = %d, io.Frac(0) = %b\n", implicit_bits(0), io.Frac(0));

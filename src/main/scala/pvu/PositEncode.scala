@@ -4,11 +4,10 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
-  var es: Int         = 2
+class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) extends Module {
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1 
-  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var EXP_WIDTH: Int  = nd + ES + 1 
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
 
   val io = IO(new Bundle {
     val pir_sign = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -26,10 +25,10 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   
   //获取es和rigime的二进制,regime的基底是16，即2的4次方
   val regime_k = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
-  val es_value = Wire(Vec(VECTOR_SIZE, UInt(es.W)))
+  val es_value = Wire(Vec(VECTOR_SIZE, UInt(ES.W)))
   for(i <- 0 until VECTOR_SIZE){
-    regime_k(i) := io.pir_exp(i)(EXP_WIDTH - 1, es)
-    es_value(i) := io.pir_exp(i)(es - 1, 0)
+    regime_k(i) := io.pir_exp(i)(EXP_WIDTH - 1, ES)
+    es_value(i) := io.pir_exp(i)(ES - 1, 0)
   }
 
   // printf("regime_k[0] = %d, es_value[0] = %d\n", regime_k(0), es_value(0))
@@ -56,7 +55,7 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   // printf("regime_width[0] = %d\n", regime_width(0))
 
   //拼接各个部分（位宽溢出）
-  var TMP_WIDTH   = POSIT_WIDTH - 1 + es + FRAC_WIDTH
+  var TMP_WIDTH   = POSIT_WIDTH - 1 + ES + FRAC_WIDTH
   val reg_es_frac = Wire(Vec(VECTOR_SIZE, UInt(TMP_WIDTH.W)))
   for(i <- 0 until VECTOR_SIZE){
     reg_es_frac(i) := Cat(regime(i), es_value(i), io.pir_frac(i)(FRAC_WIDTH - 1, 0))
@@ -65,12 +64,12 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int) extends Module {
   // printf("reg_es_frac[0] = %b\n", reg_es_frac(0))
 
   //进行右移操作(先左移再右移)
-  var MAX_SHIFT   = FRAC_WIDTH + es + 1
+  var MAX_SHIFT   = FRAC_WIDTH + ES + 1
   var SHIFT_WIDTH = log2Ceil(MAX_SHIFT)
   val shift = Wire(Vec(VECTOR_SIZE, UInt(SHIFT_WIDTH.W)))
 
   for(i <- 0 until VECTOR_SIZE){
-    shift(i) := Mux(regime_width(i) >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width(i) + FRAC_WIDTH.U + es.U  - POSIT_WIDTH.U + 1.U)
+    shift(i) := Mux(regime_width(i) >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width(i) + FRAC_WIDTH.U + ES.U  - POSIT_WIDTH.U + 1.U)
   }
   //如果regime_bits>=n，说明regime占据了所有位，此时右移位数为最大右移位数,在两次移位后，posit则全是regime位，且位宽位n位
   //如果regime_bits<n，说明右移后需要对mant的低位进行舍入，舍入的位数即位移量，设为x， reg+esp+mant-x = n-1， x = reg+esp+mant-n+1

@@ -7,11 +7,10 @@ import chisel3._
 import chisel3.util._
 import chisel3.experimental._
 
-class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int) extends Module {
-  var es: Int         = 2
+class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val DECIMAL_POINT: Int, val ES: Int) extends Module {
   var nd: Int         = log2Ceil(WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1 
-  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var EXP_WIDTH: Int  = nd + ES + 1 
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
   
   // printf("DECIMAL_POINT = %d\n", DECIMAL_POINT.asUInt)
   

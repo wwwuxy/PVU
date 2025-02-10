@@ -1,21 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/DotProduct.scala:83:29: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.SInt[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Vec[chisel3.SInt][0m
-[0m[[0m[31merror[0m] [0m[0m  when((io.pir_exp1_i === 0.S && io.pir_frac1_i === 0.U) || (io.pir_exp2_i === 0.S && io.pir_frac2_i === 0.U)){[0m
-[0m[[0m[31merror[0m] [0m[0m                            ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/DotProduct.scala:83:55: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Vec[chisel3.UInt][0m
-[0m[[0m[31merror[0m] [0m[0m  when((io.pir_exp1_i === 0.S && io.pir_frac1_i === 0.U) || (io.pir_exp2_i === 0.S && io.pir_frac2_i === 0.U)){[0m
-[0m[[0m[31merror[0m] [0m[0m                                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/DotProduct.scala:83:82: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.SInt[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Vec[chisel3.SInt][0m
-[0m[[0m[31merror[0m] [0m[0m  when((io.pir_exp1_i === 0.S && io.pir_frac1_i === 0.U) || (io.pir_exp2_i === 0.S && io.pir_frac2_i === 0.U)){[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PositDecode.scala:90:82: not found: value es[0m
+[0m[[0m[31merror[0m] [0m[0m    io.Frac(i) := Cat(implicit_bits(i), operand_after_shift(i)(POSIT_WIDTH - 2 - es, 2))[0m
 [0m[[0m[31merror[0m] [0m[0m                                                                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/DotProduct.scala:83:108: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.UInt[0m
-[0m[[0m[31merror[0m] [0m[0m required: chisel3.Vec[chisel3.UInt][0m
-[0m[[0m[31merror[0m] [0m[0m  when((io.pir_exp1_i === 0.S && io.pir_frac1_i === 0.U) || (io.pir_exp2_i === 0.S && io.pir_frac2_i === 0.U)){[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                                           ^[0m
-[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PositEncode.scala:72:101: not found: value es[0m
+[0m[[0m[31merror[0m] [0m[0m    shift(i) := Mux(regime_width(i) >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width(i) + FRAC_WIDTH.U + es.U  - POSIT_WIDTH.U + 1.U)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wuxy/PVU/src/main/scala/pvu/PositEncode_DotProduct.scala:64:90: not found: value es[0m
+[0m[[0m[31merror[0m] [0m[0m  shift := Mux(regime_width >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width + FRAC_WIDTH.U + es.U  - POSIT_WIDTH.U + 1.U)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

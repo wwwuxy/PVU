@@ -4,11 +4,10 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-  var es: Int         = 2
+class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int,  val ES :Int) extends Module {
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1
-  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var EXP_WIDTH: Int  = nd + ES + 1
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
   var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
   val SUM_WIDTH: Int  = MUL_WIDTH + log2Ceil(VECTOR_SIZE)
 
@@ -30,7 +29,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   val pir_exp_mul  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
   val pir_frac_mul = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
 
-  val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+  val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
   mul.io.pir_sign1_i := io.pir_sign1_i
   mul.io.pir_sign2_i := io.pir_sign2_i
   mul.io.pir_exp1_i  := io.pir_exp1_i
@@ -53,7 +52,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   val pir_exp_cmp  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_cmp = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
 
-  val frac_compare            = Module(new FractionAlignment_DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+  val frac_compare            = Module(new FractionAlignment_DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
   frac_compare.io.pir_exp_i  := pir_exp_mul
   frac_compare.io.pir_frac_i := pir_frac_mul
   pir_exp_cmp                := frac_compare.io.pir_max_exp

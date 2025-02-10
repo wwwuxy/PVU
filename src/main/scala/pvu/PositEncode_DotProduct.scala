@@ -4,11 +4,10 @@ package pvu
 import chisel3._
 import chisel3.util._
 
-class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
-  var es: Int         = 2
+class PositEncode_DotProduct(val POSIT_WIDTH: Int, val ES: Int) extends Module {
   var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-  var EXP_WIDTH: Int  = nd + es + 1
-  var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3
+  var EXP_WIDTH: Int  = nd + ES + 1
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
 
   val io = IO(new Bundle {
     val pir_sign = Input(UInt(1.W))
@@ -26,9 +25,9 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
   
     //获取es和rigime的二进制
   val regime_k  = Wire(UInt(nd.W))
-  val es_value  = Wire(UInt(es.W))
-      regime_k := io.pir_exp(EXP_WIDTH - 1, es)
-      es_value := io.pir_exp(es - 1, 0)
+  val es_value  = Wire(UInt(ES.W))
+      regime_k := io.pir_exp(EXP_WIDTH - 1, ES)
+      es_value := io.pir_exp(ES - 1, 0)
 
       // printf("regime_k = %b, es_value = %b\n", regime_k, es_value)
 
@@ -50,7 +49,7 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
       regime_width := Mux(k_sign === 1.U, ((~regime_k + 1.U) + 1.U), regime_k + 2.U)
 
     //拼接各个部分（位宽溢出）
-  var TMP_WIDTH    = POSIT_WIDTH - 1 + es + FRAC_WIDTH
+  var TMP_WIDTH    = POSIT_WIDTH - 1 + ES + FRAC_WIDTH
   val reg_es_frac  = Wire(UInt(TMP_WIDTH.W))
       reg_es_frac := Cat(regime, es_value, io.pir_frac(FRAC_WIDTH - 1, 0))
 
@@ -58,11 +57,11 @@ class PositEncode_DotProduct(val POSIT_WIDTH: Int) extends Module {
   // printf("reg_es_frac = %b\n", reg_es_frac)
 
     //进行右移操作(先左移再右移)
-  var MAX_SHIFT   = FRAC_WIDTH + es + 1
+  var MAX_SHIFT   = FRAC_WIDTH + ES + 1
   var SHIFT_WIDTH = log2Ceil(MAX_SHIFT)
   val shift       = Wire(UInt(SHIFT_WIDTH.W))
 
-  shift := Mux(regime_width >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width + FRAC_WIDTH.U + es.U  - POSIT_WIDTH.U + 1.U)
+  shift := Mux(regime_width >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width + FRAC_WIDTH.U + ES.U  - POSIT_WIDTH.U + 1.U)
     //如果regime_bits>=n，说明regime占据了所有位，此时右移位数为最大右移位数,在两次移位后，posit则全是regime位，且位宽位n位
     //如果regime_bits<n，说明右移后需要对mant的低位进行舍入，舍入的位数即位移量，设为x， reg+esp+mant-x = n-1， x = reg+esp+mant-n+1
     //右移的数据量计算是为了让 右移后的低MAX_SHIFT位成为舍入位，其上的n位是有效数据位

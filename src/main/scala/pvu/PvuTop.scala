@@ -13,11 +13,10 @@
  import scala.languageFeature.existentials
  import chisel3.stage._
  
- class PvuTop(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int) extends Module {
-   var es: Int         = 2
+ class PvuTop(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val ES: Int) extends Module {
    var nd: Int         = log2Ceil(POSIT_WIDTH - 1)
-   var EXP_WIDTH: Int  = nd + es + 1
-   var FRAC_WIDTH: Int = POSIT_WIDTH - es - 3               //rigime位宽至少为2，再去除一位符号位，故减3
+   var EXP_WIDTH: Int  = nd + ES + 1
+   var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3               //rigime位宽至少为2，再去除一位符号位，故减3
    var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
    val SUM_WIDTH: Int  = MUL_WIDTH + log2Ceil(VECTOR_SIZE)
  
@@ -40,8 +39,8 @@
   val pir_frac1 = Wire(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH + 1).W)))
   val pir_frac2 = Wire(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH + 1).W)))
 
-  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))
-  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE))
+  val decode1 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE, ES))
+  val decode2 = Module(new PositDecode(POSIT_WIDTH, VECTOR_SIZE, ES))
 
   decode1.io.posit := io.posit_i1
   decode2.io.posit := io.posit_i2
@@ -87,8 +86,8 @@
     val overflow      = Wire(Vec(VECTOR_SIZE, UInt(1.W)))  //尾数溢出
     val frac_truncate = Wire(Vec(VECTOR_SIZE, UInt(1.W)))  //尾数截断
   
-    val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
-    val add       = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+    val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
+    val add       = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
 
     fracalign.io.pir_exp1_i  := pir_exp1
     fracalign.io.pir_frac1_i := pir_frac1
@@ -113,8 +112,8 @@
     val overflow      = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
     val frac_truncate = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
 
-    val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
-    val sub       = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+    val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
+    val sub       = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
 
     fracalign.io.pir_exp1_i  := pir_exp1
     fracalign.io.pir_frac1_i := pir_frac1
@@ -136,7 +135,7 @@
     frac_truncate    := sub.io.frac_truncate
   
   }.elsewhen(io.op === 3.U){  //Mul
-    val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+    val mul = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
   
     mul.io.pir_sign1_i := pir_sign1
     mul.io.pir_sign2_i := pir_sign2
@@ -150,7 +149,7 @@
     pir_frac_rst_mul := mul.io.pir_frac_o
   
   }.elsewhen(io.op === 4.U){  //Div
-    val div = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+    val div = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
   
     div.io.pir_sign1_i := pir_sign1
     div.io.pir_sign2_i := pir_sign2
@@ -164,7 +163,7 @@
     pir_frac_rst_div := div.io.pir_frac_o
   
   }.elsewhen(io.op === 5.U){  //DotProduct, 先相乘再相加，对阶在DotProduct中实现，输入向量 输出标量
-   val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH))
+   val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))
   
   
     dotproduct.io.pir_sign1_i := pir_sign1
@@ -194,27 +193,27 @@
   pir_frac_normed_dot := 0.U(MUL_WIDTH.W)
 
   when(io.op === 5.U){  //dotproduct output is scala, 默认小数点位于首位
-  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE+1)+2))
+  val frac_norm_dot                = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE+1)+2, ES))
       frac_norm_dot.io.pir_frac_i := pir_frac_dot
       pir_frac_normed_dot         := frac_norm_dot.io.pir_frac_o
       pir_exp_adjust_dot          := frac_norm_dot.io.exp_adjust
   }.elsewhen(io.op === 1.U){ //Add
-    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+    val frac_norm_add                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))
         frac_norm_add.io.pir_frac_i := pir_frac_rst_add
         pir_frac_normed             := frac_norm_add.io.pir_frac_o
         pir_exp_adjust              := frac_norm_add.io.exp_adjust
   }.elsewhen(io.op === 2.U){ //Sub
-    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1))
+    val frac_norm_sub                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))
         frac_norm_sub.io.pir_frac_i := pir_frac_rst_sub
         pir_frac_normed             := frac_norm_sub.io.pir_frac_o
         pir_exp_adjust              := frac_norm_sub.io.exp_adjust
   }.elsewhen(io.op === 3.U){  //Mul           
-    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2))
+    val frac_norm_mul                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))
         frac_norm_mul.io.pir_frac_i := pir_frac_rst_mul
         pir_frac_normed             := frac_norm_mul.io.pir_frac_o
         pir_exp_adjust              := frac_norm_mul.io.exp_adjust
   }.elsewhen(io.op === 4.U){  //Div    
-    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1))
+    val frac_norm_div                = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))
         frac_norm_div.io.pir_frac_i := pir_frac_rst_div
         pir_frac_normed             := frac_norm_div.io.pir_frac_o
         pir_exp_adjust              := frac_norm_div.io.exp_adjust
@@ -244,14 +243,14 @@
   //**encode**//
   //*********//
   when(io.op === 5.U){
-    val encode_dot              = Module(new PositEncode_DotProduct(POSIT_WIDTH))
+    val encode_dot              = Module(new PositEncode_DotProduct(POSIT_WIDTH, ES))
         encode_dot.io.pir_sign := pir_sign_dot
         encode_dot.io.pir_exp  := pir_exp_rst_adjusied_dot
         encode_dot.io.pir_frac := pir_frac_normed_dot
         io.posit_dot_o         := encode_dot.io.posit
         io.posit_o             := VecInit(Seq.fill(VECTOR_SIZE)(0.U(POSIT_WIDTH.W)))
   }.otherwise{
-    val encode              = Module(new PositEncode(POSIT_WIDTH, VECTOR_SIZE))
+    val encode              = Module(new PositEncode(POSIT_WIDTH, VECTOR_SIZE, ES))
         encode.io.pir_sign := pir_sign_rst
         encode.io.pir_exp  := pir_exp_rst_adjusied
         encode.io.pir_frac := pir_frac_normed
