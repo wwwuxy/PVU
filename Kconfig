@@ -1,25 +1,39 @@
 mainmenu "Test File Config"
 
-menu "RESNET_P32"
-config RESNET_ADD_P32
-	bool "resnet_add_p32_test"
-	default n
+menu "RESNET_TEST"
+    choice
+        prompt "Posit<32, 2>"
+        default RESNET_ADD_P32
+        help
+            Select one of the ResNet operations for the test.
 
-config RESNET_SUB_P32
-	bool "resnet_sub_p32_test"
-	default n
+    config RESNET_ADD_P32
+        bool "resnet_add_p32_test"
+        default n
+        help
+            Enable ResNet addition test.
 
-config RESNET_MUL_P32
-	bool "resnet_mul_p32_test"
-	default n
+    config RESNET_SUB_P32
+        bool "resnet_sub_p32_test"
+        default n
+        help
+            Enable ResNet subtraction test.
 
-config RESNET_DIV_P32
-	bool "resnet_div_p32_test"
-	default n
+    config RESNET_MUL_P32
+        bool "resnet_mul_p32_test"
+        default n
+        help
+            Enable ResNet multiplication test.
 
+    config RESNET_DIV_P32
+        bool "resnet_div_p32_test"
+        default n
+        help
+            Enable ResNet division test.
+
+    endchoice
 endmenu
 
 config SAMPLE_TEST
-	bool "manually_sample_test"
-	default n
-
+    bool "manually_sample_test"
+    default n
