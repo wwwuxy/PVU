@@ -102,16 +102,18 @@ vpositdot vd, vs1, vs2, vm
 ---
 #### 图表：
 
-1. PVU和其他hw的功能比较 --> table
-2. Posit四个部分介绍 --> figure
-3. posit-Regime部分计算规则（r、k、useed） --> figure
-4. posit计算示例 --> figure
-5. Posit向量划分（复用专利1）--> figure
-6. 基于Deep PeNSieve比较一下FP64和P32在同一个CNN上**训练**的损失和准确率 --> 无法复现就用Table 2的数据画直方图来对比推理的准确度
-7. 基于PositNN比较一下FP64和P32在同一个DNN上的损失和准确率
-8. RVV扩展指令 --> table
-9. PVU数据流主图 --> figure
-10. 乘法、除法、点积（对于quire可以加一个小图）各画一个算法逻辑 --> figure
+- [x] PVU和其他hw的功能比较 --> table
+- [ ] Posit四个部分介绍 --> figure
+- [ ] posit-Regime部分计算规则（r、k、useed） --> figure
+- [x] posit计算示例 --> figure
+- [ ] Posit向量划分（复用专利1）--> figure
+- [ ] 基于Deep PeNSieve比较一下FP64和P32在同一个CNN上**训练**的损失和准确率 --> 无法复现就用Table 2的数据画直方图来对比推理的准确度
+- [ ] 基于PositNN比较一下FP64和P32在同一个DNN上的损失和准确率
+- [x] RVV扩展指令 --> table
+- [ ] PVU数据流主图 --> figure
+- [ ] 乘法、除法、点积（对于quire可以加一个小图）各画一个算法逻辑 --> figure
+- [ ] PAU挂载至运算单元图  --> figurer --> 类似PPU-Light的前端
+- [x] PVU与其他HW的异同 --> table
 
 
 
@@ -196,6 +198,13 @@ Conference & Exhibition (DATE). IEEE, 2021, pp. 1350–1355.
 (3) p的计算公式
 fig1：Posit32数制格式
 fig2：Posit<16,2>举例
+fig3：PVU硬件设计主图
+- 解码
+- 五大运算
+- 尾数对齐
+- 规格化
+- 编码
+
 
 table1：本工作与相关Posit处理单元的异同
 - 比较角度：Posit配置参数化、基础四则运算、点积/FMA运算、RISC-V集成、标量运算、向量运算、高级软件支持、自定义指令支持、开源
