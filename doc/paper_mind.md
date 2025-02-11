@@ -156,7 +156,7 @@ Posit数制通过引入灵活的编码机制来提高数值表示的效率和精
 
 法国里昂大学的Florent de Dinechin团队对Posit浮点数的适用情景进行了探索[8]，发现其非常适用于机器学习领域，并证明了Posit浮点数与IEEE 754浮点数之间的精确转换。美国罗切斯特理工学院的Zachariah Carmichael团队成功将深度神经网络（DNN）在低于8位的Posit浮点数上运行[9]，并获得更好的精度和延迟。意大利比萨大学的Marco Cococcioni团队通过软件仿真，探索了Posit浮点机制向量化计算的可能性，并将其集成在DNN模型训练推理过程中[10]。马德里康普顿斯大学的PeNSieve项目提出了一种基于Posit的深度神经网络模型训练和推理框架，并通过融合运算进行了低比特量化处理[11]。
 
-相较于Posit数制软件仿真和应用的百花齐放，其硬件计算单元的研究则较为匮乏。马德里康普顿斯大学的PERCIVAL[12]和BIG-PERCIVAL项目[13]聚焦于小规模和大规模Posit运算的实现，旨在加速深度学习推理和科学计算。德国亚琛工业大学的PERC项目[14]则研究如何将Posit运算集成到高性能处理器中，而印度马德拉斯理工学院的PERI项目[15]侧重于优化物联网设备的高精度计算和能效表现。新加坡国立大学的POSAR项目[16]和意大利比萨大学的PPU-light项目[17]分别为智能终端设备和低功耗应用设计了轻量化的Posit处理单元，推动了RISC-V架构在边缘计算中的广泛应用。南京大学的李琼团队设计了一个可配置的开源Posit点积单元，能够在深度学习应用中执行有效的点积运算，并支持混合精度[18]。如表1所示，我们总结了其中一些工作，并与本工作进行了比较。
+相较于Posit数制软件仿真和应用的百花齐放，其硬件计算单元的研究则较为匮乏。马德里康普顿斯大学的PERCIVAL[12]和BIG-PERCIVAL项目[13]聚焦于小规模和大规模Posit运算的实现，旨在加速深度学习推理和科学计算。德国亚琛工业大学的PERC项目[14]则研究如何将Posit运算集成到高性能处理器中，而印度马德拉斯理工学院的PERI项目[15]侧重于优化物联网设备的高精度计算和能效表现。新加坡国立大学的POSAR项目[16]为智能终端设备和低功耗应用设计了轻量化的Posit处理单元，推动了RISC-V架构在边缘计算中的广泛应用。意大利比萨大学的PPU-light项目[17]可以将Posit转换为其他数制。南京大学的李琼团队设计了一个可配置的开源Posit点积单元PDPU，能够在深度学习应用中执行有效的点积运算，并支持混合精度[18]。如表1所示，我们总结了其中一些工作，并与本工作进行了比较。
 #### 4. Posit Vector Unit Arithmentic Operations And Implementation：
 
 #### 5. RISC-V ISA Extension And Compiler suppopt
@@ -185,7 +185,7 @@ Conference & Exhibition (DATE). IEEE, 2021, pp. 1350–1355.
 [13] Mallasén, D., Del Barrio, A. A., & Prieto-Matias, M. Big-PERCIVAL: Exploring the Native Use of 64-Bit Posit Arithmetic in Scientific Computing[EB/OL]. arXiv preprint, 2023, May.
 [14] M. V. Arunkumar, S. G. Bhairathi, and H. G. Hayatnagarkar, “PERC: Posit Enhanced Rocket Chip,” in 4th Workshop on Computer Architecture Research with RISC-V (CARRV’20), 2020, p. 8.
 [15] S. Tiwari, N. Gala, C. Rebeiro, and V. Kamakoti, “PERI: A Configurable Posit Enabled RISC-V Core,” ACM Transactions on Architecture and Code Optimization, vol. 18, no. 3, pp. 1–26, Jun. 2021.
-[16] S. D. Ciocirlan, D. Loghin, L. Ramapantulu, N. Tapus, and Y. M. Teo, “The Accuracy and Efficiency ofPosit Arithmetic,” 2021, arXiv:2109.08225.
+[16] S. D. Ciocirlan, D. Loghin, L. Ramapantulu, N. Tapus, and Y. M. Teo, “The Accuracy and Efficiency of Posit Arithmetic,” 2021, arXiv:2109.08225.
 [17] M. Cococcioni, F. Rossi, E. Ruffaldi, and S. Saponara, “A Lightweight Posit Processing Unit for RISC-V Processors in Deep Neural Network Applications,” IEEE Transactions on Emerging Topics in Computing, no. 01, pp. 1–1, Oct. 2021.
 [18] Li, Q., Fang, C., & Wang, Z. PDPU: An Open-Source Posit Dot-Product Unit for Deep Learning Applications. In _2023 IEEE International Symposium on Circuits and Systems (ISCAS)_, 2023. IEEE.
 
@@ -198,6 +198,8 @@ fig1：Posit32数制格式
 fig2：Posit<16,2>举例
 
 table1：本工作与相关Posit处理单元的异同
+- 比较角度：Posit配置参数化、基础四则运算、点积/FMA运算、RISC-V集成、标量运算、向量运算、高级软件支持、自定义指令支持、开源
+- 比较对象：BIG-PERCIVAL、PERC、PERI、POSAR、PPU-light、PDPU
 
 ---
 
