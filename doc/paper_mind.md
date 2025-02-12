@@ -97,7 +97,6 @@ vpositdot vd, vs1, vs2, vm
 
 #### TODO:
 - 添加GEMM测试数据
-- 将ES参数化，便于后续测试
 
 
 ---
@@ -149,10 +148,11 @@ Chisel作为一种基于Scala的现代硬件构建语言，凭借其高度抽象
 Posit数制通过引入灵活的编码机制来提高数值表示的效率和精度。如图一所示，它的基本组成部分包括Sign, Regime, Exponent和Fraction，每个部分都有独特的功能和结构，使得Posit数制在精度和范围之间达到了平衡。以下是对各个组成部分的详细介绍：
 - 符号位S是Posit数制的第一个比特，负责确定posit的正负。若 s = 0，则Posit为正数；若 s = 1，则Posit为负数。
 - Regime file R是Posit数制的关键创新之一，采用了可变长度的编码方式来表示指数的范围，决定了Posit的尺度。Regime由连续的1和0组成，由反转位R0控制其长度，当Posit较大时，Regime将包含更多的1，反之，Regime将包含更多的0。Regime file的长度为k，值r由下述公式计算：（ r 的计算公式）
-- Regime value是一个特殊常数Useed的比例因子，Useed的值与Posit的配置有关，具体而言，取决于Posit中Exponent部分的位宽，其计算公式如下：（Useed的计算公式）
-- Exponent file E是Posit中显示配置的部分，最多由2位组成。由于Regime位域是可变长度的，因此Exponent位可能在Posit的LSB之后，此时Exponent的值为0。
+- Regime value是一个特殊常数Useed的比例因子，Useed的值与Posit的配置有关，具体而言，取决于Posit中Exponent部分的位宽ES，其计算公式如下：（Useed的计算公式）
+- Exponent file E是Posit中显示配置的部分。由于Regime位域是可变长度的，因此Exponent位可能在Posit的LSB之后，此时Exponent的值为0。
 - Fraction file F是Posit数制的最后一部分，类似于IEEE 754中的尾数部分。但是，在Fraction前面总是有一个隐含数m，当Posit是正数时，m = 1，当Posit是负数时，m = 2。这意味着在实际存储时，尾数部分通常只存储后续的二进制位，而第一个位不需要显式存储。例如，数值1.101会在尾部部分存储101，而隐式地理解为1.101。
-综合上述4个部分，Posit value p的计算公式如下：（p的计算公式）
+
+综合上述4个部分，虽然在Posit标准2022中，ES固定为2，但为了更好的评估，PVU将ES进行了参数化处理，从而得到了两种计算公式，当ES不为2时，Posit value p的计算公式如（3）所示，当ES为2时，Posit value p的计算公式如（4）所示。
 
 特殊的，若Posit file全为0，则Posit value 为0，若Posit file全为1，则Posit value为Not a Real(NaR)，即umbrella value for anything not mathematically definable as a unique real number。
 
