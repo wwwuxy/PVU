@@ -23,48 +23,48 @@ class Add(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val 
     val frac_truncate = Output(Vec(VECTOR_SIZE, UInt(1.W)))  // Fraction_Truncate flag
   })
 
-//检查符号位,相同则加法,不同则减法
+// Check the sign bits. If they are the same, perform addition; if they are different, perform subtraction.
   val diff_sign = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   for (i <- 0 until VECTOR_SIZE) {
     diff_sign(i) := Mux(io.pir_sign1_i(i) === io.pir_sign2_i(i), 0.U, 1.U)
   }
 
-//进行加法操作
+// Perform addition operation
   for (i <- 0 until VECTOR_SIZE) {
-  when (diff_sign(i) === 0.U) { // 符号相同，执行加法
-    // 执行带进位的加法
+  when (diff_sign(i) === 0.U) { // The same sign, perform addition
+    // Perform addition with carry
     val sum   = io.pir_frac1_aligned(i) +& io.pir_frac2_aligned(i)
-    val carry = sum(ALIGN_WIDTH)                                     // 检查进位
+    val carry = sum(ALIGN_WIDTH)                                     // Check carry
 
-    // 如果有进位，尾数右移一位 并 指数加一
+    //If there is a carry, shift the mantissa to the right by one bit and increment index by one
     val new_frac = Mux(carry, sum >> 1, sum(ALIGN_WIDTH - 1, 0))
     val new_exp  = Mux(carry, io.pir_exp1_i(i) + 1.S, io.pir_exp1_i(i))
 
-    // 赋值结果符号、指数和尾数
+    // Assignment result symbol, exponent, and mantissa
     io.pir_sign_o(i) := io.pir_sign1_i(i)
     io.pir_exp_o(i)  := new_exp
     io.pir_frac_o(i) := new_frac
 
-    // 设置溢出标志
+    // Set overflow flag
     io.overflow(i) := carry
 
-    // 设置尾数截断标志：如果有进位且尾数中有1
+    // Set the mantissa truncation flag: if there is a carry and there is a 1 in the mantissa
     io.frac_truncate(i) := (carry.asBool && sum(ALIGN_WIDTH - 1, 0).orR).asUInt
-  } .otherwise { // 符号不同，执行减法
-    // 确定哪个尾数更大
+  } .otherwise { // The symbols are different, perform subtraction.
+    // Determine which suffix is larger
     val mant1         = io.pir_frac1_aligned(i)
     val mant2         = io.pir_frac2_aligned(i)
     val mant1_greater = (mant1 > mant2)
 
-    // 计算尾数差
+    // Calculate the difference in the last digit
     val mant_diff = Mux(mant1_greater, mant1 - mant2, mant2 - mant1)
     io.pir_frac_o(i) := mant_diff
 
-    // 确定结果的符号
+    // Determine the sign of the result
     val res_sign = Mux(mant1_greater, io.pir_sign1_i(i), io.pir_sign2_i(i))
     io.pir_sign_o(i) := res_sign
 
-    //减法指数不变
+    // Subtraction exponent remains unchanged
     io.pir_exp_o(i)     := io.pir_exp1_i(i)
     io.overflow(i)      := 0.U
     io.frac_truncate(i) := 0.U
