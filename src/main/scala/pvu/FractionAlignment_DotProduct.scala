@@ -19,16 +19,16 @@ class FractionAlignment_DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, v
     val pir_max_exp    = Output(SInt(EXP_WIDTH.W))
   })
 
-  // 计算每个向量元素的最大指数
+  // Calculate the maximum exponent of each vector element
     val comptree = Module(new CompTree(VECTOR_SIZE, EXP_WIDTH))
     comptree.io.operands_i := io.pir_exp_i
     io.pir_max_exp         := comptree.io.result_o
 
-  // 计算所需的移位量并确保 shift_amount <= ALIGN_WIDTH
+  // Calculate the required shift amount and ensure shift_amount <= ALIGN_WIDTH
   val shift_amount = Wire(Vec(VECTOR_SIZE, UInt(EXP_WIDTH.W)))
 
   for(i <- 0 until VECTOR_SIZE){
-    shift_amount(i) := (io.pir_max_exp - io.pir_exp_i(i)).asUInt //取与0的最大值 ---> 防御性编程
+    shift_amount(i) := (io.pir_max_exp - io.pir_exp_i(i)).asUInt //Take the maximum value with 0 ---> Defensive programming
     io.pir_frac_align(i) := io.pir_frac_i(i) >> Mux(shift_amount(i) > ALIGN_WIDTH.U, ALIGN_WIDTH.U, shift_amount(i))
   }
 }

@@ -24,7 +24,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
     val pir_frac_o = Output(UInt((SUM_WIDTH+1).W))
   })
 
-//通过MUL进行累乘计算
+// Perform cumulative multiplication using mul.
   val pir_sign_mul = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val pir_exp_mul  = Wire(Vec(VECTOR_SIZE, SInt(EXP_WIDTH.W)))
   val pir_frac_mul = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
@@ -48,7 +48,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
     }
   }
 
-//将尾数进行对阶
+// Align the mantissa.
   val pir_exp_cmp  = Wire(SInt(EXP_WIDTH.W))
   val pir_frac_cmp = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
 
@@ -58,7 +58,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   pir_exp_cmp                := frac_compare.io.pir_max_exp
   pir_frac_cmp               := frac_compare.io.pir_frac_align
 
-//将负Posit数的尾数转换为补码
+// Convert the mantissa of negative numbers to two's complement
   val pir_frac_cmp_tmp = RegInit(VecInit(Seq.fill(VECTOR_SIZE)(0.U(MUL_WIDTH.W))))
   pir_frac_cmp_tmp(0) := Mux(pir_sign_mul(0) === 1.U, ~pir_frac_cmp(0) + 1.U, pir_frac_cmp(0))  //初始化第一个元素，防止VECTOR_SIZE为1时出错
   
@@ -66,14 +66,7 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
     pir_frac_cmp_tmp(i) := Mux(pir_sign_mul(i) === 1.U, ~pir_frac_cmp(i) + 1.U, pir_frac_cmp(i))
   }
 
-//打印各部分乘法结果
-// printf("dot every mul result:\n\n")
-// for(i <- 0 until VECTOR_SIZE){
-//   printf("pir_exp_cmp[%d] = %b, pir_frac_cmp[%d] = %b\n", i.U, pir_exp_mul(i), i.U, pir_frac_mul(i))
-// }
-
-
-//通过CsaTree进行累加
+// Accumulation through the CSA tree
   val sum        = Wire(UInt(SUM_WIDTH.W))
   val carry      = Wire(UInt(SUM_WIDTH.W))
   val sum_result = Wire(UInt((SUM_WIDTH+1).W))
@@ -82,16 +75,11 @@ class DotProduct(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: In
   csaTree.io.operands_i := pir_frac_cmp
   sum                   := csaTree.io.sum_o
   carry                 := csaTree.io.carry_o
-  //最后一次求和
+  // Last sum
   sum_result := carry + sum
 
-//输出结果
-
+// Output result
   io.pir_sign_o := sum_result(SUM_WIDTH)
   io.pir_exp_o  := pir_exp_cmp
   io.pir_frac_o := sum_result
-
-  // printf("dot result:\n")
-  // printf("pir_sign_o = %b, pir_exp_o = %b, pir_frac_o = %b\n", io.pir_sign_o, io.pir_exp_o, io.pir_frac_o)
-
 }
