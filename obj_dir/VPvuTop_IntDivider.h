@@ -139,12 +139,13 @@ class VPvuTop_IntDivider final : public VerilatedModule {
         CData/*0:0*/ __PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4;
         CData/*0:0*/ boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0;
         CData/*0:0*/ boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0;
-        CData/*0:0*/ __VdfgTmp_hce824426__0;
+        CData/*0:0*/ __VdfgTmp_h1a5d0b9a__0;
         VL_IN(io_dividend,27,0);
         VL_IN(io_divisor,27,0);
         VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x1_x_new_full;
         VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x2_x_new_full;
         VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x3_x_new_full;
+        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x4_x_new_full;
         VlWide<102>/*3247:0*/ boothMult__DOT____Vcellout__genProds__io_partial_prods;
         VlWide<14>/*447:0*/ boothMult__DOT__csaTree__DOT____Vcellinp__compressor__io_operands_i;
         VlWide<25>/*783:0*/ boothMult__DOT__csaTree__DOT__csa_tree_A__DOT____Vcellinp__csa_tree_B__io_operands_i;
@@ -152,14 +153,14 @@ class VPvuTop_IntDivider final : public VerilatedModule {
         VlWide<14>/*447:0*/ boothMult__DOT__csaTree__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i;
         VlWide<14>/*447:0*/ boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i;
         VlWide<14>/*447:0*/ boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i;
-        VlWide<25>/*769:0*/ __VdfgTmp_h6e934676__0;
-        VlWide<24>/*741:0*/ __VdfgTmp_h765d951d__0;
-        VlWide<14>/*441:0*/ __VdfgTmp_hbd4def03__0;
+        VlWide<25>/*769:0*/ __VdfgTmp_hffadf5d6__0;
+        VlWide<24>/*741:0*/ __VdfgTmp_hcc9d1910__0;
+        VlWide<14>/*441:0*/ __VdfgTmp_hf757b9f2__0;
         VL_OUT64(io_quotient,55,0);
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod;
-        QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod;
     };
     struct {
+        QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod;
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_24_io_partial_prod;
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_23_io_partial_prod;
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_22_io_partial_prod;
@@ -179,7 +180,7 @@ class VPvuTop_IntDivider final : public VerilatedModule {
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_8_io_partial_prod;
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_7_io_partial_prod;
         QData/*56:0*/ __PVT__boothMult__DOT__genProds__DOT___genProd_6_io_partial_prod;
-        QData/*55:0*/ __VdfgTmp_hd7a9ff3d__0;
+        QData/*55:0*/ __VdfgTmp_hf62111dd__0;
     };
 
     // INTERNAL VARIABLES

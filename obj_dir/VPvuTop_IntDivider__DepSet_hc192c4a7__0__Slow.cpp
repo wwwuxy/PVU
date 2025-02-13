@@ -17,6 +17,7 @@ VL_ATTR_COLD void VPvuTop_IntDivider___ctor_var_reset(VPvuTop_IntDivider* vlSelf
     VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full);
     VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full);
     VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full);
+    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x4_x_new_full);
     VL_RAND_RESET_W(3248, vlSelf->boothMult__DOT____Vcellout__genProds__io_partial_prods);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod = VL_RAND_RESET_Q(57);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod = VL_RAND_RESET_Q(57);
@@ -154,9 +155,9 @@ VL_ATTR_COLD void VPvuTop_IntDivider___ctor_var_reset(VPvuTop_IntDivider* vlSelf
     VL_RAND_RESET_W(448, vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
     VL_RAND_RESET_W(448, vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
     VL_RAND_RESET_W(448, vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i);
-    vlSelf->__VdfgTmp_hd7a9ff3d__0 = 0;
-    vlSelf->__VdfgTmp_hce824426__0 = 0;
-    VL_ZERO_RESET_W(770, vlSelf->__VdfgTmp_h6e934676__0);
-    VL_ZERO_RESET_W(742, vlSelf->__VdfgTmp_h765d951d__0);
-    VL_ZERO_RESET_W(442, vlSelf->__VdfgTmp_hbd4def03__0);
+    vlSelf->__VdfgTmp_hf62111dd__0 = 0;
+    vlSelf->__VdfgTmp_h1a5d0b9a__0 = 0;
+    VL_ZERO_RESET_W(770, vlSelf->__VdfgTmp_hffadf5d6__0);
+    VL_ZERO_RESET_W(742, vlSelf->__VdfgTmp_hcc9d1910__0);
+    VL_ZERO_RESET_W(442, vlSelf->__VdfgTmp_hf757b9f2__0);
 }
