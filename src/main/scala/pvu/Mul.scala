@@ -10,8 +10,6 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val 
   var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
   var MUL_WIDTH: Int  = 2 * (FRAC_WIDTH + 1)
 
-  // printf("Module Mul:\n\n")
-
   val io = IO(new Bundle {
     val pir_sign1_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
     val pir_sign2_i = Input(Vec(VECTOR_SIZE, UInt(1.W)))
@@ -25,12 +23,12 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val 
     val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   })
 
-  //异或运算计算符号
+  // XOR operator
   for (i <- 0 until VECTOR_SIZE) {
       io.pir_sign_o(i) := io.pir_sign1_i(i) ^ io.pir_sign2_i(i)
   }
 
-  //计算尾数
+  // Calculate the remainder
   val sum_frac = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   val carry    = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
   val frac     = Wire(Vec(VECTOR_SIZE, UInt(MUL_WIDTH.W)))
@@ -41,15 +39,11 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val 
     radix4BoothMultiplier.io.operand_b := io.pir_frac2_i(i)
     sum_frac(i)                        := radix4BoothMultiplier.io.sum_o
     carry(i)                           := radix4BoothMultiplier.io.carry_o
-    frac(i)                            := (sum_frac(i) + carry(i))         //左移一位进行缩放，后续尾数标准化时指数减一
+    frac(i)                            := (sum_frac(i) + carry(i))
   }
 
-  // printf("sum_frac = %b\n", sum_frac(0))
-  // printf("carry = %b\n", carry(0))
-  // printf("frac = %b\n", frac(0))
-
-  //计算指数
-  // 定义最大指数值,处理指数溢出时
+  // Calculate exponentials
+  // Define the maximum exponent value, handle exponent overflow
   val maxExp = ((1.U << (EXP_WIDTH - 1)) - 1.U).asSInt
 
   for (i <- 0 until VECTOR_SIZE) {
@@ -57,11 +51,6 @@ class Mul(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ALIGN_WIDTH: Int, val 
     val carry = sum(EXP_WIDTH)
 
    io.pir_exp_o(i)  := Mux(carry === 1.U, maxExp, sum(EXP_WIDTH - 1, 0).asSInt)
-   io.pir_frac_o(i) := Mux(carry === 1.U, 0.U, frac(i)) //溢出时尾数为0
+   io.pir_frac_o(i) := Mux(carry === 1.U, 0.U, frac(i)) //Mantissa set 0 when overflow
   }
-
-  // printf("mul result:\n\n")
-  // printf("pir_sign_o = %b\n", io.pir_sign_o(0))
-  // printf("pir_exp_o = %b\n", io.pir_exp_o(0))
-  // printf("pir_frac_o = %b\n", io.pir_frac_o(0))
 }
