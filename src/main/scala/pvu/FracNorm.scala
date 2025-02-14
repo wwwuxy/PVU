@@ -1,6 +1,6 @@
 //Posit Vector FracNorm Unit
-//输出的是调整后的尾数和指数的调整量，还需对指数进行调整
-//WIDTH在PvuTop中调用时指定，要么是MUL_WIDTH，要么是FRAC_WIDTH
+//The output is the adjusted mantissa and the amount of adjustment for the exponent, and the exponent also needs to be adjusted.
+//WIDTH Specified when calling in pvu top (MUL_WIDTH or FRAC_WIDTH)
 package pvu
 
 import chisel3._
@@ -21,22 +21,22 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     val pir_frac_o = Output(Vec(VECTOR_SIZE, UInt((FRAC_WIDTH + 1).W)))
   })
 
-  val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
+  val LZC_WIDTH = log2Ceil(WIDTH)  // The number of binary bits required to store the number of leading zeros
   val leading_zero_count  = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
   val lzc_zeroes          = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   
   for(i <- 0 until VECTOR_SIZE){
     
-  //计算前导0的个数
+  // Count the number of leading zeros
     val lzcMod              = Module(new LZC(WIDTH, true, nd))
         lzcMod.io.in_i     := io.pir_frac_i(i)
         leading_zero_count(i) := lzcMod.io.cnt_o
         lzc_zeroes(i)         := lzcMod.io.empty_o
 
-  //计算指数位移量(指数几乎不会溢出)
+  // Calculate the exponential displacement (exponent will hardly overflow)
     val exp_adjust_reg = Wire(SInt((EXP_WIDTH+1).W))
     when(lzc_zeroes(i) === 1.U) {
-      exp_adjust_reg := 0.S   // 尾数全0，不需要规格化
+      exp_adjust_reg := 0.S   // The trailing zeros do not need to be normalized.
     }.elsewhen(leading_zero_count(i) <= (DECIMAL_POINT - 1).U) {
       exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count(i) - 1.U).asSInt
     }.otherwise {
@@ -46,14 +46,14 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     // io.exp_adjust(i) := exp_adjust_reg + WIDTH.S - FRAC_WIDTH.S
     // io.exp_adjust(i) := exp_adjust_reg
 
-  //使用barrel_shifter左移，使DECIMAL_POINT位上为1
+  //Use barrel_shifter, make DECIMAL_POINT is 1
     val frac_shifted = Wire(UInt(WIDTH.W))
     val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, false))
     shifter.io.operand_i    := io.pir_frac_i(i)
     shifter.io.shift_amount := leading_zero_count(i)
     frac_shifted            := shifter.io.result_o
 
-  //保留前FRAC_WITH + 1位，低位舍入
+  //Keep the first FRAC_WITH + 1 digits, round down the lower digits
     if(WIDTH > (FRAC_WIDTH + 1)){
       val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - 2, 0)
       val sticky_bit  = sticky_bits.orR.asUInt
@@ -65,9 +65,4 @@ class FracNorm(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val WIDTH: Int, val D
     }
   }
 
-  // printf("Fractional Normalization:\n")
-  // printf("pir_frac_i = %b\n", io.pir_frac_i(0))
-  // printf("pir_frac_o = %b\n", io.pir_frac_o(0))
-  // printf("exp_adjust = %d\n", io.exp_adjust(0))
-  
 } 

@@ -1,7 +1,7 @@
 // Posit Dot Product FracNorm Unit
-//输入的是标量而非向量
-//输出的是调整后的尾数和指数的调整量，还需对指数进行调整
-//WIDTH在PvuTop中调用时指定，要么是MUL_WIDTH，要么是FRAC_WIDTH
+//The input is a scalar rather than a vector
+//The output is the adjusted mantissa and the amount of adjustment for the exponent, and the exponent also needs to be adjusted.
+//WIDTH Specified when calling in pvu top (MUL_WIDTH or FRAC_WIDTH)
 package pvu
 
 import chisel3._
@@ -20,26 +20,23 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
     val pir_frac_o = Output(UInt((FRAC_WIDTH+1).W))
   })
 
-  // printf("DECIMAL_POINT = %d\n", DECIMAL_POINT.U)
-  // printf("pir_frac_i = %b\n", io.pir_frac_i)
+  val LZC_WIDTH = log2Ceil(WIDTH)  // The number of binary bits required to store the number of leading zeros
 
-  val LZC_WIDTH = log2Ceil(WIDTH)  //存放前导0数量所需要的二进制位宽
-
-  //计算前导0的个数
+  // Count the number of leading zeros
     val lzcMod              = Module(new LZC(WIDTH, true, nd))
     lzcMod.io.in_i         := io.pir_frac_i
     val leading_zero_count  = lzcMod.io.cnt_o
     val lzc_zeroes          = lzcMod.io.empty_o
     
     val shift_flag  = Wire(Bool())
-        shift_flag := false.B   //默认值
+        shift_flag := false.B   //Default value
     val shift_amount = Wire(UInt(LZC_WIDTH.W))
         shift_amount := 0.U
 
-  //计算指数位移量(指数几乎不会溢出)
+  // Calculate the exponential displacement (exponent will hardly overflow)
     val exp_adjust_reg = Wire(SInt((EXP_WIDTH+1).W))
     when(lzc_zeroes) {
-      exp_adjust_reg := 0.S   // 尾数全0，不需要规格化
+      exp_adjust_reg := 0.S   // The trailing zeros do not need to be normalized.
     }.elsewhen(leading_zero_count <= (DECIMAL_POINT - 1).U) {
       exp_adjust_reg := (DECIMAL_POINT.U - leading_zero_count - 1.U).asSInt
       shift_amount   := DECIMAL_POINT.U - leading_zero_count - 1.U
@@ -52,10 +49,7 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
 
     io.exp_adjust := exp_adjust_reg
 
-    // io.exp_adjust := exp_adjust_reg + Mux(io.pir_frac_i(WIDTH - (DECIMAL_POINT - 1)), 1.S, 0.S)  //若有进位则需 加上 进位值
-    // printf("add: %b\n", io.pir_frac_i(WIDTH - DECIMAL_POINT - 1))
-
-  //使用barrel_shifter左移，使DECIMAL_POINT位上为1
+   // Use barrel_shifter, make DECIMAL_POINT is 1
     val frac_shifted = Wire(UInt(WIDTH.W))
     when(shift_flag){
       val shifter      = Module(new BarrelShifter(WIDTH, LZC_WIDTH, true))
@@ -69,7 +63,7 @@ class FracNorm_DotProduct(val POSIT_WIDTH: Int, val WIDTH: Int, val DECIMAL_POIN
       frac_shifted            := shifter.io.result_o
     }
 
-  //保留前FRAC_WITH + 1位，低位舍入
+  // Keep the first FRAC_WITH + 1 digits, round down the lower digits
     when(WIDTH.asUInt > (FRAC_WIDTH + 1).U){
       val sticky_bits = frac_shifted(WIDTH - FRAC_WIDTH - DECIMAL_POINT - 1, 0)
       val sticky_bit  = sticky_bits.orR.asUInt
