@@ -17,13 +17,13 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
     val posit    = Output(Vec(VECTOR_SIZE, UInt(POSIT_WIDTH.W)))
   })
 
-  //提取尾数隐藏位
+  // Extract the hidden digits of the mantissa
   val frac_hide = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   for(i <- 0 until VECTOR_SIZE){
     frac_hide(i) := io.pir_frac(i)(FRAC_WIDTH)
   }
   
-  //获取es和rigime的二进制,regime的基底是16，即2的4次方
+  // Get the binary of es and rigime, the base of regime is 16, which is 2 to the power of 4.
   val regime_k = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
   val es_value = Wire(Vec(VECTOR_SIZE, UInt(ES.W)))
   for(i <- 0 until VECTOR_SIZE){
@@ -31,9 +31,8 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
     es_value(i) := io.pir_exp(i)(ES - 1, 0)
   }
 
-  // printf("regime_k[0] = %d, es_value[0] = %d\n", regime_k(0), es_value(0))
 
-  //初始化regime
+  // Initialize regime
   val k_sign       = Wire(Vec(VECTOR_SIZE, UInt(1.W)))
   val regime_init  = Wire(UInt((POSIT_WIDTH - 1).W))
   val regime       = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH- 1).W)))
@@ -43,27 +42,23 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
   for(i <- 0 until VECTOR_SIZE){
     k_sign(i) := io.pir_exp(i)(EXP_WIDTH - 1)
     regime(i) := Mux(k_sign(i) === 1.U, regime_init, ~regime_init)
-    //当k_sign为1时，regime为负数，即0000...1（-k），当k_sign为0时，regime为正数，即1111...0（k-1）
+    // If k_sign is 1，regime is negative number，0000...1（-k），if k_sign is 0，regime is positive number，1111...0（k-1）
   }
 
-  //计算regime位宽
+  // Calculate regime width
   val regime_width = Wire(Vec(VECTOR_SIZE, UInt(nd.W)))
   for(i <- 0 until VECTOR_SIZE){
     regime_width(i) := Mux(k_sign(i) === 1.U, ((~regime_k(i) + 1.U) + 1.U), regime_k(i) + 2.U)
   }
 
-  // printf("regime_width[0] = %d\n", regime_width(0))
-
-  //拼接各个部分（位宽溢出）
+  // Concatenate each part (bit-width overflow)
   var TMP_WIDTH   = POSIT_WIDTH - 1 + ES + FRAC_WIDTH
   val reg_es_frac = Wire(Vec(VECTOR_SIZE, UInt(TMP_WIDTH.W)))
   for(i <- 0 until VECTOR_SIZE){
     reg_es_frac(i) := Cat(regime(i), es_value(i), io.pir_frac(i)(FRAC_WIDTH - 1, 0))
   }
 
-  // printf("reg_es_frac[0] = %b\n", reg_es_frac(0))
-
-  //进行右移操作(先左移再右移)
+  // Perform a right shift operation (first left shift, then right shift)
   var MAX_SHIFT   = FRAC_WIDTH + ES + 1
   var SHIFT_WIDTH = log2Ceil(MAX_SHIFT)
   val shift = Wire(Vec(VECTOR_SIZE, UInt(SHIFT_WIDTH.W)))
@@ -71,9 +66,9 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
   for(i <- 0 until VECTOR_SIZE){
     shift(i) := Mux(regime_width(i) >= POSIT_WIDTH.U, MAX_SHIFT.U, regime_width(i) + FRAC_WIDTH.U + ES.U  - POSIT_WIDTH.U + 1.U)
   }
-  //如果regime_bits>=n，说明regime占据了所有位，此时右移位数为最大右移位数,在两次移位后，posit则全是regime位，且位宽位n位
-  //如果regime_bits<n，说明右移后需要对mant的低位进行舍入，舍入的位数即位移量，设为x， reg+esp+mant-x = n-1， x = reg+esp+mant-n+1
-  //右移的数据量计算是为了让 右移后的低MAX_SHIFT_AMOUNT位成为舍入位，其上的n位是有效数据位
+  //If regime bits >= n, it means the regime occupies all bits. At this point, the right shift count is the maximum right shift count. After two shifts, the posit is entirely regime bits, and the bit width is n bits.
+  //If regime_bits < n, it indicates that rounding is needed for the lower bits of mant after the right shift. The number of bits to be rounded is the shift amount, denoted as x. reg + esp + mant - x = n - 1, x = reg + esp + mant - n + 1
+  //The calculation of the amount of data shifted to the right is to make the lower MAX_SHIFT_AMOUNT bits after the right shift become rounding bits, and the n bits above them are valid data bits.
 
   val value_before_shift = Wire(Vec(VECTOR_SIZE, UInt(TMP_WIDTH.W + MAX_SHIFT.W)))
   val value_after_shift  = Wire(Vec(VECTOR_SIZE, UInt(TMP_WIDTH.W + MAX_SHIFT.W)))
@@ -86,10 +81,7 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
     value_after_shift(i)           := barrel_shifter.io.result_o
   }
 
-  // printf("value_before_shift[0] = %b\n", value_before_shift(0))
-  // printf("value_after_shift[0]  = %b\n", value_after_shift(0))
-
-  //进行舍入操作  --> RNE舍入
+  // Perform rounding operation  --> RNE rounding
   val value_before_round = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
   val round_bits         = Wire(Vec(VECTOR_SIZE, UInt(MAX_SHIFT.W)))
   val value_after_round  = Wire(Vec(VECTOR_SIZE, UInt((POSIT_WIDTH - 1).W)))
@@ -104,10 +96,7 @@ class PositEncode(val POSIT_WIDTH: Int, val VECTOR_SIZE: Int, val ES: Int) exten
    value_after_round(i) := value_before_round(i) + round_value
   }
 
-  // printf("value_before_round[0] = %b\n", value_before_round(0))
-  // printf("value_after_round[0]  = %b\n", value_after_round(0))
-
-  //输出Posit --> 转换为补码
+  // OutputPosit --> ConvertToComplement
   for(i <- 0 until VECTOR_SIZE){
     val result   = Wire(UInt(POSIT_WIDTH.W))
 
