@@ -31,6 +31,12 @@ menu "RESNET_TEST"
         help
             Enable ResNet division test.
 
+    config RESNET_DOT_P32
+        bool "resnet_dot_p32_test"
+        default n
+        help
+            Enable ResNet dot product test. 
+
     endchoice
 endmenu
 
