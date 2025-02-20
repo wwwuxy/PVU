@@ -118,16 +118,15 @@ vpositdot vd, vs1, vs2, vm
 - [x] posit-Regime部分计算规则（r、k、useed） --> figure
 - [x] posit计算示例 --> figure
 - [x] Posit向量划分（复用专利1）--> figure
-- [ ] 基于Deep PeNSieve比较一下FP64和P32在同一个CNN上**训练**的损失和准确率 --> 无法复现就用Table 2的数据画直方图来对比推理的准确度
-- [ ] 基于PositNN比较一下FP64和P32在同一个DNN上的损失和准确率
+- [x] 基于Deep PeNSieve比较一下FP64和P32在同一个CNN上**训练**的损失和准确率 --> 无法复现就用Table 2的数据画直方图来对比推理的准确度
 - [x] RVV扩展指令 --> table
 - [ ] PVU数据流主图 --> figure
 - [x] 基4Booth乘法器示例 --> figure
 - [ ] 点积示例图 --> figure
 - [x] PAU挂载至运算单元图  --> figurer --> 类似PPU-Light的前端
 - [x] PVU与其他HW的异同 --> table
-- [ ] vpmul vv内联汇编 --> Listing
-- [ ] 卷积算法示例 --> Listing
+- [x] vpmul vv内联汇编 --> Listing
+- [x] 卷积算法示例 --> Listing
 
 
 ---
@@ -288,12 +287,13 @@ Regime位域的长度k可以由前导0的个数加1得到，我们将Posit通过
 
 卷积是深度学习中的一个常用操作，我们再Listing2中展示了利用PVU进行4×4卷积的算法示例。我们将卷积核按行向量化，将行和列一次性加载至计算向量内，通过向量乘法一次性计算出结果，并保存至结果向量中，最后经过向量加法将结果相加，完成卷积计算。
 #### 6. Experimental Results
-为了评估PVU各个运算模块的运算正确性，我们基于pytorch将Resnet-18的首个卷积层的量化激活值和权重提取出来，并保存为FP64格式。由于PVU是Posit数制运算，我们通过SoftPosit库，设计了将提取到的数据批量转换为Posit32并进行加法，减法，乘法，除法。点积结果的计算框架，得到了测试所需的输入和输出。经过测试发现，PVU在向量加法、向量减法、向量乘法、向量点积运算中正确率达到了100%，在向量除法的正确率则为95.84%，这是倒数转换时带来的误差导致的。
+为了评估PVU各个运算模块的运算正确性，我们基于pytorch将Resnet-18[19]的首个卷积层的量化激活值和权重提取出来，并保存为FP64格式。由于PVU是Posit数制运算，我们通过SoftPosit库，设计了将提取到的数据批量转换为Posit32并进行加法，减法，乘法，除法。点积结果的计算框架，得到了测试所需的输入和输出。我们编写了Kconfig框架并进行了测试，PVU在向量加法、向量减法、向量乘法、向量点积运算中正确率达到了100%，在向量除法的正确率则为95.84%，这是倒数转换时带来的误差导致的。
 
-此外，我们通过Deep PeNSieve[19]测试了Posit数制在DNN中与FP32的准确度差异，如图6和图7所示，我们在TOP-1，TOP-5层次上对MNIST，Fashion-MNIST，SVHN，CIFAR-10进行的测试，可以发现Posit16在减少一半内存占比的情况下拥有比FP32更高的准确度。
+此外，我们通过Deep PeNSieve[20]测试了Posit数制在DNN中与FP32的准确度差异，如图6和图7所示，我们在TOP-1，TOP-5层次上对MNIST，Fashion-MNIST，SVHN，CIFAR-10进行的测试，可以发现Posit16在减少一半内存占比的情况下拥有比FP32更高的准确度。
 
 我们也通过Vavido对PVU进行了FPGA测试，如表3所示...
 #### 7. Conclusion And Expectation
+在本文中，我们提出了一个开源的Posit向量计算单元PVU，能够在低功耗平台下的深度学习应用中进行有效的加法，减法，乘法，除法，点积运算。PVU可以与RISC-V紧密集成起来，并通过内联汇编将高级语言映射至机器码。此外，开发了一个PVU的可配置生成器，以支持各类低功耗场景下的不同Posit数制。
 
 ---
 [1] Pullini A, Rossi D, Loi I, Tagliavini G, Benini L. Mr.Wolf: An Energy-Precision Scalable Parallel Ultra Low Power SoC for IoT Edge Processing[J]. IEEE Journal of Solid-State Circuits, 2019, 54(7): 1970-1981. DOI:10.1109/JSSC.2019.2912307.
@@ -320,7 +320,10 @@ Conference & Exhibition (DATE). IEEE, 2021, pp. 1350–1355.
 [16] S. D. Ciocirlan, D. Loghin, L. Ramapantulu, N. Tapus, and Y. M. Teo, “The Accuracy and Efficiency of Posit Arithmetic,” 2021, arXiv:2109.08225.
 [17] M. Cococcioni, F. Rossi, E. Ruffaldi, and S. Saponara, “A Lightweight Posit Processing Unit for RISC-V Processors in Deep Neural Network Applications,” IEEE Transactions on Emerging Topics in Computing, no. 01, pp. 1–1, Oct. 2021.
 [18] Li, Q., Fang, C., & Wang, Z. PDPU: An Open-Source Posit Dot-Product Unit for Deep Learning Applications. In _2023 IEEE International Symposium on Circuits and Systems (ISCAS)_, 2023. IEEE.
-[19]Murillo, Raul, Alberto A. Del Barrio, and Guillermo Botella. "Deep PeNSieve: A Deep Learning Framework Based on the Posit Number System." _Digital Signal Processing_ 102 (2020): 102762. doi:10.1016/j.dsp.2020.102762.
+[19]K. He, X. Zhang, S. Ren, and J. Sun, “Deep residual learning for image
+recognition,” in 2016 IEEE Conference on Computer Vision and Pattern
+Recognition (CVPR), 2016, pp. 770–778.
+[20]Murillo, Raul, Alberto A. Del Barrio, and Guillermo Botella. "Deep PeNSieve: A Deep Learning Framework Based on the Posit Number System." _Digital Signal Processing_ 102 (2020): 102762. doi:10.1016/j.dsp.2020.102762.
 
 
 ---
@@ -342,13 +345,14 @@ fig4： 基4Booth乘法器及CSA设计举例
 fig5：Posit-FP32在TOP-1的准确度
 fig6：Posit-FP32在TOP-5的准确度
 
-
 table 1：本工作与相关Posit处理单元的异同
 - 比较角度：Posit配置参数化、基础四则运算、点积/FMA运算、RISC-V集成、标量运算、向量运算、高级软件支持、自定义指令支持、开源
 - 比较对象：BIG-PERCIVAL、PERC、PERI、POSAR、PPU-light、PDPU
 table 2：RVV自定义指令
 table 3：FPGA测试结果
 
+Listing 1：内联汇编
+Listing 2：卷积算法
 
 ---
 
@@ -356,7 +360,3 @@ table 3：FPGA测试结果
 - Euro-Par 2025
     - 摘要截止：2025-2-24
     - 投稿截止：2025-3-9
-
-- CODES+ISSS 2025
-    - 摘要截止：2025-3-23
-    - 投稿截止：2025-3-30
