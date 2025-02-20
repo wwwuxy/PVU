@@ -287,9 +287,12 @@ Regime位域的长度k可以由前导0的个数加1得到，我们将Posit通过
 我们在Listing1中展示了一个向量乘法内联汇编示例，这里我们假设每个元素是32位的且每次操作处理4个元素。寄存器关键字让编译器将输入向量和输出向量放到指定的寄存器中，并设定向量长度。在内联汇编中，第9、10、11行是我们为特定的Posit操作设定的OP操作码、funct3字段和funct6字段，也是与其他指令、操作区分的关键部分。
 
 卷积是深度学习中的一个常用操作，我们再Listing2中展示了利用PVU进行4×4卷积的算法示例。我们将卷积核按行向量化，将行和列一次性加载至计算向量内，通过向量乘法一次性计算出结果，并保存至结果向量中，最后经过向量加法将结果相加，完成卷积计算。
-#### 6. ExperimentalResults
+#### 6. Experimental Results
+为了评估PVU各个运算模块的运算正确性，我们基于pytorch将Resnet-18的首个卷积层的量化激活值和权重提取出来，并保存为FP64格式。由于PVU是Posit数制运算，我们通过SoftPosit库，设计了将提取到的数据批量转换为Posit32并进行加法，减法，乘法，除法。点积结果的计算框架，得到了测试所需的输入和输出。经过测试发现，PVU在向量加法、向量减法、向量乘法、向量点积运算中正确率达到了100%，在向量除法的正确率则为95.84%，这是倒数转换时带来的误差导致的。
 
+此外，我们通过Deep PeNSieve[19]测试了Posit数制在DNN中与FP32的准确度差异，如图6和图7所示，我们在TOP-1，TOP-5层次上对MNIST，Fashion-MNIST，SVHN，CIFAR-10进行的测试，可以发现Posit16在减少一半内存占比的情况下拥有比FP32更高的准确度。
 
+我们也通过Vavido对PVU进行了FPGA测试，如表3所示...
 #### 7. Conclusion And Expectation
 
 ---
@@ -317,6 +320,7 @@ Conference & Exhibition (DATE). IEEE, 2021, pp. 1350–1355.
 [16] S. D. Ciocirlan, D. Loghin, L. Ramapantulu, N. Tapus, and Y. M. Teo, “The Accuracy and Efficiency of Posit Arithmetic,” 2021, arXiv:2109.08225.
 [17] M. Cococcioni, F. Rossi, E. Ruffaldi, and S. Saponara, “A Lightweight Posit Processing Unit for RISC-V Processors in Deep Neural Network Applications,” IEEE Transactions on Emerging Topics in Computing, no. 01, pp. 1–1, Oct. 2021.
 [18] Li, Q., Fang, C., & Wang, Z. PDPU: An Open-Source Posit Dot-Product Unit for Deep Learning Applications. In _2023 IEEE International Symposium on Circuits and Systems (ISCAS)_, 2023. IEEE.
+[19]Murillo, Raul, Alberto A. Del Barrio, and Guillermo Botella. "Deep PeNSieve: A Deep Learning Framework Based on the Posit Number System." _Digital Signal Processing_ 102 (2020): 102762. doi:10.1016/j.dsp.2020.102762.
 
 
 ---
@@ -335,12 +339,15 @@ fig3：PVU硬件设计主图
 - 规格化
 - 编码
 fig4： 基4Booth乘法器及CSA设计举例
+fig5：Posit-FP32在TOP-1的准确度
+fig6：Posit-FP32在TOP-5的准确度
 
 
 table 1：本工作与相关Posit处理单元的异同
 - 比较角度：Posit配置参数化、基础四则运算、点积/FMA运算、RISC-V集成、标量运算、向量运算、高级软件支持、自定义指令支持、开源
 - 比较对象：BIG-PERCIVAL、PERC、PERI、POSAR、PPU-light、PDPU
 table 2：RVV自定义指令
+table 3：FPGA测试结果
 
 
 ---
