@@ -5112,3 +5112,26 @@ Exception in thread "pool-5-thread-1" java.lang.InterruptedException
 2025.03.10 15:08:22 INFO  shutting down Metals
 2025.03.10 15:08:22 INFO  Shut down connection with build server.
 2025.03.10 15:08:22 INFO  Exiting server
+2025.03.10 15:10:08 INFO  Started: Metals version 1.5.1 in folders '/home/wuxy/PVU' for client Visual Studio Code 1.98.0.
+2025.03.10 15:10:09 INFO  Attempting to connect to the build server...
+2025.03.10 15:10:09 INFO  Found a Bloop server running
+2025.03.10 15:10:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/wuxy/PVU/.metals/bsp.trace.json or /home/wuxy/.cache/metals/bsp.trace.json
+2025.03.10 15:10:09 INFO  time: Connected to build server in 0.15s
+2025.03.10 15:10:09 INFO  Connected to Build server: Bloop v2.0.8
+2025.03.10 15:10:09 INFO  running doctor check
+2025.03.10 15:10:09 INFO  java targets: Elaborate.test, Elaborate, mill-build-
+3月 10, 2025 3:10:09 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+2025.03.10 15:10:10 INFO  time: indexed workspace in 1.33s
+3月 10, 2025 3:10:18 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:10:21 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 10, 2025 3:10:25 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:10:25 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:10:33 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:10:37 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
