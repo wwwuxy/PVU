@@ -5135,3 +5135,13 @@ Exception in thread "pool-5-thread-1" java.lang.InterruptedException
 警告: Unsupported notification method: metals/windowStateDidChange
 3月 10, 2025 3:10:37 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:11:41 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:12:38 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:12:38 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:12:39 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:13:48 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
