@@ -1,7 +1,7 @@
 # PVU-Posit Vector Unit
 PVU是一个可配置的Posit向量计算单元，支持加法、减法、乘法、除法、点积五种运算，并参数化了Posit位宽、尾数对齐位宽、Es位宽。
 
-作者：吴欣宇 （cswucy@mails.swust.edu.cn）
+作者：吴欣宇 （cswuxy@mails.swust.edu.cn）
 
 ## 先决条件
 - PVU是基于Chisel开发的，在因此需要先将Chisel转换为Verilog/systemverilog，可以使用**mill**或**sbt**
