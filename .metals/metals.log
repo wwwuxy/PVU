@@ -5145,3 +5145,105 @@ Exception in thread "pool-5-thread-1" java.lang.InterruptedException
 警告: Unsupported notification method: metals/windowStateDidChange
 3月 10, 2025 3:13:48 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:37:19 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:37:19 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:37:21 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:38:52 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:44:32 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:44:32 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:49:32 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 10, 2025 3:49:32 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+2025.03.10 20:50:38 INFO  Shutting down server
+2025.03.10 20:50:38 INFO  shutting down Metals
+2025.03.10 20:50:38 INFO  Shut down connection with build server.
+2025.03.10 20:50:38 INFO  Exiting server
+2025.03.11 10:43:22 INFO  Started: Metals version 1.5.1 in folders '/home/wuxy/PVU' for client Visual Studio Code 1.98.0.
+2025.03.11 10:43:22 INFO  Attempting to connect to the build server...
+2025.03.11 10:43:22 INFO  Found a Bloop server running
+2025.03.11 10:43:22 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/wuxy/PVU/.metals/bsp.trace.json or /home/wuxy/.cache/metals/bsp.trace.json
+2025.03.11 10:43:22 INFO  time: Connected to build server in 0.15s
+2025.03.11 10:43:22 INFO  Connected to Build server: Bloop v2.0.8
+2025.03.11 10:43:22 INFO  running doctor check
+2025.03.11 10:43:22 INFO  java targets: Elaborate.test, Elaborate, mill-build-
+3月 11, 2025 10:43:23 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 11, 2025 10:43:24 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+2025.03.11 10:43:24 INFO  time: indexed workspace in 1.3s
+3月 11, 2025 10:43:27 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 11, 2025 10:43:30 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 11, 2025 10:43:33 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 11, 2025 10:43:35 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 11, 2025 10:43:38 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 11, 2025 10:44:07 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:26:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:26:29 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:29:55 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:29:56 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:39:56 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:39:56 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:39:57 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:39:58 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:39:59 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 12:41:18 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:35:35 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:35:38 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:49:12 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:49:13 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:49:13 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:49:14 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:49:15 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+3月 11, 2025 4:50:24 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+警告: Unsupported notification method: metals/windowStateDidChange
+2025.03.12 00:55:28 INFO  Shutting down server
+2025.03.12 00:55:28 INFO  shutting down Metals
+2025.03.12 00:55:28 INFO  Shut down connection with build server.
+2025.03.12 00:55:28 INFO  Exiting server
+2025.03.12 09:42:11 INFO  Started: Metals version 1.5.1 in folders '/home/wuxy/PVU' for client Visual Studio Code 1.98.0.
+2025.03.12 09:42:12 INFO  Attempting to connect to the build server...
+2025.03.12 09:42:12 INFO  Found a Bloop server running
+2025.03.12 09:42:12 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/wuxy/PVU/.metals/bsp.trace.json or /home/wuxy/.cache/metals/bsp.trace.json
+2025.03.12 09:42:12 INFO  time: Connected to build server in 0.14s
+2025.03.12 09:42:12 INFO  Connected to Build server: Bloop v2.0.8
+2025.03.12 09:42:12 INFO  running doctor check
+2025.03.12 09:42:12 INFO  java targets: Elaborate.test, Elaborate, mill-build-
+3月 12, 2025 9:42:13 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+3月 12, 2025 9:42:14 上午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
+2025.03.12 09:42:14 INFO  time: indexed workspace in 2.41s
+2025.03.12 09:42:21 INFO  Shutting down server
+2025.03.12 09:42:21 INFO  shutting down Metals
+2025.03.12 09:42:21 INFO  Shut down connection with build server.
+2025.03.12 09:42:21 INFO  Exiting server

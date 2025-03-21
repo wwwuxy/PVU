@@ -2383,16 +2383,14 @@ module IntReciprocal(	// src/main/scala/pvu/IntReciprocal.scala:7:7
   output [55:0] io_reciprocal_o	// src/main/scala/pvu/IntReciprocal.scala:8:14
 );
 
-  wire [55:0] _GEN = {28'h0, io_num_i};	// src/main/scala/pvu/IntReciprocal.scala:20:23
-  wire [55:0] x0 = 56'h10000000 / _GEN;	// src/main/scala/pvu/IntReciprocal.scala:20:23
-  wire [83:0] x1_x_new_full = {28'h0, x0} * {28'h0, 56'h20000000 - _GEN * x0};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25
+  wire [55:0] _GEN = {28'h0, io_num_i};	// src/main/scala/pvu/IntReciprocal.scala:18:23
+  wire [55:0] x0 = 56'h10000000 / _GEN;	// src/main/scala/pvu/IntReciprocal.scala:18:23
+  wire [83:0] x1_x_new_full = {28'h0, x0} * {28'h0, 56'h20000000 - _GEN * x0};	// src/main/scala/pvu/IntReciprocal.scala:18:23, :29:22, :36:20, :42:25
   wire [83:0] x2_x_new_full =
-    {28'h0, x1_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x1_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25, :47:{29,38}
+    {28'h0, x1_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x1_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:18:23, :29:22, :36:20, :42:25, :45:{29,38}
   wire [83:0] x3_x_new_full =
-    {28'h0, x2_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x2_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25, :47:{29,38}
-  wire [83:0] x4_x_new_full =
-    {28'h0, x3_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x3_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:20:23, :31:22, :38:20, :44:25, :47:{29,38}
-  assign io_reciprocal_o = x4_x_new_full[83:28];	// src/main/scala/pvu/IntReciprocal.scala:7:7, :44:25, :47:{29,38}
+    {28'h0, x2_x_new_full[83:28]} * {28'h0, 56'h20000000 - _GEN * x2_x_new_full[83:28]};	// src/main/scala/pvu/IntReciprocal.scala:18:23, :29:22, :36:20, :42:25, :45:{29,38}
+  assign io_reciprocal_o = x3_x_new_full[83:28];	// src/main/scala/pvu/IntReciprocal.scala:7:7, :42:25, :45:{29,38}
 endmodule
 
 module GenProduct_60(	// src/main/scala/pvu/GenProduct.scala:17:7
@@ -6994,8 +6992,8 @@ module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
   output [58:0]      io_pir_frac_o	// src/main/scala/pvu/DotProduct.scala:14:14
 );
 
-  wire [57:0]      _csaTree_io_sum_o;	// src/main/scala/pvu/DotProduct.scala:81:23
-  wire [57:0]      _csaTree_io_carry_o;	// src/main/scala/pvu/DotProduct.scala:81:23
+  wire [57:0]      _csaTree_io_sum_o;	// src/main/scala/pvu/DotProduct.scala:74:23
+  wire [57:0]      _csaTree_io_carry_o;	// src/main/scala/pvu/DotProduct.scala:74:23
   wire [3:0][55:0] _frac_compare_io_pir_frac_align;	// src/main/scala/pvu/DotProduct.scala:55:39
   wire [3:0][7:0]  _mul_io_pir_exp_o;	// src/main/scala/pvu/DotProduct.scala:32:19
   wire [3:0][55:0] _mul_io_pir_frac_o;	// src/main/scala/pvu/DotProduct.scala:32:19
@@ -7036,17 +7034,17 @@ module DotProduct(	// src/main/scala/pvu/DotProduct.scala:7:7
     .io_pir_frac_align (_frac_compare_io_pir_frac_align),
     .io_pir_max_exp    (io_pir_exp_o)
   );
-  CsaTree_116 csaTree (	// src/main/scala/pvu/DotProduct.scala:81:23
+  CsaTree_116 csaTree (	// src/main/scala/pvu/DotProduct.scala:74:23
     .io_operands_i
       ({{{2'h0, _frac_compare_io_pir_frac_align[2'h3]}},
         {{2'h0, _frac_compare_io_pir_frac_align[2'h2]}},
         {{2'h0, _frac_compare_io_pir_frac_align[2'h1]}},
-        {{2'h0, _frac_compare_io_pir_frac_align[2'h0]}}}),	// src/main/scala/pvu/DotProduct.scala:38:22, :55:39, :63:55, :66:57, :81:23, :82:25
+        {{2'h0, _frac_compare_io_pir_frac_align[2'h0]}}}),	// src/main/scala/pvu/DotProduct.scala:38:22, :55:39, :63:55, :66:57, :74:23, :75:25
     .io_sum_o      (_csaTree_io_sum_o),
     .io_carry_o    (_csaTree_io_carry_o)
   );
-  assign io_pir_sign_o = 1'h0;	// src/main/scala/pvu/DotProduct.scala:7:7, :86:23
-  assign io_pir_frac_o = {1'h0, _csaTree_io_carry_o + _csaTree_io_sum_o};	// src/main/scala/pvu/DotProduct.scala:7:7, :81:23, :86:{14,23}
+  assign io_pir_sign_o = 1'h0;	// src/main/scala/pvu/DotProduct.scala:7:7, :79:23
+  assign io_pir_frac_o = {1'h0, _csaTree_io_carry_o + _csaTree_io_sum_o};	// src/main/scala/pvu/DotProduct.scala:7:7, :74:23, :79:{14,23}
 endmodule
 
 // external module LZC
@@ -7097,34 +7095,34 @@ module FracNorm_DotProduct(	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7
   output [27:0] io_pir_frac_o	// src/main/scala/pvu/FracNorm_DotProduct.scala:16:14
 );
 
-  wire [58:0] _shifter_1_io_result_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:66:32
-  wire [58:0] _shifter_io_result_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:61:32
-  wire [5:0]  _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37
-  wire        _lzcMod_empty_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37
-  wire        _GEN = _lzcMod_cnt_o < 6'h5;	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37, :43:35
-  wire [5:0]  _shift_amount_T = 6'h5 - _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37, :43:35, :44:42
-  wire [5:0]  _exp_adjust_reg_T_2 = _shift_amount_T - 6'h1;	// src/main/scala/pvu/FracNorm_DotProduct.scala:44:{42,63}
-  wire [5:0]  _exp_adjust_reg_T_10 = 6'h0 - (_lzcMod_cnt_o - 6'h4);	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37, :37:22, :48:{25,47}
+  wire [58:0] _shifter_1_io_result_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:60:32
+  wire [58:0] _shifter_io_result_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:55:32
+  wire [5:0]  _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37
+  wire        _lzcMod_empty_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37
+  wire        _GEN = _lzcMod_cnt_o < 6'h5;	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37, :40:35
+  wire [5:0]  _shift_amount_T = 6'h5 - _lzcMod_cnt_o;	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37, :40:35, :41:42
+  wire [5:0]  _exp_adjust_reg_T_2 = _shift_amount_T - 6'h1;	// src/main/scala/pvu/FracNorm_DotProduct.scala:41:{42,63}
+  wire [5:0]  _exp_adjust_reg_T_10 = 6'h0 - (_lzcMod_cnt_o - 6'h4);	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37, :34:22, :45:{25,47}
   wire [5:0]  shift_amount =
-    _lzcMod_empty_o ? 6'h0 : _GEN ? _shift_amount_T - 6'h1 : _lzcMod_cnt_o - 6'h4;	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37, :37:22, :41:22, :43:{35,61}, :44:42, :45:{22,62}, :49:{22,44}
+    _lzcMod_empty_o ? 6'h0 : _GEN ? _shift_amount_T - 6'h1 : _lzcMod_cnt_o - 6'h4;	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37, :34:22, :38:22, :40:{35,61}, :41:42, :42:{22,62}, :46:{22,44}
   wire [54:0] frac_shifted =
-    ~_lzcMod_empty_o & _GEN ? _shifter_io_result_o[54:0] : _shifter_1_io_result_o[54:0];	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37, :35:20, :41:22, :43:{35,61}, :60:21, :61:32, :64:31, :66:32, :69:31
+    ~_lzcMod_empty_o & _GEN ? _shifter_io_result_o[54:0] : _shifter_1_io_result_o[54:0];	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37, :32:20, :38:22, :40:{35,61}, :54:21, :55:32, :58:31, :60:32, :63:31
   LZC #(
     .MODE(1),
     .WIDTH(59)
-  ) lzcMod (	// src/main/scala/pvu/FracNorm_DotProduct.scala:29:37
+  ) lzcMod (	// src/main/scala/pvu/FracNorm_DotProduct.scala:26:37
     .in_i    (io_pir_frac_i),
     .cnt_o   (_lzcMod_cnt_o),
     .empty_o (_lzcMod_empty_o)
   );
-  BarrelShifter_8 shifter (	// src/main/scala/pvu/FracNorm_DotProduct.scala:61:32
+  BarrelShifter_8 shifter (	// src/main/scala/pvu/FracNorm_DotProduct.scala:55:32
     .io_operand_i    (io_pir_frac_i),
-    .io_shift_amount (shift_amount),	// src/main/scala/pvu/FracNorm_DotProduct.scala:37:22, :41:22, :43:61
+    .io_shift_amount (shift_amount),	// src/main/scala/pvu/FracNorm_DotProduct.scala:34:22, :38:22, :40:61
     .io_result_o     (_shifter_io_result_o)
   );
-  BarrelShifter_9 shifter_1 (	// src/main/scala/pvu/FracNorm_DotProduct.scala:66:32
+  BarrelShifter_9 shifter_1 (	// src/main/scala/pvu/FracNorm_DotProduct.scala:60:32
     .io_operand_i    (io_pir_frac_i),
-    .io_shift_amount (shift_amount),	// src/main/scala/pvu/FracNorm_DotProduct.scala:37:22, :41:22, :43:61
+    .io_shift_amount (shift_amount),	// src/main/scala/pvu/FracNorm_DotProduct.scala:34:22, :38:22, :40:61
     .io_result_o     (_shifter_1_io_result_o)
   );
   assign io_exp_adjust =
@@ -7132,8 +7130,8 @@ module FracNorm_DotProduct(	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7
       ? 9'h0
       : _GEN
           ? {{3{_exp_adjust_reg_T_2[5]}}, _exp_adjust_reg_T_2}
-          : {{3{_exp_adjust_reg_T_10[5]}}, _exp_adjust_reg_T_10};	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7, :29:37, :41:22, :42:22, :43:{35,61}, :44:{22,63}, :48:{22,25}
-  assign io_pir_frac_o = {frac_shifted[54:28], |(frac_shifted[26:0])};	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7, :60:21, :64:31, :69:31, :74:37, :75:37, :76:{27,40}
+          : {{3{_exp_adjust_reg_T_10[5]}}, _exp_adjust_reg_T_10};	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7, :26:37, :38:22, :39:22, :40:{35,61}, :41:{22,63}, :45:{22,25}
+  assign io_pir_frac_o = {frac_shifted[54:28], |(frac_shifted[26:0])};	// src/main/scala/pvu/FracNorm_DotProduct.scala:11:7, :54:21, :58:31, :63:31, :68:37, :69:37, :70:{27,40}
 endmodule
 
 // external module LZC
@@ -7521,17 +7519,17 @@ module PositEncode_DotProduct(	// src/main/scala/pvu/PositEncode_DotProduct.scal
   output [31:0] io_posit	// src/main/scala/pvu/PositEncode_DotProduct.scala:12:14
 );
 
-  wire [89:0] _barrel_shifter_io_result_o;	// src/main/scala/pvu/PositEncode_DotProduct.scala:73:47
+  wire [89:0] _barrel_shifter_io_result_o;	// src/main/scala/pvu/PositEncode_DotProduct.scala:64:47
   wire [30:0] _value_after_round_T =
     _barrel_shifter_io_result_o[60:30]
     + {30'h0,
        _barrel_shifter_io_result_o[29]
-         & ((|(_barrel_shifter_io_result_o[28:0])) | _barrel_shifter_io_result_o[30])};	// src/main/scala/pvu/PositEncode_DotProduct.scala:72:53, :73:47, :87:42, :90:38, :91:{38,57}, :92:{38,52,72}, :93:47
-  BarrelShifter_26 barrel_shifter (	// src/main/scala/pvu/PositEncode_DotProduct.scala:73:47
+         & ((|(_barrel_shifter_io_result_o[28:0])) | _barrel_shifter_io_result_o[30])};	// src/main/scala/pvu/PositEncode_DotProduct.scala:63:53, :64:47, :76:42, :79:38, :80:{38,57}, :81:{38,52,72}, :82:47
+  BarrelShifter_26 barrel_shifter (	// src/main/scala/pvu/PositEncode_DotProduct.scala:64:47
     .io_operand_i
-      ({io_pir_exp[7] ? 31'h1 : 31'h7FFFFFFE, io_pir_exp[1:0], io_pir_frac[26:0], 30'h0}),	// src/main/scala/pvu/PositEncode_DotProduct.scala:30:29, :39:15, :41:23, :42:{16,46}, :54:55, :72:53
+      ({io_pir_exp[7] ? 31'h1 : 31'h7FFFFFFE, io_pir_exp[1:0], io_pir_frac[26:0], 30'h0}),	// src/main/scala/pvu/PositEncode_DotProduct.scala:28:29, :35:15, :37:23, :38:{16,46}, :48:55, :63:53
     .io_shift_amount
-      ((io_pir_exp[7] ? ~(io_pir_exp[6:2]) + 5'h2 : io_pir_exp[6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode_DotProduct.scala:29:{16,29}, :41:23, :49:{26,45,62,79}, :64:112
+      ((io_pir_exp[7] ? ~(io_pir_exp[6:2]) + 5'h2 : io_pir_exp[6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode_DotProduct.scala:27:{16,29}, :37:23, :43:{26,45,62,79}, :55:112
     .io_result_o     (_barrel_shifter_io_result_o)
   );
   assign io_posit =
@@ -7539,7 +7537,7 @@ module PositEncode_DotProduct(	// src/main/scala/pvu/PositEncode_DotProduct.scal
       ? 32'h0
       : io_pir_sign
           ? {1'h1, ~_value_after_round_T + 31'h1}
-          : {1'h0, _value_after_round_T};	// src/main/scala/pvu/PositEncode_DotProduct.scala:7:7, :39:15, :93:47, :101:{18,43,49,68,79}, :103:{17,25,40,49}, :104:12, :106:12
+          : {1'h0, _value_after_round_T};	// src/main/scala/pvu/PositEncode_DotProduct.scala:7:7, :35:15, :82:47, :87:{18,43,49,68,79}, :89:{17,25,40,49}, :90:12, :92:12
 endmodule
 
 module PositEncode(	// src/main/scala/pvu/PositEncode.scala:7:7
@@ -7549,79 +7547,79 @@ module PositEncode(	// src/main/scala/pvu/PositEncode.scala:7:7
   output [3:0][31:0] io_posit	// src/main/scala/pvu/PositEncode.scala:12:14
 );
 
-  wire [89:0] _barrel_shifter_3_io_result_o;	// src/main/scala/pvu/PositEncode.scala:83:32
-  wire [89:0] _barrel_shifter_2_io_result_o;	// src/main/scala/pvu/PositEncode.scala:83:32
-  wire [89:0] _barrel_shifter_1_io_result_o;	// src/main/scala/pvu/PositEncode.scala:83:32
-  wire [89:0] _barrel_shifter_io_result_o;	// src/main/scala/pvu/PositEncode.scala:83:32
+  wire [89:0] _barrel_shifter_3_io_result_o;	// src/main/scala/pvu/PositEncode.scala:78:32
+  wire [89:0] _barrel_shifter_2_io_result_o;	// src/main/scala/pvu/PositEncode.scala:78:32
+  wire [89:0] _barrel_shifter_1_io_result_o;	// src/main/scala/pvu/PositEncode.scala:78:32
+  wire [89:0] _barrel_shifter_io_result_o;	// src/main/scala/pvu/PositEncode.scala:78:32
   wire [30:0] _value_after_round_0_T =
     _barrel_shifter_io_result_o[60:30]
     + {30'h0,
        _barrel_shifter_io_result_o[29]
-         & ((|(_barrel_shifter_io_result_o[28:0])) | _barrel_shifter_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:82:45, :83:32, :98:49, :101:41, :102:{41,60}, :103:{38,52,75}, :104:50
+         & ((|(_barrel_shifter_io_result_o[28:0])) | _barrel_shifter_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:77:45, :78:32, :90:49, :93:41, :94:{41,60}, :95:{38,52,75}, :96:50
   wire [30:0] _value_after_round_1_T =
     _barrel_shifter_1_io_result_o[60:30]
     + {30'h0,
        _barrel_shifter_1_io_result_o[29]
          & ((|(_barrel_shifter_1_io_result_o[28:0]))
-            | _barrel_shifter_1_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:82:45, :83:32, :98:49, :101:41, :102:{41,60}, :103:{38,52,75}, :104:50
+            | _barrel_shifter_1_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:77:45, :78:32, :90:49, :93:41, :94:{41,60}, :95:{38,52,75}, :96:50
   wire [30:0] _value_after_round_2_T =
     _barrel_shifter_2_io_result_o[60:30]
     + {30'h0,
        _barrel_shifter_2_io_result_o[29]
          & ((|(_barrel_shifter_2_io_result_o[28:0]))
-            | _barrel_shifter_2_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:82:45, :83:32, :98:49, :101:41, :102:{41,60}, :103:{38,52,75}, :104:50
+            | _barrel_shifter_2_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:77:45, :78:32, :90:49, :93:41, :94:{41,60}, :95:{38,52,75}, :96:50
   wire [30:0] _value_after_round_3_T =
     _barrel_shifter_3_io_result_o[60:30]
     + {30'h0,
        _barrel_shifter_3_io_result_o[29]
          & ((|(_barrel_shifter_3_io_result_o[28:0]))
-            | _barrel_shifter_3_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:82:45, :83:32, :98:49, :101:41, :102:{41,60}, :103:{38,52,75}, :104:50
-  BarrelShifter_26 barrel_shifter (	// src/main/scala/pvu/PositEncode.scala:83:32
+            | _barrel_shifter_3_io_result_o[30])};	// src/main/scala/pvu/PositEncode.scala:77:45, :78:32, :90:49, :93:41, :94:{41,60}, :95:{38,52,75}, :96:50
+  BarrelShifter_26 barrel_shifter (	// src/main/scala/pvu/PositEncode.scala:78:32
     .io_operand_i
       ({io_pir_exp[2'h0][7] ? 31'h1 : 31'h7FFFFFFE,
         io_pir_exp[2'h0][1:0],
         io_pir_frac[2'h0][26:0],
-        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :41:19, :44:31, :45:{21,54}, :61:65, :82:45, :114:39
+        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :40:19, :43:31, :44:{21,54}, :58:65, :77:45, :103:39
     .io_shift_amount
       ((io_pir_exp[2'h0][7]
           ? ~(io_pir_exp[2'h0][6:2]) + 5'h2
-          : io_pir_exp[2'h0][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :44:31, :52:{27,49,69,89}, :72:123, :114:39
+          : io_pir_exp[2'h0][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :43:31, :51:{27,49,69,89}, :67:123, :103:39
     .io_result_o     (_barrel_shifter_io_result_o)
   );
-  BarrelShifter_26 barrel_shifter_1 (	// src/main/scala/pvu/PositEncode.scala:83:32
+  BarrelShifter_26 barrel_shifter_1 (	// src/main/scala/pvu/PositEncode.scala:78:32
     .io_operand_i
       ({io_pir_exp[2'h1][7] ? 31'h1 : 31'h7FFFFFFE,
         io_pir_exp[2'h1][1:0],
         io_pir_frac[2'h1][26:0],
-        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :41:19, :44:31, :45:{21,54}, :61:65, :82:45, :114:39
+        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :40:19, :43:31, :44:{21,54}, :58:65, :77:45, :103:39
     .io_shift_amount
       ((io_pir_exp[2'h1][7]
           ? ~(io_pir_exp[2'h1][6:2]) + 5'h2
-          : io_pir_exp[2'h1][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :44:31, :52:{27,49,69,89}, :72:123, :114:39
+          : io_pir_exp[2'h1][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :43:31, :51:{27,49,69,89}, :67:123, :103:39
     .io_result_o     (_barrel_shifter_1_io_result_o)
   );
-  BarrelShifter_26 barrel_shifter_2 (	// src/main/scala/pvu/PositEncode.scala:83:32
+  BarrelShifter_26 barrel_shifter_2 (	// src/main/scala/pvu/PositEncode.scala:78:32
     .io_operand_i
       ({io_pir_exp[2'h2][7] ? 31'h1 : 31'h7FFFFFFE,
         io_pir_exp[2'h2][1:0],
         io_pir_frac[2'h2][26:0],
-        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :41:19, :44:31, :45:{21,54}, :52:89, :61:65, :82:45
+        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :40:19, :43:31, :44:{21,54}, :51:89, :58:65, :77:45
     .io_shift_amount
       ((io_pir_exp[2'h2][7]
           ? ~(io_pir_exp[2'h2][6:2]) + 5'h2
-          : io_pir_exp[2'h2][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :44:31, :52:{27,49,69,89}, :72:123
+          : io_pir_exp[2'h2][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :43:31, :51:{27,49,69,89}, :67:123
     .io_result_o     (_barrel_shifter_2_io_result_o)
   );
-  BarrelShifter_26 barrel_shifter_3 (	// src/main/scala/pvu/PositEncode.scala:83:32
+  BarrelShifter_26 barrel_shifter_3 (	// src/main/scala/pvu/PositEncode.scala:78:32
     .io_operand_i
       ({io_pir_exp[2'h3][7] ? 31'h1 : 31'h7FFFFFFE,
         io_pir_exp[2'h3][1:0],
         io_pir_frac[2'h3][26:0],
-        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :41:19, :44:31, :45:{21,54}, :61:65, :82:45, :114:39
+        30'h0}),	// src/main/scala/pvu/PositEncode.scala:23:35, :30:33, :31:33, :40:19, :43:31, :44:{21,54}, :58:65, :77:45, :103:39
     .io_shift_amount
       ((io_pir_exp[2'h3][7]
           ? ~(io_pir_exp[2'h3][6:2]) + 5'h2
-          : io_pir_exp[2'h3][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :44:31, :52:{27,49,69,89}, :72:123, :114:39
+          : io_pir_exp[2'h3][6:2] + 5'h2) - 5'h2),	// src/main/scala/pvu/PositEncode.scala:30:{17,33}, :43:31, :51:{27,49,69,89}, :67:123, :103:39
     .io_result_o     (_barrel_shifter_3_io_result_o)
   );
   assign io_posit =
@@ -7644,7 +7642,7 @@ module PositEncode(	// src/main/scala/pvu/PositEncode.scala:7:7
         ? (io_pir_sign[2'h0]
              ? {1'h1, ~_value_after_round_0_T + 31'h1}
              : {1'h0, _value_after_round_0_T})
-        : 32'h0}};	// src/main/scala/pvu/PositEncode.scala:7:7, :23:35, :41:19, :52:89, :104:50, :114:{23,39,51,57,79,90}, :115:23
+        : 32'h0}};	// src/main/scala/pvu/PositEncode.scala:7:7, :23:35, :40:19, :51:89, :96:50, :103:{23,39,51,57,79,90}, :104:23
 endmodule
 
 module PvuTop(	// src/main/scala/pvu/PvuTop.scala:16:8
