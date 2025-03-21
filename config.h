@@ -2,5 +2,5 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define CONFIG_RESNET_DOT_P32 1
+#define CONFIG_SAMPLE_TEST 1
 #endif // CONFIG_H

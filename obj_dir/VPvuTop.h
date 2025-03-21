@@ -13,8 +13,9 @@
 class VPvuTop__Syms;
 class VPvuTop___024root;
 class VerilatedVcdC;
-class VPvuTop_Radix4BoothMultiplier;
-class VPvuTop_IntDivider;
+class VPvuTop_Mul;
+class VPvuTop_Compressor4to2_6;
+class VPvuTop_CsaTree_9;
 
 
 // This class is the main interface to the Verilated model
@@ -32,34 +33,24 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&reset,0,0);
     VL_IN8(&io_op,2,0);
     VL_IN(&io_posit_i1_0,31,0);
-    VL_IN(&io_posit_i1_1,31,0);
-    VL_IN(&io_posit_i1_2,31,0);
-    VL_IN(&io_posit_i1_3,31,0);
     VL_IN(&io_posit_i2_0,31,0);
-    VL_IN(&io_posit_i2_1,31,0);
-    VL_IN(&io_posit_i2_2,31,0);
-    VL_IN(&io_posit_i2_3,31,0);
     VL_OUT(&io_posit_o_0,31,0);
-    VL_OUT(&io_posit_o_1,31,0);
-    VL_OUT(&io_posit_o_2,31,0);
-    VL_OUT(&io_posit_o_3,31,0);
     VL_OUT(&io_posit_dot_o,31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_1;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_2;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_3;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3;
+    VPvuTop_Mul* const __PVT__PvuTop__DOT__mul;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__compressor;
+    VPvuTop_CsaTree_9* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_A;
+    VPvuTop_CsaTree_9* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__csa_tree_B;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_CsaTree_9* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_A;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor;
+    VPvuTop_Compressor4to2_6* const __PVT__PvuTop__DOT__div__DOT__intdivider__DOT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT__compressor;
+    VPvuTop_Mul* const __PVT__PvuTop__DOT__dotproduct__DOT__mul;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

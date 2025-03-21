@@ -4,6 +4,7 @@ menu "RESNET_TEST"
     choice
         prompt "Posit<32, 2>"
         default RESNET_ADD_P32
+        depends on !SAMPLE_TEST  # 新增依赖：仅在SAMPLE_TEST未启用时可见
         help
             Select one of the ResNet operations for the test.
 

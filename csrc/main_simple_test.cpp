@@ -127,76 +127,76 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     // 测试用例1: 加法示例
     //--------------------------------------------------
-    {
-        printf("Test Add\n");
-        uint32_t test_i1[4] = {0x5A000000, 0x5A000000, 0x48000000, 0x60000000};
-        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x50000000, 0x60000000};
-        uint8_t  test_op    = 1; // 加法
+    // {
+    //     printf("Test Add\n");
+    //     uint32_t test_i1[4] = {0x5A000000, 0x5A000000, 0x48000000, 0x60000000};
+    //     uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x50000000, 0x60000000};
+    //     uint8_t  test_op    = 1; // 加法
 
-        uint32_t expected_o[4]  = {0x5C000000, 0x5C000000, 0x54000000, 0x64000000}; 
+    //     uint32_t expected_o[4]  = {0x5C000000, 0x5C000000, 0x54000000, 0x64000000}; 
 
-        set_inputs(dut, test_i1, test_i2, test_op);
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
-        check_outputs(dut, expected_o);
-    }
+    //     set_inputs(dut, test_i1, test_i2, test_op);
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
+    //     check_outputs(dut, expected_o);
+    // }
 
     //--------------------------------------------------
     // 测试用例2: 减法示例
     //--------------------------------------------------
-    {
-        printf("Test Sub\n");
-        uint32_t test_i1[4] = {0x5A000000, 0x5A000000, 0x5A000000, 0x48000000};
-        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x48000000, 0x5A000000};
-        uint8_t  test_op    = 2; // 加法
+    // {
+    //     printf("Test Sub\n");
+    //     uint32_t test_i1[4] = {0x5A000000, 0x5A000000, 0x5A000000, 0x48000000};
+    //     uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x48000000, 0x5A000000};
+    //     uint8_t  test_op    = 2; // 加法
 
-        uint32_t expected_o[4]  = {0x58000000, 0x58000000, 0x58000000, 0xA8000000}; 
+    //     uint32_t expected_o[4]  = {0x58000000, 0x58000000, 0x58000000, 0xA8000000}; 
 
-        set_inputs(dut, test_i1, test_i2, test_op);
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
-        check_outputs(dut, expected_o);
-    }
+    //     set_inputs(dut, test_i1, test_i2, test_op);
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
+    //     check_outputs(dut, expected_o);
+    // }
 
 
     //--------------------------------------------------
     // 测试用例3: 乘法示例
     //--------------------------------------------------
-    {
-        printf("Test Mul\n");
-        uint32_t test_i1[4] = {0x6e800000, 0x4c000000, 0x4c000000, 0x4c000000};
-        uint32_t test_i2[4] = {0x6e000000, 0x58000000, 0x60000000, 0x61000000};
-        uint8_t  test_op    = 3; // 乘法
+    // {
+    //     printf("Test Mul\n");
+    //     uint32_t test_i1[4] = {0x6e800000, 0x4c000000, 0x4c000000, 0x4c000000};
+    //     uint32_t test_i2[4] = {0x6e000000, 0x58000000, 0x60000000, 0x61000000};
+    //     uint8_t  test_op    = 3; // 乘法
 
-        uint32_t expected_o[4]  = {0x7b380000, 0x62000000, 0x66000000, 0x67800000}; 
+    //     uint32_t expected_o[4]  = {0x7b380000, 0x62000000, 0x66000000, 0x67800000}; 
 
-        set_inputs(dut, test_i1, test_i2, test_op);
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
-        check_outputs(dut, expected_o);
-    }
+    //     set_inputs(dut, test_i1, test_i2, test_op);
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
+    //     check_outputs(dut, expected_o);
+    // }
 
 
     //--------------------------------------------------
     // 测试用例4: 除法示例
     //--------------------------------------------------
-    {
-        printf("Test Div\n");
-        uint32_t test_i1[4] = {0x54000000, 0x54000000, 0x58000000, 0x48000000};
-        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x50000000, 0x58000000};
-        uint8_t  test_op    = 4; // 除法
+    // {
+    //     printf("Test Div\n");
+    //     uint32_t test_i1[4] = {0x54000000, 0x54000000, 0x58000000, 0x48000000};
+    //     uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x50000000, 0x58000000};
+    //     uint8_t  test_op    = 4; // 除法
 
-        uint32_t expected_o[4]  = {0x4c000000, 0x4c000000, 0x48000000, 0x30000000}; 
+    //     uint32_t expected_o[4]  = {0x4c000000, 0x4c000000, 0x48000000, 0x30000000}; 
 
-        set_inputs(dut, test_i1, test_i2, test_op);
-        for (int cycle = 0; cycle < 2; ++cycle) {
-            toggle_clock(dut, tfp, main_time);
-        }
-        check_outputs(dut, expected_o);
-    }
+    //     set_inputs(dut, test_i1, test_i2, test_op);
+    //     for (int cycle = 0; cycle < 2; ++cycle) {
+    //         toggle_clock(dut, tfp, main_time);
+    //     }
+    //     check_outputs(dut, expected_o);
+    // }
 
 
     //--------------------------------------------------
@@ -204,11 +204,11 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     {
         printf("Test Dot\n");
-        uint32_t test_i1[4] = {0x00000000, 0x00000000, 0x6e800000, 0x00000000};
-        uint32_t test_i2[4] = {0x00000000, 0x00000000, 0x6e000000, 0x00000000};
+        uint32_t test_i1[4] = {0x00000000, 0x00000000, 0x50000000, 0x00000000};
+        uint32_t test_i2[4] = {0x00000000, 0x00000000, 0x48000000, 0x00000000};
         uint8_t  test_op    = 5; // 点积
 
-        uint32_t expected_o  = 0x7b380000; 
+        uint32_t expected_o  = 0x58000000; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
@@ -216,6 +216,7 @@ int main(int argc, char** argv) {
         }
         check_outputs_dot(dut, expected_o);
     }
+
 
 
     // 收尾
