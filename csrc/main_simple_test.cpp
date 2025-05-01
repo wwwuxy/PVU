@@ -204,11 +204,11 @@ int main(int argc, char** argv) {
     //--------------------------------------------------
     {
         printf("Test Dot\n");
-        uint32_t test_i1[4] = {0x00000000, 0x00000000, 0x50000000, 0x00000000};
-        uint32_t test_i2[4] = {0x00000000, 0x00000000, 0x48000000, 0x00000000};
+        uint32_t test_i1[4] = {0x40000000, 0x4c000000, 0x50000000, 0x54000000};
+        uint32_t test_i2[4] = {0x48000000, 0x48000000, 0x48000000, 0x48000000};
         uint8_t  test_op    = 5; // 点积
 
-        uint32_t expected_o  = 0x58000000; 
+        uint32_t expected_o  = 0x63000000; 
 
         set_inputs(dut, test_i1, test_i2, test_op);
         for (int cycle = 0; cycle < 2; ++cycle) {
