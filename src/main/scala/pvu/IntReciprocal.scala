@@ -17,7 +17,7 @@ class IntReciprocal(val WIDTH: Int) extends Module {
   val one_fixed = (BigInt(1) << WIDTH).U((2*WIDTH).W)
   val x0 = (one_fixed / num).asUInt //Initial value in Q(1+width).width format
 
-  def nrIter(x: UInt, num: UInt): UInt = {
+  def nrIter(x: UInt, n: UInt): UInt = {
     // Fixed-point format：
     // x is Q(1+WIDTH).WIDTH，Width = 2*WIDTH
     // num is an integer (width bits)，like Q(WIDTH).0，The integer part is width digits, with no decimal places.
@@ -26,14 +26,11 @@ class IntReciprocal(val WIDTH: Int) extends Module {
     // num is U(WIDTH)
     // x is Q(1+WIDTH).WIDTH（width = 2*WIDTH, The low width bit is a decimal.）
     // num*x format is Q(1+WIDTH).WIDTH (width = 2*WIDTH)
-    val num_x = (num * x)((2*WIDTH)-1,0)
-
-    // two = 2.0 = 2 << WIDTH
     val two = (BigInt(2) << WIDTH).U((2 * WIDTH).W)
     //val two = (2.U << WIDTH)((2*WIDTH)-1,0)
 
     // diff = (2 - num*x)
-    val diff = two - num_x
+    val diff = two - ((n * x)((2*WIDTH)-1,0))
 
     // x*(2 - num*x)
     // x and diff format are Q(1+WIDTH).WIDTH
@@ -48,12 +45,7 @@ class IntReciprocal(val WIDTH: Int) extends Module {
 
   // The number of iterations can be adjusted as needed.
   // Generally, 2 to 4 iterations can achieve high accuracy.
-  val x1 = nrIter(x0, num)
-  val x2 = nrIter(x1, num)
-  val x3 = nrIter(x2, num)
-
-  // Use x3 as the final reciprocal approximation value
-  io.reciprocal_o := x3
+  io.reciprocal_o := nrIter(nrIter(nrIter(x0, num), num), num)
 }
 
 

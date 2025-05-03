@@ -48,18 +48,18 @@ class VPvuTop VL_NOT_FINAL : public VerilatedModel {
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_1;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_2;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__radix4BoothMultiplier_3;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_1;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_2;
-    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__intdivider_3;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_1;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_2;
-    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__radix4BoothMultiplier_3;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__multiplier;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__multiplier_1;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__multiplier_2;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__mul__DOT__multiplier_3;
+    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__divider;
+    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__divider_1;
+    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__divider_2;
+    VPvuTop_IntDivider* const __PVT__PvuTop__DOT__div__DOT__divider_3;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__multiplier;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__multiplier_1;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__multiplier_2;
+    VPvuTop_Radix4BoothMultiplier* const __PVT__PvuTop__DOT__dotproduct__DOT__mul__DOT__multiplier_3;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

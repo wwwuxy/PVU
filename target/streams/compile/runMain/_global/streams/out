@@ -1,43 +1,936 @@
-[0m[[0m[31merror[0m] [0m[0mjava.lang.IllegalArgumentException: requirement failed: must be inside Builder context[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.Predef$.require(Predef.scala:337)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.dynamicContext(Builder.scala:550)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.Builder$.globalIdentifierNamespace(Builder.scala:589)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.experimental.BaseModule._definitionIdentifier(Module.scala:450)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.experimental.BaseModule.<init>(Module.scala:454)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.RawModule.<init>(RawModule.scala:21)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module.<init>(Module.scala:230)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.PvuTop.<init>(PvuTop.scala:16)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$.$anonfun$pvutop$1(Elaborate.scala:23)[0m
-[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$.delayedEndpoint$pvu$Elaborate$1(Elaborate.scala:23)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$delayedInit$body.apply(Elaborate.scala:10)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp(Function0.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.Function0.apply$mcV$sp$(Function0.scala:42)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.App.$anonfun$main$1(App.scala:98)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.App.$anonfun$main$1$adapted(App.scala:98)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.IterableOnceOps.foreach(IterableOnce.scala:576)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:574)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.collection.AbstractIterable.foreach(Iterable.scala:933)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.App.main(App.scala:98)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.App.main$(App.scala:96)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate$.main(Elaborate.scala:10)[0m
-[0m[[0m[31merror[0m] [0m[0m	at pvu.Elaborate.main(Elaborate.scala)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.reflect.Method.invoke(Method.java:569)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.invokeMain(Run.scala:144)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.execute$1(Run.scala:94)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:121)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run$.executeSuccess(Run.scala:187)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Run.runWithLoader(Run.scala:121)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$bgRunMainTask$7(Defaults.scala:2011)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:1982)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)[0m
-[0m[[0m[31merror[0m] [0m[0m	at scala.util.Try$.apply(Try.scala:213)[0m
-[0m[[0m[31merror[0m] [0m[0m	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:369)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)[0m
-[0m[[0m[31merror[0m] [0m[0m	at java.base/java.lang.Thread.run(Thread.java:840)[0m
-[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) java.lang.IllegalArgumentException: requirement failed: must be inside Builder context[0m
+[0m[[0m[31merror[0m] [0m[0mcirct.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:195:29: error: sink "pir_frac_i" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_dot = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE+1)+2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrunMain[0m) circt.stage.phases.Exceptions$FirtoolNonZeroExitCode: /home/wuxy/.cache/llvm-firtool/1.62.0/bin/firtool returned a non-zero exit code. Note that this version of Chisel (6.2.0) was published against firtool version 1.62.0.[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m
+[0m[[0m[31merror[0m] [0m[0mExitCode:[0m
+[0m[[0m[31merror[0m] [0m[0m1[0m
+[0m[[0m[31merror[0m] [0m[0mSTDOUT:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mSTDERR:[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac1_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:86:22: error: sink "pir_frac2_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val add_op = Module(new Add(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac1_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:87:22: error: sink "pir_frac2_aligned[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val sub_op = Module(new Sub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:88:22: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val mul_op = Module(new Mul(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:89:22: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val div_op = Module(new Div(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:90:25: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val fracalign = Module(new FractionAlignment_AddSub(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_sign2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_exp2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac1_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:91:26: error: sink "pir_frac2_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val dotproduct = Module(new DotProduct(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:191:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_add = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:192:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_sub = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, ALIGN_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:193:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_mul = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[0]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[1]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[2]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:194:29: error: sink "pir_frac_i[3]" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_div = Module(new FracNorm(POSIT_WIDTH, VECTOR_SIZE, MUL_WIDTH, 1, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0msrc/main/scala/pvu/PvuTop.scala:195:29: error: sink "pir_frac_i" not fully initialized in "PvuTop"[0m
+[0m[[0m[31merror[0m] [0m[0m  val frac_norm_dot = Module(new FracNorm_DotProduct(POSIT_WIDTH, SUM_WIDTH + 1, log2Ceil(VECTOR_SIZE+1)+2, ES))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m------------------------------------------------------------------------------[0m

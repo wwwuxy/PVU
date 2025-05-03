@@ -29,7 +29,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__93(VPvuTop___024root* vlSe
         = (IData)((((QData)((IData)(((5U == (IData)(vlSelf->io_op))
                                       ? 0U : (3U & (IData)(vlSelf->__VdfgTmp_h5c9bd195__0))))) 
                     << 0x39U) | ((QData)((IData)((0x7ffffffU 
-                                                  & vlSelf->__VdfgTmp_hf029e323__0))) 
+                                                  & vlSelf->__VdfgTmp_h01fc6563__0))) 
                                  << 0x1eU)));
     vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_operand_i[1U] 
         = ((((IData)(vlSelf->PvuTop__DOT__encode__DOT____VdfgTmp_h1c349387__0)
@@ -44,7 +44,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__93(VPvuTop___024root* vlSe
                                                          << 0x39U) 
                                                         | ((QData)((IData)(
                                                                            (0x7ffffffU 
-                                                                            & vlSelf->__VdfgTmp_hf029e323__0))) 
+                                                                            & vlSelf->__VdfgTmp_h01fc6563__0))) 
                                                            << 0x1eU)) 
                                                        >> 0x20U)));
     vlSelf->PvuTop__DOT__encode__DOT____Vcellinp__barrel_shifter__io_operand_i[2U] 
@@ -148,7 +148,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__94(VPvuTop___024root* vlSe
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_comb__TOP__94\n"); );
     // Body
     vlSelf->io_posit_o_3 = ((5U == (IData)(vlSelf->io_op))
-                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_h77677ba4__0)
+                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_hfdb1b8d0__0)
                                       ? ((8U & (IData)(vlSelf->PvuTop__DOT____Vcellinp__encode__io_pir_sign))
                                           ? (0x80000000U 
                                              | (0x7fffffffU 
@@ -165,7 +165,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__95(VPvuTop___024root* vlSe
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_comb__TOP__95\n"); );
     // Body
     vlSelf->io_posit_o_2 = ((5U == (IData)(vlSelf->io_op))
-                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_h2a3c4c68__0)
+                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_h703a7ecb__0)
                                       ? ((4U & (IData)(vlSelf->PvuTop__DOT____Vcellinp__encode__io_pir_sign))
                                           ? (0x80000000U 
                                              | (0x7fffffffU 
@@ -182,7 +182,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__96(VPvuTop___024root* vlSe
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_comb__TOP__96\n"); );
     // Body
     vlSelf->io_posit_o_1 = ((5U == (IData)(vlSelf->io_op))
-                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_habc61126__0)
+                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_h8dc5d7a5__0)
                                       ? ((2U & (IData)(vlSelf->PvuTop__DOT____Vcellinp__encode__io_pir_sign))
                                           ? (0x80000000U 
                                              | (0x7fffffffU 
@@ -516,6 +516,16 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__97(VPvuTop___024root* vlSe
         vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[2U] 
             = (0x3ffffffU & PvuTop__DOT__encode_dot__DOT__barrel_shifter__DOT___temp_results_0_T_2[2U]);
     }
+    vlSelf->PvuTop__DOT__encode_dot__DOT___value_after_round_T 
+        = (0x7fffffffU & (((vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[1U] 
+                            << 2U) | (vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[0U] 
+                                      >> 0x1eU)) + 
+                          (1U & ((vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[0U] 
+                                  >> 0x1dU) & (IData)(
+                                                      (0U 
+                                                       != 
+                                                       (0x5fffffffU 
+                                                        & vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[0U])))))));
     vlSelf->io_posit_dot_o = ((5U == (IData)(vlSelf->io_op))
                                ? (((0U == ((5U == (IData)(vlSelf->io_op))
                                             ? (IData)(vlSelf->__VdfgTmp_hb5d7aa8c__0)
@@ -531,19 +541,18 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__97(VPvuTop___024root* vlSe
                                                     (0x7ffffffU 
                                                      & (IData)(vlSelf->PvuTop__DOT__frac_norm_dot__DOT__frac_shifted))))
                                               : 0U)))
-                                   ? 0U : (0x7fffffffU 
-                                           & (((vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[1U] 
-                                                << 2U) 
-                                               | (vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[0U] 
-                                                  >> 0x1eU)) 
-                                              + (1U 
-                                                 & ((vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[0U] 
-                                                     >> 0x1dU) 
-                                                    & (IData)(
-                                                              (0U 
-                                                               != 
-                                                               (0x5fffffffU 
-                                                                & vlSelf->PvuTop__DOT__encode_dot__DOT___barrel_shifter_io_result_o[0U]))))))))
+                                   ? 0U : (((~ (IData)(vlSelf->PvuTop__DOT___GEN_7)) 
+                                            & ((5U 
+                                                == (IData)(vlSelf->io_op)) 
+                                               & (IData)(
+                                                         (vlSelf->PvuTop__DOT__dotproduct__DOT__sum_result 
+                                                          >> 0x3aU))))
+                                            ? (0x80000000U 
+                                               | (0x7fffffffU 
+                                                  & ((IData)(1U) 
+                                                     + 
+                                                     (~ vlSelf->PvuTop__DOT__encode_dot__DOT___value_after_round_T))))
+                                            : vlSelf->PvuTop__DOT__encode_dot__DOT___value_after_round_T))
                                : 0U);
 }
 
@@ -553,7 +562,7 @@ VL_INLINE_OPT void VPvuTop___024root___ico_comb__TOP__98(VPvuTop___024root* vlSe
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPvuTop___024root___ico_comb__TOP__98\n"); );
     // Body
     vlSelf->io_posit_o_0 = ((5U == (IData)(vlSelf->io_op))
-                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_hf029e323__0)
+                             ? 0U : ((0x8000000U & vlSelf->__VdfgTmp_h01fc6563__0)
                                       ? ((1U & (IData)(vlSelf->PvuTop__DOT____Vcellinp__encode__io_pir_sign))
                                           ? (0x80000000U 
                                              | (0x7fffffffU 
@@ -605,7 +614,7 @@ void VPvuTop___024root___eval(VPvuTop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 VPvuTop___024root___dump_triggers__ico(vlSelf);
 #endif
-                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7648, "", "Input combinational region did not converge.");
+                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7660, "", "Input combinational region did not converge.");
             }
             vlSelf->__VicoIterCount = ((IData)(1U) 
                                        + vlSelf->__VicoIterCount);
@@ -628,7 +637,7 @@ void VPvuTop___024root___eval(VPvuTop___024root* vlSelf) {
 #ifdef VL_DEBUG
                     VPvuTop___024root___dump_triggers__act(vlSelf);
 #endif
-                    VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7648, "", "Active region did not converge.");
+                    VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7660, "", "Active region did not converge.");
                 }
                 vlSelf->__VactIterCount = ((IData)(1U) 
                                            + vlSelf->__VactIterCount);
@@ -643,7 +652,7 @@ void VPvuTop___024root___eval(VPvuTop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 VPvuTop___024root___dump_triggers__nba(vlSelf);
 #endif
-                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7648, "", "NBA region did not converge.");
+                VL_FATAL_MT("/home/wuxy/PVU/vsrc/PvuTop.sv", 7660, "", "NBA region did not converge.");
             }
             __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
             VPvuTop___024root___eval_nba(vlSelf);

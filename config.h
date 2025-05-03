@@ -2,5 +2,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#define CONFIG_SAMPLE_TEST 1
+#define CONFIG_TYPE_REGNET 1
+#define CONFIG_REGNET_DOT_P32 1
 #endif // CONFIG_H

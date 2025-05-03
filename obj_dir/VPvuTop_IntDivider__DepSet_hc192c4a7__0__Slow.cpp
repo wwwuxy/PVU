@@ -14,9 +14,9 @@ VL_ATTR_COLD void VPvuTop_IntDivider___ctor_var_reset(VPvuTop_IntDivider* vlSelf
     vlSelf->io_dividend = VL_RAND_RESET_I(28);
     vlSelf->io_divisor = VL_RAND_RESET_I(28);
     vlSelf->io_quotient = VL_RAND_RESET_Q(56);
-    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full);
-    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full);
-    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full);
+    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full);
+    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1);
+    VL_RAND_RESET_W(84, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2);
     VL_RAND_RESET_W(3248, vlSelf->boothMult__DOT____Vcellout__genProds__io_partial_prods);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod = VL_RAND_RESET_Q(57);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod = VL_RAND_RESET_Q(57);

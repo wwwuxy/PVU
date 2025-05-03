@@ -7,10 +7,10 @@
 #include "VPvuTop_Compressor4to2_24.h"
 #include "VPvuTop_IntDivider.h"
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__2(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__2(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__2\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__2\n"); );
     // Body
     vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i[0U] 
         = vlSelf->__PVT__boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_A__DOT__compressor->__PVT__io_sum_o[0U];
@@ -60,10 +60,10 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                          << 0x10U));
 }
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__4(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__4(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__4\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__4\n"); );
     // Body
     vlSelf->boothMult__DOT__csaTree__DOT____Vcellinp__compressor__io_operands_i[0U] 
         = vlSelf->__PVT__boothMult__DOT__csaTree__DOT__csa_tree_A__DOT__compressor->__PVT__io_sum_o[0U];

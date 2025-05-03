@@ -219,8 +219,6 @@
         pir_exp_adjust              := frac_norm_div.io.exp_adjust
   }
 
-    // printf("pir_frac_normed: %b\n", pir_frac_normed(0))
-
   //***************//
   //**Adjust EXP**//
   //**************//
@@ -256,5 +254,230 @@
         encode.io.pir_frac := pir_frac_normed
         io.posit_o         := encode.io.posit
         io.posit_dot_o     := 0.U
+  }
+}
+
+// 单个Posit数解码模块
+class PositDecodeSingle(val POSIT_WIDTH: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1 
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
+  
+  val io = IO(new Bundle {
+    val posit = Input(UInt(POSIT_WIDTH.W))
+    val Sign = Output(UInt(1.W))
+    val Exp = Output(SInt(EXP_WIDTH.W))
+    val Frac = Output(UInt((FRAC_WIDTH + 1).W))
+  })
+
+  // 使用与原始PositDecode相同的解码逻辑
+  val decode = Module(new PositDecode(POSIT_WIDTH, 1, ES))
+  decode.io.posit(0) := io.posit
+  io.Sign := decode.io.Sign(0)
+  io.Exp := decode.io.Exp(0)
+  io.Frac := decode.io.Frac(0)
+}
+
+// 单个Posit数编码模块
+class PositEncodeSingle(val POSIT_WIDTH: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1
+  var FRAC_WIDTH: Int = POSIT_WIDTH - ES - 3
+  var MUL_WIDTH: Int = 2 * (FRAC_WIDTH + 1)
+  
+  val io = IO(new Bundle {
+    val pir_sign = Input(UInt(1.W))
+    val pir_exp = Input(SInt(EXP_WIDTH.W))
+    val pir_frac = Input(UInt(MUL_WIDTH.W))
+    val posit = Output(UInt(POSIT_WIDTH.W))
+  })
+
+  // 使用与原始PositEncode相同的编码逻辑
+  val encode = Module(new PositEncode(POSIT_WIDTH, 1, ES))
+  encode.io.pir_sign(0) := io.pir_sign
+  encode.io.pir_exp(0) := io.pir_exp
+  encode.io.pir_frac(0) := io.pir_frac
+  io.posit := encode.io.posit(0)
+}
+
+// 单个加法单元
+class AddUnit(val POSIT_WIDTH: Int, val ALIGN_WIDTH: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1
+  
+  val io = IO(new Bundle {
+    val sign1 = Input(UInt(1.W))
+    val sign2 = Input(UInt(1.W))
+    val exp1 = Input(SInt(EXP_WIDTH.W))
+    val exp2 = Input(SInt(EXP_WIDTH.W))
+    val frac1 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    val frac2 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    
+    val sign_o = Output(UInt(1.W))
+    val exp_o = Output(SInt(EXP_WIDTH.W))
+    val frac_o = Output(UInt(ALIGN_WIDTH.W))
+    val max_exp = Output(SInt(EXP_WIDTH.W))
+  })
+  
+  // 对齐小数点
+  val exp_diff = io.exp1 - io.exp2
+  val max_exp = Mux(exp_diff >= 0.S, io.exp1, io.exp2)
+  val shifted_frac1 = Mux(exp_diff >= 0.S, io.frac1, (io.frac1 >> (-exp_diff).asUInt))
+  val shifted_frac2 = Mux(exp_diff >= 0.S, (io.frac2 >> exp_diff.asUInt), io.frac2)
+  
+  // 相加或相减
+  val add_result = Mux(io.sign1 === io.sign2, 
+                      shifted_frac1 + shifted_frac2,
+                      Mux(shifted_frac1 >= shifted_frac2, 
+                          shifted_frac1 - shifted_frac2,
+                          shifted_frac2 - shifted_frac1))
+                          
+  // 结果符号
+  val sign_o = Mux(io.sign1 === io.sign2, 
+                  io.sign1,
+                  Mux(shifted_frac1 >= shifted_frac2, io.sign1, io.sign2))
+  
+  // 输出
+  io.sign_o := sign_o
+  io.exp_o := max_exp
+  io.frac_o := add_result
+  io.max_exp := max_exp
+}
+
+// 单个减法单元 - 与加法类似但操作不同
+class SubUnit(val POSIT_WIDTH: Int, val ALIGN_WIDTH: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1
+  
+  val io = IO(new Bundle {
+    val sign1 = Input(UInt(1.W))
+    val sign2 = Input(UInt(1.W))
+    val exp1 = Input(SInt(EXP_WIDTH.W))
+    val exp2 = Input(SInt(EXP_WIDTH.W))
+    val frac1 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    val frac2 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    
+    val sign_o = Output(UInt(1.W))
+    val exp_o = Output(SInt(EXP_WIDTH.W))
+    val frac_o = Output(UInt(ALIGN_WIDTH.W))
+    val max_exp = Output(SInt(EXP_WIDTH.W))
+  })
+  
+  // 对齐小数点
+  val exp_diff = io.exp1 - io.exp2
+  val max_exp = Mux(exp_diff >= 0.S, io.exp1, io.exp2)
+  val shifted_frac1 = Mux(exp_diff >= 0.S, io.frac1, (io.frac1 >> (-exp_diff).asUInt))
+  val shifted_frac2 = Mux(exp_diff >= 0.S, (io.frac2 >> exp_diff.asUInt), io.frac2)
+  
+  // 相减
+  val inverted_sign2 = ~io.sign2(0)
+  val sub_result = Mux(io.sign1 === inverted_sign2, 
+                      shifted_frac1 + shifted_frac2,
+                      Mux(shifted_frac1 >= shifted_frac2, 
+                          shifted_frac1 - shifted_frac2,
+                          shifted_frac2 - shifted_frac1))
+                          
+  // 结果符号
+  val sign_o = Mux(io.sign1 === inverted_sign2, 
+                  io.sign1,
+                  Mux(shifted_frac1 >= shifted_frac2, io.sign1, ~io.sign1(0)))
+  
+  // 输出
+  io.sign_o := sign_o
+  io.exp_o := max_exp
+  io.frac_o := sub_result
+  io.max_exp := max_exp
+}
+
+// 单个乘法单元
+class MulUnit(val POSIT_WIDTH: Int, val ALIGN_WIDTH: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1
+  var MUL_WIDTH: Int = 2 * (POSIT_WIDTH - ES - 2)
+  
+  val io = IO(new Bundle {
+    val sign1 = Input(UInt(1.W))
+    val sign2 = Input(UInt(1.W))
+    val exp1 = Input(SInt(EXP_WIDTH.W))
+    val exp2 = Input(SInt(EXP_WIDTH.W))
+    val frac1 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    val frac2 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    
+    val sign_o = Output(UInt(1.W))
+    val exp_o = Output(SInt(EXP_WIDTH.W))
+    val frac_o = Output(UInt(MUL_WIDTH.W))
+  })
+  
+  // 乘法结果
+  val sign_o = io.sign1 ^ io.sign2
+  val exp_o = io.exp1 + io.exp2
+  val frac_o = io.frac1 * io.frac2
+  
+  // 输出
+  io.sign_o := sign_o
+  io.exp_o := exp_o
+  io.frac_o := frac_o
+}
+
+// 单个除法单元
+class DivUnit(val POSIT_WIDTH: Int, val ALIGN_WIDTH: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1
+  var MUL_WIDTH: Int = 2 * (POSIT_WIDTH - ES - 2)
+  
+  val io = IO(new Bundle {
+    val sign1 = Input(UInt(1.W))
+    val sign2 = Input(UInt(1.W))
+    val exp1 = Input(SInt(EXP_WIDTH.W))
+    val exp2 = Input(SInt(EXP_WIDTH.W))
+    val frac1 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    val frac2 = Input(UInt((POSIT_WIDTH - ES - 2).W))
+    
+    val sign_o = Output(UInt(1.W))
+    val exp_o = Output(SInt(EXP_WIDTH.W))
+    val frac_o = Output(UInt(MUL_WIDTH.W))
+  })
+  
+  // 除法结果
+  val sign_o = io.sign1 ^ io.sign2
+  val exp_o = io.exp1 - io.exp2
+  
+  // 扩展精度进行除法
+  val extended_frac1 = Cat(io.frac1, 0.U((MUL_WIDTH - (POSIT_WIDTH - ES - 2)).W))
+  val frac_o = extended_frac1 / io.frac2
+  
+  // 输出
+  io.sign_o := sign_o
+  io.exp_o := exp_o
+  io.frac_o := frac_o
+}
+
+// 单个尾数归一化单元
+class FracNormSingle(val POSIT_WIDTH: Int, val FRAC_WIDTH: Int, val POINT_POS: Int, val ES: Int) extends Module {
+  var nd: Int = log2Ceil(POSIT_WIDTH - 1)
+  var EXP_WIDTH: Int = nd + ES + 1
+  var MUL_WIDTH: Int = 2 * (POSIT_WIDTH - ES - 2)
+  
+  val io = IO(new Bundle {
+    val pir_frac_i = Input(UInt(FRAC_WIDTH.W))
+    val pir_frac_o = Output(UInt(MUL_WIDTH.W))
+    val exp_adjust = Output(SInt(EXP_WIDTH.W))
+  })
+  
+  // 处理零值情况
+  when(io.pir_frac_i === 0.U) {
+    io.pir_frac_o := 0.U
+    io.exp_adjust := 0.S
+  }.otherwise {
+    // 找到首个1的位置
+    val leading_zeros = PriorityEncoder(Reverse(io.pir_frac_i))
+    val shift_amount = leading_zeros - POINT_POS.U
+    
+    // 归一化后的小数
+    val normalized_frac = (io.pir_frac_i << shift_amount)(FRAC_WIDTH-1, 0)
+    val extended_frac = Cat(normalized_frac, 0.U((MUL_WIDTH - FRAC_WIDTH).W))
+    
+    io.pir_frac_o := extended_frac
+    io.exp_adjust := (-shift_amount).asSInt
   }
 }

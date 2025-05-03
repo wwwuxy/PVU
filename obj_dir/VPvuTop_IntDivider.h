@@ -142,9 +142,9 @@ class VPvuTop_IntDivider final : public VerilatedModule {
         CData/*0:0*/ __VdfgTmp_hce824426__0;
         VL_IN(io_dividend,27,0);
         VL_IN(io_divisor,27,0);
-        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x1_x_new_full;
-        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x2_x_new_full;
-        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__x3_x_new_full;
+        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full;
+        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1;
+        VlWide<3>/*83:0*/ __PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2;
         VlWide<102>/*3247:0*/ boothMult__DOT____Vcellout__genProds__io_partial_prods;
         VlWide<14>/*447:0*/ boothMult__DOT__csaTree__DOT____Vcellinp__compressor__io_operands_i;
         VlWide<25>/*783:0*/ boothMult__DOT__csaTree__DOT__csa_tree_A__DOT____Vcellinp__csa_tree_B__io_operands_i;

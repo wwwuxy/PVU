@@ -7,963 +7,963 @@
 #include "VPvuTop_IntDivider.h"
 #include "VPvuTop__Syms.h"
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__0(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__0(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__0\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__0\n"); );
     // Init
-    VlWide<3>/*95:0*/ __Vtemp_h2c91e606__0;
-    VlWide<3>/*95:0*/ __Vtemp_he90e6e5d__0;
-    VlWide<3>/*95:0*/ __Vtemp_h7bc177bc__0;
-    VlWide<3>/*95:0*/ __Vtemp_hba4a56f5__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5ce10a39__0;
-    VlWide<3>/*95:0*/ __Vtemp_ha183e862__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5f8c8a78__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5baa320b__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5f83c2a8__0;
-    VlWide<3>/*95:0*/ __Vtemp_h2959ef8b__0;
-    VlWide<3>/*95:0*/ __Vtemp_h98c5846f__0;
+    VlWide<3>/*95:0*/ __Vtemp_h79948058__0;
+    VlWide<3>/*95:0*/ __Vtemp_h36a06c84__0;
+    VlWide<3>/*95:0*/ __Vtemp_h847c9b00__0;
+    VlWide<3>/*95:0*/ __Vtemp_h1f56fcb6__0;
+    VlWide<3>/*95:0*/ __Vtemp_heebc31a5__0;
+    VlWide<3>/*95:0*/ __Vtemp_h426c613e__0;
+    VlWide<3>/*95:0*/ __Vtemp_h97a92654__0;
+    VlWide<3>/*95:0*/ __Vtemp_h6b06f01b__0;
+    VlWide<3>/*95:0*/ __Vtemp_h049a63d4__0;
+    VlWide<3>/*95:0*/ __Vtemp_h34f97088__0;
+    VlWide<3>/*95:0*/ __Vtemp_h0f319b3f__0;
     // Body
-    __Vtemp_h2c91e606__0[0U] = (IData)((0xffffffffffffffULL 
-                                        & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)))));
-    __Vtemp_h2c91e606__0[1U] = (IData)(((0xffffffffffffffULL 
-                                         & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)))) 
+    __Vtemp_h79948058__0[0U] = (IData)((0xffffffffffffffULL 
+                                        & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)))));
+    __Vtemp_h79948058__0[1U] = (IData)(((0xffffffffffffffULL 
+                                         & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)))) 
                                         >> 0x20U));
-    __Vtemp_h2c91e606__0[2U] = 0U;
-    __Vtemp_he90e6e5d__0[0U] = (IData)((0xffffffffffffffULL 
+    __Vtemp_h79948058__0[2U] = 0U;
+    __Vtemp_h36a06c84__0[0U] = (IData)((0xffffffffffffffULL 
                                         & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)) 
                                               * (0xffffffffffffffULL 
-                                                 & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b))))))));
-    __Vtemp_he90e6e5d__0[1U] = (IData)(((0xffffffffffffffULL 
+                                                 & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b))))))));
+    __Vtemp_h36a06c84__0[1U] = (IData)(((0xffffffffffffffULL 
                                          & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)) 
                                                * (0xffffffffffffffULL 
-                                                  & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b))))))) 
+                                                  & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b))))))) 
                                         >> 0x20U));
-    __Vtemp_he90e6e5d__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_h7bc177bc__0, __Vtemp_h2c91e606__0, __Vtemp_he90e6e5d__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U] 
-        = __Vtemp_h7bc177bc__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U] 
-        = __Vtemp_h7bc177bc__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_h7bc177bc__0[2U]);
-    VL_SHIFTR_WWI(84,84,32, __Vtemp_hba4a56f5__0, vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full, 0x1cU);
-    __Vtemp_h5ce10a39__0[0U] = __Vtemp_hba4a56f5__0[0U];
-    __Vtemp_h5ce10a39__0[1U] = __Vtemp_hba4a56f5__0[1U];
-    __Vtemp_h5ce10a39__0[2U] = (0xfffffU & __Vtemp_hba4a56f5__0[2U]);
-    __Vtemp_ha183e862__0[0U] = (IData)((0xffffffffffffffULL 
+    __Vtemp_h36a06c84__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h847c9b00__0, __Vtemp_h79948058__0, __Vtemp_h36a06c84__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U] 
+        = __Vtemp_h847c9b00__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U] 
+        = __Vtemp_h847c9b00__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U] 
+        = (0xfffffU & __Vtemp_h847c9b00__0[2U]);
+    VL_SHIFTR_WWI(84,84,32, __Vtemp_h1f56fcb6__0, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full, 0x1cU);
+    __Vtemp_heebc31a5__0[0U] = __Vtemp_h1f56fcb6__0[0U];
+    __Vtemp_heebc31a5__0[1U] = __Vtemp_h1f56fcb6__0[1U];
+    __Vtemp_heebc31a5__0[2U] = (0xfffffU & __Vtemp_h1f56fcb6__0[2U]);
+    __Vtemp_h426c613e__0[0U] = (IData)((0xffffffffffffffULL 
                                         & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                              * (0xffffffffffffffULL 
-                                                 & (((QData)((IData)(
-                                                                     vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U])) 
-                                                     << 0x24U) 
-                                                    | (((QData)((IData)(
-                                                                        vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U])) 
-                                                        << 4U) 
-                                                       | ((QData)((IData)(
-                                                                          vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U])) 
-                                                          >> 0x1cU))))))));
-    __Vtemp_ha183e862__0[1U] = (IData)(((0xffffffffffffffULL 
-                                         & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
-                                               * (0xffffffffffffffULL 
-                                                  & (((QData)((IData)(
-                                                                      vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U])) 
-                                                      << 0x24U) 
-                                                     | (((QData)((IData)(
-                                                                         vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U])) 
-                                                         << 4U) 
-                                                        | ((QData)((IData)(
-                                                                           vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U])) 
-                                                           >> 0x1cU))))))) 
-                                        >> 0x20U));
-    __Vtemp_ha183e862__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_h5f8c8a78__0, __Vtemp_h5ce10a39__0, __Vtemp_ha183e862__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U] 
-        = __Vtemp_h5f8c8a78__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U] 
-        = __Vtemp_h5f8c8a78__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_h5f8c8a78__0[2U]);
-    VL_SHIFTR_WWI(84,84,32, __Vtemp_h5baa320b__0, vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full, 0x1cU);
-    __Vtemp_h5f83c2a8__0[0U] = __Vtemp_h5baa320b__0[0U];
-    __Vtemp_h5f83c2a8__0[1U] = __Vtemp_h5baa320b__0[1U];
-    __Vtemp_h5f83c2a8__0[2U] = (0xfffffU & __Vtemp_h5baa320b__0[2U]);
-    __Vtemp_h2959ef8b__0[0U] = (IData)((0xffffffffffffffULL 
-                                        & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)) 
                                               * (0xffffffffffffffULL 
                                                  & (((QData)((IData)(
-                                                                     vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U])) 
+                                                                     vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U])) 
                                                      << 0x24U) 
                                                     | (((QData)((IData)(
-                                                                        vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U])) 
+                                                                        vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U])) 
                                                         << 4U) 
                                                        | ((QData)((IData)(
-                                                                          vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U])) 
+                                                                          vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U])) 
                                                           >> 0x1cU))))))));
-    __Vtemp_h2959ef8b__0[1U] = (IData)(((0xffffffffffffffULL 
+    __Vtemp_h426c613e__0[1U] = (IData)(((0xffffffffffffffULL 
                                          & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_b)) 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)) 
                                                * (0xffffffffffffffULL 
                                                   & (((QData)((IData)(
-                                                                      vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U])) 
+                                                                      vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U])) 
                                                       << 0x24U) 
                                                      | (((QData)((IData)(
-                                                                         vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U])) 
+                                                                         vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U])) 
                                                          << 4U) 
                                                         | ((QData)((IData)(
-                                                                           vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U])) 
+                                                                           vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U])) 
                                                            >> 0x1cU))))))) 
                                         >> 0x20U));
-    __Vtemp_h2959ef8b__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_h98c5846f__0, __Vtemp_h5f83c2a8__0, __Vtemp_h2959ef8b__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-        = __Vtemp_h98c5846f__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-        = __Vtemp_h98c5846f__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_h98c5846f__0[2U]);
+    __Vtemp_h426c613e__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h97a92654__0, __Vtemp_heebc31a5__0, __Vtemp_h426c613e__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U] 
+        = __Vtemp_h97a92654__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U] 
+        = __Vtemp_h97a92654__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U] 
+        = (0xfffffU & __Vtemp_h97a92654__0[2U]);
+    VL_SHIFTR_WWI(84,84,32, __Vtemp_h6b06f01b__0, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1, 0x1cU);
+    __Vtemp_h049a63d4__0[0U] = __Vtemp_h6b06f01b__0[0U];
+    __Vtemp_h049a63d4__0[1U] = __Vtemp_h6b06f01b__0[1U];
+    __Vtemp_h049a63d4__0[2U] = (0xfffffU & __Vtemp_h6b06f01b__0[2U]);
+    __Vtemp_h34f97088__0[0U] = (IData)((0xffffffffffffffULL 
+                                        & (0x20000000ULL 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)) 
+                                              * (0xffffffffffffffULL 
+                                                 & (((QData)((IData)(
+                                                                     vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U])) 
+                                                     << 0x24U) 
+                                                    | (((QData)((IData)(
+                                                                        vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U])) 
+                                                        << 4U) 
+                                                       | ((QData)((IData)(
+                                                                          vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U])) 
+                                                          >> 0x1cU))))))));
+    __Vtemp_h34f97088__0[1U] = (IData)(((0xffffffffffffffULL 
+                                         & (0x20000000ULL 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_b)) 
+                                               * (0xffffffffffffffULL 
+                                                  & (((QData)((IData)(
+                                                                      vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U])) 
+                                                      << 0x24U) 
+                                                     | (((QData)((IData)(
+                                                                         vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U])) 
+                                                         << 4U) 
+                                                        | ((QData)((IData)(
+                                                                           vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U])) 
+                                                           >> 0x1cU))))))) 
+                                        >> 0x20U));
+    __Vtemp_h34f97088__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h0f319b3f__0, __Vtemp_h049a63d4__0, __Vtemp_h34f97088__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+        = __Vtemp_h0f319b3f__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+        = __Vtemp_h0f319b3f__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+        = (0xfffffU & __Vtemp_h0f319b3f__0[2U]);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->__VdfgTmp_hce824426__0 = (1U & (~ ((0U 
                                                 == 
                                                 (3U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                     >> 0x1cU))) 
                                                | (1U 
                                                   == 
                                                   (3U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                       >> 0x1cU))))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                              >> 0x1dU)) 
-                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                 >> 0x1dU)) 
-                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                   >> 0x1dU)))))) 
-           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                       >> 0x1dU)) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1fU)))) 
-               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                            >> 0x1fU)))) 
-                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                               >> 0x1fU)))) 
-                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                 >> 0x1fU)))))))) 
-           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                        >> 0x1fU)))) 
               | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 1U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 1U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 1U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 1U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 1U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 3U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 3U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 3U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 3U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 3U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 5U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 5U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 5U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 5U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 5U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg 
         = ((IData)(vlSelf->__VdfgTmp_hce824426__0) 
-           & ((2U == (3U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((2U == (3U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                             >> 0x1cU))) | (3U == (3U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                      >> 0x1cU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 5U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 5U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 5U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 5U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 5U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 7U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 7U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 7U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 7U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 7U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 9U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 9U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 9U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 9U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 9U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xdU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xdU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xdU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xdU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xdU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xfU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xfU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xfU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xfU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xfU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0x11U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0x11U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0x11U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0x11U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0x11U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 7U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 7U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 7U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 7U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 7U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x17U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x17U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x17U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x17U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x17U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x19U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x19U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x19U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x19U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x19U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x1bU))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x1bU))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x1bU))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x1bU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x1bU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                              >> 0x1dU)) 
-                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1dU)) 
-                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 0x1dU)))))) 
-           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                       >> 0x1dU)) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1fU)))) 
-               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                            >> 0x1fU)))) 
-                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                               >> 0x1fU)))) 
-                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1fU)))))))) 
-           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                        >> 0x1fU)))) 
               | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 1U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 1U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 1U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 1U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 1U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 9U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 9U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 9U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 9U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 9U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xbU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xbU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xbU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xbU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xbU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xdU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xdU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xdU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xdU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xdU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xfU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xfU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xfU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xfU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xfU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x11U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x11U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x11U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x11U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x11U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x13U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x13U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x13U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x13U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x13U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xbU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xbU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xbU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xbU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xbU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 3U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 3U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 3U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 3U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 3U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x15U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x15U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x15U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x15U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x15U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
 }
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__1(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__1(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider__1\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider__1\n"); );
     // Init
-    VlWide<4>/*127:0*/ __Vtemp_h33e08551__0;
-    VlWide<6>/*191:0*/ __Vtemp_hd5f9c4a9__0;
-    VlWide<9>/*287:0*/ __Vtemp_hbdcc3085__0;
-    VlWide<13>/*415:0*/ __Vtemp_ha4ed3ed2__0;
-    VlWide<17>/*543:0*/ __Vtemp_h3e3c7e8f__0;
-    VlWide<20>/*639:0*/ __Vtemp_h5bc0d237__0;
-    VlWide<24>/*767:0*/ __Vtemp_h4a924723__0;
+    VlWide<4>/*127:0*/ __Vtemp_h690ad531__0;
+    VlWide<6>/*191:0*/ __Vtemp_h27c385f0__0;
+    VlWide<9>/*287:0*/ __Vtemp_ha7a7639b__0;
+    VlWide<13>/*415:0*/ __Vtemp_hb613738e__0;
+    VlWide<17>/*543:0*/ __Vtemp_h5b3ac658__0;
+    VlWide<20>/*639:0*/ __Vtemp_hbafce308__0;
+    VlWide<24>/*767:0*/ __Vtemp_h7b6de477__0;
     VlWide<63>/*2015:0*/ __Vtemp_h00a7043d__0;
     VlWide<65>/*2079:0*/ __Vtemp_h790bb7f8__0;
     VlWide<65>/*2079:0*/ __Vtemp_h9922375c__0;
@@ -1021,132 +1021,132 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
     VlWide<102>/*3263:0*/ __Vtemp_hb12708b4__0;
     // Body
     vlSelf->__VdfgTmp_hd7a9ff3d__0 = ((0x80000U & (
-                                                   vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                                   & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U]))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                                   & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U]))
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : 0ULL);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_20_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 5U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 5U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_21_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 7U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 7U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_22_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 9U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 9U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_24_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0xdU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0xdU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0xfU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0xfU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0x11U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
-    __Vtemp_h33e08551__0[0U] = (IData)((((QData)((IData)(
+    __Vtemp_h690ad531__0[0U] = (IData)((((QData)((IData)(
                                                          (1U 
                                                           & (~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))))) 
                                          << 0x3bU) 
@@ -1160,37 +1160,37 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                  (((0U 
                                                     != 
                                                     (3U 
-                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                         >> 0x1cU))) 
                                                    & ((1U 
                                                        == 
                                                        (3U 
-                                                        & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                        & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                            >> 0x1cU))) 
                                                       | (IData)(
                                                                 ((0x30000000U 
                                                                   == 
                                                                   (0x30000000U 
-                                                                   & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])) 
+                                                                   & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])) 
                                                                  & (2U 
                                                                     != 
                                                                     (3U 
-                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                         >> 0x1cU)))))))
                                                    ? 
-                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                    << 0x1cU)
                                                    : 
                                                   (((IData)(vlSelf->__VdfgTmp_hce824426__0) 
                                                     & (0x20000000U 
                                                        == 
                                                        (0x30000000U 
-                                                        & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])))
+                                                        & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                     << 0x1dU)
                                                     : 0ULL)))))));
-    __Vtemp_h33e08551__0[1U] = (IData)(((((QData)((IData)(
+    __Vtemp_h690ad531__0[1U] = (IData)(((((QData)((IData)(
                                                           (1U 
                                                            & (~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))))) 
                                           << 0x3bU) 
@@ -1204,59 +1204,59 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                   (((0U 
                                                      != 
                                                      (3U 
-                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                          >> 0x1cU))) 
                                                     & ((1U 
                                                         == 
                                                         (3U 
-                                                         & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                         & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                             >> 0x1cU))) 
                                                        | (IData)(
                                                                  ((0x30000000U 
                                                                    == 
                                                                    (0x30000000U 
-                                                                    & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])) 
+                                                                    & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])) 
                                                                   & (2U 
                                                                      != 
                                                                      (3U 
-                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                          >> 0x1cU)))))))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                     << 0x1cU)
                                                     : 
                                                    (((IData)(vlSelf->__VdfgTmp_hce824426__0) 
                                                      & (0x20000000U 
                                                         == 
                                                         (0x30000000U 
-                                                         & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])))
+                                                         & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])))
                                                      ? 
-                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                      << 0x1dU)
                                                      : 0ULL)))))) 
                                         >> 0x20U));
-    __Vtemp_hd5f9c4a9__0[4U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h27c385f0__0[4U] = (((IData)((0x1ffffffffffffffULL 
                                           & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))) 
                                              ^ (((0U 
                                                   != 
-                                                  (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                  (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                    >> 0x1dU)) 
                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                  ? 
-                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                  << 0x1cU)
                                                  : 
                                                 (((~ 
                                                    ((0U 
                                                      == 
-                                                     (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                     (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                       >> 0x1dU)) 
                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                   ? 
-                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                   << 0x1dU)
                                                   : 0ULL))))) 
                                  >> 0xeU) | ((IData)(
@@ -1265,88 +1265,88 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                           ^ 
                                                           (((0U 
                                                              != 
-                                                             (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                             (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                               >> 0x1dU)) 
                                                             & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                             << 0x1cU)
                                                             : 
                                                            (((~ 
                                                               ((0U 
                                                                 == 
-                                                                (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                  >> 0x1dU)) 
                                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                              << 0x1dU)
                                                              : 0ULL)))) 
                                                       >> 0x20U)) 
                                              << 0x12U));
-    __Vtemp_hbdcc3085__0[7U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_ha7a7639b__0[7U] = (((IData)((0x1ffffffffffffffULL 
                                           & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))) 
                                              ^ (((0U 
                                                   != 
                                                   (7U 
-                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                        << 1U) 
-                                                      | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                      | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                          >> 0x1fU)))) 
                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                  ? 
-                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                  << 0x1cU)
                                                  : 
                                                 (((~ 
                                                    ((0U 
                                                      == 
                                                      (7U 
-                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                           << 1U) 
-                                                         | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                         | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                             >> 0x1fU)))) 
                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                   ? 
-                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                   << 0x1dU)
                                                   : 0ULL))))) 
                                  << 4U) | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg) 
                                            << 2U));
-    __Vtemp_hbdcc3085__0[8U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_ha7a7639b__0[8U] = (((IData)((0x1ffffffffffffffULL 
                                           & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))) 
                                              ^ (((0U 
                                                   != 
                                                   (7U 
-                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                        << 1U) 
-                                                      | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                      | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                          >> 0x1fU)))) 
                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                  ? 
-                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                  << 0x1cU)
                                                  : 
                                                 (((~ 
                                                    ((0U 
                                                      == 
                                                      (7U 
-                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                           << 1U) 
-                                                         | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                         | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                             >> 0x1fU)))) 
                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                   ? 
-                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                   << 0x1dU)
                                                   : 0ULL))))) 
                                  >> 0x1cU) | ((IData)(
@@ -1356,58 +1356,58 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                            (((0U 
                                                               != 
                                                               (7U 
-                                                               & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                               & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    << 1U) 
-                                                                  | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                  | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                      >> 0x1fU)))) 
                                                              & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                                                 | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                              << 0x1cU)
                                                              : 
                                                             (((~ 
                                                                ((0U 
                                                                  == 
                                                                  (7U 
-                                                                  & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                  & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                       << 1U) 
-                                                                     | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                     | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                         >> 0x1fU)))) 
                                                                 | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                                               & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                               << 0x1dU)
                                                               : 0ULL)))) 
                                                        >> 0x20U)) 
                                               << 4U));
-    __Vtemp_ha4ed3ed2__0[0xbU] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_hb613738e__0[0xbU] = (((IData)((0x1ffffffffffffffULL 
                                             & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg))) 
                                                ^ ((
                                                    (0U 
                                                     != 
                                                     (7U 
-                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                         >> 1U))) 
                                                    & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                       | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                          & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                    ? 
-                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                    << 0x1cU)
                                                    : 
                                                   (((~ 
                                                      ((0U 
                                                        == 
                                                        (7U 
-                                                        & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                        & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                            >> 1U))) 
                                                       | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                     & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                     << 0x1dU)
                                                     : 0ULL))))) 
                                    >> 0xaU) | ((IData)(
@@ -1417,54 +1417,54 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                             (((0U 
                                                                != 
                                                                (7U 
-                                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    >> 1U))) 
                                                               & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                                  | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                     & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                               << 0x1cU)
                                                               : 
                                                              (((~ 
                                                                 ((0U 
                                                                   == 
                                                                   (7U 
-                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                       >> 1U))) 
                                                                  | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                                & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                ? 
-                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                << 0x1dU)
                                                                : 0ULL)))) 
                                                         >> 0x20U)) 
                                                << 0x16U));
-    __Vtemp_h3e3c7e8f__0[0xfU] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h5b3ac658__0[0xfU] = (((IData)((0x1ffffffffffffffULL 
                                             & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg))) 
                                                ^ ((
                                                    (0U 
                                                     != 
                                                     (7U 
-                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                         >> 3U))) 
                                                    & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                       | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                          & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                    ? 
-                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                    << 0x1cU)
                                                    : 
                                                   (((~ 
                                                      ((0U 
                                                        == 
                                                        (7U 
-                                                        & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                        & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                            >> 3U))) 
                                                       | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                     & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                     << 0x1dU)
                                                     : 0ULL))))) 
                                    >> 0x18U) | ((IData)(
@@ -1474,54 +1474,54 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                              (((0U 
                                                                 != 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 3U))) 
                                                                & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                                   | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                ? 
-                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                << 0x1cU)
                                                                : 
                                                               (((~ 
                                                                  ((0U 
                                                                    == 
                                                                    (7U 
-                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                        >> 3U))) 
                                                                   | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                                 & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                 ? 
-                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                 << 0x1dU)
                                                                 : 0ULL)))) 
                                                          >> 0x20U)) 
                                                 << 8U));
-    __Vtemp_h5bc0d237__0[0x12U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_hbafce308__0[0x12U] = (((IData)((0x1ffffffffffffffULL 
                                              & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg))) 
                                                 ^ (
                                                    ((0U 
                                                      != 
                                                      (7U 
-                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                          >> 5U))) 
                                                     & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                        | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                           & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                     << 0x1cU)
                                                     : 
                                                    (((~ 
                                                       ((0U 
                                                         == 
                                                         (7U 
-                                                         & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                         & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                             >> 5U))) 
                                                        | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                      ? 
-                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                      << 0x1dU)
                                                      : 0ULL))))) 
                                     >> 6U) | ((IData)(
@@ -1531,54 +1531,54 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                            (((0U 
                                                               != 
                                                               (7U 
-                                                               & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                               & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                   >> 5U))) 
                                                              & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                                 | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                              << 0x1cU)
                                                              : 
                                                             (((~ 
                                                                ((0U 
                                                                  == 
                                                                  (7U 
-                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                      >> 5U))) 
                                                                 | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                               & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                               << 0x1dU)
                                                               : 0ULL)))) 
                                                        >> 0x20U)) 
                                               << 0x1aU));
-    __Vtemp_h4a924723__0[0x16U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h7b6de477__0[0x16U] = (((IData)((0x1ffffffffffffffULL 
                                              & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg))) 
                                                 ^ (
                                                    ((0U 
                                                      != 
                                                      (7U 
-                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                          >> 7U))) 
                                                     & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                        | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                           & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                     << 0x1cU)
                                                     : 
                                                    (((~ 
                                                       ((0U 
                                                         == 
                                                         (7U 
-                                                         & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                         & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                             >> 7U))) 
                                                        | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                      ? 
-                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                      << 0x1dU)
                                                      : 0ULL))))) 
                                     >> 0x14U) | ((IData)(
@@ -1588,31 +1588,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                               (((0U 
                                                                  != 
                                                                  (7U 
-                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                      >> 7U))) 
                                                                 & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                                    | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                       & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                 ? 
-                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                 << 0x1cU)
                                                                 : 
                                                                (((~ 
                                                                   ((0U 
                                                                     == 
                                                                     (7U 
-                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                         >> 7U))) 
                                                                    | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                                  & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                  ? 
-                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                  << 0x1dU)
                                                                  : 0ULL)))) 
                                                           >> 0x20U)) 
                                                  << 0xcU));
-    vlSelf->__VdfgTmp_h765d951d__0[0U] = __Vtemp_h33e08551__0[0U];
-    vlSelf->__VdfgTmp_h765d951d__0[1U] = __Vtemp_h33e08551__0[1U];
+    vlSelf->__VdfgTmp_h765d951d__0[0U] = __Vtemp_h690ad531__0[0U];
+    vlSelf->__VdfgTmp_h765d951d__0[1U] = __Vtemp_h690ad531__0[1U];
     vlSelf->__VdfgTmp_h765d951d__0[2U] = 0U;
     vlSelf->__VdfgTmp_h765d951d__0[3U] = (((IData)(
                                                    (0x1ffffffffffffffULL 
@@ -1620,30 +1620,30 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                        ^ 
                                                        (((0U 
                                                           != 
-                                                          (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                          (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                            >> 0x1dU)) 
                                                          & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                             | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                          ? 
-                                                        ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                        ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                          << 0x1cU)
                                                          : 
                                                         (((~ 
                                                            ((0U 
                                                              == 
-                                                             (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                             (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                               >> 0x1dU)) 
                                                             | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                           & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                           ? 
-                                                         ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                         ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                           << 0x1dU)
                                                           : 0ULL))))) 
                                            << 0x12U) 
                                           | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                              << 0x10U));
-    vlSelf->__VdfgTmp_h765d951d__0[4U] = __Vtemp_hd5f9c4a9__0[4U];
+    vlSelf->__VdfgTmp_h765d951d__0[4U] = __Vtemp_h27c385f0__0[4U];
     vlSelf->__VdfgTmp_h765d951d__0[5U] = (0x1000U | 
                                           ((0x800U 
                                             & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -1654,35 +1654,35 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                            ^ 
                                                            (((0U 
                                                               != 
-                                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                >> 0x1dU)) 
                                                              & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                                 | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                              << 0x1cU)
                                                              : 
                                                             (((~ 
                                                                ((0U 
                                                                  == 
-                                                                 (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                 (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                   >> 0x1dU)) 
                                                                 | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                               & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                               << 0x1dU)
                                                               : 0ULL)))) 
                                                        >> 0x20U)) 
                                               >> 0xeU)));
     vlSelf->__VdfgTmp_h765d951d__0[6U] = 0U;
-    vlSelf->__VdfgTmp_h765d951d__0[7U] = __Vtemp_hbdcc3085__0[7U];
+    vlSelf->__VdfgTmp_h765d951d__0[7U] = __Vtemp_ha7a7639b__0[7U];
     vlSelf->__VdfgTmp_h765d951d__0[8U] = (0x40000000U 
                                           | ((0x20000000U 
                                               & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)) 
                                                  << 0x1dU)) 
-                                             | __Vtemp_hbdcc3085__0[8U]));
+                                             | __Vtemp_ha7a7639b__0[8U]));
     vlSelf->__VdfgTmp_h765d951d__0[9U] = 0U;
     vlSelf->__VdfgTmp_h765d951d__0[0xaU] = (((IData)(
                                                      (0x1ffffffffffffffULL 
@@ -1691,31 +1691,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                          (((0U 
                                                             != 
                                                             (7U 
-                                                             & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                             & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                 >> 1U))) 
                                                            & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                               | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                  & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                            ? 
-                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                            << 0x1cU)
                                                            : 
                                                           (((~ 
                                                              ((0U 
                                                                == 
                                                                (7U 
-                                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    >> 1U))) 
                                                               | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                             & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                             << 0x1dU)
                                                             : 0ULL))))) 
                                              << 0x16U) 
                                             | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg) 
                                                << 0x14U));
-    vlSelf->__VdfgTmp_h765d951d__0[0xbU] = __Vtemp_ha4ed3ed2__0[0xbU];
+    vlSelf->__VdfgTmp_h765d951d__0[0xbU] = __Vtemp_hb613738e__0[0xbU];
     vlSelf->__VdfgTmp_h765d951d__0[0xcU] = (0x10000U 
                                             | ((0x8000U 
                                                 & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg)) 
@@ -1727,25 +1727,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                                (((0U 
                                                                   != 
                                                                   (7U 
-                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                       >> 1U))) 
                                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                  ? 
-                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                  << 0x1cU)
                                                                  : 
                                                                 (((~ 
                                                                    ((0U 
                                                                      == 
                                                                      (7U 
-                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                          >> 1U))) 
                                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                   ? 
-                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                   << 0x1dU)
                                                                   : 0ULL)))) 
                                                            >> 0x20U)) 
@@ -1758,31 +1758,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                          (((0U 
                                                             != 
                                                             (7U 
-                                                             & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                             & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                 >> 3U))) 
                                                            & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                               | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                  & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                            ? 
-                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                            << 0x1cU)
                                                            : 
                                                           (((~ 
                                                              ((0U 
                                                                == 
                                                                (7U 
-                                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    >> 3U))) 
                                                               | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                             & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                             << 0x1dU)
                                                             : 0ULL))))) 
                                              << 8U) 
                                             | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg) 
                                                << 6U));
-    vlSelf->__VdfgTmp_h765d951d__0[0xfU] = __Vtemp_h3e3c7e8f__0[0xfU];
+    vlSelf->__VdfgTmp_h765d951d__0[0xfU] = __Vtemp_h5b3ac658__0[0xfU];
     vlSelf->__VdfgTmp_h765d951d__0[0x10U] = (4U | (
                                                    (2U 
                                                     & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg)) 
@@ -1794,25 +1794,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                                    (((0U 
                                                                       != 
                                                                       (7U 
-                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                           >> 3U))) 
                                                                      & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                                         | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                      ? 
-                                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                      << 0x1cU)
                                                                      : 
                                                                     (((~ 
                                                                        ((0U 
                                                                          == 
                                                                          (7U 
-                                                                          & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                          & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                              >> 3U))) 
                                                                         | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                                       & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                       ? 
-                                                                     ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                     ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                       << 0x1dU)
                                                                       : 0ULL)))) 
                                                                >> 0x20U)) 
@@ -1824,31 +1824,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                           (((0U 
                                                              != 
                                                              (7U 
-                                                              & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                              & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                  >> 5U))) 
                                                             & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                             << 0x1cU)
                                                             : 
                                                            (((~ 
                                                               ((0U 
                                                                 == 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 5U))) 
                                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                              << 0x1dU)
                                                              : 0ULL))))) 
                                               << 0x1aU) 
                                              | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg) 
                                                 << 0x18U));
-    vlSelf->__VdfgTmp_h765d951d__0[0x12U] = __Vtemp_h5bc0d237__0[0x12U];
+    vlSelf->__VdfgTmp_h765d951d__0[0x12U] = __Vtemp_hbafce308__0[0x12U];
     vlSelf->__VdfgTmp_h765d951d__0[0x13U] = (0x100000U 
                                              | ((0x80000U 
                                                  & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg)) 
@@ -1860,25 +1860,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                                 (((0U 
                                                                    != 
                                                                    (7U 
-                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                        >> 5U))) 
                                                                   & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                                      | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                         & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                   ? 
-                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                   << 0x1cU)
                                                                   : 
                                                                  (((~ 
                                                                     ((0U 
                                                                       == 
                                                                       (7U 
-                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                           >> 5U))) 
                                                                      | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                    ? 
-                                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                    << 0x1dU)
                                                                    : 0ULL)))) 
                                                             >> 0x20U)) 
@@ -1891,31 +1891,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                           (((0U 
                                                              != 
                                                              (7U 
-                                                              & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                              & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                  >> 7U))) 
                                                             & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                             << 0x1cU)
                                                             : 
                                                            (((~ 
                                                               ((0U 
                                                                 == 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 7U))) 
                                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                              << 0x1dU)
                                                              : 0ULL))))) 
                                               << 0xcU) 
                                              | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg) 
                                                 << 0xaU));
-    vlSelf->__VdfgTmp_h765d951d__0[0x16U] = __Vtemp_h4a924723__0[0x16U];
+    vlSelf->__VdfgTmp_h765d951d__0[0x16U] = __Vtemp_h7b6de477__0[0x16U];
     vlSelf->__VdfgTmp_h765d951d__0[0x17U] = ((0x20U 
                                               & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg)) 
                                                  << 5U)) 
@@ -1926,25 +1926,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                              (((0U 
                                                                 != 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 7U))) 
                                                                & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                                   | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                ? 
-                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                << 0x1cU)
                                                                : 
                                                               (((~ 
                                                                  ((0U 
                                                                    == 
                                                                    (7U 
-                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                        >> 7U))) 
                                                                   | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                                 & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                 ? 
-                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                                                 << 0x1dU)
                                                                 : 0ULL)))) 
                                                          >> 0x20U)) 
@@ -1952,303 +1952,303 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_13_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x17U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_14_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x19U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_15_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x1bU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_16_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT___boothEncoder_io_neg))) 
-                                   ^ (((0U != (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                   ^ (((0U != (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x1dU)) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
-                                                (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                  >> 0x1dU)) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_17_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                  << 1U) 
-                                                | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0x1fU)))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      << 1U) 
-                                                    | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                    | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                        >> 0x1fU)))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_18_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 1U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 1U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_6_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 9U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 9U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_7_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0xbU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0xbU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_8_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0xdU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0xdU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_9_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0xfU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0xfU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_10_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x11U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_11_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x13U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_23_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0xbU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0xbU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_19_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 3U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 3U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_12_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x15U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i[0U] 
@@ -2832,963 +2832,963 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
     vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_A__DOT____Vcellinp__csa_tree_B__io_operands_i[0x18U] = 0U;
 }
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider_1__0(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider_1__0(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider_1__0\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider_1__0\n"); );
     // Init
-    VlWide<3>/*95:0*/ __Vtemp_h6910bc2b__0;
-    VlWide<3>/*95:0*/ __Vtemp_ha67f780c__0;
-    VlWide<3>/*95:0*/ __Vtemp_h95857d05__0;
-    VlWide<3>/*95:0*/ __Vtemp_hba4a56f5__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5ce10a39__0;
-    VlWide<3>/*95:0*/ __Vtemp_h2f44e198__0;
-    VlWide<3>/*95:0*/ __Vtemp_h15f3800c__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5baa320b__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5f83c2a8__0;
-    VlWide<3>/*95:0*/ __Vtemp_h874f292b__0;
-    VlWide<3>/*95:0*/ __Vtemp_hdcfde32d__0;
+    VlWide<3>/*95:0*/ __Vtemp_hf6dc4bae__0;
+    VlWide<3>/*95:0*/ __Vtemp_h618b94ab__0;
+    VlWide<3>/*95:0*/ __Vtemp_h59ce68a4__0;
+    VlWide<3>/*95:0*/ __Vtemp_h1f56fcb6__0;
+    VlWide<3>/*95:0*/ __Vtemp_heebc31a5__0;
+    VlWide<3>/*95:0*/ __Vtemp_h8b192727__0;
+    VlWide<3>/*95:0*/ __Vtemp_h48c12eec__0;
+    VlWide<3>/*95:0*/ __Vtemp_h6b06f01b__0;
+    VlWide<3>/*95:0*/ __Vtemp_h049a63d4__0;
+    VlWide<3>/*95:0*/ __Vtemp_h9899e20d__0;
+    VlWide<3>/*95:0*/ __Vtemp_he9dace35__0;
     // Body
-    __Vtemp_h6910bc2b__0[0U] = (IData)((0xffffffffffffffULL 
-                                        & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)))));
-    __Vtemp_h6910bc2b__0[1U] = (IData)(((0xffffffffffffffULL 
-                                         & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)))) 
+    __Vtemp_hf6dc4bae__0[0U] = (IData)((0xffffffffffffffULL 
+                                        & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)))));
+    __Vtemp_hf6dc4bae__0[1U] = (IData)(((0xffffffffffffffULL 
+                                         & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)))) 
                                         >> 0x20U));
-    __Vtemp_h6910bc2b__0[2U] = 0U;
-    __Vtemp_ha67f780c__0[0U] = (IData)((0xffffffffffffffULL 
+    __Vtemp_hf6dc4bae__0[2U] = 0U;
+    __Vtemp_h618b94ab__0[0U] = (IData)((0xffffffffffffffULL 
                                         & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)) 
                                               * (0xffffffffffffffULL 
-                                                 & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b))))))));
-    __Vtemp_ha67f780c__0[1U] = (IData)(((0xffffffffffffffULL 
+                                                 & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b))))))));
+    __Vtemp_h618b94ab__0[1U] = (IData)(((0xffffffffffffffULL 
                                          & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)) 
                                                * (0xffffffffffffffULL 
-                                                  & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b))))))) 
+                                                  & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b))))))) 
                                         >> 0x20U));
-    __Vtemp_ha67f780c__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_h95857d05__0, __Vtemp_h6910bc2b__0, __Vtemp_ha67f780c__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U] 
-        = __Vtemp_h95857d05__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U] 
-        = __Vtemp_h95857d05__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_h95857d05__0[2U]);
-    VL_SHIFTR_WWI(84,84,32, __Vtemp_hba4a56f5__0, vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full, 0x1cU);
-    __Vtemp_h5ce10a39__0[0U] = __Vtemp_hba4a56f5__0[0U];
-    __Vtemp_h5ce10a39__0[1U] = __Vtemp_hba4a56f5__0[1U];
-    __Vtemp_h5ce10a39__0[2U] = (0xfffffU & __Vtemp_hba4a56f5__0[2U]);
-    __Vtemp_h2f44e198__0[0U] = (IData)((0xffffffffffffffULL 
+    __Vtemp_h618b94ab__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h59ce68a4__0, __Vtemp_hf6dc4bae__0, __Vtemp_h618b94ab__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U] 
+        = __Vtemp_h59ce68a4__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U] 
+        = __Vtemp_h59ce68a4__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U] 
+        = (0xfffffU & __Vtemp_h59ce68a4__0[2U]);
+    VL_SHIFTR_WWI(84,84,32, __Vtemp_h1f56fcb6__0, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full, 0x1cU);
+    __Vtemp_heebc31a5__0[0U] = __Vtemp_h1f56fcb6__0[0U];
+    __Vtemp_heebc31a5__0[1U] = __Vtemp_h1f56fcb6__0[1U];
+    __Vtemp_heebc31a5__0[2U] = (0xfffffU & __Vtemp_h1f56fcb6__0[2U]);
+    __Vtemp_h8b192727__0[0U] = (IData)((0xffffffffffffffULL 
                                         & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                              * (0xffffffffffffffULL 
-                                                 & (((QData)((IData)(
-                                                                     vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U])) 
-                                                     << 0x24U) 
-                                                    | (((QData)((IData)(
-                                                                        vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U])) 
-                                                        << 4U) 
-                                                       | ((QData)((IData)(
-                                                                          vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U])) 
-                                                          >> 0x1cU))))))));
-    __Vtemp_h2f44e198__0[1U] = (IData)(((0xffffffffffffffULL 
-                                         & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
-                                               * (0xffffffffffffffULL 
-                                                  & (((QData)((IData)(
-                                                                      vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U])) 
-                                                      << 0x24U) 
-                                                     | (((QData)((IData)(
-                                                                         vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U])) 
-                                                         << 4U) 
-                                                        | ((QData)((IData)(
-                                                                           vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U])) 
-                                                           >> 0x1cU))))))) 
-                                        >> 0x20U));
-    __Vtemp_h2f44e198__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_h15f3800c__0, __Vtemp_h5ce10a39__0, __Vtemp_h2f44e198__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U] 
-        = __Vtemp_h15f3800c__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U] 
-        = __Vtemp_h15f3800c__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_h15f3800c__0[2U]);
-    VL_SHIFTR_WWI(84,84,32, __Vtemp_h5baa320b__0, vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full, 0x1cU);
-    __Vtemp_h5f83c2a8__0[0U] = __Vtemp_h5baa320b__0[0U];
-    __Vtemp_h5f83c2a8__0[1U] = __Vtemp_h5baa320b__0[1U];
-    __Vtemp_h5f83c2a8__0[2U] = (0xfffffU & __Vtemp_h5baa320b__0[2U]);
-    __Vtemp_h874f292b__0[0U] = (IData)((0xffffffffffffffULL 
-                                        & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)) 
                                               * (0xffffffffffffffULL 
                                                  & (((QData)((IData)(
-                                                                     vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U])) 
+                                                                     vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U])) 
                                                      << 0x24U) 
                                                     | (((QData)((IData)(
-                                                                        vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U])) 
+                                                                        vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U])) 
                                                         << 4U) 
                                                        | ((QData)((IData)(
-                                                                          vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U])) 
+                                                                          vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U])) 
                                                           >> 0x1cU))))))));
-    __Vtemp_h874f292b__0[1U] = (IData)(((0xffffffffffffffULL 
+    __Vtemp_h8b192727__0[1U] = (IData)(((0xffffffffffffffULL 
                                          & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_b)) 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)) 
                                                * (0xffffffffffffffULL 
                                                   & (((QData)((IData)(
-                                                                      vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U])) 
+                                                                      vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U])) 
                                                       << 0x24U) 
                                                      | (((QData)((IData)(
-                                                                         vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U])) 
+                                                                         vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U])) 
                                                          << 4U) 
                                                         | ((QData)((IData)(
-                                                                           vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U])) 
+                                                                           vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U])) 
                                                            >> 0x1cU))))))) 
                                         >> 0x20U));
-    __Vtemp_h874f292b__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_hdcfde32d__0, __Vtemp_h5f83c2a8__0, __Vtemp_h874f292b__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-        = __Vtemp_hdcfde32d__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-        = __Vtemp_hdcfde32d__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_hdcfde32d__0[2U]);
+    __Vtemp_h8b192727__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h48c12eec__0, __Vtemp_heebc31a5__0, __Vtemp_h8b192727__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U] 
+        = __Vtemp_h48c12eec__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U] 
+        = __Vtemp_h48c12eec__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U] 
+        = (0xfffffU & __Vtemp_h48c12eec__0[2U]);
+    VL_SHIFTR_WWI(84,84,32, __Vtemp_h6b06f01b__0, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1, 0x1cU);
+    __Vtemp_h049a63d4__0[0U] = __Vtemp_h6b06f01b__0[0U];
+    __Vtemp_h049a63d4__0[1U] = __Vtemp_h6b06f01b__0[1U];
+    __Vtemp_h049a63d4__0[2U] = (0xfffffU & __Vtemp_h6b06f01b__0[2U]);
+    __Vtemp_h9899e20d__0[0U] = (IData)((0xffffffffffffffULL 
+                                        & (0x20000000ULL 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)) 
+                                              * (0xffffffffffffffULL 
+                                                 & (((QData)((IData)(
+                                                                     vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U])) 
+                                                     << 0x24U) 
+                                                    | (((QData)((IData)(
+                                                                        vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U])) 
+                                                        << 4U) 
+                                                       | ((QData)((IData)(
+                                                                          vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U])) 
+                                                          >> 0x1cU))))))));
+    __Vtemp_h9899e20d__0[1U] = (IData)(((0xffffffffffffffULL 
+                                         & (0x20000000ULL 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_b)) 
+                                               * (0xffffffffffffffULL 
+                                                  & (((QData)((IData)(
+                                                                      vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U])) 
+                                                      << 0x24U) 
+                                                     | (((QData)((IData)(
+                                                                         vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U])) 
+                                                         << 4U) 
+                                                        | ((QData)((IData)(
+                                                                           vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U])) 
+                                                           >> 0x1cU))))))) 
+                                        >> 0x20U));
+    __Vtemp_h9899e20d__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_he9dace35__0, __Vtemp_h049a63d4__0, __Vtemp_h9899e20d__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+        = __Vtemp_he9dace35__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+        = __Vtemp_he9dace35__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+        = (0xfffffU & __Vtemp_he9dace35__0[2U]);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->__VdfgTmp_hce824426__0 = (1U & (~ ((0U 
                                                 == 
                                                 (3U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                     >> 0x1cU))) 
                                                | (1U 
                                                   == 
                                                   (3U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                       >> 0x1cU))))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                              >> 0x1dU)) 
-                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                 >> 0x1dU)) 
-                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                   >> 0x1dU)))))) 
-           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                       >> 0x1dU)) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1fU)))) 
-               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                            >> 0x1fU)))) 
-                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                               >> 0x1fU)))) 
-                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                 >> 0x1fU)))))))) 
-           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                        >> 0x1fU)))) 
               | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 1U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 1U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 1U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 1U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 1U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 3U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 3U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 3U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 3U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 3U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 5U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 5U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 5U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 5U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 5U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg 
         = ((IData)(vlSelf->__VdfgTmp_hce824426__0) 
-           & ((2U == (3U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((2U == (3U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                             >> 0x1cU))) | (3U == (3U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                      >> 0x1cU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 5U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 5U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 5U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 5U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 5U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 7U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 7U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 7U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 7U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 7U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 9U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 9U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 9U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 9U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 9U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xdU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xdU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xdU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xdU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xdU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xfU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xfU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xfU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xfU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xfU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0x11U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0x11U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0x11U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0x11U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0x11U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 7U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 7U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 7U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 7U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 7U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x17U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x17U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x17U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x17U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x17U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x19U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x19U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x19U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x19U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x19U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x1bU))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x1bU))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x1bU))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x1bU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x1bU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                              >> 0x1dU)) 
-                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1dU)) 
-                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 0x1dU)))))) 
-           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                       >> 0x1dU)) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1fU)))) 
-               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                            >> 0x1fU)))) 
-                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                               >> 0x1fU)))) 
-                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1fU)))))))) 
-           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                        >> 0x1fU)))) 
               | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 1U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 1U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 1U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 1U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 1U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 9U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 9U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 9U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 9U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 9U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xbU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xbU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xbU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xbU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xbU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xdU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xdU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xdU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xdU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xdU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xfU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xfU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xfU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xfU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xfU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x11U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x11U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x11U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x11U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x11U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x13U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x13U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x13U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x13U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x13U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xbU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xbU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xbU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xbU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xbU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 3U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 3U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 3U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 3U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 3U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x15U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x15U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x15U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x15U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x15U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
 }
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider_1__1(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider_1__1(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider_1__1\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider_1__1\n"); );
     // Init
-    VlWide<4>/*127:0*/ __Vtemp_hffde29ad__0;
-    VlWide<6>/*191:0*/ __Vtemp_he8b40b17__0;
-    VlWide<9>/*287:0*/ __Vtemp_hd13851bd__0;
-    VlWide<13>/*415:0*/ __Vtemp_h42a2ad90__0;
-    VlWide<17>/*543:0*/ __Vtemp_h83ceb399__0;
-    VlWide<20>/*639:0*/ __Vtemp_h0e277b85__0;
-    VlWide<24>/*767:0*/ __Vtemp_h9e820e67__0;
+    VlWide<4>/*127:0*/ __Vtemp_h2a5d51a2__0;
+    VlWide<6>/*191:0*/ __Vtemp_h01a19412__0;
+    VlWide<9>/*287:0*/ __Vtemp_h864e046a__0;
+    VlWide<13>/*415:0*/ __Vtemp_h758b3be5__0;
+    VlWide<17>/*543:0*/ __Vtemp_h65d0a149__0;
+    VlWide<20>/*639:0*/ __Vtemp_h4e265eef__0;
+    VlWide<24>/*767:0*/ __Vtemp_h0a53bf21__0;
     VlWide<63>/*2015:0*/ __Vtemp_h00a7043d__0;
     VlWide<65>/*2079:0*/ __Vtemp_h790bb7f8__0;
     VlWide<65>/*2079:0*/ __Vtemp_h9922375c__0;
@@ -3846,132 +3846,132 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
     VlWide<102>/*3263:0*/ __Vtemp_hb12708b4__0;
     // Body
     vlSelf->__VdfgTmp_hd7a9ff3d__0 = ((0x80000U & (
-                                                   vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                                   & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U]))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                                   & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U]))
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : 0ULL);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_20_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 5U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 5U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_21_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 7U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 7U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_22_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 9U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 9U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_24_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0xdU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0xdU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_25_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0xfU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0xfU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_26_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0x11U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
-    __Vtemp_hffde29ad__0[0U] = (IData)((((QData)((IData)(
+    __Vtemp_h2a5d51a2__0[0U] = (IData)((((QData)((IData)(
                                                          (1U 
                                                           & (~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))))) 
                                          << 0x3bU) 
@@ -3985,37 +3985,37 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                  (((0U 
                                                     != 
                                                     (3U 
-                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                         >> 0x1cU))) 
                                                    & ((1U 
                                                        == 
                                                        (3U 
-                                                        & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                        & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                            >> 0x1cU))) 
                                                       | (IData)(
                                                                 ((0x30000000U 
                                                                   == 
                                                                   (0x30000000U 
-                                                                   & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])) 
+                                                                   & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])) 
                                                                  & (2U 
                                                                     != 
                                                                     (3U 
-                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                         >> 0x1cU)))))))
                                                    ? 
-                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                    << 0x1cU)
                                                    : 
                                                   (((IData)(vlSelf->__VdfgTmp_hce824426__0) 
                                                     & (0x20000000U 
                                                        == 
                                                        (0x30000000U 
-                                                        & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])))
+                                                        & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                     << 0x1dU)
                                                     : 0ULL)))))));
-    __Vtemp_hffde29ad__0[1U] = (IData)(((((QData)((IData)(
+    __Vtemp_h2a5d51a2__0[1U] = (IData)(((((QData)((IData)(
                                                           (1U 
                                                            & (~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg))))) 
                                           << 0x3bU) 
@@ -4029,59 +4029,59 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                   (((0U 
                                                      != 
                                                      (3U 
-                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                          >> 0x1cU))) 
                                                     & ((1U 
                                                         == 
                                                         (3U 
-                                                         & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                         & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                             >> 0x1cU))) 
                                                        | (IData)(
                                                                  ((0x30000000U 
                                                                    == 
                                                                    (0x30000000U 
-                                                                    & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])) 
+                                                                    & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])) 
                                                                   & (2U 
                                                                      != 
                                                                      (3U 
-                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                          >> 0x1cU)))))))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                     << 0x1cU)
                                                     : 
                                                    (((IData)(vlSelf->__VdfgTmp_hce824426__0) 
                                                      & (0x20000000U 
                                                         == 
                                                         (0x30000000U 
-                                                         & vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U])))
+                                                         & vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U])))
                                                      ? 
-                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                      << 0x1dU)
                                                      : 0ULL)))))) 
                                         >> 0x20U));
-    __Vtemp_he8b40b17__0[4U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h01a19412__0[4U] = (((IData)((0x1ffffffffffffffULL 
                                           & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg))) 
                                              ^ (((0U 
                                                   != 
-                                                  (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                  (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                    >> 0x1dU)) 
                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                  ? 
-                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                  << 0x1cU)
                                                  : 
                                                 (((~ 
                                                    ((0U 
                                                      == 
-                                                     (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                     (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                       >> 0x1dU)) 
                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                   ? 
-                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                   << 0x1dU)
                                                   : 0ULL))))) 
                                  >> 0xeU) | ((IData)(
@@ -4090,88 +4090,88 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                           ^ 
                                                           (((0U 
                                                              != 
-                                                             (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                             (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                               >> 0x1dU)) 
                                                             & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                             << 0x1cU)
                                                             : 
                                                            (((~ 
                                                               ((0U 
                                                                 == 
-                                                                (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                  >> 0x1dU)) 
                                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                              << 0x1dU)
                                                              : 0ULL)))) 
                                                       >> 0x20U)) 
                                              << 0x12U));
-    __Vtemp_hd13851bd__0[7U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h864e046a__0[7U] = (((IData)((0x1ffffffffffffffULL 
                                           & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))) 
                                              ^ (((0U 
                                                   != 
                                                   (7U 
-                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                        << 1U) 
-                                                      | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                      | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                          >> 0x1fU)))) 
                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                  ? 
-                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                  << 0x1cU)
                                                  : 
                                                 (((~ 
                                                    ((0U 
                                                      == 
                                                      (7U 
-                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                           << 1U) 
-                                                         | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                         | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                             >> 0x1fU)))) 
                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                   ? 
-                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                   << 0x1dU)
                                                   : 0ULL))))) 
                                  << 4U) | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg) 
                                            << 2U));
-    __Vtemp_hd13851bd__0[8U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h864e046a__0[8U] = (((IData)((0x1ffffffffffffffULL 
                                           & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg))) 
                                              ^ (((0U 
                                                   != 
                                                   (7U 
-                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                        << 1U) 
-                                                      | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                      | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                          >> 0x1fU)))) 
                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                  ? 
-                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                  << 0x1cU)
                                                  : 
                                                 (((~ 
                                                    ((0U 
                                                      == 
                                                      (7U 
-                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                           << 1U) 
-                                                         | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                         | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                             >> 0x1fU)))) 
                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                   ? 
-                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                   << 0x1dU)
                                                   : 0ULL))))) 
                                  >> 0x1cU) | ((IData)(
@@ -4181,58 +4181,58 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                            (((0U 
                                                               != 
                                                               (7U 
-                                                               & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                               & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    << 1U) 
-                                                                  | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                  | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                      >> 0x1fU)))) 
                                                              & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4) 
                                                                 | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                              << 0x1cU)
                                                              : 
                                                             (((~ 
                                                                ((0U 
                                                                  == 
                                                                  (7U 
-                                                                  & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                  & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                       << 1U) 
-                                                                     | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                     | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                         >> 0x1fU)))) 
                                                                 | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4))) 
                                                               & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                               << 0x1dU)
                                                               : 0ULL)))) 
                                                        >> 0x20U)) 
                                               << 4U));
-    __Vtemp_h42a2ad90__0[0xbU] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h758b3be5__0[0xbU] = (((IData)((0x1ffffffffffffffULL 
                                             & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg))) 
                                                ^ ((
                                                    (0U 
                                                     != 
                                                     (7U 
-                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                         >> 1U))) 
                                                    & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                       | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                          & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                    ? 
-                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                    << 0x1cU)
                                                    : 
                                                   (((~ 
                                                      ((0U 
                                                        == 
                                                        (7U 
-                                                        & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                        & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                            >> 1U))) 
                                                       | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                     & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                     << 0x1dU)
                                                     : 0ULL))))) 
                                    >> 0xaU) | ((IData)(
@@ -4242,54 +4242,54 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                             (((0U 
                                                                != 
                                                                (7U 
-                                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    >> 1U))) 
                                                               & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                                  | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                     & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                               << 0x1cU)
                                                               : 
                                                              (((~ 
                                                                 ((0U 
                                                                   == 
                                                                   (7U 
-                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                       >> 1U))) 
                                                                  | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                                & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                ? 
-                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                << 0x1dU)
                                                                : 0ULL)))) 
                                                         >> 0x20U)) 
                                                << 0x16U));
-    __Vtemp_h83ceb399__0[0xfU] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h65d0a149__0[0xfU] = (((IData)((0x1ffffffffffffffULL 
                                             & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg))) 
                                                ^ ((
                                                    (0U 
                                                     != 
                                                     (7U 
-                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                         >> 3U))) 
                                                    & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                       | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                          & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                    ? 
-                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                    << 0x1cU)
                                                    : 
                                                   (((~ 
                                                      ((0U 
                                                        == 
                                                        (7U 
-                                                        & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                        & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                            >> 3U))) 
                                                       | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                     & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                     << 0x1dU)
                                                     : 0ULL))))) 
                                    >> 0x18U) | ((IData)(
@@ -4299,54 +4299,54 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                              (((0U 
                                                                 != 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 3U))) 
                                                                & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                                   | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                ? 
-                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                << 0x1cU)
                                                                : 
                                                               (((~ 
                                                                  ((0U 
                                                                    == 
                                                                    (7U 
-                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                        >> 3U))) 
                                                                   | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                                 & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                 ? 
-                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                 << 0x1dU)
                                                                 : 0ULL)))) 
                                                          >> 0x20U)) 
                                                 << 8U));
-    __Vtemp_h0e277b85__0[0x12U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h4e265eef__0[0x12U] = (((IData)((0x1ffffffffffffffULL 
                                              & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg))) 
                                                 ^ (
                                                    ((0U 
                                                      != 
                                                      (7U 
-                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                          >> 5U))) 
                                                     & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                        | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                           & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                     << 0x1cU)
                                                     : 
                                                    (((~ 
                                                       ((0U 
                                                         == 
                                                         (7U 
-                                                         & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                         & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                             >> 5U))) 
                                                        | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                      ? 
-                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                      << 0x1dU)
                                                      : 0ULL))))) 
                                     >> 6U) | ((IData)(
@@ -4356,54 +4356,54 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                            (((0U 
                                                               != 
                                                               (7U 
-                                                               & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                               & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                   >> 5U))) 
                                                              & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                                 | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                              << 0x1cU)
                                                              : 
                                                             (((~ 
                                                                ((0U 
                                                                  == 
                                                                  (7U 
-                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                      >> 5U))) 
                                                                 | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                               & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                               << 0x1dU)
                                                               : 0ULL)))) 
                                                        >> 0x20U)) 
                                               << 0x1aU));
-    __Vtemp_h9e820e67__0[0x16U] = (((IData)((0x1ffffffffffffffULL 
+    __Vtemp_h0a53bf21__0[0x16U] = (((IData)((0x1ffffffffffffffULL 
                                              & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg))) 
                                                 ^ (
                                                    ((0U 
                                                      != 
                                                      (7U 
-                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                          >> 7U))) 
                                                     & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                        | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                           & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                     ? 
-                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                   ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                     << 0x1cU)
                                                     : 
                                                    (((~ 
                                                       ((0U 
                                                         == 
                                                         (7U 
-                                                         & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                         & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                             >> 7U))) 
                                                        | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                      ? 
-                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                      << 0x1dU)
                                                      : 0ULL))))) 
                                     >> 0x14U) | ((IData)(
@@ -4413,31 +4413,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                               (((0U 
                                                                  != 
                                                                  (7U 
-                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                      >> 7U))) 
                                                                 & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                                    | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                       & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                 ? 
-                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                 << 0x1cU)
                                                                 : 
                                                                (((~ 
                                                                   ((0U 
                                                                     == 
                                                                     (7U 
-                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                     & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                         >> 7U))) 
                                                                    | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                                  & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                  ? 
-                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                  << 0x1dU)
                                                                  : 0ULL)))) 
                                                           >> 0x20U)) 
                                                  << 0xcU));
-    vlSelf->__VdfgTmp_h765d951d__0[0U] = __Vtemp_hffde29ad__0[0U];
-    vlSelf->__VdfgTmp_h765d951d__0[1U] = __Vtemp_hffde29ad__0[1U];
+    vlSelf->__VdfgTmp_h765d951d__0[0U] = __Vtemp_h2a5d51a2__0[0U];
+    vlSelf->__VdfgTmp_h765d951d__0[1U] = __Vtemp_h2a5d51a2__0[1U];
     vlSelf->__VdfgTmp_h765d951d__0[2U] = 0U;
     vlSelf->__VdfgTmp_h765d951d__0[3U] = (((IData)(
                                                    (0x1ffffffffffffffULL 
@@ -4445,30 +4445,30 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                        ^ 
                                                        (((0U 
                                                           != 
-                                                          (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                          (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                            >> 0x1dU)) 
                                                          & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                             | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                          ? 
-                                                        ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                        ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                          << 0x1cU)
                                                          : 
                                                         (((~ 
                                                            ((0U 
                                                              == 
-                                                             (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                             (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                               >> 0x1dU)) 
                                                             | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                           & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                           ? 
-                                                         ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                         ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                           << 0x1dU)
                                                           : 0ULL))))) 
                                            << 0x12U) 
                                           | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg) 
                                              << 0x10U));
-    vlSelf->__VdfgTmp_h765d951d__0[4U] = __Vtemp_he8b40b17__0[4U];
+    vlSelf->__VdfgTmp_h765d951d__0[4U] = __Vtemp_h01a19412__0[4U];
     vlSelf->__VdfgTmp_h765d951d__0[5U] = (0x1000U | 
                                           ((0x800U 
                                             & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg)) 
@@ -4479,35 +4479,35 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                            ^ 
                                                            (((0U 
                                                               != 
-                                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                >> 0x1dU)) 
                                                              & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4) 
                                                                 | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                              << 0x1cU)
                                                              : 
                                                             (((~ 
                                                                ((0U 
                                                                  == 
-                                                                 (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                                 (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                                   >> 0x1dU)) 
                                                                 | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4))) 
                                                               & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                               ? 
-                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                             ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                               << 0x1dU)
                                                               : 0ULL)))) 
                                                        >> 0x20U)) 
                                               >> 0xeU)));
     vlSelf->__VdfgTmp_h765d951d__0[6U] = 0U;
-    vlSelf->__VdfgTmp_h765d951d__0[7U] = __Vtemp_hd13851bd__0[7U];
+    vlSelf->__VdfgTmp_h765d951d__0[7U] = __Vtemp_h864e046a__0[7U];
     vlSelf->__VdfgTmp_h765d951d__0[8U] = (0x40000000U 
                                           | ((0x20000000U 
                                               & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg)) 
                                                  << 0x1dU)) 
-                                             | __Vtemp_hd13851bd__0[8U]));
+                                             | __Vtemp_h864e046a__0[8U]));
     vlSelf->__VdfgTmp_h765d951d__0[9U] = 0U;
     vlSelf->__VdfgTmp_h765d951d__0[0xaU] = (((IData)(
                                                      (0x1ffffffffffffffULL 
@@ -4516,31 +4516,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                          (((0U 
                                                             != 
                                                             (7U 
-                                                             & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                             & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                 >> 1U))) 
                                                            & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                               | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                  & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                            ? 
-                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                            << 0x1cU)
                                                            : 
                                                           (((~ 
                                                              ((0U 
                                                                == 
                                                                (7U 
-                                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    >> 1U))) 
                                                               | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                             & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                             << 0x1dU)
                                                             : 0ULL))))) 
                                              << 0x16U) 
                                             | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg) 
                                                << 0x14U));
-    vlSelf->__VdfgTmp_h765d951d__0[0xbU] = __Vtemp_h42a2ad90__0[0xbU];
+    vlSelf->__VdfgTmp_h765d951d__0[0xbU] = __Vtemp_h758b3be5__0[0xbU];
     vlSelf->__VdfgTmp_h765d951d__0[0xcU] = (0x10000U 
                                             | ((0x8000U 
                                                 & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg)) 
@@ -4552,25 +4552,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                                (((0U 
                                                                   != 
                                                                   (7U 
-                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                       >> 1U))) 
                                                                  & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4) 
                                                                     | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                        & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                  ? 
-                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                  << 0x1cU)
                                                                  : 
                                                                 (((~ 
                                                                    ((0U 
                                                                      == 
                                                                      (7U 
-                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                      & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                          >> 1U))) 
                                                                     | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4))) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                   ? 
-                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                   << 0x1dU)
                                                                   : 0ULL)))) 
                                                            >> 0x20U)) 
@@ -4583,31 +4583,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                          (((0U 
                                                             != 
                                                             (7U 
-                                                             & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                             & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                 >> 3U))) 
                                                            & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                               | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                  & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                            ? 
-                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                          ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                            << 0x1cU)
                                                            : 
                                                           (((~ 
                                                              ((0U 
                                                                == 
                                                                (7U 
-                                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                    >> 3U))) 
                                                               | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                             & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                             << 0x1dU)
                                                             : 0ULL))))) 
                                              << 8U) 
                                             | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg) 
                                                << 6U));
-    vlSelf->__VdfgTmp_h765d951d__0[0xfU] = __Vtemp_h83ceb399__0[0xfU];
+    vlSelf->__VdfgTmp_h765d951d__0[0xfU] = __Vtemp_h65d0a149__0[0xfU];
     vlSelf->__VdfgTmp_h765d951d__0[0x10U] = (4U | (
                                                    (2U 
                                                     & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg)) 
@@ -4619,25 +4619,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                                    (((0U 
                                                                       != 
                                                                       (7U 
-                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                           >> 3U))) 
                                                                      & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4) 
                                                                         | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                      ? 
-                                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                    ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                      << 0x1cU)
                                                                      : 
                                                                     (((~ 
                                                                        ((0U 
                                                                          == 
                                                                          (7U 
-                                                                          & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                          & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                              >> 3U))) 
                                                                         | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4))) 
                                                                       & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                       ? 
-                                                                     ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                     ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                       << 0x1dU)
                                                                       : 0ULL)))) 
                                                                >> 0x20U)) 
@@ -4649,31 +4649,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                           (((0U 
                                                              != 
                                                              (7U 
-                                                              & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                              & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                  >> 5U))) 
                                                             & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                             << 0x1cU)
                                                             : 
                                                            (((~ 
                                                               ((0U 
                                                                 == 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 5U))) 
                                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                              << 0x1dU)
                                                              : 0ULL))))) 
                                               << 0x1aU) 
                                              | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg) 
                                                 << 0x18U));
-    vlSelf->__VdfgTmp_h765d951d__0[0x12U] = __Vtemp_h0e277b85__0[0x12U];
+    vlSelf->__VdfgTmp_h765d951d__0[0x12U] = __Vtemp_h4e265eef__0[0x12U];
     vlSelf->__VdfgTmp_h765d951d__0[0x13U] = (0x100000U 
                                              | ((0x80000U 
                                                  & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg)) 
@@ -4685,25 +4685,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                                 (((0U 
                                                                    != 
                                                                    (7U 
-                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                        >> 5U))) 
                                                                   & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4) 
                                                                      | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                         & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                   ? 
-                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                 ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                   << 0x1cU)
                                                                   : 
                                                                  (((~ 
                                                                     ((0U 
                                                                       == 
                                                                       (7U 
-                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                       & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                           >> 5U))) 
                                                                      | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4))) 
                                                                    & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                    ? 
-                                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                                  ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                    << 0x1dU)
                                                                    : 0ULL)))) 
                                                             >> 0x20U)) 
@@ -4716,31 +4716,31 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                           (((0U 
                                                              != 
                                                              (7U 
-                                                              & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                              & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                  >> 7U))) 
                                                             & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                                | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                   & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                             ? 
-                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                           ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                             << 0x1cU)
                                                             : 
                                                            (((~ 
                                                               ((0U 
                                                                 == 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 7U))) 
                                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                              ? 
-                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                            ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                              << 0x1dU)
                                                              : 0ULL))))) 
                                               << 0xcU) 
                                              | ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg) 
                                                 << 0xaU));
-    vlSelf->__VdfgTmp_h765d951d__0[0x16U] = __Vtemp_h9e820e67__0[0x16U];
+    vlSelf->__VdfgTmp_h765d951d__0[0x16U] = __Vtemp_h0a53bf21__0[0x16U];
     vlSelf->__VdfgTmp_h765d951d__0[0x17U] = ((0x20U 
                                               & ((~ (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg)) 
                                                  << 5U)) 
@@ -4751,25 +4751,25 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
                                                              (((0U 
                                                                 != 
                                                                 (7U 
-                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                     >> 7U))) 
                                                                & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4) 
                                                                   | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                                                      & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
                                                                ? 
-                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                              ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                << 0x1cU)
                                                                : 
                                                               (((~ 
                                                                  ((0U 
                                                                    == 
                                                                    (7U 
-                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                                    & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                                        >> 7U))) 
                                                                   | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4))) 
                                                                 & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
                                                                 ? 
-                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                                               ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                                                 << 0x1dU)
                                                                 : 0ULL)))) 
                                                          >> 0x20U)) 
@@ -4777,303 +4777,303 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_13_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x17U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_14_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x19U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_15_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x1bU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_16_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT___boothEncoder_io_neg))) 
-                                   ^ (((0U != (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                   ^ (((0U != (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x1dU)) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
-                                                (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                  >> 0x1dU)) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_17_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                  << 1U) 
-                                                | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0x1fU)))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      << 1U) 
-                                                    | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                    | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                        >> 0x1fU)))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_18_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 1U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 1U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_6_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 9U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 9U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_7_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0xbU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0xbU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_8_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0xdU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0xdU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_9_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0xfU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0xfU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_10_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x11U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_11_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x13U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_23_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0xbU))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0xbU))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_19_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 3U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 3U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT___genProd_12_io_partial_prod 
         = (0x1ffffffffffffffULL & ((- (QData)((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg))) 
                                    ^ (((0U != (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))) 
                                        & ((IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4) 
                                           | ((~ (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0)) 
                                              & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0))))
-                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                       ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                           << 0x1cU)
                                        : (((~ ((0U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x15U))) 
                                                | (IData)(vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4))) 
                                            & (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0))
-                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_1__io_operand_a)) 
+                                           ? ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_1__io_operand_a)) 
                                               << 0x1dU)
                                            : 0ULL))));
     vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_B__DOT__csa_tree_B__DOT__csa_tree_B__DOT____Vcellinp__compressor__io_operands_i[0U] 
@@ -5657,947 +5657,947 @@ VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__in
     vlSelf->boothMult__DOT__csaTree__DOT__csa_tree_A__DOT____Vcellinp__csa_tree_B__io_operands_i[0x18U] = 0U;
 }
 
-VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider_2__0(VPvuTop_IntDivider* vlSelf) {
+VL_INLINE_OPT void VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider_2__0(VPvuTop_IntDivider* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPvuTop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__intdivider_2__0\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+          VPvuTop_IntDivider___ico_comb__TOP__PvuTop__DOT__div__DOT__divider_2__0\n"); );
     // Init
-    VlWide<3>/*95:0*/ __Vtemp_h2578db6d__0;
-    VlWide<3>/*95:0*/ __Vtemp_hd3d55378__0;
-    VlWide<3>/*95:0*/ __Vtemp_h66679482__0;
-    VlWide<3>/*95:0*/ __Vtemp_hba4a56f5__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5ce10a39__0;
-    VlWide<3>/*95:0*/ __Vtemp_h91c76526__0;
-    VlWide<3>/*95:0*/ __Vtemp_hb7b763a1__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5baa320b__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5f83c2a8__0;
-    VlWide<3>/*95:0*/ __Vtemp_he6fd6e25__0;
-    VlWide<3>/*95:0*/ __Vtemp_hd3082310__0;
+    VlWide<3>/*95:0*/ __Vtemp_h30414844__0;
+    VlWide<3>/*95:0*/ __Vtemp_hbfcc6789__0;
+    VlWide<3>/*95:0*/ __Vtemp_h41cae579__0;
+    VlWide<3>/*95:0*/ __Vtemp_h1f56fcb6__0;
+    VlWide<3>/*95:0*/ __Vtemp_heebc31a5__0;
+    VlWide<3>/*95:0*/ __Vtemp_hd2eaaf17__0;
+    VlWide<3>/*95:0*/ __Vtemp_ha6c826fe__0;
+    VlWide<3>/*95:0*/ __Vtemp_h6b06f01b__0;
+    VlWide<3>/*95:0*/ __Vtemp_h049a63d4__0;
+    VlWide<3>/*95:0*/ __Vtemp_h4186c379__0;
+    VlWide<3>/*95:0*/ __Vtemp_h472fdb4c__0;
     // Body
-    __Vtemp_h2578db6d__0[0U] = (IData)((0xffffffffffffffULL 
-                                        & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)))));
-    __Vtemp_h2578db6d__0[1U] = (IData)(((0xffffffffffffffULL 
-                                         & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)))) 
+    __Vtemp_h30414844__0[0U] = (IData)((0xffffffffffffffULL 
+                                        & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)))));
+    __Vtemp_h30414844__0[1U] = (IData)(((0xffffffffffffffULL 
+                                         & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)))) 
                                         >> 0x20U));
-    __Vtemp_h2578db6d__0[2U] = 0U;
-    __Vtemp_hd3d55378__0[0U] = (IData)((0xffffffffffffffULL 
+    __Vtemp_h30414844__0[2U] = 0U;
+    __Vtemp_hbfcc6789__0[0U] = (IData)((0xffffffffffffffULL 
                                         & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)) 
                                               * (0xffffffffffffffULL 
-                                                 & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b))))))));
-    __Vtemp_hd3d55378__0[1U] = (IData)(((0xffffffffffffffULL 
+                                                 & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b))))))));
+    __Vtemp_hbfcc6789__0[1U] = (IData)(((0xffffffffffffffULL 
                                          & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)) 
                                                * (0xffffffffffffffULL 
-                                                  & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b))))))) 
+                                                  & VL_DIV_QQQ(56, 0x10000000ULL, (QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b))))))) 
                                         >> 0x20U));
-    __Vtemp_hd3d55378__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_h66679482__0, __Vtemp_h2578db6d__0, __Vtemp_hd3d55378__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U] 
-        = __Vtemp_h66679482__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U] 
-        = __Vtemp_h66679482__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_h66679482__0[2U]);
-    VL_SHIFTR_WWI(84,84,32, __Vtemp_hba4a56f5__0, vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full, 0x1cU);
-    __Vtemp_h5ce10a39__0[0U] = __Vtemp_hba4a56f5__0[0U];
-    __Vtemp_h5ce10a39__0[1U] = __Vtemp_hba4a56f5__0[1U];
-    __Vtemp_h5ce10a39__0[2U] = (0xfffffU & __Vtemp_hba4a56f5__0[2U]);
-    __Vtemp_h91c76526__0[0U] = (IData)((0xffffffffffffffULL 
+    __Vtemp_hbfcc6789__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h41cae579__0, __Vtemp_h30414844__0, __Vtemp_hbfcc6789__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U] 
+        = __Vtemp_h41cae579__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U] 
+        = __Vtemp_h41cae579__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U] 
+        = (0xfffffU & __Vtemp_h41cae579__0[2U]);
+    VL_SHIFTR_WWI(84,84,32, __Vtemp_h1f56fcb6__0, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full, 0x1cU);
+    __Vtemp_heebc31a5__0[0U] = __Vtemp_h1f56fcb6__0[0U];
+    __Vtemp_heebc31a5__0[1U] = __Vtemp_h1f56fcb6__0[1U];
+    __Vtemp_heebc31a5__0[2U] = (0xfffffU & __Vtemp_h1f56fcb6__0[2U]);
+    __Vtemp_hd2eaaf17__0[0U] = (IData)((0xffffffffffffffULL 
                                         & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                              * (0xffffffffffffffULL 
-                                                 & (((QData)((IData)(
-                                                                     vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U])) 
-                                                     << 0x24U) 
-                                                    | (((QData)((IData)(
-                                                                        vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U])) 
-                                                        << 4U) 
-                                                       | ((QData)((IData)(
-                                                                          vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U])) 
-                                                          >> 0x1cU))))))));
-    __Vtemp_h91c76526__0[1U] = (IData)(((0xffffffffffffffULL 
-                                         & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
-                                               * (0xffffffffffffffULL 
-                                                  & (((QData)((IData)(
-                                                                      vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[2U])) 
-                                                      << 0x24U) 
-                                                     | (((QData)((IData)(
-                                                                         vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[1U])) 
-                                                         << 4U) 
-                                                        | ((QData)((IData)(
-                                                                           vlSelf->__PVT__reciprocalMod__DOT__x1_x_new_full[0U])) 
-                                                           >> 0x1cU))))))) 
-                                        >> 0x20U));
-    __Vtemp_h91c76526__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_hb7b763a1__0, __Vtemp_h5ce10a39__0, __Vtemp_h91c76526__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U] 
-        = __Vtemp_hb7b763a1__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U] 
-        = __Vtemp_hb7b763a1__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_hb7b763a1__0[2U]);
-    VL_SHIFTR_WWI(84,84,32, __Vtemp_h5baa320b__0, vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full, 0x1cU);
-    __Vtemp_h5f83c2a8__0[0U] = __Vtemp_h5baa320b__0[0U];
-    __Vtemp_h5f83c2a8__0[1U] = __Vtemp_h5baa320b__0[1U];
-    __Vtemp_h5f83c2a8__0[2U] = (0xfffffU & __Vtemp_h5baa320b__0[2U]);
-    __Vtemp_he6fd6e25__0[0U] = (IData)((0xffffffffffffffULL 
-                                        & (0x20000000ULL 
-                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)) 
                                               * (0xffffffffffffffULL 
                                                  & (((QData)((IData)(
-                                                                     vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U])) 
+                                                                     vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U])) 
                                                      << 0x24U) 
                                                     | (((QData)((IData)(
-                                                                        vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U])) 
+                                                                        vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U])) 
                                                         << 4U) 
                                                        | ((QData)((IData)(
-                                                                          vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U])) 
+                                                                          vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U])) 
                                                           >> 0x1cU))))))));
-    __Vtemp_he6fd6e25__0[1U] = (IData)(((0xffffffffffffffULL 
+    __Vtemp_hd2eaaf17__0[1U] = (IData)(((0xffffffffffffffULL 
                                          & (0x20000000ULL 
-                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__radix4BoothMultiplier_2__io_operand_b)) 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)) 
                                                * (0xffffffffffffffULL 
                                                   & (((QData)((IData)(
-                                                                      vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[2U])) 
+                                                                      vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[2U])) 
                                                       << 0x24U) 
                                                      | (((QData)((IData)(
-                                                                         vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[1U])) 
+                                                                         vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[1U])) 
                                                          << 4U) 
                                                         | ((QData)((IData)(
-                                                                           vlSelf->__PVT__reciprocalMod__DOT__x2_x_new_full[0U])) 
+                                                                           vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full[0U])) 
                                                            >> 0x1cU))))))) 
                                         >> 0x20U));
-    __Vtemp_he6fd6e25__0[2U] = 0U;
-    VL_MUL_W(3, __Vtemp_hd3082310__0, __Vtemp_h5f83c2a8__0, __Vtemp_he6fd6e25__0);
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-        = __Vtemp_hd3082310__0[0U];
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-        = __Vtemp_hd3082310__0[1U];
-    vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-        = (0xfffffU & __Vtemp_hd3082310__0[2U]);
+    __Vtemp_hd2eaaf17__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_ha6c826fe__0, __Vtemp_heebc31a5__0, __Vtemp_hd2eaaf17__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U] 
+        = __Vtemp_ha6c826fe__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U] 
+        = __Vtemp_ha6c826fe__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U] 
+        = (0xfffffU & __Vtemp_ha6c826fe__0[2U]);
+    VL_SHIFTR_WWI(84,84,32, __Vtemp_h6b06f01b__0, vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1, 0x1cU);
+    __Vtemp_h049a63d4__0[0U] = __Vtemp_h6b06f01b__0[0U];
+    __Vtemp_h049a63d4__0[1U] = __Vtemp_h6b06f01b__0[1U];
+    __Vtemp_h049a63d4__0[2U] = (0xfffffU & __Vtemp_h6b06f01b__0[2U]);
+    __Vtemp_h4186c379__0[0U] = (IData)((0xffffffffffffffULL 
+                                        & (0x20000000ULL 
+                                           - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)) 
+                                              * (0xffffffffffffffULL 
+                                                 & (((QData)((IData)(
+                                                                     vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U])) 
+                                                     << 0x24U) 
+                                                    | (((QData)((IData)(
+                                                                        vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U])) 
+                                                        << 4U) 
+                                                       | ((QData)((IData)(
+                                                                          vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U])) 
+                                                          >> 0x1cU))))))));
+    __Vtemp_h4186c379__0[1U] = (IData)(((0xffffffffffffffULL 
+                                         & (0x20000000ULL 
+                                            - ((QData)((IData)(vlSymsp->TOP.PvuTop__DOT__dotproduct__DOT__mul__DOT____Vcellinp__multiplier_2__io_operand_b)) 
+                                               * (0xffffffffffffffULL 
+                                                  & (((QData)((IData)(
+                                                                      vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[2U])) 
+                                                      << 0x24U) 
+                                                     | (((QData)((IData)(
+                                                                         vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[1U])) 
+                                                         << 4U) 
+                                                        | ((QData)((IData)(
+                                                                           vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_1[0U])) 
+                                                           >> 0x1cU))))))) 
+                                        >> 0x20U));
+    __Vtemp_h4186c379__0[2U] = 0U;
+    VL_MUL_W(3, __Vtemp_h472fdb4c__0, __Vtemp_h049a63d4__0, __Vtemp_h4186c379__0);
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+        = __Vtemp_h472fdb4c__0[0U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+        = __Vtemp_h472fdb4c__0[1U];
+    vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+        = (0xfffffU & __Vtemp_h472fdb4c__0[2U]);
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (2U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (2U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (4U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT___GEN_4 
-        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((1U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (2U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h1678a7aa__0 
-        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((3U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (4U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))) | 
-           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 5U))));
     vlSelf->__VdfgTmp_hce824426__0 = (1U & (~ ((0U 
                                                 == 
                                                 (3U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                     >> 0x1cU))) 
                                                | (1U 
                                                   == 
                                                   (3U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                       >> 0x1cU))))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 5U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 5U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xdU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xfU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0x11U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 7U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 7U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x17U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x17U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x19U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x19U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x1bU))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1bU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                   >> 0x1dU)) | (6U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1dU)));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))) | 
-           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           (6U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                          << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                     >> 0x1fU)))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 1U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 1U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                         >> 9U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 9U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xbU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xdU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xdU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0xfU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0xfU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x11U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x11U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x13U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x13U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                          >> 0xbU))) | (6U == (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0xbU))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                         >> 3U))) | (6U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                   >> 3U))));
     vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0 
-        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((5U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                          >> 0x15U))) | (6U == (7U & 
-                                               (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                               (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x15U))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
-                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
+                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                              >> 0x1dU)) 
-                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                 >> 0x1dU)) 
-                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                   >> 0x1dU)))))) 
-           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                       >> 0x1dU)) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_1__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                         >> 0x1fU)))) 
-               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                            >> 0x1fU)))) 
-                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                               >> 0x1fU)))) 
-                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                 >> 0x1fU)))))))) 
-           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                        >> 0x1fU)))) 
               | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_1__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_2__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 1U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 1U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 1U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 1U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 1U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_2__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_3__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 3U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 3U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 3U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 3U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 3U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_3__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_4__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 5U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 5U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 5U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 5U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 5U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_4__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProdFirst__DOT___boothEncoder_io_neg 
         = ((IData)(vlSelf->__VdfgTmp_hce824426__0) 
-           & ((2U == (3U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+           & ((2U == (3U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                             >> 0x1cU))) | (3U == (3U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[0U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[0U] 
                                                      >> 0x1cU)))));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_20__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 5U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 5U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 5U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 5U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 5U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_20__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_21__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 7U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 7U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 7U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 7U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 7U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_21__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_22__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 9U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 9U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 9U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 9U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 9U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_22__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_24__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xdU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xdU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xdU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xdU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xdU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_24__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_25__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xfU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xfU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xfU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xfU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xfU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_25__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_26__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0x11U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 0x11U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 0x11U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0x11U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0x11U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_26__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_5__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 7U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 7U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 7U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 7U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 7U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_5__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_13__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x17U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x17U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x17U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x17U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x17U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_13__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_14__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x19U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x19U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x19U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x19U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x19U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_14__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_15__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x1bU))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x1bU))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x1bU))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x1bU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x1bU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_15__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_16__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
-                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
+                       >> 0x1dU)) | ((1U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                              >> 0x1dU)) 
-                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                     | ((2U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1dU)) 
-                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                        | (3U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                   >> 0x1dU)))))) 
-           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                       >> 0x1dU)) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_16__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_17__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                              << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                         >> 0x1fU)))) 
-               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+               | ((1U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                 << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                            >> 0x1fU)))) 
-                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                  | ((2U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                    << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                               >> 0x1fU)))) 
-                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                     | (3U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                                      << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                 >> 0x1fU)))))))) 
-           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
-                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & ((vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
+                             << 1U) | (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                        >> 0x1fU)))) 
               | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_17__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_18__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 1U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 1U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 1U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 1U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 1U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_18__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_6__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 9U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 9U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 9U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 9U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 9U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_6__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_7__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xbU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xbU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xbU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xbU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xbU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_7__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_8__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xdU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xdU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xdU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xdU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xdU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_8__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_9__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0xfU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0xfU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                    >> 0xfU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                      >> 0xfU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0xfU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_9__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_10__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x11U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x11U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x11U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x11U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x11U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_10__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_11__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x13U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x13U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x13U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x13U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x13U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_11__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_23__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 0xbU))) | ((1U == (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                       >> 0xbU))) 
                                            | ((2U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 0xbU))) 
                                               | (3U 
                                                  == 
                                                  (7U 
-                                                  & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                  & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                      >> 0xbU))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 0xbU))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_23__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_19__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                              >> 3U))) | ((1U == (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                     >> 3U))) 
                                          | ((2U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                >> 3U))) 
                                             | (3U == 
                                                (7U 
-                                                & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+                                                & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                                                    >> 3U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[2U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[2U] 
                             >> 3U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_19__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
     vlSelf->__PVT__boothMult__DOT__genProds__DOT__genProd_12__DOT___boothEncoder_io_neg 
-        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+        = ((~ ((0U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                              >> 0x15U))) | ((1U == 
                                              (7U & 
-                                              (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                              (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                >> 0x15U))) 
                                             | ((2U 
                                                 == 
                                                 (7U 
-                                                 & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                 & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                     >> 0x15U))) 
                                                | (3U 
                                                   == 
                                                   (7U 
-                                                   & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+                                                   & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                                                       >> 0x15U))))))) 
-           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__x3_x_new_full[1U] 
+           & ((4U == (7U & (vlSelf->__PVT__reciprocalMod__DOT__io_reciprocal_o_x_new_full_2[1U] 
                             >> 0x15U))) | (IData)(vlSelf->boothMult__DOT__genProds__DOT__genProd_12__DOT__boothEncoder__DOT____VdfgTmp_h2f460be7__0)));
 }

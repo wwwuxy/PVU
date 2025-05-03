@@ -1,46 +1,447 @@
 mainmenu "Test File Config"
 
+# 顶级选择，确保各个测试类型互斥
+choice
+    prompt "Test Type"
+    default TYPE_RESNET
+
+    config TYPE_RESNET
+        bool "ResNet Tests"
+        help
+            Enable ResNet related tests
+
+    config TYPE_VGG
+        bool "VGG Tests"
+        help
+            Enable VGG related tests
+
+    config TYPE_ALEXNET
+        bool "AlexNet Tests"
+        help
+            Enable AlexNet related tests
+
+    config TYPE_LENET
+        bool "LeNet Tests"
+        help
+            Enable LeNet related tests
+            
+    config TYPE_MOBILENET
+        bool "MobileNet Tests"
+        help
+            Enable MobileNet related tests
+            
+    config TYPE_SQUEEZENET
+        bool "SqueezeNet Tests"
+        help
+            Enable SqueezeNet related tests
+            
+    config TYPE_CONVNEXT
+        bool "ConvNeXt Tests"
+        help
+            Enable ConvNeXt related tests
+
+    config TYPE_SHUFFLENETV2
+        bool "ShuffleNetV2 Tests"
+        help
+            Enable ShuffleNetV2 related tests
+            
+    config TYPE_EFFICIENTNET
+        bool "EfficientNet Tests"
+        help
+            Enable EfficientNet related tests
+
+    config TYPE_REGNET
+        bool "RegNet Tests"
+        help
+            Enable RegNet related tests
+
+    config TYPE_SAMPLE
+        bool "Sample Test"
+        help
+            Enable manually sample test
+endchoice
+
+# ResNet测试选项
 menu "RESNET_TEST"
+    visible if TYPE_RESNET
+    
     choice
         prompt "Posit<32, 2>"
         default RESNET_ADD_P32
-        depends on !SAMPLE_TEST  # 新增依赖：仅在SAMPLE_TEST未启用时可见
         help
             Select one of the ResNet operations for the test.
 
     config RESNET_ADD_P32
         bool "resnet_add_p32_test"
-        default n
         help
             Enable ResNet addition test.
 
     config RESNET_SUB_P32
         bool "resnet_sub_p32_test"
-        default n
         help
             Enable ResNet subtraction test.
 
     config RESNET_MUL_P32
         bool "resnet_mul_p32_test"
-        default n
         help
             Enable ResNet multiplication test.
 
     config RESNET_DIV_P32
         bool "resnet_div_p32_test"
-        default n
         help
             Enable ResNet division test.
 
     config RESNET_DOT_P32
         bool "resnet_dot_p32_test"
-        default n
         help
             Enable ResNet dot product test. 
 
     endchoice
 endmenu
 
+# VGG测试菜单
+menu "VGG_TEST"
+    visible if TYPE_VGG
+    
+    choice
+        prompt "Posit<32, 2>"
+        default VGG_ADD_P32
+        help
+            Select one of the VGG operations for the test.
+
+    config VGG_ADD_P32
+        bool "vgg_add_p32_test"
+        help
+            Enable VGG addition test.
+
+    config VGG_SUB_P32
+        bool "vgg_sub_p32_test"
+        help
+            Enable VGG subtraction test.
+
+    config VGG_MUL_P32
+        bool "vgg_mul_p32_test"
+        help
+            Enable VGG multiplication test.
+
+    config VGG_DIV_P32
+        bool "vgg_div_p32_test"
+        help
+            Enable VGG division test.
+            
+    config VGG_DOT_P32
+        bool "vgg_dot_p32_test"
+        help
+            Enable VGG dot product test.
+
+    endchoice
+endmenu
+
+# AlexNet测试菜单
+menu "ALEXNET_TEST"
+    visible if TYPE_ALEXNET
+    
+    choice
+        prompt "Posit<32, 2>"
+        default ALEXNET_ADD_P32
+        help
+            Select one of the AlexNet operations for the test.
+
+    config ALEXNET_ADD_P32
+        bool "alexnet_add_p32_test"
+        help
+            Enable AlexNet addition test.
+
+    config ALEXNET_SUB_P32
+        bool "alexnet_sub_p32_test"
+        help
+            Enable AlexNet subtraction test.
+
+    config ALEXNET_MUL_P32
+        bool "alexnet_mul_p32_test"
+        help
+            Enable AlexNet multiplication test.
+
+    config ALEXNET_DIV_P32
+        bool "alexnet_div_p32_test"
+        help
+            Enable AlexNet division test.
+            
+    config ALEXNET_DOT_P32
+        bool "alexnet_dot_p32_test"
+        help
+            Enable AlexNet dot product test.
+
+    endchoice
+endmenu
+
+# LENET测试菜单
+menu "LENET_TEST"
+    visible if TYPE_LENET
+    
+    choice
+        prompt "Posit<32, 2>"
+        default LENET_ADD_P32
+        help
+            Select one of the LeNet operations for the test.
+
+    config LENET_ADD_P32
+        bool "lenet_add_p32_test"
+        help
+            Enable LeNet addition test.
+
+    config LENET_SUB_P32
+        bool "lenet_sub_p32_test"
+        help
+            Enable LeNet subtraction test.
+
+    config LENET_MUL_P32
+        bool "lenet_mul_p32_test"
+        help
+            Enable LeNet multiplication test.
+
+    config LENET_DIV_P32
+        bool "lenet_div_p32_test"
+        help
+            Enable LeNet division test.
+            
+    config LENET_DOT_P32
+        bool "lenet_dot_p32_test"
+        help
+            Enable LeNet dot product test.
+
+    endchoice
+endmenu
+
+# MOBILENET_TEST菜单
+menu "MOBILENET_TEST"
+    visible if TYPE_MOBILENET
+    
+    choice
+        prompt "Posit<32, 2>"
+        default MOBILENET_ADD_P32
+        help
+            Select one of the MobileNet operations for the test.
+
+    config MOBILENET_ADD_P32
+        bool "mobilenet_add_p32_test"
+        help
+            Enable MobileNet addition test.
+
+    config MOBILENET_SUB_P32
+        bool "mobilenet_sub_p32_test"
+        help
+            Enable MobileNet subtraction test.
+
+    config MOBILENET_MUL_P32
+        bool "mobilenet_mul_p32_test"
+        help
+            Enable MobileNet multiplication test.
+
+    config MOBILENET_DIV_P32
+        bool "mobilenet_div_p32_test"
+        help
+            Enable MobileNet division test.
+            
+    config MOBILENET_DOT_P32
+        bool "mobilenet_dot_p32_test"
+        help
+            Enable MobileNet dot product test.
+
+    endchoice
+endmenu
+
+# SQUEEZENET_TEST菜单
+menu "SQUEEZENET_TEST"
+    visible if TYPE_SQUEEZENET
+    
+    choice
+        prompt "Posit<32, 2>"
+        default SQUEEZENET_ADD_P32
+        help
+            Select one of the SqueezeNet operations for the test.
+
+    config SQUEEZENET_ADD_P32
+        bool "squeezenet_add_p32_test"
+        help
+            Enable SqueezeNet addition test.
+
+    config SQUEEZENET_SUB_P32
+        bool "squeezenet_sub_p32_test"
+        help
+            Enable SqueezeNet subtraction test.
+
+    config SQUEEZENET_MUL_P32
+        bool "squeezenet_mul_p32_test"
+        help
+            Enable SqueezeNet multiplication test.
+
+    config SQUEEZENET_DIV_P32
+        bool "squeezenet_div_p32_test"
+        help
+            Enable SqueezeNet division test.
+            
+    config SQUEEZENET_DOT_P32
+        bool "squeezenet_dot_p32_test"
+        help
+            Enable SqueezeNet dot product test.
+
+    endchoice
+endmenu
+
+# CONVNEXT_TEST菜单
+menu "CONVNEXT_TEST"
+    visible if TYPE_CONVNEXT
+    
+    choice
+        prompt "Posit<32, 2>"
+        default CONVNEXT_ADD_P32
+        help
+            Select one of the ConvNeXt operations for the test.
+
+    config CONVNEXT_ADD_P32
+        bool "convnext_add_p32_test"
+        help
+            Enable ConvNeXt addition test.
+
+    config CONVNEXT_SUB_P32
+        bool "convnext_sub_p32_test"
+        help
+            Enable ConvNeXt subtraction test.
+
+    config CONVNEXT_MUL_P32
+        bool "convnext_mul_p32_test"
+        help
+            Enable ConvNeXt multiplication test.
+
+    config CONVNEXT_DIV_P32
+        bool "convnext_div_p32_test"
+        help
+            Enable ConvNeXt division test.
+            
+    config CONVNEXT_DOT_P32
+        bool "convnext_dot_p32_test"
+        help
+            Enable ConvNeXt dot product test.
+
+    endchoice
+endmenu
+
+# SHUFFLENETV2_TEST菜单
+menu "SHUFFLENETV2_TEST"
+    visible if TYPE_SHUFFLENETV2
+    
+    choice
+        prompt "Posit<32, 2>"
+        default SHUFFLENETV2_ADD_P32
+        help
+            Select one of the ShuffleNetV2 operations for the test.
+
+    config SHUFFLENETV2_ADD_P32
+        bool "shufflenetv2_add_p32_test"
+        help
+            Enable ShuffleNetV2 addition test.
+
+    config SHUFFLENETV2_SUB_P32
+        bool "shufflenetv2_sub_p32_test"
+        help
+            Enable ShuffleNetV2 subtraction test.
+
+    config SHUFFLENETV2_MUL_P32
+        bool "shufflenetv2_mul_p32_test"
+        help
+            Enable ShuffleNetV2 multiplication test.
+
+    config SHUFFLENETV2_DIV_P32
+        bool "shufflenetv2_div_p32_test"
+        help
+            Enable ShuffleNetV2 division test.
+            
+    config SHUFFLENETV2_DOT_P32
+        bool "shufflenetv2_dot_p32_test"
+        help
+            Enable ShuffleNetV2 dot product test.
+
+    endchoice
+endmenu
+
+# EFFICIENTNET_TEST菜单
+menu "EFFICIENTNET_TEST"
+    visible if TYPE_EFFICIENTNET
+    
+    choice
+        prompt "Posit<32, 2>"
+        default EFFICIENTNET_ADD_P32
+        help
+            Select one of the EfficientNet operations for the test.
+
+    config EFFICIENTNET_ADD_P32
+        bool "efficientnet_add_p32_test"
+        help
+            Enable EfficientNet addition test.
+
+    config EFFICIENTNET_SUB_P32
+        bool "efficientnet_sub_p32_test"
+        help
+            Enable EfficientNet subtraction test.
+
+    config EFFICIENTNET_MUL_P32
+        bool "efficientnet_mul_p32_test"
+        help
+            Enable EfficientNet multiplication test.
+
+    config EFFICIENTNET_DIV_P32
+        bool "efficientnet_div_p32_test"
+        help
+            Enable EfficientNet division test.
+            
+    config EFFICIENTNET_DOT_P32
+        bool "efficientnet_dot_p32_test"
+        help
+            Enable EfficientNet dot product test.
+
+    endchoice
+endmenu
+
+# REGNET_TEST菜单
+menu "REGNET_TEST"
+    visible if TYPE_REGNET
+    
+    choice
+        prompt "Posit<32, 2>"
+        default REGNET_ADD_P32
+        help
+            Select one of the RegNet operations for the test.
+
+    config REGNET_ADD_P32
+        bool "regnet_add_p32_test"
+        help
+            Enable RegNet addition test.
+
+    config REGNET_SUB_P32
+        bool "regnet_sub_p32_test"
+        help
+            Enable RegNet subtraction test.
+
+    config REGNET_MUL_P32
+        bool "regnet_mul_p32_test"
+        help
+            Enable RegNet multiplication test.
+
+    config REGNET_DIV_P32
+        bool "regnet_div_p32_test"
+        help
+            Enable RegNet division test.
+            
+    config REGNET_DOT_P32
+        bool "regnet_dot_p32_test"
+        help
+            Enable RegNet dot product test.
+
+    endchoice
+endmenu
+
+# 设置配置辅助变量
 config SAMPLE_TEST
-    bool "manually_sample_test"
-    default n
+    bool
+    default y if TYPE_SAMPLE
