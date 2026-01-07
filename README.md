@@ -33,8 +33,7 @@ PVU支持多种运行时配置参数：
 - `MAX_VECTOR_SIZE`：最大向量大小
 - `MAX_ALIGN_WIDTH`：最大对齐宽度
 - `ES`：ES参数
-- `FLOAT_MODE`：浮点数格式选择
-- `INT_WIDTH`：整数位宽
+
 
 ### 操作码说明
 
